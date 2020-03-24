@@ -1,0 +1,354 @@
+---
+title: "Sharing on Short Notice"
+subtitle: "How to Get Your Teaching Materials Online with R Markdown"
+session: Hi!
+author: Alison Hill
+date: "`r Sys.Date()`"
+output:
+  xaringan::moon_reader:
+    css: ["default", "assets/css/my-theme.css", "assets/css/my-fonts.css"]
+    seal: false 
+    lib_dir: libs
+    nature:
+      # autoplay: 5000
+      highlightStyle: solarized-light
+      highlightLanguage: ["r", "css", "yaml"]
+      slideNumberFormat: "" 
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: "16:9"
+      beforeInit: "https://platform.twitter.com/widgets.js"
+    includes:
+      in_header: [assets/header.html]
+params:
+  github_link: "TBD"
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(collapse = TRUE,
+                      fig.retina = 3)
+yt_counter <- 0
+library(countdown)
+library(tidyverse)
+library(AmesHousing)
+ames <- make_ames() %>% 
+  dplyr::select(-matches("Qu"))
+```
+
+class: title-slide, center
+
+<span class="fa-stack fa-4x">
+  <i class="fa fa-circle fa-stack-2x" style="color: #ffffff;"></i>
+  <strong class="fa-stack-1x" style="color:#E7553C;">`r rmarkdown::metadata$session`</strong>
+</span> 
+
+# `r rmarkdown::metadata$title`
+
+## `r rmarkdown::metadata$subtitle`
+
+### `r rmarkdown::metadata$author` &#183; Desirée De Leon
+
+
+
+---
+class: middle, center
+
+.pull-left[
+## Alison Hill 
+
+<img style="border-radius: 50%;" src="https://conf20-intro-ml.netlify.com/authors/alison/avatar.jpg" width="150px"/>
+
+[<i class="fab fa-github"></i> @apreshill](https://github.com/apreshill)  
+[<i class="fab fa-twitter"></i> @apreshill](https://twitter.com/apreshill)
+
+]
+
+.pull-right[
+## Desirée De Leon  
+
+<img style="border-radius: 50%;" src="https://conf20-intro-ml.netlify.com/authors/desiree/avatar.jpg" width="150px"/>
+
+[<i class="fab fa-github"></i> @dcossyleon](https://github.com/dcossyleon)  
+[<i class="fab fa-twitter"></i> @dcossyle](https://twitter.com/dcossyle)
+
+]
+
+
+???
+
+Here's who we are
+
+---
+class: middle, center
+
+# Who you are
+
+<div class="flex">
+  <div class="column">
+    <h2> Educator </h2>
+    <img src="https://picsum.photos/300?random=1" style="margin: 0 1em;">
+  </div>
+  
+--
+  <div class="column">
+    <h2> R Markdown </h2>
+    <img src="https://picsum.photos/300?random=2 style="margin: 0 1em;">
+  </div>
+  
+--
+  <div class="column">
+    <h2> ONLINE </h2>
+    <img src="https://picsum.photos/300?random=3 style="margin: 0 1em;">
+  </div>
+</div>
+
+???
+
+And here's who we think you are...
+* Educator with RMDs
+*
+* Probably started doing a lot of online teaching recently
+
+---
+class: middle, center, inverse
+
+# Goals
+
+```{r echo=FALSE}
+ knitr::include_graphics("https://picsum.photos/id/1600/900")
+```
+ Give you a quick tour around what is possible to do with your RMD docs when turning them into a site.
+ 
+ [cinderella fairy godmother]
+
+???
+FAST SLIDE
+And our goals are to show you how to quickly take that R Markdown and put it online the fastest and most straightforard way possible. 
+
+
+---
+class: top, center
+background-image: url("https://picsum.photos/id/177/1600/900")
+background-size: cover
+
+# LET'S JUMP RIGHT IN
+
+???
+[image only]
+
+...by turning an RMD and turn it into a webpage right away. 
+
+---
+class: top, center
+background-image: url("")
+background-size: cover
+
+
+# Here is a plain RMD
+
+???
+
+default doc screenshot
+
+
+---
+background-image: url("")
+background-size: cover
+
+# Same thing but now annotated
+
+???
+
+You've got your meta data
+The body 
+The code chunks
+
+* IMportant! Needs to be named index.Rmd.
+
+---
+background-image: url("")
+background-size: cover
+
+# Now let's knit it to HTML
+
+You have probably seen this output before
+
+???
+Use kap for a gif --- should end at produced HTML --> maybe next slide is freeze frame of that?
+dont forget to host gif-url elsewhere
+
+
+---
+background-image: url("")
+background-size: cover
+
+# You've probably even seen this output looking styled before
+
+In YAML, let's add a theme
+Let's add a floating TOC
+
+???
+
+Another gif, showing typing in theme and TOC
+
+(maybe followed by static slide of what was added?)
+
+---
+class: inverse
+background-image: url("")
+background-size: cover
+
+# Now for the fun part
+
+??? 
+Divider slide
+
+now for the fun part
+
+---
+background-image: url("")
+background-size: cover
+
+# Let's Drag N Drop
+
+
+Go to your browser. 
+
+Go to netlify.com...drag n drop
+
+
+???
+gif -- all the way through getting a link. 
+
+
+---
+
+background-image: url("")
+background-position: top center
+background-size: 100%
+class: bottom, center
+
+# We have a link!
+
+Frankenstein - it's alive!
+
+???
+Has kind of a crazy name, but you can now send this to whomever you'd like.
+
+need to check:  Don't you have to log in and create a netlify account otherwise domain disappears.
+
+
+---
+background-image: url(images/mtsalsa-hi-square.jpg)
+background-position: top center
+background-size: contain
+class: top, center
+
+# Where are we going?
+
+Mount Salsa -- 4 STOPS
+
+
+
+???
+
+We've just shown you how to go from a regular RMD doc on your computer to one that's a webpage.
+
+We'll talk show you 4 RMD tools that are for turning a *COLLECTION* of RMDs into a website.
+
+---
+# A collection of RMDs
+
+![](https://www.grammarly.com/blog/wp-content/uploads/2016/03/Prickle1.gif)
+
+???
+
+
+---
+class: middle, center, inverse
+
+# So Let's Start
+
+
+???
+Divider slide
+
+---
+class: middle, center
+
+# An RMD site
+
+Looks like this...
+
+[quick gif, not full screen, the sample site]
+[just a "have you seen me before?"]
+
+???
+
+---
+class: center, middle
+
+# How to make it
+
+### Add content 
+This is what you know. Each RMD becomes its own page.
+
+* index.Rmd
+* Class1.Rmd
+* Class2.Rmd
+* Homework1.Rmd
+
+### Put pages together
+This is new, and important. It's the YAML in standalone doc form
+
+* `_site.yml`
+
+### Share
+
+* All goes into one folder
+
+---
+class: middle
+
+# _site.yml
+
+The orchestra conductor --puts all the pages together in the way you want. How? 
+
+--
+
+Via the navbar.
+
+--
+    * Dropdown menus
+    * Pages
+    * Icons
+--
+   (There's a YAML line for that)
+
+???
+
+ * If you want it in the navbar, it's gotta be in the _site.yml
+
+---
+class: middle
+
+# _site.yml
+
+The conductor 
+
+also controls artistic expression of the orchestra --
+
+_site.yml controls this too:
+
+--
+ theme: flatly
+ toc: 
+ etc.
+--
+
+???
+
+
