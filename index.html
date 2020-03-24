@@ -66,20 +66,20 @@ class: middle, center
 
 &lt;div class="flex"&gt;
   &lt;div class="column"&gt;
-    &lt;h2&gt; Educator &lt;/h2&gt;
+    &lt;h2&gt; You're an educator  &lt;/h2&gt;
     &lt;img src="https://picsum.photos/300?random=1" style="margin: 0 1em;"&gt;
   &lt;/div&gt;
   
 --
   &lt;div class="column"&gt;
-    &lt;h2&gt; R Markdown &lt;/h2&gt;
-    &lt;img src="https://picsum.photos/300?random=2 style="margin: 0 1em;"&gt;
+    &lt;h2&gt; You've got lots of .Rmds &lt;/h2&gt;
+    &lt;img src="https://picsum.photos/300?random=2" style="margin: 0 1em;"&gt;
   &lt;/div&gt;
   
 --
   &lt;div class="column"&gt;
-    &lt;h2&gt; ONLINE &lt;/h2&gt;
-    &lt;img src="https://picsum.photos/300?random=3 style="margin: 0 1em;"&gt;
+    &lt;h2&gt; Your new classroom looks like this &lt;/h2&gt;
+    &lt;img src="https://media.gettyimages.com/photos/laptop-metallic-color-with-blank-screen-isolated-and-clipping-path-picture-id900734204?b=1&amp;k=6&amp;m=900734204&amp;s=612x612&amp;w=0&amp;h=LTrauFC9uLdqeDFgRWIGub7uwendvrtcT4M-YP3311k="  style="margin: 0 1em;"&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 
@@ -96,11 +96,12 @@ class: middle, center, inverse
 # Goals
 
 ![](https://picsum.photos/id/1600/900)&lt;!-- --&gt;
- Give you a quick tour around what is possible to do with your RMD docs when turning them into a site.
+ Give you a quick tour around what is possible to do with your existing RMD docs when turning them into a site.
  
- [cinderella fairy godmother]
+ [cinderella fairy godmother gif]
 
 ???
+
 FAST SLIDE
 And our goals are to show you how to quickly take that R Markdown and put it online the fastest and most straightforard way possible. 
 
@@ -134,7 +135,9 @@ default doc screenshot
 background-image: url("")
 background-size: cover
 
-# Same thing but now annotated
+# 10s anatomy lesson
+
+Same thing but annotated
 
 ???
 
@@ -168,7 +171,7 @@ Let's add a floating TOC
 
 ???
 
-Another gif, showing typing in theme and TOC
+Another gif, show typing in theme and TOC
 
 (maybe followed by static slide of what was added?)
 
@@ -276,8 +279,11 @@ class: center, left
 ### Share
 
 ---
+# Add Content
 
-# Add Content 
+## Where do my RMDs go?
+These go in the project root directory
+
 This is what you know. Each RMD becomes its own page.
 
 Ex: 
@@ -287,67 +293,70 @@ Ex:
 * Homework1.Rmd
 
 ---
+
+# Add Content
+
+## Do I need to change them?
+
+Nope! 
+
+But make sure that the RMD you want to be your "home page" is renamed index.RMD
+
+---
+
 # Put pages together
 
-* `_site.yml`
+### How does the site know what pages to show my learners?
+
+`_site.yml`
+
+Orchestra director
 
 ???
 
-This is new, and important. It's the YAML in standalone doc form
+This is new, and important. It's the RMD doc's frontmatter YAML in standalone doc form
 
---
-# Share
-
-* When you knit, it all goes into one folder
+It acts like the orchestra conductor --puts all the pages together in the way you want. How?
 
 ---
-class: middle
 
-# _site.yml
+### Take a peek at _site.yml
 
-The orchestra conductor --puts all the pages together in the way you want. How? 
-
+Screenshot of _site.yml
 --
-
-Via the navbar.
-
+Screenshot of navbar
 --
-    * Dropdown menus
-    * Pages
-    * Icons
---
-   (There's a YAML line for that)
+Annotation showing how _site.yml controls what you see in NAv
 
 ???
 
- * If you want it in the navbar, it's gotta be in the _site.yml
- * Maybe GIF demo of adding class3.Rmd
- 
+It creates your navbar.
+If you want to "hide" an RMD from learners, then leave it off your _site.yml
 
 ---
-class: middle
 
-# _site.yml
+### Let's add a new page
 
-The conductor 
+Quick gif demo class3.rmd 
 
-also controls artistic expression of the orchestra --
+???
+if time allows?
 
-_site.yml controls this too
+---
 
---
+# FYI _site.yml
 
- theme: flatly
- toc: 
- code_download: 
- 
---
+You can also add: 
+* Dropdown menus
+* Icons
+* Code folding and Code download
+
 
 ???
 
----
+There's a YAML line for all of these options
 
-class: center, middle
+---
 
 # Sharing 
 
@@ -392,11 +401,56 @@ Cons
 [with RMD sites](https://github.com/apreshill/data-vis-labs-2018)
 
 ---
+class: middle, center, inverse
 
 # DISTILL
 
 ???
 Transition slide
+
+
+---
+class: middle, center
+
+# A Distill site
+
+Looks like this...
+
+[quick gif tour, not full screen, the sample site]
+[just a "have you seen me before?"]
+
+???
+
+Some new features to point out during "tour" :
+* Citations, Appendicies, Footnotes
+* Blog feature
+
+---
+
+# How to make it
+
+`install.packages("distill")`
+
+### Add content
+### Put pages together
+### Share
+
+`_site/`
+
+---
+# Where do my RMD docs go?
+
+A Distill site (without the blog) is going to be very similar to an RMD. Put your Main site files in the project root directory.
+
+---
+# Do I need to change my RMDs?
+
+```
+output: 
+ distill::distill_article
+```
+* individual RMDs HAve to have ^ in their frontmatter YAML.
+* knit each article individually. It does not get built in one fell swoop
 
 ---
     </textarea>
