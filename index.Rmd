@@ -295,7 +295,13 @@ class: center, left
 
 # How to make it
 
-### Add content 
+### Add content
+### Put pages together
+### Share
+
+---
+
+# Add Content 
 This is what you know. Each RMD becomes its own page.
 
 Ex: 
@@ -304,14 +310,19 @@ Ex:
 * Class2.Rmd
 * Homework1.Rmd
 
-### Put pages together
-This is new, and important. It's the YAML in standalone doc form
+---
+# Put pages together
 
 * `_site.yml`
 
-### Share
+???
 
-* All goes into one folder
+This is new, and important. It's the YAML in standalone doc form
+
+--
+# Share
+
+* When you knit, it all goes into one folder
 
 ---
 class: middle
@@ -334,6 +345,7 @@ Via the navbar.
 ???
 
  * If you want it in the navbar, it's gotta be in the _site.yml
+ * Maybe GIF demo of adding class3.Rmd
  
 
 ---
@@ -345,7 +357,7 @@ The conductor
 
 also controls artistic expression of the orchestra --
 
-_site.yml controls this too:
+_site.yml controls this too
 
 --
 
@@ -383,18 +395,33 @@ Pros
 .pull-left[
 
 * You don't have to change your existing RMD docs much at all
-* 
-*
+* Bootstrap, aka out-of-the-box themes, toc, and code_download
+* Low dependencies
 
 ]
-
 
 Cons
 .pull-right[
 
-*
-*
-*
+* File organization
+* Manual Menus
+* Low customizability without lots of CSS work
 
 ]
+
+---
+
+# Staying organized
+
+[with RMD sites](https://github.com/apreshill/data-vis-labs-2018)
+
+---
+
+# DISTILL
+
+???
+Transition slide
+
+---
+
 
