@@ -85,7 +85,6 @@ Here's who we are
 ---
 class: middle, center
 
-# Hello
 .pull-left[
 ## Alison Hill 
 
@@ -162,13 +161,11 @@ And here's who we think you are...
 ---
 class: middle, center
 
-# Who you are
-
 
 <div class="flex" style="margin: 0 1em;">
   <div class="column">
     <h4> You're an educator </h4>
-    <img src="https://media1.tenor.com/images/31a9a75c629437bb894ff1d251324147e3/tenor.gif?itemid=4712531" style="width: 100%; ">
+    <img src="https://media1.tenor.com/images/a9a75c629437bb894ff1d251324147e3/tenor.gif?itemid=4712531" style="width: 100%; ">
   </div>
   
   <div class="column"style="margin: 0 1em;">
@@ -348,15 +345,17 @@ There is no *link* to give learners so they can access this content.
 
 
 ---
+background-image: url("images/Server.jpg")
+background-size: 80%
 
 # What does a *linkable* Rmd look like?
-
-some image here on left of laptop, on right big computer in the sky (anything like that from keeya that can be reused?)
 
 ???
 
 What does a linkable RMD look like? 
 First, we need a big computer in the clouds, otherwise known as a web server..
+
+(h/t Heather Nolis: https://resources.rstudio.com/rstudio-conf-2020/we-re-hitting-r-a-million-times-a-day-so-we-made-a-talk-about-it-heather-nolis-dr-jacqueline-nolis)
 
 ---
 
@@ -412,6 +411,14 @@ knitr::include_url("https://summer-of-blogdown.netlify.com/01/#44")
 
 ---
 
+# What just happened?
+
+something like...
+
+![](images/dnd-doc.gif)
+
+
+---
 # Sharing = knit + drop -> LINK
 
 ???
