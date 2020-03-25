@@ -54,6 +54,7 @@ class: title-slide, center
 
 
 ---
+name: hello
 class: middle, center
 
 .pull-left[
@@ -84,11 +85,39 @@ Here's who we are
 ---
 class: middle, center
 
+.pull-left[
+## Alison Hill 
+
+<img style="border-radius: 50%;" src="https://conf20-intro-ml.netlify.com/authors/alison/avatar.jpg" width="150px"/>
+
+[<i class="fab fa-github"></i> @apreshill](https://github.com/apreshill)  
+[<i class="fab fa-twitter"></i> @apreshill](https://twitter.com/apreshill)
+
+]
+
+.pull-right[
+## Desirée De Leon  
+
+![](https://media.giphy.com/media/hoqxB6HRhWtySSjO2S/giphy.gif)
+
+[<i class="fab fa-github"></i> @dcossyleon](https://github.com/dcossyleon)  
+[<i class="fab fa-twitter"></i> @dcossyle](https://twitter.com/dcossyle)
+
+]
+
+
+???
+
+Here's who we are
+
+---
+class: middle, center
+
 # Who you are
 
 <div class="flex">
   <div class="column">
-    <h2> You're an educator  </h2>
+    <h2> You're an educator </h2>
     <img src="https://picsum.photos/300?random=1" style="margin: 0 1em;">
   </div>
   
