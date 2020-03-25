@@ -493,3 +493,9 @@ h1#pop-quiz:after {
   padding-bottom: 1.0em !important;
   border-bottom: 3px solid #bed3ec;
 }
+
+/* Headers, body */
+
+h4 {
+  font-size: 1.8em;
+}

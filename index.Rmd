@@ -119,29 +119,52 @@ class: middle, center
 
 <div class="flex">
   <div class="column">
-    <h2> You're an educator </h2>
+    <h3> You're an educator </h2>
     <img src="https://picsum.photos/200?random=1" style="margin: 0 1em;">
   </div>
   
 --
   <div class="column">
-    <h2> You've got lots of .Rmds </h2>
+    <h3> You've got lots of .Rmds </h2>
     <img src="images/rmd-buddy.jpg" style="margin: 0 1em;">
   </div>
   
---
+
+???
+
+And here's who we think you are...
+* You're an educator
+* You use RMD (and you probably have a lot of RMD course content)
+
+---
+class: middle, center
+
+# Who you are
+
+
+<div class="flex" style="margin: 0 1em;">
   <div class="column">
-    <h2> Your new classroom looks like this </h2>
-    <img src="https://media.gettyimages.com/photos/laptop-metallic-color-with-blank-screen-isolated-and-clipping-path-picture-id900734204?b=1&k=6&m=900734204&s=612x612&w=0&h=LTrauFC9uLdqeDFgRWIGub7uwendvrtcT4M-YP3311k="  style="margin: 0 1em;">
+    <h4> You're an educator </h4>
+    <img src="https://media1.tenor.com/images/a9a75c629437bb894ff1d251324147e3/tenor.gif?itemid=4712531" style="width: 100%; ">
+  </div>
+  
+  <div class="column"style="margin: 0 1em;">
+    <h4> You've got lots of .Rmds </h4>
+    <img src="images/rmd-buddy-help.jpg" style="">
+  </div>
+  
+--
+  <div class="column" style="margin: 0 1em;">
+    <h4> Your new classroom </h4>
+    <img src="https://media.gettyimages.com/photos/laptop-metallic-color-with-blank-screen-isolated-and-clipping-path-picture-id900734204?b=1&k=6&m=900734204&s=612x612&w=0&h=LTrauFC9uLdqeDFgRWIGub7uwendvrtcT4M-YP3311k="  style="">
   </div>
 </div>
 
 ???
 
-And here's who we think you are...
-* Educator with RMDs
-*
-* Probably started doing a lot of online teaching recently
+* But those DOCS are stuck on your computer, and you want to make sharing content easier
+
+* ANd you probably have a new classroom space that looks like this-- and you need quick way to share your materials with learners 100% online
 
 ---
 class: middle, center, inverse
