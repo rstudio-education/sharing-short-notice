@@ -3,7 +3,7 @@
 }
 
 .remark-slide-content {
-  background-color: #fbf9f4;
+  background-color: #ffffff;
 }
 
 .remark-slide-content h1 {
@@ -439,6 +439,7 @@ h1#pop-quiz:after {
   justify-content: center;
   align-items: flex-start;
 }
+
 .column {
   float: left;
   width: 25%;

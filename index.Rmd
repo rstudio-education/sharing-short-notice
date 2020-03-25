@@ -108,23 +108,25 @@ class: middle, center
 
 ???
 
-Here's who we are
+And we promise we are real live humans who are stuck at home right now, sitting in front our computers.
 
 ---
 class: middle, center
 
 # Who you are
 
+--
+
 <div class="flex">
   <div class="column">
     <h2> You're an educator </h2>
-    <img src="https://picsum.photos/300?random=1" style="margin: 0 1em;">
+    <img src="https://picsum.photos/200?random=1" style="margin: 0 1em;">
   </div>
   
 --
   <div class="column">
     <h2> You've got lots of .Rmds </h2>
-    <img src="https://picsum.photos/300?random=2" style="margin: 0 1em;">
+    <img src="images/rmd-buddy.jpg" style="margin: 0 1em;">
   </div>
   
 --
