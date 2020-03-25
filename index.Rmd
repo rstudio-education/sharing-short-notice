@@ -354,7 +354,7 @@ background-position: center
 ???
 
 What does a linkable RMD look like? 
-First, you have to rename your RMD index.Rmd -- an internet browser will always begin by looking for a file named index to open. 
+First, you have to make sure your RMD is named index.Rmd -- an internet browser will always begin by looking for a file named index to open as your homepage. 
 
 
 ---
@@ -366,27 +366,31 @@ background-position: bottom
 
 ???
 
-What does a linkable RMD look like? 
 Second, we need a big computer in the clouds, otherwise known as a web server..
 
 (h/t Heather Nolis: https://resources.rstudio.com/rstudio-conf-2020/we-re-hitting-r-a-million-times-a-day-so-we-made-a-talk-about-it-heather-nolis-dr-jacqueline-nolis)
 
 ---
+class: middle
 
 # What does a *linkable* Rmd look like?
 
-screenshot netlify 
+.pull-left[
 
-url typed out so easy to find, like:
+## Go here:
 
-```{r echo=FALSE}
-knitr::include_url("https://summer-of-blogdown.netlify.com/01/#42")
-```
+#### [app.netlify.com/drop](https://app.netlify.com/drop)
 
+]
+
+.pull-right[
+
+![](https://summer-of-blogdown.netlify.com/assets/netlify-drop.png)
+]
 
 ???
 
-For this webinar, we'll use servers provided by Netlify.
+For this webinar, we'll use servers provided by Netlify. 
 
 ---
 
@@ -401,8 +405,13 @@ and drag it into netlify and...
 (gif -- all the way through getting a link)
 
 ---
+class: middle center
 
-Frankenstein - it's alive! image
+
+![](images/doc-live.jpg)
+
+Still need to include screenshot of the netlify link
+
 
 ???
 
