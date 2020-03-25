@@ -157,35 +157,28 @@ thead, tfoot, tr:nth-child(even) { background: #eee }
 @page { margin: 0; }
 
 .title-slide {
-  background-image: 
-    /* top is white; middle is orange; bottom is blue */
-    linear-gradient(
-      rgba(255, 255, 255, 0), 
-      rgba(231, 85, 60, .1), 
-      rgba(68, 112, 153, 1)
-    ),
-    /* your image */
-    url("https://picsum.photos/1600/900"); /*../../images/robert-bye-678640-unsplash.jpg */
-  background-size: cover;
+  background-image: url(../../images/rawpixel/zeppelin.jpg);
+  background-position: top;
+  background-size: 55%;
+  background-color: #e7ebec;
 }
 
 
 .title-slide h1 {
   font-family: 'Karla', serif;
-  color: #FFFFFF;
+  color: #3b4245;
   font-size: 3em;
   padding-top: 1em;
   line-height: 1em;
   padding-bottom: .1em;
   word-wrap: break-word;
-  text-shadow: 3px 3px #282a36;
 }
 
 .title-slide h2 {
   font-family: 'Karla', sans-serif;
   font-weight: 700;
   font-size: 1.6em;
-  color: #FFFFFF;
+  color: #3b4245;
   text-shadow: none;
   padding-top: .1em;
   margin-top: 0px;
@@ -196,7 +189,7 @@ thead, tfoot, tr:nth-child(even) { background: #eee }
   font-family: 'Karla', sans-serif;
   font-weight: 400;
   font-size: 1.6em;
-  color: #FFFFFF;
+  color: #3b4245;
   margin-top: 0px;
   margin-bottom: 0px;
   line-height: 1.6em;
@@ -206,7 +199,7 @@ thead, tfoot, tr:nth-child(even) { background: #eee }
   font-family: 'Karla', sans-serif;
   font-weight: 400;
   font-size: 1.4em;
-  color: #FFFFFF;
+  color: #3b4245;
   margin-top: 0px;
   margin-bottom: 0px;
 }
@@ -499,3 +492,15 @@ h1#pop-quiz:after {
 h4 {
   font-size: 1.8em;
 }
+
+.freight-slide {
+  background-image: 
+    linear-gradient(
+      rgba(59, 66, 69, .5),
+      rgba(59, 66, 69, .5)
+    ),
+    /* your image */
+    url(../../images/rawpixel/freight.jpg);
+  background-size: cover;
+}
+
