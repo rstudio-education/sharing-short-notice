@@ -300,7 +300,7 @@ and oftentimes, code.
 
 ---
 
-# What does a *shareable* Rmd look like?
+# What does a .emphasis[shareable] Rmd look like?
 
 gif- knit to html
 
@@ -313,7 +313,7 @@ So we click Knit and...
 
 ---
 
-# What does a *shareable* Rmd look like?
+# What does a .emphasis[shareable] Rmd look like?
 
 screenshot- knitted html, pretty
 
@@ -329,7 +329,7 @@ background-image: url("images/hello-index.jpg")
 background-size: 80%
 background-position: center
 
-# What does a *linkable* Rmd look like?
+# What does a .emphasis[linkable] Rmd look like?
 
 
 ???
@@ -343,7 +343,7 @@ background-image: url("images/Server.jpg")
 background-size: 80%
 background-position: bottom
 
-# What does a *linkable* Rmd look like?
+# What does a .emphasis[linkable] Rmd look like?
 
 ???
 
@@ -352,21 +352,16 @@ Second, we need a big computer in the clouds, otherwise known as a web server..
 (h/t Heather Nolis: https://resources.rstudio.com/rstudio-conf-2020/we-re-hitting-r-a-million-times-a-day-so-we-made-a-talk-about-it-heather-nolis-dr-jacqueline-nolis)
 
 ---
-class: middle
+class: top
 
-# What does a *linkable* Rmd look like?
-
+# What does a .emphasis[linkable] Rmd look like?
 .pull-left[
-
 ## Go here:
-
 #### [app.netlify.com/drop](https://app.netlify.com/drop)
-
 ]
 
 .pull-right[
-
-![](https://summer-of-blogdown.netlify.com/assets/netlify-drop.png)
+&lt;img src= "https://summer-of-blogdown.netlify.com/assets/netlify-drop.png" style="width: 85%;"&gt;
 ]
 
 ???
@@ -375,7 +370,7 @@ For this webinar, we'll use servers provided by Netlify.
 
 ---
 
-# What does a *linkable* Rmd look like?
+# What does a .emphasis[linkable] Rmd look like?
 
 gif of drag and drop
 
@@ -410,7 +405,7 @@ class: middle center
 
 ???
 
-We started with an RMD file, we knit it to get our HTML version. 
+We started with an RMD file --&gt;  we knit it to get our HTML version --&gt; 
 Then we dragged and dropped the folder with the HTML file straight into netlify to get our link.
 
 (I'll replace parts of this with the right screenshots so it's not all sketched -- and name RMD index). 
@@ -441,42 +436,34 @@ Sharing your R Markdown means three things:
 
 class: middle, center, inverse
 
-# Goals
-
-![](https://picsum.photos/id/1600/900)&lt;!-- --&gt;
- 
- Give you a quick tour around what is possible to do with your existing RMD docs when turning them into a site.
- 
- [cinderella fairy godmother gif]
-
-???
-
-FAST SLIDE
-And our goals are to show you how to quickly take that R Markdown and put it online the fastest and most straightforard way possible. 
-
 ---
 background-image: url(images/mtsalsa-hi-square.jpg)
 background-position: top center
 background-size: contain
 class: top, center
 
-# Where are we going?
+# So where are we going?
 
 
 
 ???
 
-We've just shown you how to go from a regular RMD doc on your computer to one that's a webpage.
+We've just shown you how to go from a regular RMD doc on your computer to one that's a web*page*.
 
-We'll talk show you 4 RMD tools that are for turning a *COLLECTION* of RMDs into a website.
+Our goal for the rest of this webinar is to show you 4 RMD tools that are for turning a *COLLECTION* of RMDs into a web*site*.
 
 
 ---
+class: center middle
+
 # A collection of RMDs
 
 ![](https://www.grammarly.com/blog/wp-content/uploads/2016/03/Prickle1.gif)
 
 ???
+
+By the way, fun fact about hedgehogs--
+
 
 ---
 name: default_site
@@ -487,15 +474,19 @@ class: inverse, middle, center
 
 ???
 
-I didn't know argument existed (but in hindsight, of course there's an explicit site generation function for rmd sites). If we are trying to pare down, I wonder whether including this line of code in the RMD site case will makes things feel more complicated than they are. I think we will get more buy in 
+transition slide --revisit later
+
+So let's begin with an R Markdown site.
+
 ---
 
 # R Markdown site
 
-Looks like this...
-
 Screenshot of rendered html site (w/ theme)
 
+???
+
+Here's an example of what one site would look like. 
 
 ---
 
@@ -505,7 +496,7 @@ same screenshot, annotated
 
 **Minimum** required files:
 
-1. `index.Rmd` = Landing page
+1. `index.Rmd` = Homepage
 
 1. `_site.yml` = Navbar / theme 
 
@@ -517,21 +508,35 @@ same screenshot, annotated
 
 ???
 
-say somewhere: every .Rmd is a page, but the one named index.Rmd is a special page
+To build something like this, There are two minimum files you need:
+
+* The homepage content comes from you have in index.Rmd
+* And the navbar content and other global features like the theme, come from a file called _site.yml
+* All other R Markdown documents becomes the other webpages on the site.
 
 ---
 
 # Where is the site?
 
-build with button
+screenshot with build button highlighted
+
+???
+
+What do you do once you have these files?
+You can mouse over to the Build tab, which will knit all your RMDs at once, pulling them together according to _site.yml.
+This will put all your HTML-website ready files in a folder called "site"
 
 ---
 
 # How do you share this site?
 
-Drag-and-drop `docs/`
+Drag-and-drop `_site/`
 
 ![](https://media.giphy.com/media/5pUkiGdxzKisg/giphy.gif)
+
+???
+
+And we will drop that folder back into netlify to make our site. 
 
 ---
 
@@ -543,12 +548,23 @@ Only exists for 24 hours.
 
 Need to make a Netlify account to make it stick.
 
+
+???
+
+But if we do nothing else, this site will only exist for 24 hours. We need to make a Netlify account to make it stick. 
+
 ---
 
 # Back to Netlify
 
 Make an account.
 
+???
+
+So let's go back to Netlify and do that. 
+Here's a gif of me doing this in one, two, three steps....
+
+Now we can rest asssured that this link is here to stay, and we can share it with others. 
 
 ---
 
@@ -975,42 +991,6 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
     deleted = true;
   });
 })();
-(function() {
-  "use strict"
-  /* Replace <script> tags in slides area to make them executable
-   *
-   * Runs after post-processing of markdown source into slides and replaces only
-   * <script>s on the last slide of continued slides using the .has-continuation
-   * class added by xaringan. Finally, any <script>s in the slides area that
-   * aren't executed are commented out.
-   */
-  var scripts = document.querySelectorAll(
-    '.remark-slides-area .remark-slide-container:not(.has-continuation) script'
-  );
-  if (!scripts.length) return;
-  for (var i = 0; i < scripts.length; i++) {
-    var s = document.createElement('script');
-    var code = document.createTextNode(scripts[i].textContent);
-    s.appendChild(code);
-    scripts[i].parentElement.replaceChild(s, scripts[i]);
-  }
-  var scriptsNotExecuted = document.querySelectorAll(
-    '.remark-slides-area .remark-slide-container.has-continuation script'
-  );
-  if (!scriptsNotExecuted.length) return;
-  for (var i = 0; i < scriptsNotExecuted.length; i++) {
-    var comment = document.createComment(scriptsNotExecuted[i].outerHTML)
-    scriptsNotExecuted[i].parentElement.replaceChild(comment, scriptsNotExecuted[i])
-  }
-})();
-(function() {
-  var links = document.getElementsByTagName('a');
-  for (var i = 0; i < links.length; i++) {
-    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
-      links[i].target = '_blank';
-    }
-  }
-})();
 // adds .remark-code-has-line-highlighted class to <pre> parent elements
 // of code chunks containing highlighted lines with class .remark-code-line-highlighted
 (function(d) {
@@ -1028,6 +1008,17 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
   }
   preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
 })(document);</script>
+
+<script>
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+</script>
 
 <script>
 slideshow._releaseMath = function(el) {
