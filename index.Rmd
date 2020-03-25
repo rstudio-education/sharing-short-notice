@@ -347,9 +347,13 @@ It acts like the orchestra conductor --puts all the pages together in the way yo
 ### Take a peek at _site.yml
 
 Screenshot of _site.yml
+
 --
+
 Screenshot of navbar
+
 --
+
 Annotation showing how _site.yml controls what you see in NAv
 
 ???
@@ -361,7 +365,9 @@ If you want to "hide" an RMD from learners, then leave it off your _site.yml
 
 ### Let's add a new page
 
-Quick gif demo class3.rmd 
+Quick gif demo 
+
+Adding class3.rmd 
 
 ???
 if time allows?
@@ -451,7 +457,7 @@ Some new features to point out during "tour" :
 
 ---
 
-# How to make it
+# How to get it
 
 `install.packages("distill")`
 
@@ -490,6 +496,8 @@ Barely!
 output: 
  distill::distill_article
 ```
+
+* Need to make sure you have an index.Rmd in root = landing
 * individual RMDs HAve to have ^ in their frontmatter YAML.
 * knit each article individually once you've added it or made changes
 
@@ -577,3 +585,140 @@ Gif
 * Not easy to customize styling
 
 ]
+
+---
+
+class: inverse, middle, center
+
+# Bookdown
+
+???
+divider
+
+---
+
+# A Bookdown site
+
+Looks like this...
+
+[quick gif tour, not full screen, the sample site]
+[just a "have you seen me before?"]
+
+???
+
+Some new features to point out during "tour" :
+* A very long TOC
+* Chapters 
+* Sections
+
+---
+
+# How to get it
+
+```
+#install.packages("bookdown")
+library(bookdown)
+```
+
+---
+# Key Files
+
+
+All your RMD content 
+
+--
+
+3 YAMLs
+
+-- 
+
+1 of them is index.Rmd
+
+---
+
+???
+
+Brace yourselves because the bookdown structure is weirder than what we've seen. 
+
+
+
+# Key Files
+
+## Where do my RMD Files GO?
+
+![](https://rstudio4edu.github.io/rstudio4edu-book/images/screenshots/bookdown-skeleton-files.jpg)
+???
+
+For example... a directory that looks like this.
+
+Your RMDs will be in the root. The first one is still index.Rmd. This becomes the first page of your book. Usually an preface or Intro.
+
+The REst of the RMDs are numbered. These each become book chapters. 
+
+---
+# Do I need to change the RMDs?
+
+Yes. 
+
+* You (might) need to rename all the files to have a numerical order. 
+* All chapter .Rmd files MUST begin with a `# Level 1 Header` no matter what. No front matter YAMLS.
+
+---
+
+# ...here's why
+
+(maybe if time allows)
+
+![](https://rstudio4edu.github.io/rstudio4edu-book/images/illos/Bookdown-file-flow.jpg)
+
+---
+
+# How does bookdown know what to do with the rest?
+
+The other 3 YAMLS
+
+### `_output.yml`
+
+### `_bookdown.yml`
+
+### The YAML in `index.Rmd`
+
+???
+
+include a Graphic which bullets which doc lets you change what
+
+* To hide a chapter while it is in progress, put it in a subfolder or start the .Rmd filename with an `_`.
+
+---
+
+# Share
+
+Build your book with the Build tab. 
+
+_book/ --> drag and drop
+
+???
+
+By now you probably get the picture.
+
+---
+
+# Pros and Cons of Bookdown
+
+.pull-left[
+
+* Long-form content friendly
+* Clear ordering of content
+* Cross-references
+* Numbered figures, equations, tables
+
+]
+
+.pull-right [
+
+* Three YAMLS (time consuming to set up)
+* Project directory will have many RMDs and no good way to organize them into subdirectories
+* Not easy to customize styling
+
+]
+
