@@ -85,6 +85,7 @@ Here's who we are
 ---
 class: middle, center
 
+# Hello
 .pull-left[
 ## Alison Hill 
 
@@ -104,7 +105,6 @@ class: middle, center
 [<i class="fab fa-twitter"></i> @dcossyle](https://twitter.com/dcossyle)
 
 ]
-
 
 ???
 
@@ -126,11 +126,18 @@ We use R Markdown!
 
 ---
 
+
 class: middle, center
 
 # Who you are
 
---
+???
+
+Divider
+
+
+---
+class: middle, center
 
 <div class="flex" style="margin: 0 1em;">
   <div class="column">
@@ -150,7 +157,7 @@ class: middle, center
 
 And here's who we think you are...
 * You're an educator
-* You use RMD (and you probably have a lot of RMD course content)
+* You have R Markdown files for teaching..
 
 ---
 class: middle, center
@@ -161,7 +168,7 @@ class: middle, center
 <div class="flex" style="margin: 0 1em;">
   <div class="column">
     <h4> You're an educator </h4>
-    <img src="https://media1.tenor.com/images/a9a75c629437bb894ff1d251324147e3/tenor.gif?itemid=4712531" style="width: 100%; ">
+    <img src="https://media1.tenor.com/images/31a9a75c629437bb894ff1d251324147e3/tenor.gif?itemid=4712531" style="width: 100%; ">
   </div>
   
   <div class="column"style="margin: 0 1em;">
@@ -178,31 +185,21 @@ class: middle, center
 
 ???
 
-* But those docs are stuck on your computer, and you want to make sharing content easier
+* But those files are stuck on your computer, and you need to share them easily with other people. 
 
-* And you probably have a new classroom space that looks like this-- and you need quick way to share your materials with learners 100% online
+* And--- you probably have a new classroom space that looks like this-- so sharing needs to be done 100% online
 
 ---
+class: middle, center
 
-# Why sharing on short notice?
+# Sharing on **short notice**
 
---
-
-- you have files
-
---
-
-- you need to teach
-
---
-
-- you need to share your files with other people
 
 ???
 
-You have files, you need to teach, you need to share your files with other peoples
+With that in mind, we hope to give you a quick tour today of how to get your course materials online in the *fastest* way possible.
 
-you can make a course website to do this.
+(aka not necessarily using longterm best practices, but prioritizing things that are possible to get done in a pinch)
 
 ---
 
@@ -236,12 +233,20 @@ you can make a course website to do this.
 
 ???
 
+Why make a course website at all?  It makes your content shareable, reproducible, and resilient (<-- how?)
+
+second column? You might think the downsides are that this requires....
+
 
 ---
 
 # Good news
 
 R markdown is made for sharing
+
+???
+
+Luckily, R Markdown is made for sharing
 
 ---
 
@@ -252,6 +257,11 @@ HTML makes sharing even easier with a `r emo::ji("star")`link`r emo::ji("star")`
 --
 
 R Markdown can be knitted into HTML! `r emo::ji("rocket")`
+
+
+???
+
+What's the transition here?
 
 ---
 
@@ -273,7 +283,7 @@ class: inverse, middle, center
 
 ???
 
-will this just be a divider silde? 
+divider silde only
 
 ---
 
@@ -283,6 +293,11 @@ will this just be a divider silde?
 --
 
 full screen screenshot of index.Rmd source file inside RStudio
+
+
+???
+
+Here's what an RMD looks like. 
 
 ---
 
@@ -298,6 +313,13 @@ text = markdown
 
 code = R
 
+
+???
+
+And it's made up of some metadata, which we call the YAML.
+Text in the form of markdown
+and oftentimes, code. 
+
 ---
 
 # What does a *shareable* Rmd look like?
@@ -308,7 +330,8 @@ gif- knit to html
 
 Use kap for a gif --- should end at produced HTML
 
-dont forget to host gif-url elsewhere
+And your RMD is easily sharable when you knit it to HTML. 
+So we click Knit and...
 
 ---
 
@@ -318,7 +341,10 @@ screenshot- knitted html, pretty
 
 ???
 
-but still trapped on your computer
+Voila! We have an HTML file that looks like a webpage. 
+
+but this is still trapped on your computer--it's not yet online. 
+There is no *link* to give learners so they can access this content.
 
 
 ---
@@ -329,7 +355,8 @@ some image here on left of laptop, on right big computer in the sky (anything li
 
 ???
 
-First, we need a big computer in the clouds, otherwise known as a web server.
+What does a linkable RMD look like? 
+First, we need a big computer in the clouds, otherwise known as a web server..
 
 ---
 
@@ -356,7 +383,9 @@ gif of drag and drop
 
 ???
 
-gif -- all the way through getting a link. 
+And we can take a folder that has the knitted HTML file we created, 
+and drag it into netlify and...
+(gif -- all the way through getting a link)
 
 ---
 
@@ -364,6 +393,7 @@ Frankenstein - it's alive! image
 
 ???
 
+Our R Markdown page is now alive on the internet. And this is the link where it lives. 
 Has kind of a crazy name, but you can now send this to whomever you'd like.
 
 
