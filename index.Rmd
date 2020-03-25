@@ -30,12 +30,9 @@ editor_options:
 options(htmltools.dir.version = FALSE)
 knitr::opts_chunk$set(collapse = TRUE,
                       fig.retina = 3)
-yt_counter <- 0
-library(countdown)
+
+library(ymlthis)
 library(tidyverse)
-library(AmesHousing)
-ames <- make_ames() %>% 
-  dplyr::select(-matches("Qu"))
 ```
 
 class: title-slide, center
