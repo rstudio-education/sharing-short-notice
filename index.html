@@ -32,8 +32,9 @@ class: title-slide, center
 
 
 ---
-name: hello
 class: middle, center
+
+# Hello
 
 .pull-left[
 ## Alison Hill 
@@ -44,6 +45,8 @@ class: middle, center
 [&lt;i class="fab fa-twitter"&gt;&lt;/i&gt; @apreshill](https://twitter.com/apreshill)
 
 ]
+
+--
 
 .pull-right[
 ## Desirée De Leon  
@@ -91,20 +94,36 @@ And we promise we are real live humans who are stuck at home right now, sitting 
 ---
 class: middle, center
 
+
+We make a lot of websites
+
+--
+
+Neither of us is a web developer
+
+--
+
+We use R Markdown!
+
+---
+
+class: middle, center
+
 # Who you are
 
 --
 
-&lt;div class="flex"&gt;
+&lt;div class="flex" style="margin: 0 1em;"&gt;
   &lt;div class="column"&gt;
-    &lt;h3&gt; You're an educator &lt;/h2&gt;
-    &lt;img src="https://picsum.photos/200?random=1" style="margin: 0 1em;"&gt;
+    &lt;h4&gt; You're an educator &lt;/h4&gt;
+    &lt;img src="https://media1.tenor.com/images/a9a75c629437bb894ff1d251324147e3/tenor.gif?itemid=4712531" style="width: 100%; "&gt;
   &lt;/div&gt;
   
 --
-  &lt;div class="column"&gt;
-    &lt;h3&gt; You've got lots of .Rmds &lt;/h2&gt;
-    &lt;img src="images/rmd-buddy.jpg" style="margin: 0 1em;"&gt;
+
+   &lt;div class="column"style="margin: 0 1em;"&gt;
+    &lt;h4&gt; You've got lots of .Rmds &lt;/h4&gt;
+    &lt;img src="images/rmd-buddy.jpg" style=""&gt;
   &lt;/div&gt;
   
 
@@ -140,16 +159,225 @@ class: middle, center
 
 ???
 
-* But those DOCS are stuck on your computer, and you want to make sharing content easier
+* But those docs are stuck on your computer, and you want to make sharing content easier
 
-* ANd you probably have a new classroom space that looks like this-- and you need quick way to share your materials with learners 100% online
+* And you probably have a new classroom space that looks like this-- and you need quick way to share your materials with learners 100% online
 
 ---
+
+# Why sharing on short notice?
+
+--
+
+- you have files
+
+--
+
+- you need to teach
+
+--
+
+- you need to share your files with other people
+
+???
+
+You have files, you need to teach, you need to share your files with other peoples
+
+you can make a course website to do this.
+
+---
+
+# Why make a course website?
+
+--
+
+.pull-left[
+### 👍
+
++ Shareable
+
++ Reproducible
+
++ Resilient
+
+]
+
+--
+
+.pull-right[
+### 👎
+
++ Time
+
++ Skills
+
++ Fortitude
+
+]
+
+???
+
+
+---
+
+# Good news
+
+R markdown is made for sharing
+
+---
+
+# Better news
+
+HTML makes sharing even easier with a ⭐link⭐ and...
+
+--
+
+R Markdown can be knitted into HTML! 🚀
+
+---
+
+# What does sharing look like?
+
+(gif of file window, click on .Rproj file to open and open up index.Rmd; have TOC floating and flatly theme already done)
+
+???
+
+Let's start with a single Rmd file, inside an folder that is also an R project
+
+---
+
+name: html_document
+class: inverse, middle, center
+
+## `output: rmarkdown::html_document`
+
+
+???
+
+will this just be a divider silde? 
+
+---
+
+
+# What does an Rmd look like?
+
+--
+
+full screen screenshot of index.Rmd source file inside RStudio
+
+---
+
+# What does an Rmd look like?
+
+--
+
+screenshot of index.Rmd source file inside RStudio, annotated w/:
+
+metadata = YAML
+
+text = markdown
+
+code = R
+
+---
+
+# What does a *shareable* Rmd look like?
+
+gif- knit to html
+
+???
+
+Use kap for a gif --- should end at produced HTML
+
+dont forget to host gif-url elsewhere
+
+---
+
+# What does a *shareable* Rmd look like?
+
+screenshot- knitted html, pretty
+
+???
+
+but still trapped on your computer
+
+
+---
+
+# What does a *linkable* Rmd look like?
+
+some image here on left of laptop, on right big computer in the sky (anything like that from keeya that can be reused?)
+
+???
+
+First, we need a big computer in the clouds, otherwise known as a web server.
+
+---
+
+# What does a *linkable* Rmd look like?
+
+screenshot netlify 
+
+url typed out so easy to find, like:
+
+&lt;iframe src="https://summer-of-blogdown.netlify.com/01/#42" width="504" height="400px"&gt;&lt;/iframe&gt;
+
+
+???
+
+For this webinar, we'll use servers provided by Netlify.
+
+---
+
+# What does a *linkable* Rmd look like?
+
+gif of drag and drop
+
+???
+
+gif -- all the way through getting a link. 
+
+---
+
+Frankenstein - it's alive! image
+
+???
+
+Has kind of a crazy name, but you can now send this to whomever you'd like.
+
+
+---
+
+# What just happened?
+
+something like...
+
+
+&lt;iframe src="https://summer-of-blogdown.netlify.com/01/#44" width="504" height="400px"&gt;&lt;/iframe&gt;
+
+
+
+---
+
+# Sharing = knit + drop -&gt; LINK
+
+???
+
+Sharing your R Markdown means two things:
+
+1. Knit to HTML
+
+1. Transfer to web server
+
+
+---
+
 class: middle, center, inverse
 
 # Goals
 
 ![](https://picsum.photos/id/1600/900)&lt;!-- --&gt;
+ 
  Give you a quick tour around what is possible to do with your existing RMD docs when turning them into a site.
  
  [cinderella fairy godmother gif]
@@ -159,121 +387,143 @@ class: middle, center, inverse
 FAST SLIDE
 And our goals are to show you how to quickly take that R Markdown and put it online the fastest and most straightforard way possible. 
 
-
 ---
-class: top, center
-background-image: url("https://picsum.photos/id/177/1600/900")
-background-size: cover
-
-# LET'S JUMP RIGHT IN
-
-???
-[image only]
-
-...by turning an RMD and turn it into a webpage right away. 
-
----
-class: top, center
-background-image: url("")
-background-size: cover
-
-
-# Here is a plain RMD
-
-???
-
-default doc screenshot
-
-
----
-background-image: url("")
-background-size: cover
-
-# 10s anatomy lesson
-
-Same thing but annotated
-
-???
-
-You've got your meta data
-The body 
-The code chunks
-
-* IMportant! Needs to be named index.Rmd.
-
----
-background-image: url("")
-background-size: cover
-
-# Now let's knit it to HTML
-
-You have probably seen this output before
-
-???
-Use kap for a gif --- should end at produced HTML --&gt; maybe next slide is freeze frame of that?
-dont forget to host gif-url elsewhere
-
-
----
-background-image: url("")
-background-size: cover
-
-# You've probably even seen this output looking styled before
-
-In YAML, let's add a theme
-Let's add a floating TOC
-
-???
-
-Another gif, show typing in theme and TOC
-
-(maybe followed by static slide of what was added?)
-
----
-class: inverse
-background-image: url("")
-background-size: cover
-
-# Now for the fun part
-
-??? 
-
-Divider slide
-
-now for the fun part
-
----
-background-image: url("")
-background-size: cover
-
-# Let's Drag N Drop
-
-
-Go to your browser. 
-
-Go to netlify.com...drag n drop
-
-
-???
-
-gif -- all the way through getting a link. 
-
-
----
-
-background-image: url("")
+background-image: url(images/mtsalsa-hi-square.jpg)
 background-position: top center
-background-size: 100%
-class: bottom, center
+background-size: contain
+class: top, center
 
-# We have a link!
+# Where are we going?
 
-Frankenstein - it's alive!
+Mount Salsa -- 4 STOPS
+
+
 
 ???
-Has kind of a crazy name, but you can now send this to whomever you'd like.
 
-need to check:  Don't you have to log in and create a netlify account otherwise domain disappears.
+We've just shown you how to go from a regular RMD doc on your computer to one that's a webpage.
+
+We'll talk show you 4 RMD tools that are for turning a *COLLECTION* of RMDs into a website.
+
+
+---
+# A collection of RMDs
+
+![](https://www.grammarly.com/blog/wp-content/uploads/2016/03/Prickle1.gif)
+
+???
+
+---
+name: default_site
+class: inverse, middle, center
+
+# `site: rmarkdown::default_site`
+
+
+???
+
+I didn't know argument existed (but in hindsight, of course there's an explicit site generation function for rmd sites). If we are trying to pare down, I wonder whether including this line of code in the RMD site case will makes things feel more complicated than they are. I think we will get more buy in 
+---
+
+# R Markdown site
+
+Looks like this...
+
+Screenshot of rendered html site (w/ theme)
+
+
+---
+
+# R Markdown site
+
+same screenshot, annotated
+
+**Minimum** required files:
+
+1. `index.Rmd` = Landing page
+
+1. `_site.yml` = Navbar / theme 
+
+--
+
+**Optional** but likely:
+
++ Other `.Rmd` files = Content 
+
+???
+
+say somewhere: every .Rmd is a page, but the one named index.Rmd is a special page
+
+---
+
+# Where is the site?
+
+build with button
+
+---
+
+# How do you share this site?
+
+Drag-and-drop `docs/`
+
+![](https://media.giphy.com/media/5pUkiGdxzKisg/giphy.gif)
+
+---
+
+# But...
+
+(maybe a good place also for cinderella- carriage goes poof)
+
+Only exists for 24 hours. 
+
+Need to make a Netlify account to make it stick.
+
+---
+
+# Back to Netlify
+
+Make an account.
+
+
+---
+
+# Inside the Rmds
+
+.Rmd files look just like you think...
+
++ now there are just many of them, but 
+
++ remember: index is special 
+
+???
+
+Metadata = YAML
+text = markdown
+code = R
+
+---
+
+# Inside the `_site.yml`
+
+```yaml
+---
+navbar:
+  title: rstats101
+  left:
+  - text: Home
+    href: index.html
+  - text: Syllabus
+    href: syllabus.html
+output:
+  html_document:
+    toc: true
+    toc_float: true
+    theme: flatly
+---
+```
+
+background-image: url("")
+background-size: cover
 
 
 ---
