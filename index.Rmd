@@ -420,8 +420,6 @@ class: top, center
 
 # Where are we going?
 
-Mount Salsa -- 4 STOPS
-
 
 
 ???
@@ -526,6 +524,7 @@ Metadata = YAML
 text = markdown
 code = R
 
+
 ---
 
 # Inside the `_site.yml`
@@ -542,185 +541,57 @@ yml_empty() %>%
   asis_yaml_output()
 ```
 
-background-image: url("")
-background-size: cover
 
-
----
-background-image: url(images/mtsalsa-hi-square.jpg)
-background-position: top center
-background-size: contain
-class: top, center
-
-# Where are we going?
-
-Mount Salsa -- 4 STOPS
-
-
-
-???
-
-We've just shown you how to go from a regular RMD doc on your computer to one that's a webpage.
-
-We'll talk show you 4 RMD tools that are for turning a *COLLECTION* of RMDs into a website.
-
----
-# A collection of RMDs
-
-![](https://www.grammarly.com/blog/wp-content/uploads/2016/03/Prickle1.gif)
-
-???
-
-
----
-class: middle, center, inverse
-
-# So Let's Start
-
-
-???
-Divider slide
-
----
-class: middle, center
-
-# An RMD site
-
-Looks like this...
-
-[quick gif, not full screen, the sample site]
-[just a "have you seen me before?"]
-
-???
 
 ---
 class: center, left
 
-# How to make it
+# Put it together and what have you got?
 
-### Add content
-### Put pages together
-### Share
+.pull-left[
 
----
-# Add Content
+.Rmds
 
-## Where do my RMDs go?
-These go in the project root directory
+(maybe a violin, a flute, some other instruments?)
+]
 
-This is what you know. Each RMD becomes its own page.
+--
 
-Ex: 
-* index.Rmd
-* Class1.Rmd
-* Class2.Rmd
-* Homework1.Rmd
-
----
-
-# Add Content
-
-## Do I need to change them?
-
-Nope! 
-
-But make sure that the RMD you want to be your "home page" is renamed index.RMD
-
----
-
-# Put pages together
-
-### How does the site know what pages to show my learners?
+.pull-right[
 
 `_site.yml`
 
-Orchestra director
+orchestra conductor
 
-???
+]
 
-This is new, and important. It's the RMD doc's frontmatter YAML in standalone doc form
-
-It acts like the orchestra conductor --puts all the pages together in the way you want. How?
 
 ---
 
-### Take a peek at _site.yml
 
-Screenshot of _site.yml
-
---
-
-Screenshot of navbar
-
---
-
-Annotation showing how _site.yml controls what you see in NAv
-
-???
-
-It creates your navbar.
-If you want to "hide" an RMD from learners, then leave it off your _site.yml
-
----
-
-### Let's add a new page
-
-Quick gif demo 
-
-Adding class3.rmd 
-
-???
-if time allows?
-
----
-
-# FYI _site.yml
-
-You can also add: 
-* Dropdown menus
-* Icons
-* Code folding and Code download
-
-
-???
-
-There's a YAML line for all of these options
-
----
-
-# Sharing 
-
-When you knit, your HTML folders all go into docs/
-
-???
-Back to the sample site, GIF of knitting > demo drag n drop docs folder. 
-
----
-
-# And we can change the domain name 
-
-???
-
-Gif continues showing how this is done
----
-
-# RMD Site Pros and Cons
-
-Pros
 .pull-left[
 
-* You don't have to change your existing RMD docs much at all
-* Bootstrap, aka out-of-the-box themes, toc, and code_download
+### Pros
+
+* Source stays same
+
+* Bootstrap
+
 * Low dependencies
 
 ]
 
-Cons
+--
+
 .pull-right[
 
-* File organization
-* Manual Menus
-* Low customizability without lots of CSS work
+### Cons
+
+* No Rmds in folders
+
+* Update menus manually
+
+* 1 content flavor
 
 ]
 
@@ -731,158 +602,96 @@ Cons
 [with RMD sites](https://github.com/apreshill/data-vis-labs-2018)
 
 ---
-class: middle, center, inverse
 
 # DISTILL
 
 ???
 Transition slide
 
-
 ---
-class: middle, center
 
-# A Distill site
+# Distill site
 
 Looks like this...
 
-[quick gif tour, not full screen, the sample site]
-[just a "have you seen me before?"]
+Screenshot of rendered html site 
+
+---
+
+# Distill site
+
+same screenshot, annotated
+
+**Minimum** required files:
+
+1. `index.Rmd` = Landing page
+
+1. `_site.yml` = Navbar
+
+--
+
+**Optional** but likely:
+
++ Other `.Rmd` files = Content
+
+--
+
+But also!
+
++ `_posts/` = Nice!
 
 ???
 
-Some new features to point out during "tour" :
-* Citations, Appendicies, Footnotes
-* Blog feature -- organize by date
+Say out loud- actually the same as Rmd site, minus themes based on bootstrap.
 
 ---
 
-# How to get it
+# A blog?
 
-`install.packages("distill")`
-
-Extends RMD functionality by adding Distill framework
+listing page stuff here, yml goes on left for `index.Rmd` in `_posts/` folder, on right is screenshot of output
 
 ---
 
-# Where do my RMD docs go?
+# Where is the site?
 
-A Distill site (without the blog) is going to be very similar to an RMD site. Put your Main site files in the project root directory.
-
-Each page in your nav/ menu should be in _site.yml 
-
----
-
-# What about blog RMDs? Where do they go?
-
-A few extra bits for a blog section. They all live in: 
-
-(1) _posts/
-
-Screenshot or directory tree thing
-
-OR just show that `distill::create_post("My Awesome Post")` creates the appropriate structure for you. Then paste in whatever .RMd content you want. 
+build with button
 
 ???
 
-The blog "arm" of the distill site lives in the _posts/ folder. Then there has to be another folder for each blog post you make, that will house the post's .Rmd + images etc.
-
----
-# Do I need to change my RMDs?
-
-Barely!
-
-```
-output: 
- distill::distill_article
-```
-
-* Need to make sure you have an index.Rmd in root = landing
-* individual RMDs HAve to have ^ in their frontmatter YAML.
-* knit each article individually once you've added it or made changes
+actually the same as Rmd site!
 
 ---
 
-# Consider adding...
+# How do you share this site?
 
-Screenshot of Distill post with annotations that highlight the following. With color-coded arrows indicating whether you add it through the YAML frontmatter or in the doc itself.
+Drag-and-drop `docs/`
 
-* citations 
-* gutter notes
-* appendices
-* categories in the metadata
-
+![](https://media.giphy.com/media/5pUkiGdxzKisg/giphy.gif)
 
 ???
 
----
-
-# Put pages together
-
-### How does the site know what pages to show my learner?
-
-* same as RMD still `_site.yml` is our orchestra director
-* point out output directory here? (maybe?)
-
-Screenshot probably
----
-
-# Put pages together
-
-### Blog post specific: 
-
-Screenshot of blog listing page with:
-
-```
----
-title: "About this blog"
-description: |
-  This won't show up
-listing: posts
+actually the same as Rmd site!
 
 ---
-```
-???
-
-* Note: Need to have a "blog" listing .Rmd and page
-* No real content, just a YAML:
-
----
-
-# Sharing
-
-* Build your site with Build Tab
-* Drag and drop _site/ folder 
-
-???
-
-Gif
-
----
-
-# What about updating?
-
-* Demo a common mistake. And how to fix it. 
-* I forgot to knit my blog post class3.Rmd. My previous drag and drop is missing it!
-* Re-knit -- drag and drop again
-
-
----
-# Distill Pros and Cons
 
 .pull-left[
 
-* Sleek styling with no effort
-* BLog posts with categories make it easy for users to sort through content
-* Technical features like footnotes, citations, etc.
+* Sleek
+
+* 2 content flavors
+
+* Nice features out-of-the-box
 
 ]
 
-.pull-right [
+--
 
-* Each blog post needs to be knit independently of building the site
-* Navbar .RMDs are all still in your root directory. Could get messy
-* Not easy to customize styling
+.pull-right[
+
+* Knit posts one-by-one (but no manual adding to menus!)
+
+* Project organization
+
 
 ]
 
@@ -890,7 +699,7 @@ Gif
 
 class: inverse, middle, center
 
-# Bookdown
+# BOOKDOWN
 
 ???
 divider
