@@ -423,7 +423,7 @@ Looks like this...
 
 Some new features to point out during "tour" :
 * Citations, Appendicies, Footnotes
-* Blog feature
+* Blog feature -- organize by date
 
 ---
 
@@ -431,28 +431,128 @@ Some new features to point out during "tour" :
 
 `install.packages("distill")`
 
-### Add content
-### Put pages together
-### Share
-
-`_site/`
+Extends RMD functionality by adding Distill framework
 
 ---
+
 # Where do my RMD docs go?
 
-A Distill site (without the blog) is going to be very similar to an RMD. Put your Main site files in the project root directory.
+A Distill site (without the blog) is going to be very similar to an RMD site. Put your Main site files in the project root directory.
+
+Each page in your nav/ menu should be in _site.yml 
+
+---
+
+# What about blog RMDs? Where do they go?
+
+A few extra bits for a blog section. They all live in: 
+
+(1) _posts/
+
+Screenshot or directory tree thing
+
+OR just show that `distill::create_post("My Awesome Post")` creates the appropriate structure for you. Then paste in whatever .RMd content you want. 
+
+???
+
+The blog "arm" of the distill site lives in the _posts/ folder. Then there has to be another folder for each blog post you make, that will house the post's .Rmd + images etc.
 
 ---
 # Do I need to change my RMDs?
+
+Barely!
 
 ```
 output: 
  distill::distill_article
 ```
 * individual RMDs HAve to have ^ in their frontmatter YAML.
-* knit each article individually. It does not get built in one fell swoop
+* knit each article individually once you've added it or made changes
 
 ---
+
+# Consider adding...
+
+Screenshot of Distill post with annotations that highlight the following. With color-coded arrows indicating whether you add it through the YAML frontmatter or in the doc itself.
+
+* citations 
+* gutter notes
+* appendices
+* categories in the metadata
+
+
+???
+
+---
+
+# Put pages together
+
+### How does the site know what pages to show my learner?
+
+* same as RMD still `_site.yml` is our orchestra director
+* point out output directory here? (maybe?)
+
+Screenshot probably
+---
+
+# Put pages together
+
+### Blog post specific: 
+
+Screenshot of blog listing page with:
+
+```
+---
+title: "About this blog"
+description: |
+  This won't show up
+listing: posts
+
+---
+```
+???
+
+* Note: Need to have a "blog" listing .Rmd and page
+* No real content, just a YAML:
+
+---
+
+# Sharing
+
+* Build your site with Build Tab
+* Drag and drop _site/ folder 
+
+???
+
+Gif
+
+---
+
+# What about updating?
+
+* Demo a common mistake. And how to fix it. 
+* I forgot to knit my blog post class3.Rmd. My previous drag and drop is missing it!
+* Re-knit -- drag and drop again
+
+
+---
+# Distill Pros and Cons
+
+.pull-left[
+
+* Sleek styling with no effort
+* BLog posts with categories make it easy for users to sort through content
+* Technical features like footnotes, citations, etc.
+
+]
+
+.pull-right [
+
+* Each blog post needs to be knit independently of building the site
+* Navbar .RMDs are all still in your root directory. Could get messy
+* Not easy to customize styling
+
+]
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
