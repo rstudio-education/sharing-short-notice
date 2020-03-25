@@ -343,17 +343,31 @@ Voila! We have an HTML file that looks like a webpage.
 but this is still trapped on your computer--it's not yet online. 
 There is no *link* to give learners so they can access this content.
 
+---
+background-image: url("images/hello-index.jpg")
+background-size: 80%
+background-position: center
+
+# What does a *linkable* Rmd look like?
+
+
+???
+
+What does a linkable RMD look like? 
+First, you have to rename your RMD index.Rmd -- an internet browser will always begin by looking for a file named index to open. 
+
 
 ---
 background-image: url("images/Server.jpg")
 background-size: 80%
+background-position: bottom
 
 # What does a *linkable* Rmd look like?
 
 ???
 
 What does a linkable RMD look like? 
-First, we need a big computer in the clouds, otherwise known as a web server..
+Second, we need a big computer in the clouds, otherwise known as a web server..
 
 (h/t Heather Nolis: https://resources.rstudio.com/rstudio-conf-2020/we-re-hitting-r-a-million-times-a-day-so-we-made-a-talk-about-it-heather-nolis-dr-jacqueline-nolis)
 
@@ -398,24 +412,26 @@ Has kind of a crazy name, but you can now send this to whomever you'd like.
 
 ---
 
+class: middle center
+
 # What just happened?
 
-something like...
+```{r echo=FALSE, out.width = "800px"}
+ knitr::include_graphics("images/dnd-doc.gif")
+```
 
+???
+
+We started with an RMD file, we knit it to get our HTML version. 
+Then we dragged and dropped the folder with the HTML file straight into netlify to get our link.
+
+(I'll replace parts of this with the right screenshots so it's not all sketched -- and name RMD index). 
 
 ```{r echo=FALSE}
 knitr::include_url("https://summer-of-blogdown.netlify.com/01/#44")
 ```
 
-
-
----
-
-# What just happened?
-
-something like...
-
-![](images/dnd-doc.gif)
+???
 
 
 ---
@@ -423,11 +439,16 @@ something like...
 
 ???
 
-Sharing your R Markdown means two things:
+Sharing your R Markdown means three things:
+
+1. Have an index.Rmd
 
 1. Knit to HTML
 
 1. Transfer to web server
+
+???
+
 
 
 ---
