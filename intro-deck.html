@@ -16,12 +16,8 @@
 
 
 
-class: title-slide, center
+class: title-slide, center, bottom
 
-&lt;span class="fa-stack fa-4x"&gt;
-  &lt;i class="fa fa-circle fa-stack-2x" style="color: #ffffff;"&gt;&lt;/i&gt;
-  &lt;strong class="fa-stack-1x" style="color:#E7553C;"&gt;Hi!&lt;/strong&gt;
-&lt;/span&gt; 
 
 # Sharing on Short Notice
 
@@ -64,10 +60,26 @@ class: middle, center
 Here's who we are
 
 ---
+class: freight-slide, center, middle, inverse
 
-(something along these lines I think is worth saying)
+# We make a lot of websites
 
-We make a lot of websites
+http://bit.ly/giraffe-stats
+
+https://education.rstudio.com/
+
+https://bookdown.org/yihui/blogdown/
+
+https://stat545.com/
+
+https://conf20-intro-ml.netlify.com/
+
+https://summer-of-blogdown.netlify.com/
+
+https://apreshill.github.io/data-vis-labs-2018/
+
+
+???
 
 Neither of us is a web developer
 
@@ -149,6 +161,9 @@ And here's who we think you are...
 + Fortitude
 
 ]
+
+---
+
 ---
 
 # Good news
@@ -293,6 +308,27 @@ Sharing your R Markdown means two things:
 1. Knit to HTML
 
 1. Transfer to web server
+
+---
+background-image: url(images/rawpixel/single-balloon.jpg)
+background-size: contain
+background-position: left
+class: middle, center
+
+.pull-right[
+### But that is just one .Rmd file...
+]
+
+
+---
+background-image: url(images/rawpixel/bunch-balloons.jpg)
+background-size: contain
+background-position: right
+class: middle, center
+
+.pull-left[
+### We want to share many .Rmd files!
+]
 
 
 
@@ -648,42 +684,6 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
     deleted = true;
   });
 })();
-(function() {
-  "use strict"
-  /* Replace <script> tags in slides area to make them executable
-   *
-   * Runs after post-processing of markdown source into slides and replaces only
-   * <script>s on the last slide of continued slides using the .has-continuation
-   * class added by xaringan. Finally, any <script>s in the slides area that
-   * aren't executed are commented out.
-   */
-  var scripts = document.querySelectorAll(
-    '.remark-slides-area .remark-slide-container:not(.has-continuation) script'
-  );
-  if (!scripts.length) return;
-  for (var i = 0; i < scripts.length; i++) {
-    var s = document.createElement('script');
-    var code = document.createTextNode(scripts[i].textContent);
-    s.appendChild(code);
-    scripts[i].parentElement.replaceChild(s, scripts[i]);
-  }
-  var scriptsNotExecuted = document.querySelectorAll(
-    '.remark-slides-area .remark-slide-container.has-continuation script'
-  );
-  if (!scriptsNotExecuted.length) return;
-  for (var i = 0; i < scriptsNotExecuted.length; i++) {
-    var comment = document.createComment(scriptsNotExecuted[i].outerHTML)
-    scriptsNotExecuted[i].parentElement.replaceChild(comment, scriptsNotExecuted[i])
-  }
-})();
-(function() {
-  var links = document.getElementsByTagName('a');
-  for (var i = 0; i < links.length; i++) {
-    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
-      links[i].target = '_blank';
-    }
-  }
-})();
 // adds .remark-code-has-line-highlighted class to <pre> parent elements
 // of code chunks containing highlighted lines with class .remark-code-line-highlighted
 (function(d) {
@@ -701,6 +701,17 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
   }
   preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
 })(document);</script>
+
+<script>
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+</script>
 
 <script>
 slideshow._releaseMath = function(el) {

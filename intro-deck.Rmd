@@ -1,7 +1,6 @@
 ---
 title: "Sharing on Short Notice"
 subtitle: "How to Get Your Teaching Materials Online with R Markdown"
-session: Hi!
 author: Alison Hill
 date: "`r Sys.Date()`"
 output:
@@ -35,12 +34,8 @@ library(ymlthis)
 library(tidyverse)
 ```
 
-class: title-slide, center
+class: title-slide, center, bottom
 
-<span class="fa-stack fa-4x">
-  <i class="fa fa-circle fa-stack-2x" style="color: #ffffff;"></i>
-  <strong class="fa-stack-1x" style="color:#E7553C;">`r rmarkdown::metadata$session`</strong>
-</span> 
 
 # `r rmarkdown::metadata$title`
 
@@ -83,10 +78,26 @@ class: middle, center
 Here's who we are
 
 ---
+class: freight-slide, center, middle, inverse
 
-(something along these lines I think is worth saying)
+# We make a lot of websites
 
-We make a lot of websites
+http://bit.ly/giraffe-stats
+
+https://education.rstudio.com/
+
+https://bookdown.org/yihui/blogdown/
+
+https://stat545.com/
+
+https://conf20-intro-ml.netlify.com/
+
+https://summer-of-blogdown.netlify.com/
+
+https://apreshill.github.io/data-vis-labs-2018/
+
+
+???
 
 Neither of us is a web developer
 
@@ -168,6 +179,9 @@ And here's who we think you are...
 + Fortitude
 
 ]
+
+---
+
 ---
 
 # Good news
@@ -316,6 +330,27 @@ Sharing your R Markdown means two things:
 1. Knit to HTML
 
 1. Transfer to web server
+
+---
+background-image: url(images/rawpixel/single-balloon.jpg)
+background-size: contain
+background-position: left
+class: middle, center
+
+.pull-right[
+### But that is just one .Rmd file...
+]
+
+
+---
+background-image: url(images/rawpixel/bunch-balloons.jpg)
+background-size: contain
+background-position: right
+class: middle, center
+
+.pull-left[
+### We want to share many .Rmd files!
+]
 
 
 
