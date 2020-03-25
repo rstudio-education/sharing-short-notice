@@ -763,5 +763,9 @@ class: inverse, center, middle
 ![](images/mtsalsa-hi-square.jpg)
 ???
 
-which options work best for who?
+which options work best for whom?
+
+---
+
+# Other links, resources, stuff
 
