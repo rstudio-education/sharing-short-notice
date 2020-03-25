@@ -1,7 +1,6 @@
 ---
 title: "Sharing on Short Notice"
 subtitle: "How to Get Your Teaching Materials Online with R Markdown"
-session: Hi!
 author: Alison Hill
 date: "`r Sys.Date()`"
 output:
@@ -35,12 +34,7 @@ library(ymlthis)
 library(tidyverse)
 ```
 
-class: title-slide, center
-
-<span class="fa-stack fa-4x">
-  <i class="fa fa-circle fa-stack-2x" style="color: #ffffff;"></i>
-  <strong class="fa-stack-1x" style="color:#E7553C;">`r rmarkdown::metadata$session`</strong>
-</span> 
+class: title-slide, center, bottom
 
 # `r rmarkdown::metadata$title`
 
