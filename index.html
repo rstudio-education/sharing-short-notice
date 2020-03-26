@@ -854,22 +854,49 @@ actually the same as Rmd site!
 ]
 
 ---
-
 class: inverse, middle, center
 
-# BOOKDOWN
+# bookdown
+
+--
+
+
+`install.packages("bookdown")`
+
 
 ???
+
 divider
 
+
+
 ---
+background-image: url("images/rawpixel/writing-machine.jpg")
+background-size: contain
+background-position: right
+class: middle
 
-# A Bookdown site
+# E-book with...
 
-Looks like this...
+--
 
-[quick gif tour, not full screen, the sample site]
-[just a "have you seen me before?"]
++ Table of contents
+
+--
+
++ Chapters
+
+--
+
++ Bells &amp; whistles
+
+
+---
+class: middle, center
+
+&lt;https://bookdown.org/yihui/bookdown/&gt;
+
+&lt;iframe src="https://bookdown.org/yihui/bookdown/" height="600" width="1200" frameborder="0"&gt;&lt;/iframe&gt; 
 
 ???
 
@@ -879,39 +906,208 @@ Some new features to point out during "tour" :
 * Sections
 
 ---
+# Inside the project
 
-# How to get it
+.pull-left[
 
+
+```r
+.
+├── book.Rproj
+├── _bookdown.yml
+├── _output.yml
+├── index.Rmd 
+├── week01.Rmd
+├── week02.Rmd
+├── week03.Rmd
+*└── _book
 ```
-#install.packages("bookdown")
-library(bookdown)
-```
+]
+
+.pull-right[
+Build your book with the Build tab. 
+]
 
 ---
-# Key Files
+# Sharing your book
+
+.pull-left[
 
 
-All your RMD content 
+```r
+.
+├── book.Rproj
+├── _bookdown.yml
+├── _output.yml
+├── index.Rmd 
+├── week01.Rmd
+├── week02.Rmd
+├── week03.Rmd
+*└── _book
+```
+]
 
---
+.pull-right[
 
-3 YAMLs
+_book/ --&gt; drag and drop
 
--- 
+]
 
-1 of them is index.Rmd
 
 ---
+# Inside the `index.Rmd`
+
+.pull-left[
+
+
+```r
+.
+├── book.Rproj
+├── _bookdown.yml
+├── _output.yml
+*├── index.Rmd
+├── week01.Rmd
+├── week02.Rmd
+├── week03.Rmd
+└── _book
+```
+]
+
+.pull-right[
+hot air balloon with just index labeled
+]
 
 ???
 
-Brace yourselves because the bookdown structure is weirder than what we've seen. 
+The index.Rmd file is special. It is both the first chapter, and contains some YAML for the book's metadata like the title. You can think of this as the mega-YAML for your book- it is the YAML for all the chapters.
+
+---
+# Inside the `index.Rmd`
+
+.pull-left[
 
 
+```r
+.
+├── book.Rproj
+├── _bookdown.yml
+├── _output.yml
+*├── index.Rmd
+├── week01.Rmd
+├── week02.Rmd
+├── week03.Rmd
+└── _book
+```
+]
 
-# Key Files
+.pull-right[
 
-## Where do my RMD Files GO?
+
+```
+---
+title: "A Book"
+author: "Frida Gomam"
+site: bookdown::bookdown_site
+documentclass: book
+output:
+  bookdown::gitbook: default
+---
+
+Welcome to the course!
+```
+
+to-do convert to ymlthis
+]
+
+---
+# Inside the chapters
+
+.pull-left[
+
+
+```r
+.
+├── book.Rproj
+├── _bookdown.yml
+├── _output.yml
+├── index.Rmd 
+*├── week01.Rmd
+*├── week02.Rmd
+*├── week03.Rmd
+└── _book
+```
+]
+
+.pull-right[
+hot air balloon with all rmds labeled
+
+]
+
+???
+
+Every Rmd is a chapter
+
+---
+# Inside one chapter
+
+.pull-left[
+
+
+```r
+.
+├── book.Rproj
+├── _bookdown.yml
+├── _output.yml
+├── index.Rmd 
+*├── week01.Rmd
+├── week02.Rmd 
+├── week03.Rmd 
+└── _book
+```
+]
+
+.pull-right[
+
+```
+# Week One
+
+In our first week together, 
+we'll cover the syllabus 
+and how to use Zoom.
+
+```
+
+]
+
+???
+
+Main points- the Rmd chapters don't have any YAML. This will mean that you'll need to change any individual Rmd that you want to make into chapters.
+
+---
+# Inside the `.yml` files
+
+.pull-left[
+
+```r
+.
+├── book.Rproj
+*├── _bookdown.yml
+*├── _output.yml
+├── index.Rmd 
+├── week01.Rmd 
+├── week02.Rmd 
+├── week03.Rmd 
+└── _book 
+```
+]
+
+.pull-right[
+hot air balloon with basket labelled not with _site.yml
+]
+
+
+---
+
 
 ![](https://rstudio4edu.github.io/rstudio4edu-book/images/screenshots/bookdown-skeleton-files.jpg)
 ???
@@ -938,35 +1134,6 @@ Yes.
 
 ![](https://rstudio4edu.github.io/rstudio4edu-book/images/illos/Bookdown-file-flow.jpg)
 
----
-
-# How does bookdown know what to do with the rest?
-
-The other 3 YAMLS
-
-### `_output.yml`
-
-### `_bookdown.yml`
-
-### The YAML in `index.Rmd`
-
-???
-
-include a Graphic which bullets which doc lets you change what
-
-* To hide a chapter while it is in progress, put it in a subfolder or start the .Rmd filename with an `_`.
-
----
-
-# Share
-
-Build your book with the Build tab. 
-
-_book/ --&gt; drag and drop
-
-???
-
-By now you probably get the picture.
 
 ---
 
@@ -981,7 +1148,7 @@ By now you probably get the picture.
 
 ]
 
-.pull-right [
+.pull-right[
 
 * Three YAMLS (time consuming to set up)
 * Project directory will have many RMDs and no good way to organize them into subdirectories
@@ -992,7 +1159,7 @@ By now you probably get the picture.
 ---
 class: inverse, center, middle
 
-# Blogdown
+# blogdown
 
 ---
 
@@ -1086,42 +1253,6 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
     deleted = true;
   });
 })();
-(function() {
-  "use strict"
-  /* Replace <script> tags in slides area to make them executable
-   *
-   * Runs after post-processing of markdown source into slides and replaces only
-   * <script>s on the last slide of continued slides using the .has-continuation
-   * class added by xaringan. Finally, any <script>s in the slides area that
-   * aren't executed are commented out.
-   */
-  var scripts = document.querySelectorAll(
-    '.remark-slides-area .remark-slide-container:not(.has-continuation) script'
-  );
-  if (!scripts.length) return;
-  for (var i = 0; i < scripts.length; i++) {
-    var s = document.createElement('script');
-    var code = document.createTextNode(scripts[i].textContent);
-    s.appendChild(code);
-    scripts[i].parentElement.replaceChild(s, scripts[i]);
-  }
-  var scriptsNotExecuted = document.querySelectorAll(
-    '.remark-slides-area .remark-slide-container.has-continuation script'
-  );
-  if (!scriptsNotExecuted.length) return;
-  for (var i = 0; i < scriptsNotExecuted.length; i++) {
-    var comment = document.createComment(scriptsNotExecuted[i].outerHTML)
-    scriptsNotExecuted[i].parentElement.replaceChild(comment, scriptsNotExecuted[i])
-  }
-})();
-(function() {
-  var links = document.getElementsByTagName('a');
-  for (var i = 0; i < links.length; i++) {
-    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
-      links[i].target = '_blank';
-    }
-  }
-})();
 // adds .remark-code-has-line-highlighted class to <pre> parent elements
 // of code chunks containing highlighted lines with class .remark-code-line-highlighted
 (function(d) {
@@ -1139,6 +1270,17 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
   }
   preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
 })(document);</script>
+
+<script>
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+</script>
 
 <script>
 slideshow._releaseMath = function(el) {

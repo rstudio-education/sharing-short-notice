@@ -656,3 +656,113 @@ actually the same as Rmd site!
 ---
 
 Bookdown...
+
+
+---
+class: middle, center
+
+<https://bookdown.org/yihui/bookdown/>
+
+<iframe src="https://bookdown.org/yihui/bookdown/" height="600" width="1200" frameborder="0"></iframe> 
+
+---
+
+.pull-left[
+
+```{r eval=FALSE}
+.
+├── book.Rproj
+├── _bookdown.yml
+├── _output.yml
+├── index.Rmd #<<
+├── week01.Rmd
+├── week02.Rmd
+└── week03.Rmd
+```
+]
+
+.pull-right[
+hot air balloon with just index labeled
+]
+
+---
+
+.pull-left[
+
+```{r eval=FALSE}
+.
+├── book.Rproj
+├── _bookdown.yml
+├── _output.yml
+├── index.Rmd #<<
+├── week01.Rmd #<<
+├── week02.Rmd #<<
+└── week03.Rmd #<<
+```
+]
+
+.pull-right[
+hot air balloon with just all rmds labeled
+]
+
+---
+
+```{r eval=FALSE}
+.
+├── book.Rproj
+├── _bookdown.yml
+├── _output.yml
+├── index.Rmd 
+├── week01.Rmd 
+├── week02.Rmd 
+├── week03.Rmd 
+└── _book #<<
+```
+
+
+
+---
+class: middle, center
+
+<https://r4ds.had.co.nz/>
+
+<iframe src="https://r4ds.had.co.nz/" height="600" width="1200" frameborder="0"></iframe> 
+
+---
+class: middle, center
+
+<https://stat545.com/>
+
+<iframe src="https://stat545.com/" height="600" width="1200" frameborder="0"></iframe> 
+
+---
+
+annotated screenshot showing:
+
+1. index.Rmd -> index.html
+
+1. then point to individual chapters in TOC and each is an .Rmd file -> 
+
+---
+
+---
+
+blogdown
+
+---
+
+```{r eval = FALSE}
+.
+├── .Rproj.user/
+├── stat101.Rproj
+├── archetypes/ 
+├── config.toml
+├── content/
+├── data/
+├── index.Rmd 
+├── layouts/ 
+*├── public/ # IGNORE #<<
+├── resources/
+├── static/
+└── themes/
+```

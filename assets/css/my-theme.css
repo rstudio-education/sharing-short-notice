@@ -518,3 +518,9 @@ h4 {
 .shadow-text {
   text-shadow: 2px 2px 0.5em black;
 }
+
+.remark-code-line-highlighted {
+  color: #E7553CFF;
+  background-color: transparent;
+}
+
