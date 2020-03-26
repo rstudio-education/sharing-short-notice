@@ -47,10 +47,12 @@ class: title-slide, center, bottom
 ---
 class: middle, center
 
-# Hello
+## .big-text[Hello.]
+
+--
 
 .pull-left[
-## Alison Hill 
+### Alison Hill 
 
 <img style="border-radius: 50%;" src="https://conf20-intro-ml.netlify.com/authors/alison/avatar.jpg" width="150px"/>
 
@@ -62,7 +64,7 @@ class: middle, center
 --
 
 .pull-right[
-## Desirée De Leon  
+### Desirée De Leon  
 
 <img style="border-radius: 50%;" src="https://conf20-intro-ml.netlify.com/authors/desiree/avatar.jpg" width="150px"/>
 
@@ -71,6 +73,7 @@ class: middle, center
 
 ]
 
+--
 
 ???
 
@@ -80,7 +83,7 @@ Here's who we are
 class: middle, center
 
 .pull-left[
-## Alison Hill 
+### Alison Hill 
 
 <img style="border-radius: 50%;" src="https://conf20-intro-ml.netlify.com/authors/alison/avatar.jpg" width="150px"/>
 
@@ -90,7 +93,7 @@ class: middle, center
 ]
 
 .pull-right[
-## Desirée De Leon  
+### Desirée De Leon  
 
 ![](https://media.giphy.com/media/hoqxB6HRhWtySSjO2S/giphy.gif)
 
@@ -106,7 +109,23 @@ And we promise we are real live humans who are stuck at home right now, sitting 
 ---
 class: freight-slide, center, middle, inverse
 
-# We ship a lot of websites
+# .shadow-text[We ship a lot of websites.]
+
+???
+
+Alison is a developmental psychologist
+
+Desirée is a neuroscientist
+
+Neither of us is a web developer
+
+We use R Markdown!
+
+
+---
+class: freight-slide, center, middle, inverse
+
+# .shadow-text[We ship a lot of websites.]
 
 http://bit.ly/giraffe-stats
 
@@ -132,7 +151,6 @@ Desirée is a neuroscientist
 Neither of us is a web developer
 
 We use R Markdown!
-
 ---
 class: middle, center
 
@@ -148,15 +166,15 @@ class: middle, center
 
 <div class="flex" style="margin: 0 1em;">
   <div class="column">
-    <h4> You're an educator </h4>
-    <img src="https://media1.tenor.com/images/a9a75c629437bb894ff1d251324147e3/tenor.gif?itemid=4712531" style="width: 100%; ">
+    <h3> You're an educator <h3>
+    <img src="images/rawpixel/educator.jpg" style="width: 100%;">
   </div>
   
 --
 
    <div class="column"style="margin: 0 1em;">
-    <h4> You've got lots of .Rmds </h4>
-    <img src="images/rmd-buddy.jpg" style="">
+    <h3> You've got lots of .Rmds </h3>
+    <img src="images/rmd-buddy.jpg" style="width: 100%;">
   </div>
   
 
@@ -172,19 +190,19 @@ class: middle, center
 
 <div class="flex" style="margin: 0 1em;">
   <div class="column">
-    <h4> You're an educator </h4>
-    <img src="https://media1.tenor.com/images/a9a75c629437bb894ff1d251324147e3/tenor.gif?itemid=4712531" style="width: 100%; ">
+    <h3> You're an educator </h3>
+    <img src="images/rawpixel/educator.jpg" style="width: 100%;">
   </div>
   
   <div class="column"style="margin: 0 1em;">
-    <h4> You've got lots of .Rmds </h4>
+    <h3> You've got lots of .Rmds </h3>
     <img src="images/rmd-buddy-help.jpg" style="">
   </div>
   
 --
   <div class="column" style="margin: 0 1em;">
-    <h4> Your new classroom </h4>
-    <img src="https://media.gettyimages.com/photos/laptop-metallic-color-with-blank-screen-isolated-and-clipping-path-picture-id900734204?b=1&k=6&m=900734204&s=612x612&w=0&h=LTrauFC9uLdqeDFgRWIGub7uwendvrtcT4M-YP3311k="  style="">
+    <h3> Your new classroom </h3>
+    <img src="images/internet.jpg"  style="">
   </div>
 </div>
 
@@ -199,13 +217,43 @@ class: middle, center
 
 # Sharing on **short notice**
 
+???
+
+With that in mind, we hope to give you a quick tour today of how to get your **course materials** online in the *fastest* way possible.
+
+---
+class: middle, center
+background-image: url("images/short1.jpg")
+background-size: cover
+
+# Sharing on **short notice**
+
+???
+**course materials**...
+
+---
+class: middle, center
+background-image: url("images/short2.jpg")
+background-size: cover
+
+# Sharing on **short notice**
 
 ???
 
-With that in mind, we hope to give you a quick tour today of how to get your course materials online in the *fastest* way possible.
+online...
+
+---
+class: middle, center
+background-image: url("images/short3.jpg")
+background-size: cover
+
+# Sharing on **short notice**
+
+???
+
+in the *fastest* way possible.
 
 (aka not necessarily using longterm best practices, but prioritizing things that are possible to get done in a pinch)
-
 ---
 
 # Why make a course website?

@@ -7,7 +7,7 @@
 }
 
 .remark-slide-content h1 {
-	margin-bottom: 1.0em !important;
+	margin-bottom: 0.5em !important;
 }
 
 .footnote {
@@ -158,50 +158,38 @@ thead, tfoot, tr:nth-child(even) { background: #eee }
 
 .title-slide {
   background-image: url(../../images/rawpixel/zeppelin.jpg);
-  background-position: top;
-  background-size: 55%;
+  background-position: 60% 0%;
+  background-size: 57%;
   background-color: #e7ebec;
 }
 
 
 .title-slide h1 {
-  font-family: 'Karla', serif;
-  color: #3b4245;
+  font-family: 'Noto Serif JP', serif;
+  color: #181b1c;
   font-size: 3em;
-  padding-top: 1em;
-  line-height: 1em;
-  padding-bottom: .1em;
   word-wrap: break-word;
+  letter-spacing: 1pt;
+  font-weight: 300;
+  margin-bottom: -10px !important;
 }
 
 .title-slide h2 {
-  font-family: 'Karla', sans-serif;
-  font-weight: 700;
-  font-size: 1.6em;
+  font-family: 'Sen', sans-serif;
+  font-weight: 400;
+  font-size: 1.35em;
   color: #3b4245;
   text-shadow: none;
-  padding-top: .1em;
-  margin-top: 0px;
-  margin-bottom: .1em;
+  text-transform: uppercase;
+  margin-bottom: 0px !important;
 }
 
 .title-slide h3 {
-  font-family: 'Karla', sans-serif;
+  font-family: 'Sen', sans-serif;
   font-weight: 400;
-  font-size: 1.6em;
+  font-size: 1.3em;
   color: #3b4245;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  line-height: 1.6em;
-}
-
-.title-slide h4 {
-  font-family: 'Karla', sans-serif;
-  font-weight: 400;
-  font-size: 1.4em;
-  color: #3b4245;
-  margin-top: 0px;
-  margin-bottom: 0px;
+  text-transform: none;
 }
 
 .title-slide a {
@@ -496,8 +484,8 @@ h4 {
 .freight-slide {
   background-image: 
     linear-gradient(
-      rgba(59, 66, 69, .5),
-      rgba(59, 66, 69, .5)
+      rgba(59, 66, 69, .8),
+      rgba(59, 66, 69, .8)
     ),
     /* your image */
     url(../../images/rawpixel/freight.jpg);
@@ -507,4 +495,12 @@ h4 {
 .emphasis {
   font-family: 'Kalam';
   font-weight: bold;
+}
+
+.big-text {
+  font-size: 2.8em !important;
+}
+
+.shadow-text {
+  text-shadow: 2px 2px 0.5em black;
 }
