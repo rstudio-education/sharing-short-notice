@@ -213,13 +213,24 @@ class: middle, center
 [arghhh-- why do the visuals "jump" down??]
 
 ---
+class: center, lesson-time-slide
+background-image: url("images/rawpixel/lesson-time.jpg")
+background-size: contain
+
+## You might feel like this right now.
+
+???
+
+And you might feel like this right now.
+
+---
 class: middle, center
 
 # Sharing on **short notice**
 
 ???
 
-With that in mind, we hope to give you a quick tour today of how to get your **course materials** online in the *fastest* way possible.
+With that in mind, we hope to give you a quick tour today of how...
 
 ---
 class: middle, center
@@ -229,7 +240,7 @@ background-size: cover
 # Sharing on **short notice**
 
 ???
-**course materials**...
+to get your **course materials**...
 
 ---
 class: middle, center
@@ -324,10 +335,12 @@ R Markdown can be knitted into HTML! `r emo::ji("rocket")`
 [NEED TRANSITION]
 
 ---
+class: middle, center
 
 # What does sharing look like?
 
-(gif of file window, click on .Rproj file to open and open up index.Rmd; have TOC floating and flatly theme already done)
+
+![](https://dcossyleon.github.io/gifs/video/single-doc-Rmd.gif)
 
 ???
 
@@ -691,7 +704,7 @@ code = R
 # Inside the `_site.yml`
 
 ```{r echo=FALSE}
-yml_empty() %>%
+ yml_empty() %>%
   yml_navbar(
     title = "rstats101",
     left = list(
@@ -699,7 +712,7 @@ yml_empty() %>%
       navbar_page("Syllabus", href = "syllabus.html")
     )) %>% 
   yml_output(html_document(toc = TRUE, toc_float = TRUE, theme = "flatly")) %>% 
-  asis_yaml_output()
+  asis_yaml_output(fences = FALSE)
 ```
 
 
