@@ -373,86 +373,131 @@ background-size: contain
 Let's start with a single Rmd file, inside an folder that is also an R project
 
 ---
+class: middle, center
 
 ## What does an Rmd look like?
 
-![](images/screenshots/Single-rmd.jpg)
+```{r single-rmd, echo=FALSE, out.width = "70%"}
+knitr::include_graphics("images/screenshots/Single-rmd.jpg")
+```
 
 ???
 
-Here's what an RMD looks like. 
+Here's what an RMD looks like....
 
 ---
+class: middle, center
 
 ## What does an Rmd look like?
 
-![](images/screenshots/Single-rmd1.jpg)
+```{r single-rmd1, echo=FALSE, out.width = "70%"}
+knitr::include_graphics("images/screenshots/Single-rmd1.jpg")
+```
 
 ???
 
-And it's made up of some metadata, which we call the YAML.
+And it's made up of some metadata, which we call the YAML...
+
+---
+class: middle, center 
+
+## What does an Rmd look like?
+
+```{r single-rmd2, echo=FALSE, out.width = "70%"}
+knitr::include_graphics("images/screenshots/Single-rmd2.jpg")
+```
+
+???
+
 Text in the form of markdown
+
+---
+class: center middle
+
+## What does an Rmd look like?
+
+```{r single-rmd3, echo=FALSE, out.width = "70%"}
+knitr::include_graphics("images/screenshots/Single-rmd3.jpg")
+```
+
+???
+
 and oftentimes, code. 
 
-
-## What does an Rmd look like?
-
-![](images/screenshots/Single-rmd2.jpg)
-
-???
-
 ---
-
-## What does an Rmd look like?
-
-![](images/screenshots/Single-rmd3.jpg)
-
-???
-
----
+class: middle center
 
 ## What does a .emphasis[shareable] Rmd look like?
 
-gif- knit to html
+```{r single-rmd-knit, echo=FALSE, out.width = "70%"}
+knitr::include_graphics("https://dcossyleon.github.io/gifs/video/single-doc-knit.gif")
+```
 
 ???
 
-Use kap for a gif --- should end at produced HTML
-
-And your RMD is easily sharable when you knit it to HTML. 
-So we click Knit and...
+Let's knit our RMD source file and see. 
+We click Knit and...we get an HTML file.
 
 ---
+class: middle center
 
 ## What does a .emphasis[shareable] Rmd look like?
 
-screenshot- knitted html, pretty
+```{r single-knit1, echo=FALSE, out.width = "70%"}
+knitr::include_graphics("images/screenshots/Single-knit1.jpg")
+```
 
 ???
-
 Voila! We have an HTML file that looks like a webpage. 
-
 but this is still trapped on your computer--it's not yet online. 
-There is no *link* to give learners so they can access this content.
 
 ---
-background-image: url("images/hello-index.jpg")
-background-size: 80%
-background-position: center
+class: middle center
+
+## What does a .emphasis[shareable] Rmd look like?
+
+```{r single-knit2, echo=FALSE, out.width = "70%"}
+knitr::include_graphics("images/screenshots/Single-knit2.jpg")
+```
+
+???
+
+There is no *link* to give learners so they can access this content.
+This is just the local filepath to the HTML file.
+
+
+---
+class: center top
 
 ## What does a .emphasis[linkable] Rmd look like?
 
+--
+.pull-left[
+```{r hello-index, echo=FALSE}
+knitr::include_graphics("images/hello-index.jpg")
+```
+]
+
+--
+
+.pull-right[
+```{r rename, echo=FALSE}
+knitr::include_graphics("https://dcossyleon.github.io/gifs/video/single-doc-rename.gif")
+```
+
+]
 
 ???
 
-What does a linkable RMD look like? 
-First, you have to make sure your RMD is named index.Rmd -- an internet browser will always begin by looking for a file named index to open as your homepage. 
+So thenk what does a *linkable* RMD look like? 
+First, you have to make sure your RMD is named index.Rmd -- an internet browser will always begin by looking for a file named index because that's what it uses as a homepage. 
 
 
 ---
 background-image: url("images/Server.jpg")
 background-size: 80%
 background-position: bottom
+class: center, top
 
 ## What does a .emphasis[linkable] Rmd look like?
 
@@ -480,24 +525,25 @@ class: top
 For this webinar, we'll use servers provided by Netlify. 
 
 ---
+class: center, middle
 
 ## What does a .emphasis[linkable] Rmd look like?
 
-gif of drag and drop
+```{r single-dnd, echo=FALSE}
+knitr::include_graphics("https://dcossyleon.github.io/gifs/video/single-doc-dnd.gif")
+```
 
 ???
 
-And we can take a folder that has the knitted HTML file we created, 
-and drag it into netlify and...
-(gif -- all the way through getting a link)
+So we can go to app.netlify.com/drop -- and have the R Project folder with our RMD content ready to drop in. And netlify does the rest of the work for us. Giving us a link. And our site is there!
+
+**Say "don't close out of this page"??**
 
 ---
 class: middle center
 
 
 ![](images/doc-live.jpg)
-
-Still need to include screenshot of the netlify link
 
 
 ???
