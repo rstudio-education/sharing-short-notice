@@ -494,28 +494,86 @@ Has kind of a crazy name, but you can now send this to whomever you'd like.
 
 
 ---
-
-class: middle center
+class: center, middle
 
 # What just happened?
 
-```{r echo=FALSE, out.width = "800px"}
- knitr::include_graphics("images/dnd-doc.gif")
-```
+---
+background-image: url(images/what-happened/single-doc/Slide1.jpeg)
+class: middle center
+background-size: contain
+
 
 ???
 
 We started with an RMD file -->  we knit it to get our HTML version --> 
 Then we dragged and dropped the folder with the HTML file straight into netlify to get our link.
 
-(I'll replace parts of this with the right screenshots so it's not all sketched -- and name RMD index). 
+---
+background-image: url(images/what-happened/single-doc/Slide2.jpeg)
+class: middle center
+background-size: contain
 
-```{r echo=FALSE}
-knitr::include_url("https://summer-of-blogdown.netlify.com/01/#44")
-```
 
 ???
 
+We started with an RMD file -->  we knit it to get our HTML version --> 
+Then we dragged and dropped the folder with the HTML file straight into netlify to get our link.
+
+---
+background-image: url(images/what-happened/single-doc/Slide3.jpeg)
+class: middle center
+background-size: contain
+
+
+???
+
+We started with an RMD file -->  we knit it to get our HTML version --> 
+Then we dragged and dropped the folder with the HTML file straight into netlify to get our link.
+
+---
+background-image: url(images/what-happened/single-doc/Slide4.jpeg)
+class: middle center
+background-size: contain
+
+
+???
+
+We started with an RMD file -->  we knit it to get our HTML version --> 
+Then we dragged and dropped the folder with the HTML file straight into netlify to get our link.
+
+---
+background-image: url(images/what-happened/single-doc/Slide5.jpeg)
+class: middle center
+background-size: contain
+
+
+???
+
+We started with an RMD file -->  we knit it to get our HTML version --> 
+Then we dragged and dropped the folder with the HTML file straight into netlify to get our link.
+
+---
+background-image: url(images/what-happened/single-doc/Slide6.jpeg)
+class: middle center
+background-size: contain
+
+
+???
+
+We started with an RMD file -->  we knit it to get our HTML version --> 
+Then we dragged and dropped the folder with the HTML file straight into netlify to get our link.
+
+---
+background-image: url(images/what-happened/single-doc/Slide7.jpeg)
+class: middle center
+background-size: contain
+
+
+???
+
+We started with an RMD file -->  we knit it to get our HTML version --> 
+Then we dragged and dropped the folder with the HTML file straight into netlify to get our link.
 
 ---
 # Sharing = knit + drop -> LINK

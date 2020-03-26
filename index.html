@@ -476,24 +476,86 @@ Has kind of a crazy name, but you can now send this to whomever you'd like.
 
 
 ---
-
-class: middle center
+class: center, middle
 
 # What just happened?
 
-&lt;img src="images/dnd-doc.gif" width="800px" /&gt;
+---
+background-image: url(images/what-happened/single-doc/Slide1.jpeg)
+class: middle center
+background-size: contain
+
 
 ???
 
 We started with an RMD file --&gt;  we knit it to get our HTML version --&gt; 
 Then we dragged and dropped the folder with the HTML file straight into netlify to get our link.
 
-(I'll replace parts of this with the right screenshots so it's not all sketched -- and name RMD index). 
+---
+background-image: url(images/what-happened/single-doc/Slide2.jpeg)
+class: middle center
+background-size: contain
 
-&lt;iframe src="https://summer-of-blogdown.netlify.com/01/#44" width="504" height="400px"&gt;&lt;/iframe&gt;
 
 ???
 
+We started with an RMD file --&gt;  we knit it to get our HTML version --&gt; 
+Then we dragged and dropped the folder with the HTML file straight into netlify to get our link.
+
+---
+background-image: url(images/what-happened/single-doc/Slide3.jpeg)
+class: middle center
+background-size: contain
+
+
+???
+
+We started with an RMD file --&gt;  we knit it to get our HTML version --&gt; 
+Then we dragged and dropped the folder with the HTML file straight into netlify to get our link.
+
+---
+background-image: url(images/what-happened/single-doc/Slide4.jpeg)
+class: middle center
+background-size: contain
+
+
+???
+
+We started with an RMD file --&gt;  we knit it to get our HTML version --&gt; 
+Then we dragged and dropped the folder with the HTML file straight into netlify to get our link.
+
+---
+background-image: url(images/what-happened/single-doc/Slide5.jpeg)
+class: middle center
+background-size: contain
+
+
+???
+
+We started with an RMD file --&gt;  we knit it to get our HTML version --&gt; 
+Then we dragged and dropped the folder with the HTML file straight into netlify to get our link.
+
+---
+background-image: url(images/what-happened/single-doc/Slide6.jpeg)
+class: middle center
+background-size: contain
+
+
+???
+
+We started with an RMD file --&gt;  we knit it to get our HTML version --&gt; 
+Then we dragged and dropped the folder with the HTML file straight into netlify to get our link.
+
+---
+background-image: url(images/what-happened/single-doc/Slide7.jpeg)
+class: middle center
+background-size: contain
+
+
+???
+
+We started with an RMD file --&gt;  we knit it to get our HTML version --&gt; 
+Then we dragged and dropped the folder with the HTML file straight into netlify to get our link.
 
 ---
 # Sharing = knit + drop -&gt; LINK
@@ -1253,6 +1315,42 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
     deleted = true;
   });
 })();
+(function() {
+  "use strict"
+  /* Replace <script> tags in slides area to make them executable
+   *
+   * Runs after post-processing of markdown source into slides and replaces only
+   * <script>s on the last slide of continued slides using the .has-continuation
+   * class added by xaringan. Finally, any <script>s in the slides area that
+   * aren't executed are commented out.
+   */
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container:not(.has-continuation) script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+  var scriptsNotExecuted = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container.has-continuation script'
+  );
+  if (!scriptsNotExecuted.length) return;
+  for (var i = 0; i < scriptsNotExecuted.length; i++) {
+    var comment = document.createComment(scriptsNotExecuted[i].outerHTML)
+    scriptsNotExecuted[i].parentElement.replaceChild(comment, scriptsNotExecuted[i])
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
 // adds .remark-code-has-line-highlighted class to <pre> parent elements
 // of code chunks containing highlighted lines with class .remark-code-line-highlighted
 (function(d) {
@@ -1270,17 +1368,6 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
   }
   preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
 })(document);</script>
-
-<script>
-(function() {
-  var links = document.getElementsByTagName('a');
-  for (var i = 0; i < links.length; i++) {
-    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
-      links[i].target = '_blank';
-    }
-  }
-})();
-</script>
 
 <script>
 slideshow._releaseMath = function(el) {
