@@ -241,6 +241,16 @@ div.my-footer span {
     bottom: 2px;
 }
 
+.remark-slide-content:after {
+    content: "bit.ly/share";
+    position: absolute;
+    bottom: 5px;
+    right: 35px;
+    height: 40px;
+    width: 120px;
+    color: #E7553C;
+}
+
 /* your turns */
 
 .your-turn {

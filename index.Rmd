@@ -212,6 +212,8 @@ class: middle, center
 
 * And--- you probably have a new classroom space that looks like this-- so sharing needs to be done 100% online
 
+[arghhh-- why do the visuals "jump" down??]
+
 ---
 class: middle, center
 
@@ -254,6 +256,10 @@ background-size: cover
 in the *fastest* way possible.
 
 (aka not necessarily using longterm best practices, but prioritizing things that are possible to get done in a pinch)
+
+
+And one of the ways we can do that is by making a course website
+
 ---
 
 # Why make a course website?
@@ -292,6 +298,7 @@ second column? You might think the downsides are that this requires....
 
 
 ---
+class: middle, center
 
 # Good news
 
@@ -302,19 +309,21 @@ R markdown is made for sharing
 Luckily, R Markdown is made for sharing
 
 ---
+class: middle, center
 
 # Better news
 
 HTML makes sharing even easier with a `r emo::ji("star")`link`r emo::ji("star")` and...
 
 --
+class: middle, center
 
 R Markdown can be knitted into HTML! `r emo::ji("rocket")`
 
 
 ???
 
-What's the transition here?
+[NEED TRANSITION]
 
 ---
 
@@ -522,7 +531,7 @@ class: middle, center
 
 
 ---
-background-image: url(images/rawpixel/bunch-balloons.jpg)
+background-image: url(images/rawpixel/bunch-balloons-annotated.jpg)
 background-size: contain
 background-position: right
 class: middle, center
