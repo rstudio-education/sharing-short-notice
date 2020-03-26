@@ -340,12 +340,6 @@ class: middle, center
 # What does sharing look like?
 
 
-![](https://dcossyleon.github.io/gifs/video/single-doc-Rmd.gif)
-
-???
-
-Let's start with a single Rmd file, inside an folder that is also an R project
-
 ---
 
 name: html_document
@@ -356,7 +350,16 @@ class: inverse, middle, center
 
 ???
 
-divider silde only
+divider slide?
+
+---
+class: middle, center
+background-image: url(https://dcossyleon.github.io/gifs/video/single-doc-Rmd.gif)
+background-size: contain
+
+???
+
+Let's start with a single Rmd file, inside an folder that is also an R project
 
 ---
 
