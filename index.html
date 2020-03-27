@@ -798,13 +798,35 @@ output:
 ]
 
 ---
+class: center, left
+
+## Put it together and what have you got?
+
+.pull-left[
+
+.Rmds
+
+&lt;img src="images/rawpixel/instruments.jpg" width="2558" /&gt;
+
+]
+
+--
+
+.pull-right[
+
+`_site.yml`
+
+&lt;img src="images/orchestra.jpg" width="501" /&gt;
+]
+
+---
 name: build-rmd-site
-class: middle
 background-image: url(images/Clouds2.jpg)
 background-size: cover
 
-.left-column[
+## Build the site
 
+.left-column[
 
 ```r
 .
@@ -820,43 +842,66 @@ background-size: cover
 &lt;img src="images/screenshots/build-site.jpg" width="640" /&gt;
 ]
 
+
+
 ???
 
-ONce you have at minimum the _site.yml and the index.RMd
+Once you have at minimum the _site.yml and the index.RMd
 You can mouse over to the Build tab, which give you  HTML-website ready files in a folder called "_site"
 
 ---
+class: middle, center
 
 # How do you share this site?
-
 Drag-and-drop `_site/`
 
-![](https://media.giphy.com/media/5pUkiGdxzKisg/giphy.gif)
+---
+class: center, middle
+
+&lt;video width="1530" height="610" controls&gt;
+    &lt;source src="images/rmd-site-dnd.mp4" type="video/mp4"&gt;
+&lt;/video&gt;
 
 ???
 
 And we will drop that folder back into netlify to make our site. 
 
 ---
+class: center, middle
 
 # But...
 
-(balloon deflating? or popping)
+.pull-left[
+![](https://media.giphy.com/media/3orif5e8QhgoL9TvmU/giphy.gif)
 
+
+![](https://media.giphy.com/media/5pUkiGdxzKisg/giphy.gif)
+
+]
+
+.pull-right[
 Only exists for 24 hours. 
 
 Need to make a Netlify account to make it stick.
-
+]
 
 ???
 
 But if we do nothing else, this site will only exist for 24 hours. We need to make a Netlify account to make it stick. 
 
 ---
+class: center, middle
 
 # Back to Netlify
 
 Make an account.
+
+---
+class: middle center
+
+&lt;video width="1510" height="638" controls&gt;
+    &lt;source src="images/netlify-account.mp4" type="video/mp4"&gt;
+&lt;/video&gt;
 
 ???
 
@@ -865,53 +910,37 @@ Here's a gif of me doing this in one, two, three steps....
 
 Now we can rest asssured that this link is here to stay, and we can share it with others. 
 
+---
+class: center, middle
+
+# Update again?
 
 ---
+class: center, middle
 
-# Inside the `_site.yml`
-
-```yaml
-navbar:
-  title: rstats101
-  left:
-  - text: Home
-    href: index.html
-  - text: Syllabus
-    href: syllabus.html
-output:
-  html_document:
-    toc: true
-    toc_float: true
-    theme: flatly
-```
-
-
-
----
-class: center, left
-
-# Put it together and what have you got?
-
-.pull-left[
-
-.Rmds
-
-(maybe a violin, a flute, some other instruments?)
-]
-
---
-
-.pull-right[
-
-`_site.yml`
-
-orchestra conductor
-
-]
+&lt;video width="1560" height="620" controls&gt;
+    &lt;source src="images/netlify-update.mp4" type="video/mp4"&gt;
+&lt;/video&gt;
 
 
 ---
 
+class: middle, center
+background-image: url(images/Clouds2.jpg)
+background-size: cover
+
+
+## Staying organized
+
+&lt;https://github.com/apreshill/data-vis-labs-2018&gt;
+
+&lt;iframe src="https://github.com/apreshill/data-vis-labs-2018" height="500" width="1200" frameborder="0"&gt;&lt;/iframe&gt; 
+
+---
+
+class: middle, left
+
+## R Markdown sites
 
 .pull-left[
 
@@ -919,7 +948,7 @@ orchestra conductor
 
 * Source stays same
 
-* Bootstrap
+* Built-in themes (Bootstrap)
 
 * Low dependencies
 
@@ -933,21 +962,24 @@ orchestra conductor
 
 * No Rmds in folders
 
-* Update menus manually
+* Update navbar manually
 
 * 1 content flavor
 
 ]
 
+???
+
+So in summary for RMD site, 
+You don't have to change much from your original docs. 
+You get to use built in themes from bootstrap
+..
+..
+..
+
 ---
 
-# Staying organized
-
-[with RMD sites](https://github.com/apreshill/data-vis-labs-2018)
-
----
-
-# DISTILL
+# Distill
 
 ???
 Transition slide
