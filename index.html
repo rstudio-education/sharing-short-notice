@@ -4,7 +4,7 @@
     <title>Sharing on Short Notice</title>
     <meta charset="utf-8" />
     <meta name="author" content="Alison Hill" />
-    <meta name="date" content="2020-03-26" />
+    <meta name="date" content="2020-03-27" />
     <link href="libs/remark-css/default.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/my-theme.css" type="text/css" />
@@ -435,21 +435,13 @@ This is just the local filepath to the HTML file.
 
 
 ---
-class: center top
+class: center middle
 
 ## What does a .emphasis[linkable] Rmd look like?
 
 --
-.pull-left[
+
 &lt;img src="images/hello-index.jpg" width="532" /&gt;
-]
-
---
-
-.pull-right[
-![](https://dcossyleon.github.io/gifs/video/single-doc-rename.gif)&lt;!-- --&gt;
-
-]
 
 ???
 
@@ -576,15 +568,6 @@ background-size: contain
 
 
 ---
-background-image: url(images/what-happened/single-doc/Slide7.jpeg)
-class: middle center
-background-size: contain
-
-
-???
-
-
----
 class: middle, center
 
 ## Sharing = knit + drop -&gt; LINK
@@ -625,62 +608,99 @@ class: middle, center
 
 
 ---
-background-image: url(images/mtsalsa-hi-square.jpg)
-background-position: top center
+background-image: url(images/mtsalsa0.jpg)
+background-position: bottom center
 background-size: contain
 class: top, center
 
 ## So where are we going?
 
-
-
 ???
 
+"markdown mountain"
+
 We've just shown you how to go from a regular RMD doc on your computer to one that's a web*page*.
+
+---
+background-image: url(images/mtsalsa.jpg)
+background-position: bottom center
+background-size: contain
+class: top, center
+
+## So where are we going?
+
+???
 
 Our goal for the rest of this webinar is to show you 4 RMD tools that are for turning a *COLLECTION* of RMDs into a web*site*.
 
 
 ---
-class: center middle
-
-## A collection of RMDs
-
-![](https://www.grammarly.com/blog/wp-content/uploads/2016/03/Prickle1.gif)
-
-???
-
-By the way, fun fact about hedgehogs--
-
-
----
 name: default_site
-class: inverse, middle, center
+class:  top, center
+background-image: url(images/mtsalsa-rmd.jpg)
+background-size: contain
+background-position: center, bottom
 
 # `site: rmarkdown::default_site`
 
 
 ???
 
-transition slide --revisit later
-
 So let's begin with an R Markdown site.
 
 ---
+class: middle
+background-image: url(images/Clouds2.jpg)
 
-# R Markdown site
+&lt;https://apreshill.github.io/data-vis-labs-2018&gt;
 
-Screenshot of rendered html site (w/ theme)
+&lt;iframe src="https://apreshill.github.io/data-vis-labs-2018/index.html" height="600" width="1200" frameborder="0"&gt;&lt;/iframe&gt; 
 
 ???
 
-Here's an example of what one site would look like. 
+Here's what one looks like out in the wild. 
+
+A website made up of many individual R Markdown documents.
+
+Some of which are now connected via:
+
+* A navbar
 
 ---
+class: middle
+background-image: url(images/Clouds2.jpg)
+background-size: cover
 
-# R Markdown site
+&lt;img src="images/screenshots/RMD-site.png" width="702" /&gt;
 
-same screenshot, annotated
+???
+And here's a simple book that we're going to look at more closely.
+
+make simple site to match dir tree in next slide
+
+---
+background-image: url(images/Clouds2.jpg)
+class: middle center
+
+.left-column[
+
+```r
+.
+├── RMD-site.Rproj
+*├── _site.yml
+*├── index.Rmd
+├── Lab1.Rmd
+└── _site/ 
+```
+]
+
+.right-column[
+&lt;img src="images/screenshots/RMD-site-annotated.png" width="880" /&gt;
+]
+
+???
+
+Here on the left you can see the files in the project directory. 
 
 **Minimum** required files:
 
@@ -688,54 +708,95 @@ same screenshot, annotated
 
 1. `_site.yml` = Navbar / theme 
 
---
+---
+background-image: url(images/Clouds2.jpg)
+
+.left-column[
+
+```r
+.
+├── RMD-site.Rproj
+├── _site.yml 
+├── index.Rmd 
+*├── Lab1.Rmd
+└── _site/
+```
+]
+
+.right-column[
+&lt;img src="images/screenshots/RMD-site-lab.png" width="703" /&gt;
+]
+
+
+
+???
 
 **Optional** but likely:
 
 + Other `.Rmd` files = Content 
 
-???
+---
+name: rmd-site-yml
 
-To build something like this, There are two minimum files you need:
+# Inside the `_site.yml`
 
-* The homepage content comes from you have in index.Rmd
-* And the navbar content and other global features like the theme, come from a file called _site.yml
-* All other R Markdown documents becomes the other webpages on the site.
+.left-column[
+
+```r
+.
+├── RMD-site.Rproj
+*├── _site.yml
+├── index.Rmd
+├── Lab1.Rmd
+└── _site/
+```
+]
+
+&lt;img src="images/site.yml.png" style="position: absolute; width: 62%; top: -23px;"&gt;
+
+
+.right-column[
+```yaml
+navbar:
+  title: rstats101
+  left:
+  - text: Syllabus
+    href: index.html
+  - text: Labs
+    href: lab1.html
+output:
+  html_document:
+    toc: true
+    toc_float: true
+    theme: yeti
+```
+]
 
 ---
+name: build-rmd-site
+class: middle center
 
-# Inside the project
-
-.pull-left[
+.left-column[
 
 
 ```r
 .
-├── RMDsite.Rproj
+├── RMD-site.Rproj
+*├── _site.yml
 *├── index.Rmd
-├── _site.yml
-├── week02.Rmd
-├── week03.Rmd
-└── _site 
+├── Lab1.Rmd
+└── _site/ 
 ```
 ]
 
-.pull-right[
-Build your site with the Build tab. 
+.right-column[
+&lt;img src="images/screenshots/build-site.jpg" width="640" /&gt;
 ]
-
-
----
-
-# Where is the site?
-
-screenshot with build button highlighted
 
 ???
 
-What do you do once you have these files?
-You can mouse over to the Build tab, which will knit all your RMDs at once, pulling them together according to _site.yml.
-This will put all your HTML-website ready files in a folder called "site"
+ONce you have at minimum the _site.yml and the index.RMd
+You can mouse over to the Build tab, which give you  HTML-website ready files in a folder called "_site"
 
 ---
 
@@ -776,22 +837,6 @@ So let's go back to Netlify and do that.
 Here's a gif of me doing this in one, two, three steps....
 
 Now we can rest asssured that this link is here to stay, and we can share it with others. 
-
----
-
-# Inside the Rmds
-
-.Rmd files look just like you think...
-
-+ now there are just many of them, but 
-
-+ remember: index is special 
-
-???
-
-Metadata = YAML
-text = markdown
-code = R
 
 
 ---
@@ -968,14 +1013,14 @@ actually the same as Rmd site!
 ]
 
 ---
-class: inverse, middle, center
+name: bookdown
+class:  top, center
+background-image: url(mtsalsa-book.jpg)
+background-size: contain
+background-position: center, bottom
 
-# bookdown
 
---
-
-
-`install.packages("bookdown")`
+# `install.packages("bookdown")`
 
 
 ???
@@ -1291,7 +1336,7 @@ We won't go into the key files for this, but a main PRO of blogdown is that you 
 
 ---
 
-# HEre's a shortcut you can use
+# Here's a shortcut you can use
 
 Deploy to netlify link
 
