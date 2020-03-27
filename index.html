@@ -657,7 +657,7 @@ background-position: center, bottom
 So let's begin with an R Markdown site.
 
 ---
-class: middle
+class: center middle
 background-image: url(images/Clouds2.jpg)
 
 &lt;https://apreshill.github.io/data-vis-labs-2018&gt;
@@ -675,20 +675,23 @@ Some of which are now connected via:
 * A navbar
 
 ---
-class: middle
+class: center middle
 background-image: url(images/Clouds2.jpg)
 background-size: cover
+
+## R Markdown site
 
 &lt;img src="images/screenshots/RMD-site.png" width="702" /&gt;
 
 ???
-And here's a simple book that we're going to look at more closely.
 
-make simple site to match dir tree in next slide
+And here's a simple site that we're going to look at more closely.
 
 ---
 background-image: url(images/Clouds2.jpg)
-class: middle center
+background-size: cover
+
+## Inside the project
 
 .left-column[
 
@@ -698,17 +701,25 @@ class: middle center
 *├── _site.yml
 *├── index.Rmd
 ├── Lab1.Rmd
-└── _site/ 
 ```
 ]
 
 .right-column[
-&lt;img src="images/screenshots/RMD-site-annotated.png" width="880" /&gt;
+&lt;img src="images/screenshots/RMD-site.png" width="702" /&gt;
 ]
+
+--
+
+&lt;img src="images/RMD-site-annotated.png" style="
+  position: absolute; 
+  width: 52%; 
+  top: 91px;
+  right: 147px;
+"&gt;
 
 ???
 
-Here on the left you can see the files in the project directory. 
+On the left, we have  directory tree, where you can see the files in the project directory. 
 
 **Minimum** required files:
 
@@ -718,6 +729,9 @@ Here on the left you can see the files in the project directory.
 
 ---
 background-image: url(images/Clouds2.jpg)
+background-size: cover
+
+## Inside the project
 
 .left-column[
 
@@ -727,15 +741,12 @@ background-image: url(images/Clouds2.jpg)
 ├── _site.yml 
 ├── index.Rmd 
 *├── Lab1.Rmd
-└── _site/
 ```
 ]
 
 .right-column[
 &lt;img src="images/screenshots/RMD-site-lab.png" width="703" /&gt;
 ]
-
-
 
 ???
 
@@ -745,8 +756,10 @@ background-image: url(images/Clouds2.jpg)
 
 ---
 name: rmd-site-yml
+background-image: url(images/Clouds2.jpg)
+background-size: cover
 
-# Inside the `_site.yml`
+## Inside the `_site.yml`
 
 .left-column[
 
@@ -756,11 +769,15 @@ name: rmd-site-yml
 *├── _site.yml
 ├── index.Rmd
 ├── Lab1.Rmd
-└── _site/
 ```
 ]
 
-&lt;img src="images/site.yml.png" style="position: absolute; width: 62%; top: -23px;"&gt;
+&lt;img src="images/site.yml.png" style="
+  position: absolute; 
+  width: 63%; 
+  top: 96px;
+  right: 49px;
+"&gt;
 
 
 .right-column[
@@ -782,7 +799,9 @@ output:
 
 ---
 name: build-rmd-site
-class: middle center
+class: middle
+background-image: url(images/Clouds2.jpg)
+background-size: cover
 
 .left-column[
 
@@ -790,10 +809,10 @@ class: middle center
 ```r
 .
 ├── RMD-site.Rproj
-*├── _site.yml
-*├── index.Rmd
+├── _site.yml
+├── index.Rmd
 ├── Lab1.Rmd
-└── _site/ 
+*└── _site/
 ```
 ]
 
@@ -822,7 +841,7 @@ And we will drop that folder back into netlify to make our site.
 
 # But...
 
-(maybe a good place also for cinderella- carriage goes poof)
+(balloon deflating? or popping)
 
 Only exists for 24 hours. 
 
