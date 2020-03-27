@@ -1397,3 +1397,40 @@ which options work best for whom?
 
 # Other links, resources, stuff
 
+---
+background-image: url("images/rawpixel/site-dreams.jpg")
+background-size: cover
+class: top, center
+
+# Thank you
+
+---
+name: excuses
+
+## 3 excuses
+
+.columns[
+
+.left-col[
+"I can't give away my work!"
+
+
+] 
+
+
+
+.middle-col[
+"It's not perfect (yet)!" 
+
+*"If it knits, it ships."*
+]
+
+
+
+.right-col[
+"It's scary." 
+
+*"If it hurts, do it more often."*
+]
+
+]
