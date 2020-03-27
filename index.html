@@ -25,11 +25,14 @@ class: title-slide, center, bottom
 ### Alison Hill &amp;#183; Desirée De Leon
 
 
+---
+name: clouds
+class: center, middle
+background-image: url(images/Clouds.jpg)
+background-size: cover
 
 ---
-class: middle, center
-background-image: url(images/Clouds.jpg)
-background-size: contain
+template: clouds
 
 ## .big-text[Hello.]
 
@@ -62,7 +65,9 @@ background-size: contain
 
 ???
 
-Here's who we are
+I'm Alison Hill. I'm a data scientist and professional educator at RStudio.
+
+And I'm Desirée De Leon. I interned with Alison last summer at RStudio on the education team.
 
 ---
 class: middle, center
@@ -91,7 +96,7 @@ background-size: contain
 
 ???
 
-And we promise we are real live humans who are stuck at home right now, sitting in front our computers.
+And we promise we are real live humans who are stuck at home right now just like you all, sitting in front our computers.
 
 ---
 class: freight-slide, center, middle, inverse
@@ -106,7 +111,9 @@ Desirée is a neuroscientist
 
 Neither of us is a web developer
 
-We use R Markdown!
+But we both ship a lot of websites for teaching data science.
+
+Here are just a few of them.
 
 
 ---
@@ -131,23 +138,20 @@ https://apreshill.github.io/data-vis-labs-2018/
 
 ???
 
-Alison is a developmental psychologist
+If you type the short link on the bottom right of this slide into your browser right now, you'll be able to follow along.
 
-Desirée is a neuroscientist
+All of these links are clickable from the slides.
 
-Neither of us is a web developer
-
-We use R Markdown!
 ---
-class: middle, center
-background-image: url(images/Clouds.jpg)
-background-size: contain
+template: clouds
 
 # Who are you?
 
 ???
 
-Divider
+So that's us. 
+
+We are happy to be with you today, and we hope that in our time together we'll be able to help you do your job better.
 
 
 ---
@@ -169,9 +173,11 @@ class: middle, center
 
 ???
 
-And here's who we think you are...
+Here's who we think you are...
+
 * You're an educator
-* You have R Markdown files for teaching..
+
+* You have R Markdown files for teaching...
 
 ---
 class: middle, center
@@ -204,9 +210,10 @@ class: middle, center
 [arghhh-- why do the visuals "jump" down??]
 
 ---
-class: center, lesson-time-slide
+class: center
 background-image: url("images/rawpixel/lesson-time.jpg")
 background-size: contain
+background-color: #f6f6f6
 
 ## You might feel like this right now.
 
@@ -255,10 +262,40 @@ background-size: cover
 
 in the *fastest* way possible.
 
-(aka not necessarily using longterm best practices, but prioritizing things that are possible to get done in a pinch)
+---
+class: middle, center
+background-image: url("images/rawpixel/inflation.jpg")
+background-size: contain
+background-color: #EBEAE6
 
+???
 
-And one of the ways we can do that is by making a course website
+So we'll show you how to build websites using R Markdown and friends. 
+
+Our goal is to help you get your site up in the air...
+
+---
+class: inverse, center
+background-image: url("images/rawpixel/blue-balloon.jpg")
+background-size: cover
+
+# This
+
+???
+
+with a link so that you can get on with your teaching...
+
+---
+class: top center
+background-image: url("images/rawpixel/balloon-ouch.jpg")
+background-position: bottom center
+background-size: 40%
+
+# Not this
+
+???
+
+and hopefully avoid HTML pain.
 
 ---
 
@@ -296,54 +333,18 @@ Why make a course website at all?  It makes your content shareable, reproducible
 
 second column? You might think the downsides are that this requires....
 
+Saving here for now:
+The good news is that R markdown is made for sharing
+
+R Markdown can be knitted into websites
+
+and websites can be shared easily with a single link
 
 ---
-class: middle, center
+template: clouds
 
-## Good news
+# What does an .Rmd look like?
 
-R markdown is made for sharing
-
-???
-
-Luckily, R Markdown is made for sharing
-
----
-class: middle, center
-
-## Better news
-
-HTML makes sharing even easier with a ⭐link⭐ and...
-
---
-class: middle, center
-
-R Markdown can be knitted into HTML! 🚀
-
-
-???
-
-[NEED TRANSITION]
-
----
-class: center, middle
-background-image: url(images/Clouds.jpg)
-background-size: cover
-
-# What does sharing look like?
-
-
----
-
-name: html_document
-class: inverse, middle, center
-
-## `output: rmarkdown::html_document`
-
-
-???
-
-divider slide?
 
 ---
 class: middle, center
@@ -357,7 +358,7 @@ Let's start with a single Rmd file, inside an folder that is also an R project
 ---
 class: middle, center
 
-## What does an Rmd look like?
+## An .Rmd
 
 &lt;img src="images/screenshots/Single-rmd.jpg" width="70%" /&gt;
 
@@ -368,9 +369,11 @@ Here's what an RMD looks like....
 ---
 class: middle, center
 
-## What does an Rmd look like?
+## An .Rmd
+
 
 &lt;img src="images/screenshots/Single-rmd1.jpg" width="70%" /&gt;
+
 
 ???
 
@@ -379,7 +382,7 @@ And it's made up of some metadata, which we call the YAML...
 ---
 class: middle, center 
 
-## What does an Rmd look like?
+## An .Rmd
 
 &lt;img src="images/screenshots/Single-rmd2.jpg" width="70%" /&gt;
 
@@ -390,7 +393,7 @@ Text in the form of markdown
 ---
 class: center middle
 
-## What does an Rmd look like?
+## An .Rmd
 
 &lt;img src="images/screenshots/Single-rmd3.jpg" width="70%" /&gt;
 
@@ -399,9 +402,14 @@ class: center middle
 and oftentimes, code. 
 
 ---
+template: clouds
+
+# What does a .emphasis[shareable] .Rmd look like?
+
+---
 class: middle center
 
-## What does a .emphasis[shareable] Rmd look like?
+## A .emphasis[shareable] .Rmd
 
 &lt;img src="https://dcossyleon.github.io/gifs/video/single-doc-knit.gif" width="70%" /&gt;
 
@@ -413,7 +421,7 @@ We click Knit and...we get an HTML file.
 ---
 class: middle center
 
-## What does a .emphasis[shareable] Rmd look like?
+## A .emphasis[shareable] .Rmd
 
 &lt;img src="images/screenshots/Single-knit1.jpg" width="70%" /&gt;
 
@@ -424,7 +432,7 @@ but this is still trapped on your computer--it's not yet online.
 ---
 class: middle center
 
-## What does a .emphasis[shareable] Rmd look like?
+## A .emphasis[shareable] .Rmd
 
 &lt;img src="images/screenshots/Single-knit2.jpg" width="70%" /&gt;
 
@@ -1067,7 +1075,7 @@ Some new features to point out during "tour" :
 ---
 # Inside the project
 
-.pull-left[
+.left-column[
 
 
 ```r
@@ -1083,7 +1091,7 @@ Some new features to point out during "tour" :
 ```
 ]
 
-.pull-right[
+.right-column[
 Build your book with the Build tab. 
 ]
 
