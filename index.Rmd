@@ -975,7 +975,9 @@ background-size: cover
 
 <https://github.com/apreshill/data-vis-labs-2018>
 
-<iframe src="https://github.com/apreshill/data-vis-labs-2018" height="500" width="1200" frameborder="0"></iframe> 
+```{r stay-organized, echo=FALSE}
+knitr::include_graphics("https://dcossyleon.github.io/gifs/video/stay-organized.gif")
+```
 
 ---
 
