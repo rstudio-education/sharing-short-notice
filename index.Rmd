@@ -1049,40 +1049,68 @@ Here's a Distill site...and it's actually very similar to a RMD site, but it has
 
 Another great optional feature of Distill that is worth pointing out, is the ability to organize content into a blog format. 
 
-
 ---
+class: center middle
+background-image: url(images/Clouds.jpg)
+background-size: cover
 
-# Distill site
+## Distill site
 
-same screenshot, annotated
-
-**Minimum** required files:
-
-1. `index.Rmd` = Home page
-
-1. `_site.yml` = Navbar
-
---
-
-**Optional** but likely:
-
-+ Other `.Rmd` files = Content
-
---
-
-But also!
-
-+ `_posts/` = Nice!
+(Screenshot of basic Distill site)
 
 ???
 
-Say out loud- actually the same as Rmd site, minus themes based on bootstrap.
+And here's a simple Distill site that we're going to look at more closely.
+
 
 ---
+background-image: url(images/Clouds.jpg)
+background-size: cover
 
-# A blog?
+## Inside the project
 
-listing page stuff here, yml goes on left for `index.Rmd` in `_posts/` folder, on right is screenshot of output
+.left-column[
+```{r eval=FALSE}
+.
+├── distill-site.Rproj
+├── _site.yml #<<
+├── index.Rmd #<< 
+├── listing.Rmd
+├── _posts/
+  ├── Class1/
+    ├── Class1.Rmd
+```
+]
+
+.right-column[
+```{r, echo=FALSE}
+knitr::include_graphics("")
+```
+
+Basic distill Screenshot annotated
+
+]
+
+--
+
+<img src="" style="
+  position: absolute; 
+  width: 52%; 
+  top: 91px;
+  right: 147px;
+">
+
+???
+
+A Distill site without blog content needs the same minimum files as an RMD site. 
+
+**Minimum** required files:
+
+1. `index.Rmd` = Homepage
+
+1. `_site.yml` = Navbar
+
+But for the blog-like feature, you need a Blog Listing RMD, a folder, named posts/ which then contains a directory for each post you make. 
 
 ---
 
