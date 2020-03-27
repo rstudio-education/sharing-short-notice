@@ -976,7 +976,7 @@ background-size: cover
 <https://github.com/apreshill/data-vis-labs-2018>
 
 ```{r stay-organized, echo=FALSE}
-knitr::include_graphics("https://dcossyleon.github.io/gifs/video/stay-organized.gif")
+knitr::include_graphics("https://dcossyleon.github.io/gifs/video/stay-organized1.gif")
 ```
 
 ---
@@ -1021,19 +1021,34 @@ You get to use built in themes from bootstrap
 ..
 
 ---
+name: distill
+class:  top, center
+background-image: url(mtsalsa-distill.jpg)
+background-size: contain
+background-position: center, bottom
 
-# Distill
+# `install.packages("distill")`
 
 ???
-Transition slide
+
+Next up is Distill, which you'll need to install first before you can use it. 
 
 ---
+class: middle, center
+background-image: url(images/Clouds.jpg)
+background-size: cover
 
-# Distill site
+<https://blogs.rstudio.com/tensorflow/about.html>
 
-Looks like this...
+<iframe src="https://blogs.rstudio.com/tensorflow/about.html/" height="600" width="1200" frameborder="0"></iframe> 
 
-Screenshot of rendered html site 
+
+???
+
+Here's a Distill site...and it's actually very similar to a RMD site, but it has some features built-in that make it especially good for technical and scientific content. ANd I'll show you an example of that in a second. 
+
+Another great optional feature of Distill that is worth pointing out, is the ability to organize content into a blog format. 
+
 
 ---
 
@@ -1043,7 +1058,7 @@ same screenshot, annotated
 
 **Minimum** required files:
 
-1. `index.Rmd` = Landing page
+1. `index.Rmd` = Home page
 
 1. `_site.yml` = Navbar
 
