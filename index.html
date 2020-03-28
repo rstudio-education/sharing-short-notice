@@ -457,17 +457,20 @@ Of course, the real magic happens, when we click on the Knit icon, and see our f
 
 So, here's what that looks like: 
 
++ We knit
++ We can watch in this bottom pane as our R Markdown document gets processed.
++ And voila! -- we see our rendered HTML file. 
++ We can choose to open this up in a real browser window.
++ And then just test a few things out. 
 
 ---
 class: middle center
-
-## A .emphasis[shareable] .Rmd
-
-&lt;img src="images/screenshots/Single-knit1.jpg" width="70%" /&gt;
+background-image: url(images/screenshots/Single-knit1.png)
+background-size: contain
 
 ???
-Voila! We have an HTML file that looks like a webpage. 
-but this is still trapped on your computer--it's not yet online. 
+
+Okay, so here's a screenshot of the same rendered file in our browser, and there are few things to point out.
 
 ---
 class: middle center
@@ -542,6 +545,7 @@ So we can go to app.netlify.com/drop -- and have the R Project folder with our R
 **Say "don't close out of this page"??**
 
 ---
+exclude: true
 class: middle center
 
 
@@ -689,6 +693,8 @@ background-image: url(images/mtsalsa-rmd.jpg)
 background-size: contain
 background-position: center, bottom
 
+# `install.packages("rmarkdown")`
+
 ???
 
 So let's begin with an R Markdown site.
@@ -711,6 +717,30 @@ Some of which are now connected via:
 
 * A navbar
 
+
+
+---
+## Build your site
+
+.left-column[
+
+
+```r
+.
+├── rstats101.Rproj
+*├── _site/
+├── _site.yml
+├── index.Rmd 
+├── schedule.Rmd 
+├── lab01.Rmd
+└── lab02.Rmd
+```
+]
+
+.right-column[
+&lt;img src="images/screenshots/build-site.jpg" width="640" /&gt;
+]
+
 ---
 class: center middle
 background-image: url(images/Clouds2.jpg)
@@ -725,6 +755,240 @@ background-size: cover
 And here's a simple site that we're going to look at more closely.
 
 ---
+background-image: url("images/rawpixel/bunch-balloons-rmd1.jpg")
+background-position: right
+background-size: contain
+
+## Inside the `index.Rmd`
+
+.left-column[
+
+
+```r
+.
+├── rstats101.Rproj
+├── _site/ 
+├── _site.yml
+*├── index.Rmd
+├── schedule.Rmd 
+├── lab01.Rmd
+└── lab02.Rmd
+```
+]
+
+???
+
+---
+## Inside the `index.Rmd`
+
+.left-column[
+
+
+```r
+.
+├── rstats101.Rproj
+├── _site/ 
+├── _site.yml
+*├── index.Rmd
+├── schedule.Rmd 
+├── lab01.Rmd
+└── lab02.Rmd
+```
+]
+
+.right-column[
+
+```
+---
+title: "rstats 101"
+---
+
+Welcome to the course!
+```
+
+to-do convert to ymlthis
+]
+
+---
+background-image: url("images/rawpixel/bunch-balloons-rmd2.jpg")
+background-position: right
+background-size: contain
+
+## Inside the `_site.yml`
+
+.left-column[
+
+```r
+.
+├── rstats101.Rproj
+├── _site/ 
+*├── _site.yml
+├── index.Rmd 
+├── schedule.Rmd 
+├── lab01.Rmd
+└── lab02.Rmd
+```
+]
+
+---
+## Inside the `_site.yml`
+
+.left-column[
+
+
+```r
+.
+├── rstats101.Rproj
+├── _site/ 
+*├── _site.yml
+├── index.Rmd 
+├── schedule.Rmd 
+├── lab01.Rmd
+└── lab02.Rmd
+```
+]
+
+.right-column[
+
+```yaml
+navbar:
+  title: rstats101
+  left:
+  - text: Schedule
+    href: schedule.html
+  - text: Labs
+    menu:
+    - text: Lab 1
+      href: lab01.html
+    - text: Lab 2
+      href: lab02.html
+output:
+  html_document:
+    theme: yeti
+```
+
+
+]
+
+---
+background-image: url("images/rawpixel/bunch-balloons-rmd3.jpg")
+background-position: right
+background-size: contain
+
+## Inside a page
+
+.left-column[
+
+
+```r
+.
+├── rstats101.Rproj
+├── _site/ 
+├── _site.yml 
+├── index.Rmd 
+├── schedule.Rmd 
+*├── lab01.Rmd
+└── lab02.Rmd
+```
+]
+
+???
+
+Every Rmd is a page
+
+---
+
+preview page screenshot here-
+
+quiz Alison, what do you think the YAML for this page looks like??
+
+Answer:
+
+toc
+toc_float
+and code download (be sure screenshot is taken after clicking on code download button so the drop down shows up like: https://pbs.twimg.com/media/D2OwEBxUYAAG3YN?format=jpg&amp;name=4096x4096)
+
+---
+## Inside a page
+
+.left-column[
+
+
+```r
+.
+├── rstats101.Rproj
+├── _site/ 
+├── _site.yml 
+├── index.Rmd 
+├── schedule.Rmd 
+*├── lab01.Rmd
+└── lab02.Rmd
+```
+]
+
+.right-column[
+
+```yaml
+---
+output:
+  html_document:
+    toc: true
+    toc_float: true
+    code_download: true
+---
+```
+
+```
+# Lab One
+
+In our first week together, 
+we'll cover the syllabus 
+and how to use Zoom.
+
+```
+
+]
+
+???
+
+
+---
+
+same screenshot here, but now annotated-
+
+circle toc, note floating
+
+circle code download button
+
+---
+background-image: url("images/rawpixel/bunch-balloons-rmd4.jpg")
+background-position: right
+background-size: contain
+
+## Sharing your site
+
+.left-column[
+
+
+```r
+.
+├── rstats101.Rproj
+*├── _site/
+├── _site.yml 
+├── index.Rmd 
+├── schedule.Rmd 
+├── lab01.Rmd 
+└── lab02.Rmd
+```
+]
+
+---
+
+drag and drop goes here
+
+
+---
+exclude: true
 background-image: url(images/Clouds2.jpg)
 background-size: cover
 
@@ -765,6 +1029,7 @@ On the left, we have  directory tree, where you can see the files in the project
 1. `_site.yml` = Navbar / theme 
 
 ---
+exclude: true
 template: clouds2
 
 ## Inside the project
@@ -791,6 +1056,7 @@ template: clouds2
 + Other `.Rmd` files = Content 
 
 ---
+exclude: true
 template: clouds2
 
 ## Inside the `_site.yml`
@@ -832,6 +1098,7 @@ output:
 ]
 
 ---
+exclude: true
 class: center, left
 
 ## Put it together and what have you got?
@@ -854,6 +1121,7 @@ class: center, left
 ]
 
 ---
+exclude: true
 template: clouds2
 
 ## Build the site
@@ -1608,42 +1876,6 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
     deleted = true;
   });
 })();
-(function() {
-  "use strict"
-  /* Replace <script> tags in slides area to make them executable
-   *
-   * Runs after post-processing of markdown source into slides and replaces only
-   * <script>s on the last slide of continued slides using the .has-continuation
-   * class added by xaringan. Finally, any <script>s in the slides area that
-   * aren't executed are commented out.
-   */
-  var scripts = document.querySelectorAll(
-    '.remark-slides-area .remark-slide-container:not(.has-continuation) script'
-  );
-  if (!scripts.length) return;
-  for (var i = 0; i < scripts.length; i++) {
-    var s = document.createElement('script');
-    var code = document.createTextNode(scripts[i].textContent);
-    s.appendChild(code);
-    scripts[i].parentElement.replaceChild(s, scripts[i]);
-  }
-  var scriptsNotExecuted = document.querySelectorAll(
-    '.remark-slides-area .remark-slide-container.has-continuation script'
-  );
-  if (!scriptsNotExecuted.length) return;
-  for (var i = 0; i < scriptsNotExecuted.length; i++) {
-    var comment = document.createComment(scriptsNotExecuted[i].outerHTML)
-    scriptsNotExecuted[i].parentElement.replaceChild(comment, scriptsNotExecuted[i])
-  }
-})();
-(function() {
-  var links = document.getElementsByTagName('a');
-  for (var i = 0; i < links.length; i++) {
-    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
-      links[i].target = '_blank';
-    }
-  }
-})();
 // adds .remark-code-has-line-highlighted class to <pre> parent elements
 // of code chunks containing highlighted lines with class .remark-code-line-highlighted
 (function(d) {
@@ -1661,6 +1893,17 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
   }
   preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
 })(document);</script>
+
+<script>
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+</script>
 
 <script>
 slideshow._releaseMath = function(el) {

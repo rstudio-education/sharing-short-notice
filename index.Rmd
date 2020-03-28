@@ -575,6 +575,7 @@ So we can go to app.netlify.com/drop -- and have the R Project folder with our R
 **Say "don't close out of this page"??**
 
 ---
+exclude: true
 class: middle center
 
 
@@ -722,6 +723,8 @@ background-image: url(images/mtsalsa-rmd.jpg)
 background-size: contain
 background-position: center, bottom
 
+# `install.packages("rmarkdown")`
+
 ???
 
 So let's begin with an R Markdown site.
@@ -744,6 +747,31 @@ Some of which are now connected via:
 
 * A navbar
 
+
+
+---
+## Build your site
+
+.left-column[
+
+```{r eval=FALSE}
+.
+├── rstats101.Rproj
+├── _site/ #<<
+├── _site.yml
+├── index.Rmd 
+├── schedule.Rmd 
+├── lab01.Rmd
+└── lab02.Rmd
+```
+]
+
+.right-column[
+```{r, echo=FALSE}
+knitr::include_graphics("images/screenshots/build-site.jpg")
+```
+]
+
 ---
 class: center middle
 background-image: url(images/Clouds2.jpg)
@@ -760,6 +788,229 @@ knitr::include_graphics("images/screenshots/RMD-site.png")
 And here's a simple site that we're going to look at more closely.
 
 ---
+background-image: url("images/rawpixel/bunch-balloons-rmd1.jpg")
+background-position: right
+background-size: contain
+
+## Inside the `index.Rmd`
+
+.left-column[
+
+```{r eval=FALSE}
+.
+├── rstats101.Rproj
+├── _site/ 
+├── _site.yml
+├── index.Rmd #<<
+├── schedule.Rmd 
+├── lab01.Rmd
+└── lab02.Rmd
+```
+]
+
+???
+
+---
+## Inside the `index.Rmd`
+
+.left-column[
+
+```{r eval=FALSE}
+.
+├── rstats101.Rproj
+├── _site/ 
+├── _site.yml
+├── index.Rmd #<<
+├── schedule.Rmd 
+├── lab01.Rmd
+└── lab02.Rmd
+```
+]
+
+.right-column[
+
+```
+---
+title: "rstats 101"
+---
+
+Welcome to the course!
+```
+
+to-do convert to ymlthis
+]
+
+---
+background-image: url("images/rawpixel/bunch-balloons-rmd2.jpg")
+background-position: right
+background-size: contain
+
+## Inside the `_site.yml`
+
+.left-column[
+```{r eval=FALSE}
+.
+├── rstats101.Rproj
+├── _site/ 
+├── _site.yml #<<
+├── index.Rmd 
+├── schedule.Rmd 
+├── lab01.Rmd
+└── lab02.Rmd
+```
+]
+
+---
+## Inside the `_site.yml`
+
+.left-column[
+
+```{r eval=FALSE}
+.
+├── rstats101.Rproj
+├── _site/ 
+├── _site.yml #<<
+├── index.Rmd 
+├── schedule.Rmd 
+├── lab01.Rmd
+└── lab02.Rmd
+```
+]
+
+.right-column[
+
+```{r echo=FALSE}
+yml_empty() %>%
+  yml_navbar(
+    title = "rstats101",
+    left = list(
+      navbar_page("Schedule", href = "schedule.html"),
+      navbar_page("Labs", 
+                  menu = list(
+                    navbar_page("Lab 1", href = "lab01.html"),
+                    navbar_page("Lab 2", href = "lab02.html")
+                    )
+                  )
+      )) %>% 
+  yml_output(html_document(theme = "yeti")) %>% 
+  asis_yaml_output(fences = FALSE)
+```
+
+
+]
+
+---
+background-image: url("images/rawpixel/bunch-balloons-rmd3.jpg")
+background-position: right
+background-size: contain
+
+## Inside a page
+
+.left-column[
+
+```{r eval=FALSE}
+.
+├── rstats101.Rproj
+├── _site/ 
+├── _site.yml 
+├── index.Rmd 
+├── schedule.Rmd 
+├── lab01.Rmd #<<
+└── lab02.Rmd
+```
+]
+
+???
+
+Every Rmd is a page
+
+---
+
+preview page screenshot here-
+
+quiz Alison, what do you think the YAML for this page looks like??
+
+Answer:
+
+toc
+toc_float
+and code download (be sure screenshot is taken after clicking on code download button so the drop down shows up like: https://pbs.twimg.com/media/D2OwEBxUYAAG3YN?format=jpg&name=4096x4096)
+
+---
+## Inside a page
+
+.left-column[
+
+```{r eval=FALSE}
+.
+├── rstats101.Rproj
+├── _site/ 
+├── _site.yml 
+├── index.Rmd 
+├── schedule.Rmd 
+├── lab01.Rmd #<<
+└── lab02.Rmd
+```
+]
+
+.right-column[
+
+```{r echo=FALSE}
+ yml_empty() %>%
+  yml_output(html_document(toc = TRUE, toc_float = TRUE, code_download = TRUE)) %>% 
+  asis_yaml_output()
+```
+
+```
+# Lab One
+
+In our first week together, 
+we'll cover the syllabus 
+and how to use Zoom.
+
+```
+
+]
+
+???
+
+
+---
+
+same screenshot here, but now annotated-
+
+circle toc, note floating
+
+circle code download button
+
+---
+background-image: url("images/rawpixel/bunch-balloons-rmd4.jpg")
+background-position: right
+background-size: contain
+
+## Sharing your site
+
+.left-column[
+
+```{r eval=FALSE}
+.
+├── rstats101.Rproj
+├── _site/ #<<
+├── _site.yml 
+├── index.Rmd 
+├── schedule.Rmd 
+├── lab01.Rmd 
+└── lab02.Rmd
+```
+]
+
+---
+
+drag and drop goes here
+
+
+---
+exclude: true
 background-image: url(images/Clouds2.jpg)
 background-size: cover
 
@@ -801,6 +1052,7 @@ On the left, we have  directory tree, where you can see the files in the project
 1. `_site.yml` = Navbar / theme 
 
 ---
+exclude: true
 template: clouds2
 
 ## Inside the project
@@ -828,6 +1080,7 @@ knitr::include_graphics("images/screenshots/RMD-site-lab.png")
 + Other `.Rmd` files = Content 
 
 ---
+exclude: true
 template: clouds2
 
 ## Inside the `_site.yml`
@@ -865,6 +1118,7 @@ template: clouds2
 ]
 
 ---
+exclude: true
 class: center, left
 
 ## Put it together and what have you got?
@@ -891,6 +1145,7 @@ knitr::include_graphics("images/orchestra.jpg")
 ]
 
 ---
+exclude: true
 template: clouds2
 
 ## Build the site
