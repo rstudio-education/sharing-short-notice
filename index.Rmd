@@ -55,9 +55,13 @@ template: clouds
 ## .big-text[Hello.]
 
 ---
+name: clouds2
 class: middle, center
 background-image: url(images/Clouds2.jpg)
 background-size: contain
+
+---
+template: clouds2 
 
 .pull-left[
 ### Alison Hill 
@@ -88,9 +92,7 @@ I'm Alison Hill. I'm a data scientist and professional educator at RStudio.
 And I'm Desirée De Leon. I interned with Alison last summer at RStudio on the education team.
 
 ---
-class: middle, center
-background-image: url(images/Clouds2.jpg)
-background-size: contain
+template: clouds2
 
 .pull-left[
 ### Alison Hill 
@@ -114,7 +116,7 @@ background-size: contain
 
 ???
 
-And even thoughin this webinar we don't have a video feed, we promise we are real live humans who are stuck at home right now just like you all, sitting in front our computers.
+And even though we don't have a video feed in this webinar, we promise we are real live humans who are stuck at home right now just like you all, sitting in front our computers.
 
 ---
 class: freight-slide, center, middle, inverse
@@ -297,7 +299,6 @@ background-color: #EBEAE6
 
 ???
 
-ANNOTATE  INFLATION YOUR COURSE WEBSITE 
 So we'll show you how to build websites using R Markdown and friends. 
 
 Our goal is to help you get your site up in the air...
@@ -343,9 +344,7 @@ knitr::include_graphics("images/rawpixel/fortress.jpg")
 
 + Resilient
 
-Why make a course website at all?  It makes your content shareable, reproducible, and resilient (<-- how?)
-
-second column? You might think the downsides are that this requires....
+Why make a course website at all?  It makes your content shareable, reproducible, and resilient [to short-notice changes]
 
 Saving here for now:
 The good news is that R markdown is made for sharing
@@ -353,7 +352,6 @@ The good news is that R markdown is made for sharing
 R Markdown can be knitted into websites
 
 and websites can be shared easily with a single link
-
 
 BUT BEFORE WE TALK ABOUT FULL COURSE WEBSITES, FIRST WE TALK ABOUT SINGLE RMD FILE....
 
@@ -1148,7 +1146,7 @@ actually the same as Rmd site!
 
 # How do you share this site?
 
-Drag-and-drop `docs/`
+Drag-and-drop `_site/`
 
 ![](https://media.giphy.com/media/5pUkiGdxzKisg/giphy.gif)
 
