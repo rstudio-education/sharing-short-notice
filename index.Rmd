@@ -745,16 +745,7 @@ Netlify deployed our page
 ---
 class: middle, center
 
-## Sharing = knit + drop -> LINK
-
---
-Have an index.Rmd  
-
---
-Knit to HTML  
-
---
-Transfer to web server  
+## Sharing = index + knit + drop -> LINK
 
 ???
 
@@ -829,23 +820,58 @@ background-position: center, bottom
 So let's begin with an R Markdown site.
 
 ---
+
+class: center top
+background-image: url(images/Clouds2.jpg)
+
+<https://apreshill.github.io/data-vis-labs-2018>
+
+<img src= "images/screenshots/RMD-site-wild" style="width: 85%;">
+
+???
+
+Here's what one looks like out in the wild. And if you remember our single R Markdown page, this doesn't look that different.
+
+The main difference is that we have a navbar at the top -- with links that will take us to other pages.
+
+
+---
 class: center middle
 background-image: url(images/Clouds2.jpg)
 
 <https://apreshill.github.io/data-vis-labs-2018>
 
-<iframe src="https://apreshill.github.io/data-vis-labs-2018/index.html" height="600" width="1200" frameborder="0"></iframe> 
+.pull-left[
+```{r, echo=FALSE}
+
+knitr::include_graphics("images/screenshots/RMD-site-wild.png")
+
+```
+]
+
+--
+.pull-right[
+```{r, echo=FALSE}
+
+knitr::include_graphics("images/screenshots/RMD-site-wild1.png")
+
+```
+
+--
+
+```{r, echo=FALSE}
+
+knitr::include_graphics("images/screenshots/RMD-site-wild2.png")
+
+```
+
+]
 
 ???
 
-Here's what one looks like out in the wild. 
+Here's what one looks like out in the wild. And if you remember our single R Markdown lab page, this doesn't look that different.
 
-A website made up of many individual R Markdown documents.
-
-Some of which are now connected via:
-
-* A navbar
-
+The main difference is that we have a navbar at the top -- with links that will take us to other pages.
 
 
 ---
