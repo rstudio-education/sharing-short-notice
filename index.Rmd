@@ -353,14 +353,18 @@ R Markdown can be knitted into websites
 
 and websites can be shared easily with a single link
 
-BUT BEFORE WE TALK ABOUT FULL COURSE WEBSITES, FIRST WE TALK ABOUT SINGLE RMD FILE....
+BUT BEFORE WE TALK ABOUT FULL COURSE WEBSITES, FIRST WE NEED TO TALK ABOUT A SINGLE RMD FILE....SO I'LL PASS IT OFF TO DESIREE TO LEAD US THROUGH THAT.
 
 
 ---
 template: clouds
 
-# What does an R Markdown PROJECT look like?
+# What does an R Markdown Project look like?
 
+???
+
+Getting started, it's always a good idea to use an R Project, which is this 
+---
 ALL BLUE FOLDERS....
 RPOJECT. MOMA
 INDEX.RMD
@@ -1105,7 +1109,7 @@ background-size: cover
 
 .right-column[
 ```{r, echo=FALSE}
-knitr::include_graphics("")
+#knitr::include_graphics("")
 ```
 
 Basic distill Screenshot annotated
@@ -1271,7 +1275,7 @@ Build your book with the Build tab.
 
 _book/ --> drag and drop
 
-```{r book-rmds out.width = "50%"}
+```{r out.width = "50%"}
 knitr::include_graphics("images/rawpixel/bunch-balloons-book4.jpg")
 ```
 

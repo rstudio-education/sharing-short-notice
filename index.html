@@ -37,9 +37,13 @@ template: clouds
 ## .big-text[Hello.]
 
 ---
+name: clouds2
 class: middle, center
 background-image: url(images/Clouds2.jpg)
 background-size: contain
+
+---
+template: clouds2 
 
 .pull-left[
 ### Alison Hill 
@@ -70,9 +74,7 @@ I'm Alison Hill. I'm a data scientist and professional educator at RStudio.
 And I'm Desirée De Leon. I interned with Alison last summer at RStudio on the education team.
 
 ---
-class: middle, center
-background-image: url(images/Clouds2.jpg)
-background-size: contain
+template: clouds2
 
 .pull-left[
 ### Alison Hill 
@@ -96,7 +98,7 @@ background-size: contain
 
 ???
 
-And we promise we are real live humans who are stuck at home right now just like you all, sitting in front our computers.
+And even though we don't have a video feed in this webinar, we promise we are real live humans who are stuck at home right now just like you all, sitting in front our computers.
 
 ---
 class: freight-slide, center, middle, inverse
@@ -179,6 +181,11 @@ Here's who we think you are...
 
 * You have R Markdown files for teaching...
 
+* But they're stuck on your computer, and you need to share them easily others. 
+
+* And--- you probably have a new classroom space that looks like this-- so sharing needs to be done 100% online
+
+
 ---
 class: middle, center
 
@@ -203,11 +210,15 @@ class: middle, center
 
 ???
 
-* But those files are stuck on your computer, and you need to share them easily with other people. 
+Here's who we think you are...
+
+* You're an educator
+
+* You have R Markdown files for teaching...
+
+* But they're stuck on your computer, and you need to share them easily others. 
 
 * And--- you probably have a new classroom space that looks like this-- so sharing needs to be done 100% online
-
-[arghhh-- why do the visuals "jump" down??]
 
 ---
 class: center
@@ -228,7 +239,7 @@ class: middle, center
 
 ???
 
-With that in mind, we hope to give you a quick tour today of how...
+With that in mind, we hope to give you a quick tour today of how to get your **course materials** [CLICK] online [CLICK] in the *fastest* way possible.
 
 ---
 class: middle, center
@@ -238,7 +249,8 @@ background-size: cover
 # Sharing on **short notice**
 
 ???
-to get your **course materials**...
+
+With that in mind, we hope to give you a quick tour today of how to get your **course materials** [CLICK] online [CLICK] in the *fastest* way possible.
 
 ---
 class: middle, center
@@ -249,7 +261,7 @@ background-size: cover
 
 ???
 
-online...
+With that in mind, we hope to give you a quick tour today of how to get your **course materials** [CLICK] online [CLICK] in the *fastest* way possible.
 
 ---
 class: middle, center
@@ -260,7 +272,6 @@ background-size: cover
 
 ???
 
-in the *fastest* way possible.
 
 ---
 class: middle, center
@@ -303,8 +314,9 @@ and hopefully avoid HTML pain.
 
 --
 
-.pull-left[
-### 👍
+&lt;img src="images/rawpixel/fortress.jpg" width="444" /&gt;
+
+???
 
 + Shareable
 
@@ -312,26 +324,7 @@ and hopefully avoid HTML pain.
 
 + Resilient
 
-]
-
---
-
-.pull-right[
-### 👎
-
-+ Time
-
-+ Skills
-
-+ Fortitude
-
-]
-
-???
-
-Why make a course website at all?  It makes your content shareable, reproducible, and resilient (&lt;-- how?)
-
-second column? You might think the downsides are that this requires....
+Why make a course website at all?  It makes your content shareable, reproducible, and resilient [to short-notice changes]
 
 Saving here for now:
 The good news is that R markdown is made for sharing
@@ -340,20 +333,53 @@ R Markdown can be knitted into websites
 
 and websites can be shared easily with a single link
 
+BUT BEFORE WE TALK ABOUT FULL COURSE WEBSITES, FIRST WE NEED TO TALK ABOUT A SINGLE RMD FILE....SO I'LL PASS IT OFF TO DESIREE TO LEAD US THROUGH THAT.
+
+
 ---
 template: clouds
 
-# What does an .Rmd look like?
+# What does an R Markdown Project look like?
+
+???
+
+Getting started, it's always a good idea to use an R Project, which is this 
+---
+ALL BLUE FOLDERS....
+RPOJECT. MOMA
+INDEX.RMD
+
+???
+LET'S OPEN A FOLDER [SS] AND TAKE A LOOK INSTIDE AND GO INSIDE THE RPOJECT IN RSTUDIO [SS RAW FILE]
+
+REMOVE EXTRA 
+
+---
+template: clouds
+
+# What does an R Markdown file look like?
 
 
 ---
 class: middle, center
-background-image: url(https://dcossyleon.github.io/gifs/video/single-doc-Rmd.gif)
+background-image: url()
 background-size: contain
+
+SCREENSHOT OF DIRECTORY. ONE FOLDER --&gt; 
+
+screenshot. GET RID OF CONSOLE COMPLETELY. 
+HAVE IT ALREADY BE NAMED INDEX.
+FONT SIZE LARGER
+
+
 
 ???
 
+TRANSITION TO DESIREE
+
 Let's start with a single Rmd file, inside an folder that is also an R project
+
+
 
 ---
 class: middle, center
@@ -605,7 +631,7 @@ class: middle, center
 
 
 ---
-background-image: url(images/rawpixel/bunch-balloons-annotated.jpg)
+background-image: url(images/rawpixel/bunch-balloons.jpg)
 background-size: contain
 background-position: right
 class: middle, center
@@ -648,9 +674,6 @@ class:  top, center
 background-image: url(images/mtsalsa-rmd.jpg)
 background-size: contain
 background-position: center, bottom
-
-# `site: rmarkdown::default_site`
-
 
 ???
 
@@ -980,7 +1003,7 @@ You get to use built in themes from bootstrap
 ---
 name: distill
 class:  top, center
-background-image: url(mtsalsa-distill.jpg)
+background-image: url(images/mtsalsa-distill.jpg)
 background-size: contain
 background-position: center, bottom
 
@@ -1021,38 +1044,51 @@ And here's a simple Distill site that we're going to look at more closely.
 
 
 ---
+background-image: url(images/Clouds.jpg)
+background-size: cover
 
-# Distill site
+## Inside the project
 
-same screenshot, annotated
+.left-column[
 
-**Minimum** required files:
+```r
+.
+├── distill-site.Rproj
+*├── _site.yml
+*├── index.Rmd
+├── listing.Rmd
+├── _posts/
+  ├── Class1/
+    ├── Class1.Rmd
+```
+]
 
-1. `index.Rmd` = Home page
+.right-column[
 
-1. `_site.yml` = Navbar
+
+Basic distill Screenshot annotated
+]
 
 --
 
-**Optional** but likely:
-
-+ Other `.Rmd` files = Content
-
---
-
-But also!
-
-+ `_posts/` = Nice!
+&lt;img src="" style="
+  position: absolute; 
+  width: 52%; 
+  top: 91px;
+  right: 147px;
+"&gt;
 
 ???
 
-Say out loud- actually the same as Rmd site, minus themes based on bootstrap.
+A Distill site without blog content needs the same minimum files as an RMD site. 
 
----
+**Minimum** required files:
 
-# A blog?
+1. `index.Rmd` = Homepage
 
-listing page stuff here, yml goes on left for `index.Rmd` in `_posts/` folder, on right is screenshot of output
+1. `_site.yml` = Navbar
+
+But for the blog-like feature, you need a Blog Listing RMD, a folder, named posts/ which then contains a directory for each post you make. 
 
 ---
 
@@ -1068,7 +1104,7 @@ actually the same as Rmd site!
 
 # How do you share this site?
 
-Drag-and-drop `docs/`
+Drag-and-drop `_site/`
 
 ![](https://media.giphy.com/media/5pUkiGdxzKisg/giphy.gif)
 
@@ -1102,7 +1138,7 @@ actually the same as Rmd site!
 ---
 name: bookdown
 class:  top, center
-background-image: url(mtsalsa-book.jpg)
+background-image: url(images/mtsalsa-book.jpg)
 background-size: contain
 background-position: center, bottom
 
@@ -1111,8 +1147,6 @@ background-position: center, bottom
 
 
 ???
-
-divider
 
 
 
@@ -1197,8 +1231,21 @@ Build your book with the Build tab.
 
 _book/ --&gt; drag and drop
 
+
+```r
+knitr::include_graphics("images/rawpixel/bunch-balloons-book4.jpg")
+```
+
+&lt;img src="images/rawpixel/bunch-balloons-book4.jpg" width="50%" /&gt;
+
+^ just in case you want to show this image before or after drag n drop
+
 ]
 
+---
+
+NOTE:
+Move Book drag and drop to be the last thing.
 
 ---
 # Inside the `index.Rmd`
@@ -1220,7 +1267,12 @@ _book/ --&gt; drag and drop
 ]
 
 .pull-right[
-hot air balloon with just index labeled
+
+```r
+knitr::include_graphics("images/rawpixel/bunch-balloons-book1.jpg")
+```
+
+&lt;img src="images/rawpixel/bunch-balloons-book1.jpg" width="1177" /&gt;
 ]
 
 ???
@@ -1228,7 +1280,7 @@ hot air balloon with just index labeled
 The index.Rmd file is special. It is both the first chapter, and contains some YAML for the book's metadata like the title. You can think of this as the mega-YAML for your book- it is the YAML for all the chapters.
 
 ---
-# Inside the `index.Rmd`
+## Inside the `index.Rmd`
 
 .pull-left[
 
@@ -1265,8 +1317,9 @@ Welcome to the course!
 to-do convert to ymlthis
 ]
 
+
 ---
-# Inside the chapters
+## Inside the chapters
 
 .pull-left[
 
@@ -1285,8 +1338,12 @@ to-do convert to ymlthis
 ]
 
 .pull-right[
-hot air balloon with all rmds labeled
 
+```r
+knitr::include_graphics("images/rawpixel/bunch-balloons-book-index-and-rmds.jpg")
+```
+
+&lt;img src="images/rawpixel/bunch-balloons-book-index-and-rmds.jpg" width="1177" /&gt;
 ]
 
 ???
@@ -1348,7 +1405,14 @@ Main points- the Rmd chapters don't have any YAML. This will mean that you'll ne
 ]
 
 .pull-right[
-hot air balloon with basket labelled not with _site.yml
+
+
+```r
+knitr::include_graphics("images/rawpixel/bunch-balloons-book3.jpg")
+```
+
+&lt;img src="images/rawpixel/bunch-balloons-book3.jpg" width="1177" /&gt;
+
 ]
 
 
