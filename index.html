@@ -1,46 +1,28 @@
----
-title: "Sharing on Short Notice"
-subtitle: "How to Get Your Teaching Materials Online with R Markdown"
-author: Alison Hill
-date: "`r Sys.Date()`"
-output:
-  xaringan::moon_reader:
-    css: ["default", "assets/css/my-theme.css", "assets/css/my-fonts.css"]
-    seal: false 
-    lib_dir: libs
-    nature:
-      # autoplay: 5000
-      highlightStyle: solarized-light
-      highlightLanguage: ["r", "css", "yaml"]
-      slideNumberFormat: "" 
-      highlightLines: true
-      countIncrementalSlides: false
-      ratio: "16:9"
-      beforeInit: "https://platform.twitter.com/widgets.js"
-    includes:
-      in_header: [assets/header.html]
-params:
-  github_link: "TBD"
-editor_options: 
-  chunk_output_type: console
----
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Sharing on Short Notice</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Alison Hill" />
+    <meta name="date" content="2020-03-28" />
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/my-theme.css" type="text/css" />
+    <link rel="stylesheet" href="assets/css/my-fonts.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
 
-```{r setup, include=FALSE}
-options(htmltools.dir.version = FALSE)
-knitr::opts_chunk$set(collapse = TRUE,
-                      fig.retina = 3)
 
-library(ymlthis)
-library(tidyverse)
-```
+
 
 class: title-slide, center, bottom
 
-# `r rmarkdown::metadata$title`
+# Sharing on Short Notice
 
-## `r rmarkdown::metadata$subtitle`
+## How to Get Your Teaching Materials Online with R Markdown
 
-### `r rmarkdown::metadata$author` &#183; Desirée De Leon
+### Alison Hill &amp;#183; Desirée De Leon
 
 
 ---
@@ -68,10 +50,10 @@ class: middle, center
 .pull-left[
 ### Alison Hill 
 
-<img style="border-radius: 50%;" src="https://conf20-intro-ml.netlify.com/authors/alison/avatar.jpg" width="150px"/>
+&lt;img style="border-radius: 50%;" src="https://conf20-intro-ml.netlify.com/authors/alison/avatar.jpg" width="150px"/&gt;
 
-[<i class="fab fa-github"></i> @apreshill](https://github.com/apreshill)  
-[<i class="fab fa-twitter"></i> @apreshill](https://twitter.com/apreshill)
+[&lt;i class="fab fa-github"&gt;&lt;/i&gt; @apreshill](https://github.com/apreshill)  
+[&lt;i class="fab fa-twitter"&gt;&lt;/i&gt; @apreshill](https://twitter.com/apreshill)
 
 ]
 
@@ -80,10 +62,10 @@ class: middle, center
 .pull-right[
 ### Desirée De Leon  
 
-<img style="border-radius: 50%;" src="https://conf20-intro-ml.netlify.com/authors/desiree/avatar.jpg" width="150px"/>
+&lt;img style="border-radius: 50%;" src="https://conf20-intro-ml.netlify.com/authors/desiree/avatar.jpg" width="150px"/&gt;
 
-[<i class="fab fa-github"></i> @dcossyleon](https://github.com/dcossyleon)  
-[<i class="fab fa-twitter"></i> @dcossyle](https://twitter.com/dcossyle)
+[&lt;i class="fab fa-github"&gt;&lt;/i&gt; @dcossyleon](https://github.com/dcossyleon)  
+[&lt;i class="fab fa-twitter"&gt;&lt;/i&gt; @dcossyle](https://twitter.com/dcossyle)
 
 ]
 
@@ -100,10 +82,10 @@ class: middle, center
 .pull-left[
 ### Alison Hill 
 
-<img style="border-radius: 50%;" src="https://conf20-intro-ml.netlify.com/authors/alison/avatar.jpg" width="150px"/>
+&lt;img style="border-radius: 50%;" src="https://conf20-intro-ml.netlify.com/authors/alison/avatar.jpg" width="150px"/&gt;
 
-[<i class="fab fa-github"></i> @apreshill](https://github.com/apreshill)  
-[<i class="fab fa-twitter"></i> @apreshill](https://twitter.com/apreshill)
+[&lt;i class="fab fa-github"&gt;&lt;/i&gt; @apreshill](https://github.com/apreshill)  
+[&lt;i class="fab fa-twitter"&gt;&lt;/i&gt; @apreshill](https://twitter.com/apreshill)
 
 ]
 
@@ -112,8 +94,8 @@ class: middle, center
 
 ![](https://media.giphy.com/media/hoqxB6HRhWtySSjO2S/giphy.gif)
 
-[<i class="fab fa-github"></i> @dcossyleon](https://github.com/dcossyleon)  
-[<i class="fab fa-twitter"></i> @dcossyle](https://twitter.com/dcossyle)
+[&lt;i class="fab fa-github"&gt;&lt;/i&gt; @dcossyleon](https://github.com/dcossyleon)  
+[&lt;i class="fab fa-twitter"&gt;&lt;/i&gt; @dcossyle](https://twitter.com/dcossyle)
 
 ]
 
@@ -183,18 +165,18 @@ We are happy to be with you today, and we hope that in our time together we'll b
 ---
 class: middle, center
 
-<div class="flex" style="margin: 0 1em;">
-  <div class="column">
-    <h3> You're an educator <h3>
-    <img src="images/rawpixel/educator.jpg" style="width: 100%;">
-  </div>
+&lt;div class="flex" style="margin: 0 1em;"&gt;
+  &lt;div class="column"&gt;
+    &lt;h3&gt; You're an educator &lt;h3&gt;
+    &lt;img src="images/rawpixel/educator.jpg" style="width: 100%;"&gt;
+  &lt;/div&gt;
   
 --
 
-   <div class="column"style="margin: 0 1em;">
-    <h3> You've got lots of .Rmds </h3>
-    <img src="images/rmd-buddy.jpg" style="width: 100%;">
-  </div>
+   &lt;div class="column"style="margin: 0 1em;"&gt;
+    &lt;h3&gt; You've got lots of .Rmds &lt;/h3&gt;
+    &lt;img src="images/rmd-buddy.jpg" style="width: 100%;"&gt;
+  &lt;/div&gt;
   
 
 ???
@@ -213,23 +195,23 @@ Here's who we think you are...
 class: middle, center
 
 
-<div class="flex" style="margin: 0 1em;">
-  <div class="column">
-    <h3> You're an educator </h3>
-    <img src="images/rawpixel/educator.jpg" style="width: 100%;">
-  </div>
+&lt;div class="flex" style="margin: 0 1em;"&gt;
+  &lt;div class="column"&gt;
+    &lt;h3&gt; You're an educator &lt;/h3&gt;
+    &lt;img src="images/rawpixel/educator.jpg" style="width: 100%;"&gt;
+  &lt;/div&gt;
   
-  <div class="column"style="margin: 0 1em;">
-    <h3> You've got lots of .Rmds </h3>
-    <img src="images/rmd-buddy-help.jpg" style="">
-  </div>
+  &lt;div class="column"style="margin: 0 1em;"&gt;
+    &lt;h3&gt; You've got lots of .Rmds &lt;/h3&gt;
+    &lt;img src="images/rmd-buddy-help.jpg" style=""&gt;
+  &lt;/div&gt;
   
 --
-  <div class="column" style="margin: 0 1em;">
-    <h3> Your new classroom </h3>
-    <img src="images/internet.jpg"  style="">
-  </div>
-</div>
+  &lt;div class="column" style="margin: 0 1em;"&gt;
+    &lt;h3&gt; Your new classroom &lt;/h3&gt;
+    &lt;img src="images/internet.jpg"  style=""&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
 
 ???
 
@@ -338,9 +320,7 @@ class: center, middle
 
 --
 
-```{r why-site, echo=FALSE}
-knitr::include_graphics("images/rawpixel/fortress.jpg")
-```
+&lt;img src="images/rawpixel/fortress.jpg" width="444" /&gt;
 
 ???
 
@@ -373,9 +353,7 @@ Jumping right in, let's take a look at a single R Markdown file for a Lab lesson
 ---
 class: center, middle
 
-```{r single-rmd, echo=FALSE}
-knitr::include_graphics("images/screenshots/Rproj1.png")
-```
+&lt;img src="images/screenshots/Rproj1.png" width="544" /&gt;
 
 ???
 
@@ -384,9 +362,7 @@ Let's start by opening up the folder where the specific lab content lives.
 ---
 class: center middle
 
-```{r echo=FALSE}
-knitr::include_graphics("images/screenshots/Rproj2.png")
-```
+&lt;img src="images/screenshots/Rproj2.png" width="544" /&gt;
 
 
 ???
@@ -471,9 +447,9 @@ template: clouds
 ---
 class: top center
 
-<video width="1530" height="610" controls>
-    <source src="images/single-doc-knit.mp4" type="video/mp4">
-</video>
+&lt;video width="1530" height="610" controls&gt;
+    &lt;source src="images/single-doc-knit.mp4" type="video/mp4"&gt;
+&lt;/video&gt;
 
 ???
 
@@ -501,9 +477,7 @@ class: middle center
 
 ## A .emphasis[shareable] .Rmd
 
-```{r single-knit2, echo=FALSE, out.width = "70%"}
-knitr::include_graphics("images/screenshots/Single-knit2.jpg")
-```
+&lt;img src="images/screenshots/Single-knit2.jpg" width="70%" /&gt;
 
 ???
 
@@ -518,9 +492,7 @@ class: center middle
 
 --
 
-```{r hello-index, echo=FALSE}
-knitr::include_graphics("images/hello-index.jpg")
-```
+&lt;img src="images/hello-index.jpg" width="532" /&gt;
 
 ???
 
@@ -552,7 +524,7 @@ class: top
 ]
 
 .pull-right[
-<img src= "https://summer-of-blogdown.netlify.com/assets/netlify-drop.png" style="width: 85%;">
+&lt;img src= "https://summer-of-blogdown.netlify.com/assets/netlify-drop.png" style="width: 85%;"&gt;
 ]
 
 ???
@@ -564,9 +536,7 @@ class: center, middle
 
 ## What does a .emphasis[linkable] Rmd look like?
 
-```{r single-dnd, echo=FALSE}
-knitr::include_graphics("https://dcossyleon.github.io/gifs/video/single-doc-dnd.gif")
-```
+![](https://dcossyleon.github.io/gifs/video/single-doc-dnd.gif)&lt;!-- --&gt;
 
 ???
 
@@ -603,7 +573,7 @@ background-size: contain
 
 ???
 
-We started with an RMD file -->  we knit it to get our HTML version --> 
+We started with an RMD file --&gt;  we knit it to get our HTML version --&gt; 
 Then we dragged and dropped the folder with the HTML file straight into netlify to get our link.
 
 ---
@@ -652,7 +622,7 @@ background-size: contain
 ---
 class: middle, center
 
-## Sharing = knit + drop -> LINK
+## Sharing = knit + drop -&gt; LINK
 
 ???
 
@@ -733,9 +703,9 @@ So let's begin with an R Markdown site.
 class: center middle
 background-image: url(images/Clouds2.jpg)
 
-<https://apreshill.github.io/data-vis-labs-2018>
+&lt;https://apreshill.github.io/data-vis-labs-2018&gt;
 
-<iframe src="https://apreshill.github.io/data-vis-labs-2018/index.html" height="600" width="1200" frameborder="0"></iframe> 
+&lt;iframe src="https://apreshill.github.io/data-vis-labs-2018/index.html" height="600" width="1200" frameborder="0"&gt;&lt;/iframe&gt; 
 
 ???
 
@@ -754,10 +724,11 @@ Some of which are now connected via:
 
 .left-column[
 
-```{r eval=FALSE}
+
+```r
 .
 ├── rstats101.Rproj
-├── _site/ #<<
+*├── _site/
 ├── _site.yml
 ├── index.Rmd 
 ├── schedule.Rmd 
@@ -767,9 +738,7 @@ Some of which are now connected via:
 ]
 
 .right-column[
-```{r, echo=FALSE}
-knitr::include_graphics("images/screenshots/build-site.jpg")
-```
+&lt;img src="images/screenshots/build-site.jpg" width="640" /&gt;
 ]
 
 ---
@@ -779,9 +748,7 @@ background-size: cover
 
 ## R Markdown site
 
-```{r, echo=FALSE}
-knitr::include_graphics("images/screenshots/RMD-site.png")
-```
+&lt;img src="images/screenshots/RMD-site.png" width="702" /&gt;
 
 ???
 
@@ -796,12 +763,13 @@ background-size: contain
 
 .left-column[
 
-```{r eval=FALSE}
+
+```r
 .
 ├── rstats101.Rproj
 ├── _site/ 
 ├── _site.yml
-├── index.Rmd #<<
+*├── index.Rmd
 ├── schedule.Rmd 
 ├── lab01.Rmd
 └── lab02.Rmd
@@ -815,12 +783,13 @@ background-size: contain
 
 .left-column[
 
-```{r eval=FALSE}
+
+```r
 .
 ├── rstats101.Rproj
 ├── _site/ 
 ├── _site.yml
-├── index.Rmd #<<
+*├── index.Rmd
 ├── schedule.Rmd 
 ├── lab01.Rmd
 └── lab02.Rmd
@@ -848,11 +817,12 @@ background-size: contain
 ## Inside the `_site.yml`
 
 .left-column[
-```{r eval=FALSE}
+
+```r
 .
 ├── rstats101.Rproj
 ├── _site/ 
-├── _site.yml #<<
+*├── _site.yml
 ├── index.Rmd 
 ├── schedule.Rmd 
 ├── lab01.Rmd
@@ -865,11 +835,12 @@ background-size: contain
 
 .left-column[
 
-```{r eval=FALSE}
+
+```r
 .
 ├── rstats101.Rproj
 ├── _site/ 
-├── _site.yml #<<
+*├── _site.yml
 ├── index.Rmd 
 ├── schedule.Rmd 
 ├── lab01.Rmd
@@ -879,21 +850,21 @@ background-size: contain
 
 .right-column[
 
-```{r echo=FALSE}
-yml_empty() %>%
-  yml_navbar(
-    title = "rstats101",
-    left = list(
-      navbar_page("Schedule", href = "schedule.html"),
-      navbar_page("Labs", 
-                  menu = list(
-                    navbar_page("Lab 1", href = "lab01.html"),
-                    navbar_page("Lab 2", href = "lab02.html")
-                    )
-                  )
-      )) %>% 
-  yml_output(html_document(theme = "yeti")) %>% 
-  asis_yaml_output(fences = FALSE)
+```yaml
+navbar:
+  title: rstats101
+  left:
+  - text: Schedule
+    href: schedule.html
+  - text: Labs
+    menu:
+    - text: Lab 1
+      href: lab01.html
+    - text: Lab 2
+      href: lab02.html
+output:
+  html_document:
+    theme: yeti
 ```
 
 
@@ -908,14 +879,15 @@ background-size: contain
 
 .left-column[
 
-```{r eval=FALSE}
+
+```r
 .
 ├── rstats101.Rproj
 ├── _site/ 
 ├── _site.yml 
 ├── index.Rmd 
 ├── schedule.Rmd 
-├── lab01.Rmd #<<
+*├── lab01.Rmd
 └── lab02.Rmd
 ```
 ]
@@ -934,31 +906,36 @@ Answer:
 
 toc
 toc_float
-and code download (be sure screenshot is taken after clicking on code download button so the drop down shows up like: https://pbs.twimg.com/media/D2OwEBxUYAAG3YN?format=jpg&name=4096x4096)
+and code download (be sure screenshot is taken after clicking on code download button so the drop down shows up like: https://pbs.twimg.com/media/D2OwEBxUYAAG3YN?format=jpg&amp;name=4096x4096)
 
 ---
 ## Inside a page
 
 .left-column[
 
-```{r eval=FALSE}
+
+```r
 .
 ├── rstats101.Rproj
 ├── _site/ 
 ├── _site.yml 
 ├── index.Rmd 
 ├── schedule.Rmd 
-├── lab01.Rmd #<<
+*├── lab01.Rmd
 └── lab02.Rmd
 ```
 ]
 
 .right-column[
 
-```{r echo=FALSE}
- yml_empty() %>%
-  yml_output(html_document(toc = TRUE, toc_float = TRUE, code_download = TRUE)) %>% 
-  asis_yaml_output()
+```yaml
+---
+output:
+  html_document:
+    toc: true
+    toc_float: true
+    code_download: true
+---
 ```
 
 ```
@@ -992,10 +969,11 @@ background-size: contain
 
 .left-column[
 
-```{r eval=FALSE}
+
+```r
 .
 ├── rstats101.Rproj
-├── _site/ #<<
+*├── _site/
 ├── _site.yml 
 ├── index.Rmd 
 ├── schedule.Rmd 
@@ -1017,29 +995,28 @@ background-size: cover
 ## Inside the project
 
 .left-column[
-```{r eval=FALSE}
+
+```r
 .
 ├── RMD-site.Rproj
-├── _site.yml #<<
-├── index.Rmd #<< 
+*├── _site.yml
+*├── index.Rmd
 ├── Lab1.Rmd
 ```
 ]
 
 .right-column[
-```{r, echo=FALSE}
-knitr::include_graphics("images/screenshots/RMD-site.png")
-```
+&lt;img src="images/screenshots/RMD-site.png" width="702" /&gt;
 ]
 
 --
 
-<img src="images/RMD-site-annotated.png" style="
+&lt;img src="images/RMD-site-annotated.png" style="
   position: absolute; 
   width: 52%; 
   top: 91px;
   right: 147px;
-">
+"&gt;
 
 ???
 
@@ -1058,19 +1035,18 @@ template: clouds2
 ## Inside the project
 
 .left-column[
-```{r eval=FALSE}
+
+```r
 .
 ├── RMD-site.Rproj
 ├── _site.yml 
 ├── index.Rmd 
-├── Lab1.Rmd #<< 
+*├── Lab1.Rmd
 ```
 ]
 
 .right-column[
-```{r, echo=FALSE}
-knitr::include_graphics("images/screenshots/RMD-site-lab.png")
-```
+&lt;img src="images/screenshots/RMD-site-lab.png" width="703" /&gt;
 ]
 
 ???
@@ -1086,34 +1062,38 @@ template: clouds2
 ## Inside the `_site.yml`
 
 .left-column[
-```{r eval=FALSE}
+
+```r
 .
 ├── RMD-site.Rproj
-├── _site.yml #<<
+*├── _site.yml
 ├── index.Rmd
 ├── Lab1.Rmd
 ```
 ]
 
-<img src="images/site.yml.png" style="
+&lt;img src="images/site.yml.png" style="
   position: absolute; 
   width: 63%; 
   top: 96px;
   right: 49px;
-">
+"&gt;
 
 
 .right-column[
-```{r echo=FALSE}
- yml_empty() %>%
-  yml_navbar(
-    title = "rstats101",
-    left = list(
-      navbar_page("Syllabus", href = "index.html"),
-      navbar_page("Labs", href = "lab1.html")
-    )) %>% 
-  yml_output(html_document(toc = TRUE, toc_float = TRUE, theme = "yeti")) %>% 
-  asis_yaml_output(fences = FALSE)
+```yaml
+navbar:
+  title: rstats101
+  left:
+  - text: Syllabus
+    href: index.html
+  - text: Labs
+    href: lab1.html
+output:
+  html_document:
+    toc: true
+    toc_float: true
+    theme: yeti
 ```
 ]
 
@@ -1127,9 +1107,7 @@ class: center, left
 
 .Rmds
 
-```{r, echo=FALSE}
-knitr::include_graphics("images/rawpixel/instruments.jpg")
-```
+&lt;img src="images/rawpixel/instruments.jpg" width="2558" /&gt;
 
 ]
 
@@ -1139,9 +1117,7 @@ knitr::include_graphics("images/rawpixel/instruments.jpg")
 
 `_site.yml`
 
-```{r, echo=FALSE}
-knitr::include_graphics("images/orchestra.jpg")
-```
+&lt;img src="images/orchestra.jpg" width="501" /&gt;
 ]
 
 ---
@@ -1151,20 +1127,19 @@ template: clouds2
 ## Build the site
 
 .left-column[
-```{r eval=FALSE}
+
+```r
 .
 ├── RMD-site.Rproj
 ├── _site.yml
 ├── index.Rmd
 ├── Lab1.Rmd
-└── _site/ #<<
+*└── _site/
 ```
 ]
 
 .right-column[
-```{r, echo=FALSE}
-knitr::include_graphics("images/screenshots/build-site.jpg")
-```
+&lt;img src="images/screenshots/build-site.jpg" width="640" /&gt;
 ]
 
 
@@ -1183,9 +1158,9 @@ Drag-and-drop `_site/`
 ---
 class: center, middle
 
-<video width="1530" height="610" controls>
-    <source src="images/rmd-site-dnd.mp4" type="video/mp4">
-</video>
+&lt;video width="1530" height="610" controls&gt;
+    &lt;source src="images/rmd-site-dnd.mp4" type="video/mp4"&gt;
+&lt;/video&gt;
 
 ???
 
@@ -1224,9 +1199,9 @@ Make an account.
 ---
 class: middle center
 
-<video width="1510" height="638" controls>
-    <source src="images/netlify-account.mp4" type="video/mp4">
-</video>
+&lt;video width="1510" height="638" controls&gt;
+    &lt;source src="images/netlify-account.mp4" type="video/mp4"&gt;
+&lt;/video&gt;
 
 ???
 
@@ -1243,9 +1218,9 @@ class: center, middle
 ---
 class: center, middle
 
-<video width="1560" height="620" controls>
-    <source src="images/netlify-update.mp4" type="video/mp4">
-</video>
+&lt;video width="1560" height="620" controls&gt;
+    &lt;source src="images/netlify-update.mp4" type="video/mp4"&gt;
+&lt;/video&gt;
 
 
 ---
@@ -1257,11 +1232,9 @@ background-size: cover
 
 ## Staying organized
 
-<https://github.com/apreshill/data-vis-labs-2018>
+&lt;https://github.com/apreshill/data-vis-labs-2018&gt;
 
-```{r stay-organized, echo=FALSE}
-knitr::include_graphics("https://dcossyleon.github.io/gifs/video/stay-organized1.gif")
-```
+![](https://dcossyleon.github.io/gifs/video/stay-organized1.gif)&lt;!-- --&gt;
 
 ---
 
@@ -1322,9 +1295,9 @@ class: middle, center
 background-image: url(images/Clouds.jpg)
 background-size: cover
 
-<https://blogs.rstudio.com/tensorflow/about.html>
+&lt;https://blogs.rstudio.com/tensorflow/about.html&gt;
 
-<iframe src="https://blogs.rstudio.com/tensorflow/about.html/" height="600" width="1200" frameborder="0"></iframe> 
+&lt;iframe src="https://blogs.rstudio.com/tensorflow/about.html/" height="600" width="1200" frameborder="0"&gt;&lt;/iframe&gt; 
 
 
 ???
@@ -1351,32 +1324,31 @@ template: clouds
 ## Inside the project
 
 .left-column[
-```{r eval=FALSE}
+
+```r
 .
 ├── distill-site.Rproj
-├── _site.yml #<<
-├── index.Rmd #<< 
+*├── _site.yml
+*├── index.Rmd
 ├── listing.Rmd
 ├── _posts/
 ```
 ]
 
 .right-column[
-```{r, echo=FALSE}
-#knitr::include_graphics("")
-```
+
 
 Basic distill Screenshot annotated
 ]
 
 --
 
-<img src="" style="
+&lt;img src="" style="
   position: absolute; 
   width: 52%; 
   top: 91px;
   right: 147px;
-">
+"&gt;
 
 ???
 
@@ -1468,15 +1440,15 @@ class: middle
 
 --
 
-+ Bells & whistles
++ Bells &amp; whistles
 
 
 ---
 class: middle, center
 
-<https://bookdown.org/yihui/bookdown/>
+&lt;https://bookdown.org/yihui/bookdown/&gt;
 
-<iframe src="https://bookdown.org/yihui/bookdown/" height="600" width="1200" frameborder="0"></iframe> 
+&lt;iframe src="https://bookdown.org/yihui/bookdown/" height="600" width="1200" frameborder="0"&gt;&lt;/iframe&gt; 
 
 ???
 
@@ -1490,7 +1462,8 @@ Some new features to point out during "tour" :
 
 .left-column[
 
-```{r eval=FALSE}
+
+```r
 .
 ├── book.Rproj
 ├── _bookdown.yml
@@ -1499,7 +1472,7 @@ Some new features to point out during "tour" :
 ├── week01.Rmd
 ├── week02.Rmd
 ├── week03.Rmd
-└── _book #<<
+*└── _book
 ```
 ]
 
@@ -1516,12 +1489,13 @@ background-size: contain
 
 .left-column[
 
-```{r eval=FALSE}
+
+```r
 .
 ├── book.Rproj
 ├── _bookdown.yml
 ├── _output.yml
-├── index.Rmd #<<
+*├── index.Rmd
 ├── week01.Rmd
 ├── week02.Rmd
 ├── week03.Rmd
@@ -1538,12 +1512,13 @@ The index.Rmd file is special. It is both the first chapter, and contains some Y
 
 .left-column[
 
-```{r eval=FALSE}
+
+```r
 .
 ├── book.Rproj
 ├── _bookdown.yml
 ├── _output.yml
-├── index.Rmd #<<
+*├── index.Rmd
 ├── week01.Rmd
 ├── week02.Rmd
 ├── week03.Rmd
@@ -1578,11 +1553,12 @@ background-size: contain
 ## Inside the `.yml`s
 
 .left-column[
-```{r eval=FALSE}
+
+```r
 .
 ├── book.Rproj
-├── _bookdown.yml #<<
-├── _output.yml #<<
+*├── _bookdown.yml
+*├── _output.yml
 ├── index.Rmd 
 ├── week01.Rmd 
 ├── week02.Rmd 
@@ -1603,15 +1579,16 @@ background-size: contain
 
 .left-column[
 
-```{r eval=FALSE}
+
+```r
 .
 ├── book.Rproj
 ├── _bookdown.yml
 ├── _output.yml
 ├── index.Rmd 
-├── week01.Rmd #<<
-├── week02.Rmd #<<
-├── week03.Rmd #<<
+*├── week01.Rmd
+*├── week02.Rmd
+*├── week03.Rmd
 └── _book
 ```
 ]
@@ -1625,13 +1602,14 @@ Every Rmd is a chapter
 
 .left-column[
 
-```{r eval=FALSE}
+
+```r
 .
 ├── book.Rproj
 ├── _bookdown.yml
 ├── _output.yml
 ├── index.Rmd 
-├── week01.Rmd #<<
+*├── week01.Rmd
 ├── week02.Rmd 
 ├── week03.Rmd 
 └── _book
@@ -1665,7 +1643,8 @@ background-size: contain
 
 .left-column[
 
-```{r eval=FALSE}
+
+```r
 .
 ├── book.Rproj
 ├── _bookdown.yml
@@ -1674,7 +1653,7 @@ background-size: contain
 ├── week01.Rmd
 ├── week02.Rmd
 ├── week03.Rmd
-└── _book #<<
+*└── _book
 ```
 ]
 
@@ -1846,3 +1825,115 @@ name: excuses
 ]
 
 ]
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="https://platform.twitter.com/widgets.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "solarized-light",
+"highlightLanguage": ["r", "css", "yaml"],
+"slideNumberFormat": "",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"ratio": "16:9"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
