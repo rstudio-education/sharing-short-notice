@@ -1202,7 +1202,7 @@ background-size: contain
 background-position: right
 class: middle
 
-# E-book with...
+# Online book with...
 
 --
 
@@ -1232,7 +1232,7 @@ Some new features to point out during "tour" :
 * Sections
 
 ---
-# Inside the project
+## Build your book
 
 .left-column[
 
@@ -1254,44 +1254,13 @@ Build your book with the Build tab.
 ]
 
 ---
-# Sharing your book
+background-image: url("images/rawpixel/bunch-balloons-book1.jpg")
+background-position: right
+background-size: contain
 
-.pull-left[
+## Inside the `index.Rmd`
 
-```{r eval=FALSE}
-.
-├── book.Rproj
-├── _bookdown.yml
-├── _output.yml
-├── index.Rmd 
-├── week01.Rmd
-├── week02.Rmd
-├── week03.Rmd
-└── _book #<<
-```
-]
-
-.pull-right[
-
-_book/ --> drag and drop
-
-```{r out.width = "50%"}
-knitr::include_graphics("images/rawpixel/bunch-balloons-book4.jpg")
-```
-
-^ just in case you want to show this image before or after drag n drop
-
-]
-
----
-
-NOTE:
-Move Book drag and drop to be the last thing.
-
----
-# Inside the `index.Rmd`
-
-.pull-left[
+.left-column[
 
 ```{r eval=FALSE}
 .
@@ -1303,12 +1272,6 @@ Move Book drag and drop to be the last thing.
 ├── week02.Rmd
 ├── week03.Rmd
 └── _book
-```
-]
-
-.pull-right[
-```{r book-index}
-knitr::include_graphics("images/rawpixel/bunch-balloons-book1.jpg")
 ```
 ]
 
@@ -1319,7 +1282,7 @@ The index.Rmd file is special. It is both the first chapter, and contains some Y
 ---
 ## Inside the `index.Rmd`
 
-.pull-left[
+.left-column[
 
 ```{r eval=FALSE}
 .
@@ -1334,7 +1297,7 @@ The index.Rmd file is special. It is both the first chapter, and contains some Y
 ```
 ]
 
-.pull-right[
+.right-column[
 
 
 ```
@@ -1353,11 +1316,38 @@ Welcome to the course!
 to-do convert to ymlthis
 ]
 
+---
+background-image: url("images/rawpixel/bunch-balloons-book2.jpg")
+background-position: right
+background-size: contain
+
+## Inside the `.yml`s
+
+.left-column[
+```{r eval=FALSE}
+.
+├── book.Rproj
+├── _bookdown.yml #<<
+├── _output.yml #<<
+├── index.Rmd 
+├── week01.Rmd 
+├── week02.Rmd 
+├── week03.Rmd 
+└── _book 
+```
+]
+
+
+
 
 ---
+background-image: url("images/rawpixel/bunch-balloons-book3.jpg")
+background-position: right
+background-size: contain
+
 ## Inside the chapters
 
-.pull-left[
+.left-column[
 
 ```{r eval=FALSE}
 .
@@ -1372,20 +1362,14 @@ to-do convert to ymlthis
 ```
 ]
 
-.pull-right[
-```{r book-rmds}
-knitr::include_graphics("images/rawpixel/bunch-balloons-book-index-and-rmds.jpg")
-```
-]
-
 ???
 
 Every Rmd is a chapter
 
 ---
-# Inside one chapter
+## Inside one chapter
 
-.pull-left[
+.left-column[
 
 ```{r eval=FALSE}
 .
@@ -1400,7 +1384,7 @@ Every Rmd is a chapter
 ```
 ]
 
-.pull-right[
+.right-column[
 
 ```
 # Week One
@@ -1417,30 +1401,32 @@ and how to use Zoom.
 
 Main points- the Rmd chapters don't have any YAML. This will mean that you'll need to change any individual Rmd that you want to make into chapters.
 
+
 ---
-# Inside the `.yml` files
+background-image: url("images/rawpixel/bunch-balloons-book4.jpg")
+background-position: right
+background-size: contain
+
+## Sharing your book
 
 .pull-left[
+
 ```{r eval=FALSE}
 .
 ├── book.Rproj
-├── _bookdown.yml #<<
-├── _output.yml #<<
+├── _bookdown.yml
+├── _output.yml
 ├── index.Rmd 
-├── week01.Rmd 
-├── week02.Rmd 
-├── week03.Rmd 
-└── _book 
+├── week01.Rmd
+├── week02.Rmd
+├── week03.Rmd
+└── _book #<<
 ```
 ]
 
-.pull-right[
+---
 
-```{r book-ymls}
-knitr::include_graphics("images/rawpixel/bunch-balloons-book3.jpg")
-```
-
-]
+drag and drop goes here
 
 
 ---
@@ -1478,8 +1464,8 @@ Yes.
 
 .pull-left[
 
-* Long-form content friendly
-* Clear ordering of content
+* Hard to get lost
+* Order
 * Cross-references
 * Numbered figures, equations, tables
 
@@ -1488,8 +1474,8 @@ Yes.
 .pull-right[
 
 * Three YAMLS (time consuming to set up)
-* Project directory will have many RMDs and no good way to organize them into subdirectories
-* Not easy to customize styling
+* No subfolders
+
 
 ]
 
@@ -1527,6 +1513,23 @@ class: inverse, center, middle
 
 # Review
 
+Need four square view with static screenshots of each of the 4 sites
+
+???
+
+Say out loud which folder to drag and drop for each (maybe have the text show up in each of the four squares like `site/`, `_book/`, `public/`)
+
+---
+class: inverse, center, middle
+
+# Advice
+
++ build, don't knit (generally)
+
++ know where your site lives locally
+
++ publish early and update often, don't wait
+
 ---
 
 # the options
@@ -1540,12 +1543,24 @@ which options work best for whom?
 
 # Other links, resources, stuff
 
+Looking ahead:
+
+Connect netlify to github and use continuous deployment for your sites
+
+Link out to gh repo for all the things? I can make issues with resources for each tool
+
 ---
 background-image: url("images/rawpixel/site-dreams.jpg")
-background-size: cover
-class: top, center
+background-size: 80%
+background-position: bottom, center
+class: center, top
+background-color: #FCFEF8
 
 # Thank you
+
+???
+
+Thanks for joining us today. We hope we've left you with some ideas you can use now and later. And we hope we leave you with visions of websites dancing in your heads :)
 
 ---
 name: excuses
