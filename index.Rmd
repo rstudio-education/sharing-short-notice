@@ -364,7 +364,7 @@ But before we talk about full course website, first we need to talk about single
 ---
 template: clouds
 
-# What does an R Markdown file look like?
+# What does an .Rmd file look like?
 
 ???
 
@@ -474,8 +474,7 @@ knitr::include_graphics("https://dcossyleon.github.io/gifs/video/single-doc-knit
 
 ???
 
-Let's knit our RMD source file and see. 
-We click Knit and...we get an HTML file.
+But of course, the real magic happens, when we click on the Knit icon, and see our file turned into HTML. 
 
 ---
 class: middle center
