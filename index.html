@@ -468,22 +468,44 @@ class: middle center
 background-image: url(images/screenshots/Single-knit1.png)
 background-size: contain
 
+--
+
+&lt;img src="images/screenshots/Single-knit2.png" style="
+  position: absolute; 
+  width: 91%; 
+  top: -53px;
+  right: 5px;
+"&gt;
+
+--
+
+&lt;img src="images/screenshots/Single-knit3.png" style="
+  position: absolute; 
+  width: 97%; 
+  top: -45px;
+  right: -51px;
+"&gt;
+
+--
+
+&lt;img src="images/screenshots/Single-knit4.png" style="
+  position: absolute; 
+  width: 73%; 
+  bottom: 10px;
+  right: 80px;
+"&gt;
+
 ???
 
-Okay, so here's a screenshot of the same rendered file in our browser, and there are few things to point out.
+Okay, so here's a screenshot of the same rendered file in our browser, and now we can see how some of the keys in our YAML affected our document: 
 
----
-class: middle center
++ The font and colors that we see are from a theme that we added in the output. 
 
-## A .emphasis[shareable] .Rmd
++ And we also have this nice table of contents that sticks to the left side of the window -- that's also from options that we set in our YAML.
 
-&lt;img src="images/screenshots/Single-knit2.jpg" width="70%" /&gt;
+This looks great, and is now in a format that we probably wouldn't mind sharing--BUT--- it's still local and stuck on our computer. This up here is just the file path to where this HTML file lives in my R project.
 
-???
-
-There is no *link* to give learners so they can access this content.
-This is just the local filepath to the HTML file.
-
+We need a **link** that we can give our learners. 
 
 ---
 class: center middle
@@ -492,7 +514,7 @@ class: center middle
 
 --
 
-&lt;img src="images/hello-index.jpg" width="532" /&gt;
+&lt;img src="images/hello-index.jpg" width="570" /&gt;
 
 ???
 
@@ -1876,6 +1898,42 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
     deleted = true;
   });
 })();
+(function() {
+  "use strict"
+  /* Replace <script> tags in slides area to make them executable
+   *
+   * Runs after post-processing of markdown source into slides and replaces only
+   * <script>s on the last slide of continued slides using the .has-continuation
+   * class added by xaringan. Finally, any <script>s in the slides area that
+   * aren't executed are commented out.
+   */
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container:not(.has-continuation) script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+  var scriptsNotExecuted = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container.has-continuation script'
+  );
+  if (!scriptsNotExecuted.length) return;
+  for (var i = 0; i < scriptsNotExecuted.length; i++) {
+    var comment = document.createComment(scriptsNotExecuted[i].outerHTML)
+    scriptsNotExecuted[i].parentElement.replaceChild(comment, scriptsNotExecuted[i])
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
 // adds .remark-code-has-line-highlighted class to <pre> parent elements
 // of code chunks containing highlighted lines with class .remark-code-line-highlighted
 (function(d) {
@@ -1893,17 +1951,6 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
   }
   preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
 })(document);</script>
-
-<script>
-(function() {
-  var links = document.getElementsByTagName('a');
-  for (var i = 0; i < links.length; i++) {
-    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
-      links[i].target = '_blank';
-    }
-  }
-})();
-</script>
 
 <script>
 slideshow._releaseMath = function(el) {

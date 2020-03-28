@@ -492,24 +492,44 @@ class: middle center
 background-image: url(images/screenshots/Single-knit1.png)
 background-size: contain
 
+--
+
+<img src="images/screenshots/Single-knit2.png" style="
+  position: absolute; 
+  width: 91%; 
+  top: -53px;
+  right: 5px;
+">
+
+--
+
+<img src="images/screenshots/Single-knit3.png" style="
+  position: absolute; 
+  width: 97%; 
+  top: -45px;
+  right: -51px;
+">
+
+--
+
+<img src="images/screenshots/Single-knit4.png" style="
+  position: absolute; 
+  width: 73%; 
+  bottom: 10px;
+  right: 80px;
+">
+
 ???
 
-Okay, so here's a screenshot of the same rendered file in our browser, and there are few things to point out.
+Okay, so here's a screenshot of the same rendered file in our browser, and now we can see how some of the keys in our YAML affected our document: 
 
----
-class: middle center
++ The font and colors that we see are from a theme that we added in the output. 
 
-## A .emphasis[shareable] .Rmd
++ And we also have this nice table of contents that sticks to the left side of the window -- that's also from options that we set in our YAML.
 
-```{r single-knit2, echo=FALSE, out.width = "70%"}
-knitr::include_graphics("images/screenshots/Single-knit2.jpg")
-```
+This looks great, and is now in a format that we probably wouldn't mind sharing--BUT--- it's still local and stuck on our computer. This up here is just the file path to where this HTML file lives in my R project.
 
-???
-
-There is no *link* to give learners so they can access this content.
-This is just the local filepath to the HTML file.
-
+We need a **link** that we can give our learners. 
 
 ---
 class: center middle
