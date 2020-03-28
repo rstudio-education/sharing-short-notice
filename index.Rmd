@@ -410,7 +410,7 @@ class: middle, center
 
 ???
 
-And it's made up of some metadata, which we call the YAML. The YAML has different keys. One of these Keys is the Title, and it has the value "Lab 02"
+And it's made up of some metadata, which we call the YAML. The YAML has different "keys".
 
 ---
 class: middle, center
@@ -428,7 +428,7 @@ background-size: contain
 
 ???
 
-And then our YAML also has a section all about output. Here's where we specify what format we want (in this case, an HTML document). 
+Our YAML also has a section all about output. Here's where we specify what format we want (in this case, an HTML document). 
 
 
 ---
@@ -438,7 +438,7 @@ background-size: contain
 
 ???
 
-But we can also spell out some output options as well -- like if we'd like a table of contents to be generated.  
+But we can also spell out some output options as well -- like whether we'd like a table of contents to be automatically generated.  
 
 ---
 class: middle, center
@@ -447,7 +447,7 @@ background-size: contain
 
 ???
 
-The rest of the file, might have some text in the form of markdown
+The rest of the R Markdown document might have some text in the form of markdown.
 
 ---
 class: middle, center
@@ -458,36 +458,43 @@ background-size: contain
 
 and oftentimes, code. 
 
+
+???
+
+So this is an R Markdown document --but it doesn't yet look like something we'd want to share.
+
 ---
 template: clouds
 
 # What does a .emphasis[shareable] .Rmd look like?
 
 ---
-class: middle center
+class: top center
 
-## A .emphasis[shareable] .Rmd
-
-```{r single-rmd-knit, echo=FALSE, out.width = "70%"}
-knitr::include_graphics("https://dcossyleon.github.io/gifs/video/single-doc-knit.gif")
-```
+<video width="1530" height="610" controls>
+    <source src="images/single-doc-knit.mp4" type="video/mp4">
+</video>
 
 ???
 
-But of course, the real magic happens, when we click on the Knit icon, and see our file turned into HTML. 
+Of course, the real magic happens, when we click on the Knit icon, and see our file turned into HTML. 
+
+So, here's what that looks like: 
+
++ We knit
++ We can watch in this bottom pane as our R Markdown document gets processed.
++ And voila! -- we see our rendered HTML file. 
++ We can choose to open this up in a real browser window.
++ And then just test a few things out. 
 
 ---
 class: middle center
-
-## A .emphasis[shareable] .Rmd
-
-```{r single-knit1, echo=FALSE, out.width = "70%"}
-knitr::include_graphics("images/screenshots/Single-knit1.jpg")
-```
+background-image: url(images/screenshots/Single-knit1.png)
+background-size: contain
 
 ???
-Voila! We have an HTML file that looks like a webpage. 
-but this is still trapped on your computer--it's not yet online. 
+
+Okay, so here's a screenshot of the same rendered file in our browser, and there are few things to point out.
 
 ---
 class: middle center
@@ -517,7 +524,7 @@ knitr::include_graphics("images/hello-index.jpg")
 
 ???
 
-So thenk what does a *linkable* RMD look like? 
+So then what does a *linkable* RMD look like? 
 First, you have to make sure your RMD is named index.Rmd -- an internet browser will always begin by looking for a file named index because that's what it uses as a homepage. 
 
 
