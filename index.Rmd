@@ -1583,16 +1583,15 @@ The index.Rmd file is special. It is both the first chapter, and contains some Y
 
 .right-column[
 
-```{r echo=FALSE}
-x <- as_yml("knit: bookdown::render_book")
+```{r echo=FALSE, comment='#'}
+# x <- as_yml("knit: bookdown::render_book")
 yml_empty() %>%
   yml_title("rstats101 book") %>%
   yml_author("Alison Hill") %>%
-  yml_bookdown_site() %>%
-  yml_output(bookdown::gitbook()) %>% 
-  yml_toplevel(x) %>% 
+  yml_bookdown_site() %>% 
+  # yml_toplevel(x) %>% 
   asis_yaml_output()
-cat("Welcome")
+cat("Welcome {-}")
 ```
 
 ]
@@ -1686,6 +1685,33 @@ yml_empty() %>%
   asis_yaml_output(fences = FALSE)
 ```
 ]
+
+---
+
+## Inside the `_output.yml`
+
+.left-column[
+```{r eval=FALSE}
+.
+├── book.Rproj
+├── _bookdown.yml 
+├── _output.yml #<<
+├── index.Rmd 
+├── 01-week.Rmd 
+├── 02-week.Rmd 
+├── 03-week.Rmd 
+└── _book 
+```
+]
+
+.right-column[
+
+```yaml
+bookdown::gitbook: default
+```
+
+]
+
 ---
 background-image: url("images/rawpixel/bunch-balloons-book3.jpg")
 background-position: right

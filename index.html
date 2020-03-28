@@ -1565,10 +1565,8 @@ The index.Rmd file is special. It is both the first chapter, and contains some Y
 title: rstats101 book
 author: Alison Hill
 site: bookdown::bookdown_site
-output: bookdown::gitbook
-knit: bookdown::render_book
 ---
-## Welcome
+# Welcome {-}
 ```
 
 ]
@@ -1663,6 +1661,34 @@ rmd_files:
 new_session: true
 ```
 ]
+
+---
+
+## Inside the `_output.yml`
+
+.left-column[
+
+```r
+.
+├── book.Rproj
+├── _bookdown.yml 
+*├── _output.yml
+├── index.Rmd 
+├── 01-week.Rmd 
+├── 02-week.Rmd 
+├── 03-week.Rmd 
+└── _book 
+```
+]
+
+.right-column[
+
+```yaml
+bookdown::gitbook: default
+```
+
+]
+
 ---
 background-image: url("images/rawpixel/bunch-balloons-book3.jpg")
 background-position: right
