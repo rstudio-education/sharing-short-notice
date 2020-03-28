@@ -520,7 +520,7 @@ class: center middle
 
 So then what does a *linkable* RMD look like? There are two pre-requisites: 
 
-First, you have to make sure we have an R Markdown document is named `index.Rmd` -- an internet browser will always begin by looking for a file named index to open up first. 
+1. You have to make sure we have an R Markdown document is named `index.Rmd` -- an internet browser will always begin by looking for a file named index to open up first. 
 
 ---
 background-image: url("images/Server.jpg")
@@ -539,15 +539,24 @@ class: center, top
   border-radius: 50%;
 "&gt;
 
+--
+&lt;img src="images/Netlify.png" style="
+  position: absolute; 
+  width: 23%; 
+  top: 218px;
+  right: 301px;
+"&gt;
 
 ???
 
-Second, we need a web server, which is basically (as Heather Nolis described it at her conf talk this year)--- [CLICK] a big computer in the clouds.
+2. We need a web server, which is basically (as Heather Nolis described it at her conf talk this year)--- [CLICK] a big computer in the clouds.
+
+And for this webinar, we'll use servers provided by Netlify.
 
 (h/t Heather Nolis: https://resources.rstudio.com/rstudio-conf-2020/we-re-hitting-r-a-million-times-a-day-so-we-made-a-talk-about-it-heather-nolis-dr-jacqueline-nolis)
 
 ---
-class: top
+class: top center
 
 ## What does a .emphasis[linkable] Rmd look like?
 .pull-left[
@@ -561,33 +570,22 @@ class: top
 
 ???
 
-For this webinar, we'll use servers provided by Netlify. 
+So, I'll demo this in a second, but essentially,if you go to this link, you can drag and drop an HTML file, and Netlify will host it online. Let's see what this looks like...
+
 
 ---
 class: center, middle
 
-## What does a .emphasis[linkable] Rmd look like?
-
-![](https://dcossyleon.github.io/gifs/video/single-doc-dnd.gif)&lt;!-- --&gt;
-
+&lt;video width="1200" height="625" controls&gt;
+    &lt;source src="images/single-doc-dnd.mp4" type="video/mp4"&gt;
+&lt;/video&gt;
 ???
 
-So we can go to app.netlify.com/drop -- and have the R Project folder with our RMD content ready to drop in. And netlify does the rest of the work for us. Giving us a link. And our site is there!
+So on the lef I have my Lab02 R Project folder, which has the HTML file we knit a bit ago. 
 
-**Say "don't close out of this page"??**
+And then in my browser, I'll go to app.netlify.com/drop -- and  drag n drop the folder in. 
 
----
-exclude: true
-class: middle center
-
-
-![](images/doc-live.jpg)
-
-
-???
-
-Our R Markdown page is now alive on the internet. And this is the link where it lives. 
-Has kind of a crazy name, but you can now send this to whomever you'd like.
+A few seconds later, Netlify has  auto-generated a silly-name link and deployed our page -- this link is where our Lab02 page now lives,  and you can share your page with whomever you choose --  hooray!
 
 
 ---
@@ -605,8 +603,17 @@ background-size: contain
 
 ???
 
-We started with an RMD file --&gt;  we knit it to get our HTML version --&gt; 
-Then we dragged and dropped the folder with the HTML file straight into netlify to get our link.
+**We started with an R Markdown file named index**
+
+We knit this to convert to an internet-ready HTML file
+
+It looked great, but still only lived locally in our R Project folder
+
+So then we dragged and dropped our folder
+
+Netlify deployed our page
+
+and generated a link! Ta - da!
 
 ---
 background-image: url(images/what-happened/single-doc/Slide2.jpeg)
@@ -616,6 +623,18 @@ background-size: contain
 
 ???
 
+We started with an R Markdown file named index
+
+**We knit this to convert to an internet-ready HTML file**
+
+It looked great, but still only lived locally in our R Project folder
+
+So then we dragged and dropped our folder
+
+Netlify deployed our page
+
+and generated a link! Ta - da!
+
 ---
 background-image: url(images/what-happened/single-doc/Slide3.jpeg)
 class: middle center
@@ -623,6 +642,18 @@ background-size: contain
 
 
 ???
+
+We started with an R Markdown file named index
+
+We knit this to convert to an internet-ready HTML file
+
+**It looked great, but still only lived locally in our R Project folder**
+
+So then we dragged and dropped our folder
+
+Netlify deployed our page
+
+and generated a link! Ta - da!
 
 ---
 background-image: url(images/what-happened/single-doc/Slide4.jpeg)
@@ -632,6 +663,17 @@ background-size: contain
 
 ???
 
+We started with an R Markdown file named index
+
+We knit this to convert to an internet-ready HTML file
+
+It looked great, but still only lived locally in our R Project folder
+
+**So then we dragged and dropped our folder**
+
+Netlify deployed our page
+
+and generated a link! Ta - da!
 
 ---
 background-image: url(images/what-happened/single-doc/Slide5.jpeg)
@@ -641,6 +683,17 @@ background-size: contain
 
 ???
 
+We started with an R Markdown file named index
+
+We knit this to convert to an internet-ready HTML file
+
+It looked great, but still only lived locally in our R Project folder
+
+So then we dragged and dropped our folder
+
+**Netlify deployed our page**
+
+and generated a link! Ta - da!
 
 ---
 background-image: url(images/what-happened/single-doc/Slide6.jpeg)
@@ -650,11 +703,32 @@ background-size: contain
 
 ???
 
+We started with an R Markdown file named index
+
+We knit this to convert to an internet-ready HTML file
+
+It looked great, but still only lived locally in our R Project folder
+
+So then we dragged and dropped our folder
+
+Netlify deployed our page
+
+**and generated a link! Ta - da!**
+
 
 ---
 class: middle, center
 
 ## Sharing = knit + drop -&gt; LINK
+
+--
+Have an index.Rmd  
+
+--
+Knit to HTML  
+
+--
+Transfer to web server  
 
 ???
 
@@ -667,7 +741,6 @@ Sharing your R Markdown means three things:
 1. Transfer to web server
 
 ???
-
 
 ---
 background-image: url(images/rawpixel/single-balloon.jpg)
@@ -701,9 +774,7 @@ class: top, center
 
 ???
 
-"markdown mountain"
-
-We've just shown you how to go from a regular RMD doc on your computer to one that's a web*page*.
+So here is "markdown mountain"...
 
 ---
 background-image: url(images/mtsalsa.jpg)
@@ -715,7 +786,7 @@ class: top, center
 
 ???
 
-Our goal for the rest of this webinar is to show you 4 RMD tools that are for turning a *COLLECTION* of RMDs into a web*site*.
+And our goal for the rest of this webinar is to show you 4 RMD tools that are for turning a *COLLECTION* of RMDs into a web*site*.
 
 
 ---
