@@ -4,7 +4,7 @@
     <title>Sharing on Short Notice</title>
     <meta charset="utf-8" />
     <meta name="author" content="Alison Hill" />
-    <meta name="date" content="2020-03-27" />
+    <meta name="date" content="2020-03-28" />
     <link href="libs/remark-css/default.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/my-theme.css" type="text/css" />
@@ -26,6 +26,7 @@ class: title-slide, center, bottom
 
 
 ---
+layout: true
 name: clouds
 class: center, middle
 background-image: url(images/Clouds.jpg)
@@ -37,13 +38,14 @@ template: clouds
 ## .big-text[Hello.]
 
 ---
+layout: true
 name: clouds2
-class: middle, center
 background-image: url(images/Clouds2.jpg)
 background-size: contain
 
 ---
-template: clouds2 
+template: clouds2
+class: middle, center
 
 .pull-left[
 ### Alison Hill 
@@ -75,6 +77,7 @@ And I'm Desirée De Leon. I interned with Alison last summer at RStudio on the e
 
 ---
 template: clouds2
+class: middle, center
 
 .pull-left[
 ### Alison Hill 
@@ -101,6 +104,7 @@ template: clouds2
 And even though we don't have a video feed in this webinar, we promise we are real live humans who are stuck at home right now just like you all, sitting in front our computers.
 
 ---
+layout: false
 class: freight-slide, center, middle, inverse
 
 # .shadow-text[We ship a lot of websites.]
@@ -144,6 +148,8 @@ If you type the short link on the bottom right of this slide into your browser r
 
 All of these links are clickable from the slides.
 
+[REMEMBER TO REPLACE THE FAKE SHORT LINK]
+
 ---
 template: clouds
 
@@ -181,10 +187,9 @@ Here's who we think you are...
 
 * You have R Markdown files for teaching...
 
-* But they're stuck on your computer, and you need to share them easily others. 
+* But they're stuck on your computer, and you need to share them easily with others. 
 
 * And--- you probably have a new classroom space that looks like this-- so sharing needs to be done 100% online
-
 
 ---
 class: middle, center
@@ -309,6 +314,7 @@ background-size: 40%
 and hopefully avoid HTML pain.
 
 ---
+class: center, middle
 
 ## Why make a course website?
 
@@ -333,95 +339,96 @@ R Markdown can be knitted into websites
 
 and websites can be shared easily with a single link
 
-BUT BEFORE WE TALK ABOUT FULL COURSE WEBSITES, FIRST WE NEED TO TALK ABOUT A SINGLE RMD FILE....SO I'LL PASS IT OFF TO DESIREE TO LEAD US THROUGH THAT.
-
-
----
-template: clouds
-
-# What does an R Markdown Project look like?
-
-???
-
-Getting started, it's always a good idea to use an R Project, which is this 
----
-ALL BLUE FOLDERS....
-RPOJECT. MOMA
-INDEX.RMD
-
-???
-LET'S OPEN A FOLDER [SS] AND TAKE A LOOK INSTIDE AND GO INSIDE THE RPOJECT IN RSTUDIO [SS RAW FILE]
-
-REMOVE EXTRA 
+But before we talk about full course website, first we need to talk about single R Markdown files. So I'll pass it off to Desiree to get us started. 
 
 ---
 template: clouds
 
-# What does an R Markdown file look like?
-
-
----
-class: middle, center
-background-image: url()
-background-size: contain
-
-SCREENSHOT OF DIRECTORY. ONE FOLDER --&gt; 
-
-screenshot. GET RID OF CONSOLE COMPLETELY. 
-HAVE IT ALREADY BE NAMED INDEX.
-FONT SIZE LARGER
-
-
+# What does an .Rmd file look like?
 
 ???
 
-TRANSITION TO DESIREE
-
-Let's start with a single Rmd file, inside an folder that is also an R project
-
-
+Jumping right in, let's take a look at a single R Markdown file for a Lab lesson.
 
 ---
-class: middle, center
+class: center, middle
 
-## An .Rmd
-
-&lt;img src="images/screenshots/Single-rmd.jpg" width="70%" /&gt;
+&lt;img src="images/screenshots/Rproj1.png" width="544" /&gt;
 
 ???
 
-Here's what an RMD looks like....
-
----
-class: middle, center
-
-## An .Rmd
-
-
-&lt;img src="images/screenshots/Single-rmd1.jpg" width="70%" /&gt;
-
-
-???
-
-And it's made up of some metadata, which we call the YAML...
-
----
-class: middle, center 
-
-## An .Rmd
-
-&lt;img src="images/screenshots/Single-rmd2.jpg" width="70%" /&gt;
-
-???
-
-Text in the form of markdown
+Let's start by opening up the folder where the specific lab content lives.
 
 ---
 class: center middle
 
-## An .Rmd
+&lt;img src="images/screenshots/Rproj2.png" width="544" /&gt;
 
-&lt;img src="images/screenshots/Single-rmd3.jpg" width="70%" /&gt;
+
+???
+and inside of it, you'll notice that this folder is an **R Project** (which we strongly recommend you use).
+
+We can click on the RProj file, which will port us into RStudio... 
+
+---
+background-image: url(images/screenshots/Single-rmd.png)
+background-size: contain
+class: middle, center
+
+???
+
+...where we can see our single R Markdown file for our lab. 
+
+---
+background-image: url(images/screenshots/Single-rmd0.png)
+background-size: contain
+class: middle, center
+
+???
+
+And it's made up of some metadata, which we call the YAML. The YAML has different keys. One of these Keys is the Title, and it has the value "Lab 02"
+
+---
+class: middle, center
+background-image: url(images/screenshots/Single-rmd1.png)
+background-size: contain
+
+???
+
+One of these Keys is the TITLE, and we say that it gets the *value* of `Lab 02: MoMA Museum Tour`.
+
+---
+class: middle, center
+background-image: url(images/screenshots/Single-rmd2.png)
+background-size: contain
+
+???
+
+And then our YAML also has a section all about output. Here's where we specify what format we want (in this case, an HTML document). 
+
+
+---
+class: middle, center
+background-image: url(images/screenshots/Single-rmd3.png)
+background-size: contain
+
+???
+
+But we can also spell out some output options as well -- like if we'd like a table of contents to be generated.  
+
+---
+class: middle, center
+background-image: url(images/screenshots/Single-rmd4.png)
+background-size: contain
+
+???
+
+The rest of the file, might have some text in the form of markdown
+
+---
+class: middle, center
+background-image: url(images/screenshots/Single-rmd5.png)
+background-size: contain
 
 ???
 
@@ -441,8 +448,7 @@ class: middle center
 
 ???
 
-Let's knit our RMD source file and see. 
-We click Knit and...we get an HTML file.
+But of course, the real magic happens, when we click on the Knit icon, and see our file turned into HTML. 
 
 ---
 class: middle center
@@ -751,8 +757,7 @@ On the left, we have  directory tree, where you can see the files in the project
 1. `_site.yml` = Navbar / theme 
 
 ---
-background-image: url(images/Clouds2.jpg)
-background-size: cover
+template: clouds2
 
 ## Inside the project
 
@@ -778,9 +783,7 @@ background-size: cover
 + Other `.Rmd` files = Content 
 
 ---
-name: rmd-site-yml
-background-image: url(images/Clouds2.jpg)
-background-size: cover
+template: clouds2
 
 ## Inside the `_site.yml`
 
@@ -843,9 +846,7 @@ class: center, left
 ]
 
 ---
-name: build-rmd-site
-background-image: url(images/Clouds2.jpg)
-background-size: cover
+template: clouds2
 
 ## Build the site
 
@@ -1030,9 +1031,7 @@ Here's a Distill site...and it's actually very similar to a RMD site, but it has
 Another great optional feature of Distill that is worth pointing out, is the ability to organize content into a blog format. 
 
 ---
-class: center middle
-background-image: url(images/Clouds.jpg)
-background-size: cover
+template: clouds
 
 ## Distill site
 
@@ -1044,8 +1043,7 @@ And here's a simple Distill site that we're going to look at more closely.
 
 
 ---
-background-image: url(images/Clouds.jpg)
-background-size: cover
+template: clouds
 
 ## Inside the project
 
@@ -1058,8 +1056,6 @@ background-size: cover
 *├── index.Rmd
 ├── listing.Rmd
 ├── _posts/
-  ├── Class1/
-    ├── Class1.Rmd
 ```
 ]
 
