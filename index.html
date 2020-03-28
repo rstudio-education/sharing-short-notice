@@ -4,7 +4,7 @@
     <title>Sharing on Short Notice</title>
     <meta charset="utf-8" />
     <meta name="author" content="Alison Hill" />
-    <meta name="date" content="2020-03-28" />
+    <meta name="date" content="2020-03-27" />
     <link href="libs/remark-css/default.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/my-theme.css" type="text/css" />
@@ -1152,7 +1152,7 @@ background-size: contain
 background-position: right
 class: middle
 
-# E-book with...
+# Online book with...
 
 --
 
@@ -1182,7 +1182,7 @@ Some new features to point out during "tour" :
 * Sections
 
 ---
-# Inside the project
+## Build your book
 
 .left-column[
 
@@ -1205,48 +1205,13 @@ Build your book with the Build tab.
 ]
 
 ---
-# Sharing your book
+background-image: url("images/rawpixel/bunch-balloons-book1.jpg")
+background-position: right
+background-size: contain
 
-.pull-left[
+## Inside the `index.Rmd`
 
-
-```r
-.
-├── book.Rproj
-├── _bookdown.yml
-├── _output.yml
-├── index.Rmd 
-├── week01.Rmd
-├── week02.Rmd
-├── week03.Rmd
-*└── _book
-```
-]
-
-.pull-right[
-
-_book/ --&gt; drag and drop
-
-
-```r
-knitr::include_graphics("images/rawpixel/bunch-balloons-book4.jpg")
-```
-
-&lt;img src="images/rawpixel/bunch-balloons-book4.jpg" width="50%" /&gt;
-
-^ just in case you want to show this image before or after drag n drop
-
-]
-
----
-
-NOTE:
-Move Book drag and drop to be the last thing.
-
----
-# Inside the `index.Rmd`
-
-.pull-left[
+.left-column[
 
 
 ```r
@@ -1260,15 +1225,6 @@ Move Book drag and drop to be the last thing.
 ├── week03.Rmd
 └── _book
 ```
-]
-
-.pull-right[
-
-```r
-knitr::include_graphics("images/rawpixel/bunch-balloons-book1.jpg")
-```
-
-&lt;img src="images/rawpixel/bunch-balloons-book1.jpg" width="1177" /&gt;
 ]
 
 ???
@@ -1278,7 +1234,7 @@ The index.Rmd file is special. It is both the first chapter, and contains some Y
 ---
 ## Inside the `index.Rmd`
 
-.pull-left[
+.left-column[
 
 
 ```r
@@ -1294,7 +1250,7 @@ The index.Rmd file is special. It is both the first chapter, and contains some Y
 ```
 ]
 
-.pull-right[
+.right-column[
 
 
 ```
@@ -1313,11 +1269,39 @@ Welcome to the course!
 to-do convert to ymlthis
 ]
 
+---
+background-image: url("images/rawpixel/bunch-balloons-book2.jpg")
+background-position: right
+background-size: contain
+
+## Inside the `.yml`s
+
+.left-column[
+
+```r
+.
+├── book.Rproj
+*├── _bookdown.yml
+*├── _output.yml
+├── index.Rmd 
+├── week01.Rmd 
+├── week02.Rmd 
+├── week03.Rmd 
+└── _book 
+```
+]
+
+
+
 
 ---
+background-image: url("images/rawpixel/bunch-balloons-book3.jpg")
+background-position: right
+background-size: contain
+
 ## Inside the chapters
 
-.pull-left[
+.left-column[
 
 
 ```r
@@ -1333,23 +1317,14 @@ to-do convert to ymlthis
 ```
 ]
 
-.pull-right[
-
-```r
-knitr::include_graphics("images/rawpixel/bunch-balloons-book-index-and-rmds.jpg")
-```
-
-&lt;img src="images/rawpixel/bunch-balloons-book-index-and-rmds.jpg" width="1177" /&gt;
-]
-
 ???
 
 Every Rmd is a chapter
 
 ---
-# Inside one chapter
+## Inside one chapter
 
-.pull-left[
+.left-column[
 
 
 ```r
@@ -1365,7 +1340,7 @@ Every Rmd is a chapter
 ```
 ]
 
-.pull-right[
+.right-column[
 
 ```
 # Week One
@@ -1382,34 +1357,33 @@ and how to use Zoom.
 
 Main points- the Rmd chapters don't have any YAML. This will mean that you'll need to change any individual Rmd that you want to make into chapters.
 
----
-# Inside the `.yml` files
 
-.pull-left[
+---
+background-image: url("images/rawpixel/bunch-balloons-book4.jpg")
+background-position: right
+background-size: contain
+
+## Sharing your book
+
+.left-column[
+
 
 ```r
 .
 ├── book.Rproj
-*├── _bookdown.yml
-*├── _output.yml
+├── _bookdown.yml
+├── _output.yml
 ├── index.Rmd 
-├── week01.Rmd 
-├── week02.Rmd 
-├── week03.Rmd 
-└── _book 
+├── week01.Rmd
+├── week02.Rmd
+├── week03.Rmd
+*└── _book
 ```
 ]
 
-.pull-right[
+---
 
-
-```r
-knitr::include_graphics("images/rawpixel/bunch-balloons-book3.jpg")
-```
-
-&lt;img src="images/rawpixel/bunch-balloons-book3.jpg" width="1177" /&gt;
-
-]
+drag and drop goes here
 
 
 ---
@@ -1447,8 +1421,8 @@ Yes.
 
 .pull-left[
 
-* Long-form content friendly
-* Clear ordering of content
+* Hard to get lost
+* Order
 * Cross-references
 * Numbered figures, equations, tables
 
@@ -1457,8 +1431,8 @@ Yes.
 .pull-right[
 
 * Three YAMLS (time consuming to set up)
-* Project directory will have many RMDs and no good way to organize them into subdirectories
-* Not easy to customize styling
+* No subfolders
+
 
 ]
 
@@ -1496,6 +1470,23 @@ class: inverse, center, middle
 
 # Review
 
+Need four square view with static screenshots of each of the 4 sites
+
+???
+
+Say out loud which folder to drag and drop for each (maybe have the text show up in each of the four squares like `site/`, `_book/`, `public/`)
+
+---
+class: inverse, center, middle
+
+# Advice
+
++ build, don't knit (generally)
+
++ know where your site lives locally
+
++ publish early and update often, don't wait
+
 ---
 
 # the options
@@ -1509,12 +1500,24 @@ which options work best for whom?
 
 # Other links, resources, stuff
 
+Looking ahead:
+
+Connect netlify to github and use continuous deployment for your sites
+
+Link out to gh repo for all the things? I can make issues with resources for each tool
+
 ---
 background-image: url("images/rawpixel/site-dreams.jpg")
-background-size: cover
-class: top, center
+background-size: 80%
+background-position: bottom, center
+class: center, top
+background-color: #FCFEF8
 
 # Thank you
+
+???
+
+Thanks for joining us today. We hope we've left you with some ideas you can use now and later. And we hope we leave you with visions of websites dancing in your heads :)
 
 ---
 name: excuses
@@ -1597,42 +1600,6 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
     deleted = true;
   });
 })();
-(function() {
-  "use strict"
-  /* Replace <script> tags in slides area to make them executable
-   *
-   * Runs after post-processing of markdown source into slides and replaces only
-   * <script>s on the last slide of continued slides using the .has-continuation
-   * class added by xaringan. Finally, any <script>s in the slides area that
-   * aren't executed are commented out.
-   */
-  var scripts = document.querySelectorAll(
-    '.remark-slides-area .remark-slide-container:not(.has-continuation) script'
-  );
-  if (!scripts.length) return;
-  for (var i = 0; i < scripts.length; i++) {
-    var s = document.createElement('script');
-    var code = document.createTextNode(scripts[i].textContent);
-    s.appendChild(code);
-    scripts[i].parentElement.replaceChild(s, scripts[i]);
-  }
-  var scriptsNotExecuted = document.querySelectorAll(
-    '.remark-slides-area .remark-slide-container.has-continuation script'
-  );
-  if (!scriptsNotExecuted.length) return;
-  for (var i = 0; i < scriptsNotExecuted.length; i++) {
-    var comment = document.createComment(scriptsNotExecuted[i].outerHTML)
-    scriptsNotExecuted[i].parentElement.replaceChild(comment, scriptsNotExecuted[i])
-  }
-})();
-(function() {
-  var links = document.getElementsByTagName('a');
-  for (var i = 0; i < links.length; i++) {
-    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
-      links[i].target = '_blank';
-    }
-  }
-})();
 // adds .remark-code-has-line-highlighted class to <pre> parent elements
 // of code chunks containing highlighted lines with class .remark-code-line-highlighted
 (function(d) {
@@ -1650,6 +1617,17 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
   }
   preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
 })(document);</script>
+
+<script>
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+</script>
 
 <script>
 slideshow._releaseMath = function(el) {

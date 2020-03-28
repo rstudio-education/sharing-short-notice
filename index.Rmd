@@ -1401,7 +1401,7 @@ background-size: contain
 
 ## Sharing your book
 
-.pull-left[
+.left-column[
 
 ```{r eval=FALSE}
 .
