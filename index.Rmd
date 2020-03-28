@@ -1583,21 +1583,18 @@ The index.Rmd file is special. It is both the first chapter, and contains some Y
 
 .right-column[
 
-
-```
----
-title: "A Book"
-author: "Frida Gomam"
-site: bookdown::bookdown_site
-documentclass: book
-output:
-  bookdown::gitbook: default
----
-
-Welcome to the course!
+```{r echo=FALSE}
+x <- as_yml("knit: bookdown::render_book")
+yml_empty() %>%
+  yml_title("rstats101 book") %>%
+  yml_author("Alison Hill") %>%
+  yml_bookdown_site() %>%
+  yml_output(bookdown::gitbook()) %>% 
+  yml_toplevel(x) %>% 
+  asis_yaml_output()
+cat("Welcome")
 ```
 
-to-do convert to ymlthis
 ]
 
 ---
