@@ -1618,9 +1618,74 @@ background-size: contain
 ```
 ]
 
+---
 
+## Inside the `_bookdown.yml`
 
+.left-column[
+```{r eval=FALSE}
+.
+├── book.Rproj
+├── _bookdown.yml #<<
+├── _output.yml 
+├── index.Rmd 
+├── 01-week.Rmd 
+├── 02-week.Rmd 
+├── 03-week.Rmd 
+└── _book 
+```
+]
 
+.right-column[
+```{r echo=FALSE}
+yml_empty() %>%
+  yml_bookdown_opts(new_session = TRUE) %>% 
+  asis_yaml_output(fences = FALSE)
+```
+]
+
+???
+
+new session forces bookdown to do what is called knit then merge
+
+strongly recommend
+
+K-M uses separate R sessions for individual chapters
+
+each chapter compiles from a clean state, including packages loaded
+
+Without it, you would need to make sure that you don't have any duplicate chunk labels throughout your ENTIRE book.
+
+BUT K-M does not allow Rmd files to be in subdirectories,
+
+---
+
+## Inside the `_bookdown.yml`
+
+.left-column[
+```{r eval=FALSE}
+.
+├── book.Rproj
+├── _bookdown.yml #<<
+├── _output.yml 
+├── index.Rmd 
+├── week01.Rmd 
+├── week02.Rmd 
+├── week03.Rmd 
+└── _book 
+```
+]
+
+.right-column[
+```{r echo=FALSE}
+yml_empty() %>%
+  yml_bookdown_opts(
+    new_session = TRUE,
+    rmd_files = c("index.Rmd", "week01.Rmd", "week02.Rmd", "week03.Rmd")
+    ) %>% 
+  asis_yaml_output(fences = FALSE)
+```
+]
 ---
 background-image: url("images/rawpixel/bunch-balloons-book3.jpg")
 background-position: right
