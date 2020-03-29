@@ -472,8 +472,7 @@ template: clouds
 class: top center
 
 <video width="1530" height="610" controls>
-    <source src="images/single-doc-knit.mp4" type="video/mp4">
-</video>
+    <source src="images/single-doc-knit.mp4" type="video/mp4"> </video>
 
 ???
 
@@ -826,7 +825,16 @@ background-image: url(images/Clouds2.jpg)
 
 <https://apreshill.github.io/data-vis-labs-2018>
 
-<img src= "images/screenshots/RMD-site-wild" style="width: 85%;">
+<img src= "images/screenshots/RMD-site-wild.png" style=" margin-top: -20px;">
+
+--
+
+<img src="images/Circle-nav.png" style="
+  position: absolute; 
+  width: 16%; 
+  top: 126px;
+  left: 253px;
+">
 
 ???
 
@@ -836,43 +844,46 @@ The main difference is that we have a navbar at the top -- with links that will 
 
 
 ---
+class:center middle
+background-image: url(images/Clouds2.jpg)
+
+<https://apreshill.github.io/data-vis-labs-2018>
+
+
+<img src= "images/screenshots/RMD-site-wild.png" style="width: 110%; margin-top: -20px; visibility: hidden;">
+
+
+<img src= "images/screenshots/RMD-site-wild1.png" 
+  style="
+    position: absolute; 
+    width: 103%; 
+    top: 2px;
+    left: -1px;
+  ">
+    
+---
 class: center middle
 background-image: url(images/Clouds2.jpg)
 
 <https://apreshill.github.io/data-vis-labs-2018>
 
-.pull-left[
-```{r, echo=FALSE}
+<img src= "images/screenshots/RMD-site-wild.png" style="width: 110%; margin-top: -20px; visibility: hidden;">
 
-knitr::include_graphics("images/screenshots/RMD-site-wild.png")
 
-```
-]
+<img src= "images/screenshots/RMD-site-wild2.png" 
+  style="
+    position: absolute; 
+    width: 103%; 
+    top: 2px;
+    left: -1px;
+  ">
 
---
-.pull-right[
-```{r, echo=FALSE}
-
-knitr::include_graphics("images/screenshots/RMD-site-wild1.png")
-
-```
-
---
-
-```{r, echo=FALSE}
-
-knitr::include_graphics("images/screenshots/RMD-site-wild2.png")
-
-```
-
-]
 
 ???
 
 Here's what one looks like out in the wild. And if you remember our single R Markdown lab page, this doesn't look that different.
 
-The main difference is that we have a navbar at the top -- with links that will take us to other pages.
-
+The main difference is that we have a navbar at the top with links that will take us to other pages.
 
 ---
 ## Build your site
@@ -1323,11 +1334,6 @@ class: center, middle
 
 .pull-left[
 ![](https://media.giphy.com/media/3orif5e8QhgoL9TvmU/giphy.gif)
-
-
-![](https://media.giphy.com/media/5pUkiGdxzKisg/giphy.gif)
-
-]
 
 .pull-right[
 Only exists for 24 hours. 
