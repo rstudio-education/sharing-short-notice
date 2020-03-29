@@ -993,8 +993,7 @@ name: build5
 ]
 
 .right-column[
-
-&lt;img src="images/screenshots/build-site.png" width="690" /&gt;
+&lt;img src="images/screenshots/build-site.png"&gt;
 ]
 
 ???
@@ -1024,29 +1023,34 @@ name: build6
 ]
 
 .right-column[
-&lt;img src="images/screenshots/build-site-after.png" width="670" /&gt;
+&lt;img src="images/screenshots/build-site-after.png"&gt;
+
 ]
 
 (note: RMD site in viewer pane is NOT the default setting)
 
 ???
 
-And once we do, this will create a new folder called `_site/`, which will hold all the HTML files that were just knit. 
+So after we've built our site, we'll see a lot of output in the Build pane, and it's also possible to see a preview of your site in the Viewer pane. 
 
-Let's take a look at some of these...
+And now let's look at our directory tree -- there's a new folder that was made. This is the `_site/` folder, and it holds all the HTML files that were just knit. 
+
+Let's see what our site looks like...
 
 ---
-class: center middle
-background-image: url(images/Clouds2.jpg)
-background-size: cover
+class: center top
+background-color: #f5ede4
 
 ## R Markdown site
 
-&lt;img src="images/screenshots/RMD-site.png" width="848" /&gt;
-
+![](images/screenshots/RMD-site.png)
 ???
 
-Here is the site we just built. We have a navbar and a theme -- and seeif you notice anything different about the navbar
+Here is the site we just built. We have a navbar and a theme -- and see if you notice anything different about the navbar...we'll come back to that in a bit.
+
+Also homepage link. 
+
+Let's look at the source code for some of the documents that made this site possible, starting with the index.
 
 ---
 background-image: url("images/rawpixel/bunch-balloons-rmd1.jpg")
@@ -1072,32 +1076,9 @@ background-size: contain
 
 ???
 
----
-## Inside the `index.Rmd`
+Remember that the index.Rmd is a special R Markdown document. In any site, whatever file you name `index` becomes the homepage.  
 
-.left-column[
-
-```r
-.
-├── rstats101.Rproj
-├── _site/ 
-├── _site.yml
-*├── index.Rmd
-├── schedule.Rmd 
-├── lab01.Rmd
-└── lab02.Rmd
-```
-]
-
-.right-column[
-&lt;img src="images/screenshots/RMD-site1.png" width="848" /&gt;
-
-do i need this slide w/ annotation?
-
-]
-
-
-???
+So if our site was a big bunch of hot air ballons, `index` would be the main one of them all. 
 
 ---
 ## Inside the `index.Rmd`
@@ -1130,6 +1111,21 @@ Welcome to the course!
 to-do convert to ymlthis
 ]
 
+&lt;img src="images/tab-index.png" style="
+  position: absolute; 
+  width: 60%; 
+  top: 131px;
+  right:67px;
+"&gt;
+
+???
+
+If we take a peek inside index, you'll notice that the YAML is much more pared down-- 
+
+Here we only have a key for the title, but in fact, if we wanted to, we could have even gotten rid of that and had no YAML at all.  
+
+(We'll see why next.)
+
 ---
 background-image: url("images/rawpixel/bunch-balloons-rmd2.jpg")
 background-position: right
@@ -1151,6 +1147,11 @@ background-size: contain
 ```
 ]
 
+???
+
+Next up, we have `_site.yml`. And in our balloon analogy, `_site.yml` is the basket that is bringing all the ballon strings together.
+
+Let's take a look inside this file.
 ---
 ## Inside the `_site.yml`
 
@@ -1185,18 +1186,44 @@ navbar:
       href: lab02.html
 output:
   html_document:
-    theme: yeti
+    theme: flatly
 ```
 
 
 ]
 
-&lt;img src="images/RMD-site-annotated.png" style="
+&lt;img src="images/tab-site-yml.png" style="
   position: absolute; 
-  width: 52%; 
-  top: 91px;
-  right: 147px;
+  width: 60%; 
+  top: 131px;
+  right: 67px;
 "&gt;
+
+???
+
+This file is essentially a mega - YAML, with metadata for the entire website.
+
+Let's walk through this:
+
+* If you've only ever worked with a single R MArkdown file before, then you've maybe never seen `navbar:` as a YAML key. As you might expect, all of the options indented under here are what build our navbar:
+    
+    + The first line gives a title to our site, and creates the link in the navbar to go to the homepage.
+    
+    + The next thing is `left:`, and this assigns your navbar links will go on the left side immediately next to the the site title. (but you can also choose `right:`)
+    
+    + Underneath are nested YAML keys where we spell out what items we want in the navbar. 
+    
+    + Whenever you make a new R MArkdown document, if you want it to show up in  your navbar, you have to remember to add a reference to it here! (Alison can interject here about forgetting to do this). 
+    
+    + So say I have an R Markdown document with Syllabus information. I put in the text that I want for its link in the navbar. And then I have to tell _site.yml what the link's destination should be -- that's its `href:` (stands for hypertext reference). 
+    
+    **note!** the href should always end in `.html`
+    
+    + finally -- we can use a `menu:` key to build a the dropdown menu you saw in our site earlier. This dropdown menu has two items, each links to a lab page. 
+
+
++ And then there's an output section: 
+we had this before too. ANy keys we apply here will apply to all other parts of our site -- so *this* is why our index.Rmd's YAML was optional. 
 
 ---
 ## Inside the `_site.yml`
@@ -1209,7 +1236,7 @@ output:
 ├── rstats101.Rproj
 ├── _site/ 
 *├── _site.yml
-├── index.Rmd 
+*├── index.Rmd
 ├── schedule.Rmd 
 ├── lab01.Rmd
 └── lab02.Rmd
@@ -1217,8 +1244,14 @@ output:
 ]
 
 .right-column[
-&lt;img src="images/screenshots/RMD-site1.png" width="848" /&gt;
+&lt;img src="images/screenshots/RMD-site-annotated.png" width="805" /&gt;
 ]
+
+???
+
+So, for the most minimal R Markdown site, the minimum required files are index and _site.yml.
+
+It is optional, (but likely) that you'll want to add other RMD pages to your collection.
 
 ---
 background-image: url("images/rawpixel/bunch-balloons-rmd3.jpg")
@@ -1243,6 +1276,7 @@ background-size: contain
 ]
 
 ???
+In fact, 
 
 Every Rmd is a page
 
@@ -1356,7 +1390,7 @@ background-size: cover
 ]
 
 .right-column[
-&lt;img src="images/screenshots/RMD-site.png" width="848" /&gt;
+&lt;img src="images/screenshots/RMD-site.png" width="782" /&gt;
 ]
 
 --
@@ -1404,100 +1438,6 @@ template: clouds2
 **Optional** but likely:
 
 + Other `.Rmd` files = Content 
-
----
-exclude: true
-template: clouds2
-
-## Inside the `_site.yml`
-
-.left-column[
-
-```r
-.
-├── RMD-site.Rproj
-*├── _site.yml
-├── index.Rmd
-├── Lab1.Rmd
-```
-]
-
-&lt;img src="images/site.yml.png" style="
-  position: absolute; 
-  width: 63%; 
-  top: 96px;
-  right: 49px;
-"&gt;
-
-
-.right-column[
-```yaml
-navbar:
-  title: rstats101
-  left:
-  - text: Syllabus
-    href: index.html
-  - text: Labs
-    href: lab1.html
-output:
-  html_document:
-    toc: true
-    toc_float: true
-    theme: yeti
-```
-]
-
----
-exclude: true
-class: center, left
-
-## Put it together and what have you got?
-
-.pull-left[
-
-.Rmds
-
-&lt;img src="images/rawpixel/instruments.jpg" width="2558" /&gt;
-
-]
-
---
-
-.pull-right[
-
-`_site.yml`
-
-&lt;img src="images/orchestra.jpg" width="501" /&gt;
-]
-
----
-exclude: true
-template: clouds2
-
-## Build the site
-
-.left-column[
-
-```r
-.
-├── RMD-site.Rproj
-├── _site.yml
-├── index.Rmd
-├── Lab1.Rmd
-*└── _site/
-```
-]
-
-.right-column[
-&lt;img src="images/screenshots/build-site.jpg" width="640" /&gt;
-]
-
-
-
-???
-
-Once you have at minimum the _site.yml and the index.Rmd
-You can mouse over to the Build tab, which give you  HTML-website ready files in a folder called "_site"
 
 ---
 class: middle, center
@@ -2257,7 +2197,6 @@ class: inverse, center, middle
 
 # the options
 
-![](images/mtsalsa-hi-square.jpg)
 ???
 
 which options work best for whom?
