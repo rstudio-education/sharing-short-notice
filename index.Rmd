@@ -1177,6 +1177,7 @@ background-size: contain
 Next up, we have `_site.yml`. And in our balloon analogy, `_site.yml` is the basket that is bringing all the ballon strings together.
 
 Let's take a look inside this file.
+
 ---
 ## Inside the `_site.yml`
 
@@ -1250,7 +1251,7 @@ Let's walk through this:
 we had this before too. ANy keys we apply here will apply to all other parts of our site -- so *this* is why our index.Rmd's YAML was optional. 
 
 ---
-## Inside the `_site.yml`
+## R Markdown site
 
 .left-column[
 
@@ -1389,22 +1390,12 @@ background-size: contain
 
 ???
 
-Okay, we're finally, ready to share our R MArkdown site -- we'll do this the same way as before. but now - the only files we need to drag and drop are in _site. This this is the only folder, we need to deploy with Netfliy. 
-
----
-
-drag and drop goes here
-
----
-class: middle, center
-
-# How do you share this site?
-Drag-and-drop `_site/`
+Okay, we're finally, ready to share our R MArkdown site -- we'll do this the same way as before. All of our HTML, website-ready pages are stored in the _site/ folder. So This this is the only folder, we need to ddrag and drop 
 
 ---
 class: center, middle
 
-<video width="1530" height="610" controls>
+<video width="1316" height="630" controls>
     <source src="images/rmd-site-dnd.mp4" type="video/mp4">
 </video>
 
@@ -1417,16 +1408,16 @@ class: center, middle
 
 # But...
 
-.pull-left[
+.left-column[
 ![](https://media.giphy.com/media/3orif5e8QhgoL9TvmU/giphy.gif)
 ]
 
-.pull-right[
+.right-column[
+
+![](images/screenshots/24hrs.png)
+
 Only exists for 24 hours. 
 
-Need to make a Netlify account to make it stick.
-
-(make this a screenshot instead, circle where it says this)
 ]
 
 ???
@@ -1450,31 +1441,80 @@ class: middle center
 ???
 
 So let's go back to Netlify and do that. 
-Here's a gif of me doing this in one, two, three steps....
 
-Now we can rest asssured that this link is here to stay, and we can share it with others. 
+If you already use GitHub or GitBucket, then I recommend you use that to sign in becuase you're workflow will be smoother if your accounts are connected. But for today, I'm just going to sign up with email...
 
----
-class: center, middle
+Once you've signed up, you'll see you have an account dashboard. And your silly-named link is now here to stay. 
 
-# Update again?
 
 ---
+template: clouds
+
+# What if I make a change?
+
+---
+
+## What if I make a change?
+
+.pull-left[
+```{r echo=FALSE}
+yml_empty() %>%
+  yml_output(html_document(theme = "united")) %>% #<<
+  asis_yaml_output(fences = FALSE)
+```
+]
+
+<img src="images/tab-site-yml.png" style="
+  position: absolute; 
+  width: 44%; 
+  top: 136px;
+  left: 60px;
+">
+
+--
+
+.pull-right[
+
+ * Change theme to `united`
+ 
+ * Build again
+ 
+]
+
+???
+
+Imagine that after we've dragged and drop, we decide we want to change our site theme -- let's try 
+
+---
+
 class: center, middle
 
 <video width="1560" height="620" controls>
     <source src="images/netlify-update.mp4" type="video/mp4">
 </video>
 
+???
+
+Once we've re-built our site wiith the changes we want. We'll go back to our _site/ folder. 
+
+In netlify, we can make sure we are in the "deploy" tab of our dashboard -- and there's a spot specifically for updating. WE can drag and drop again here. 
+
+We click on the link--and see our new theme has been applied.
 
 ---
+template: clouds
 
-class: middle, center
-background-image: url(images/Clouds2.jpg)
-background-size: cover
+# Thoughts on R Markdown Sites
 
+???
 
-## Staying organized
+You now know how to build and update an R Markdown site. There are a few additional considerations I want to point out. 
+
+---
+template: clouds2
+class: middle center
+
+## No Subfolders
 
 <https://github.com/apreshill/data-vis-labs-2018>
 
@@ -1482,35 +1522,43 @@ background-size: cover
 knitr::include_graphics("https://dcossyleon.github.io/gifs/video/stay-organized1.gif")
 ```
 
+???
+
+The first is that RMD sites will not automatically Build RMD files that are contained in subfolders. This means that all RMDS have to be in the project root directory. 
+
+If you have a lot of files you want to link to in your course, keeping your project tidy can start to feel tricky. That's why this repository of an RMD site that i'm showing you here looks so full. 
+
+One solution you can use in this scenario is to have good file-naming hygiene: consistently use number pre-fixing to keep your files in order.
+
 ---
+class: middle
+background-image: url(images/rawpixel/blue-balloon-side.jpg)
+background-position: left
+background-size: contain
 
-class: left
-
-## R Markdown sites
-
-.pull-left[
-
-### Pros
+.pull-right[
+### R Markdown Site
 
 * Source stays same
 
 * Built-in themes (Bootstrap)
 
-* Low dependencies
+* Short-notice = Simple
 
 ]
 
---
+---
+class: middle
+background-image: url(images/rawpixel/balloon-ouch.jpg)
+background-position: right
+background-size: contain
 
-.pull-right[
+.pull-left[
+### R Markdown site
 
-### Cons
+* No subfolders
 
-* No Rmds in folders
-
-* Update navbar manually
-
-* 1 content flavor
+* Manual update
 
 ]
 
