@@ -2190,7 +2190,6 @@ class: inverse, center, middle
 
 # the options
 
-![](images/mtsalsa-hi-square.jpg)
 ???
 
 which options work best for whom?
