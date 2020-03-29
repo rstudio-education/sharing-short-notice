@@ -860,6 +860,10 @@ background-image: url(images/Clouds2.jpg)
     top: 2px;
     left: -1px;
   ">
+
+???
+
+Link to other pages, including one's you've made.
     
 ---
 class: center middle
@@ -881,11 +885,158 @@ background-image: url(images/Clouds2.jpg)
 
 ???
 
-Here's what one looks like out in the wild. And if you remember our single R Markdown lab page, this doesn't look that different.
-
-The main difference is that we have a navbar at the top with links that will take us to other pages.
+But you can also link to external pages here too, like this one here which in this case goes to a learning management system.
 
 ---
+name: build1
+
+## Build your site
+
+.pull-left[
+
+```{r eval=FALSE}
+.
+├── rstats101.Rproj
+├── _site.yml
+├── index.Rmd 
+├── schedule.Rmd 
+├── lab01.Rmd
+└── lab02.Rmd
+```
+]
+
+.pull-right[
+```{r echo=FALSE}
+knitr::include_graphics("images/rproj.png")
+```
+
+]
+???
+
+So let's build a minimal R Markdown site of our own. 
+
+Imagine that this box on the left is the list of files that are inside of our R Project folder. 
+
+---
+name: build2
+
+## Build your site
+
+.pull-left[
+
+```{r eval=FALSE}
+.
+├── rstats101.Rproj
+├── _site.yml
+├── index.Rmd #<<
+├── schedule.Rmd 
+├── lab01.Rmd
+└── lab02.Rmd
+```
+]
+
+
+.pull-right[
+```{r echo=FALSE}
+knitr::include_graphics("images/hello-index.jpg")
+```
+]
+
+???
+
+Just like before when we created a single page, we have an `index.Rmd` file. 
+
+---
+name: build3
+
+## Build your site
+
+.pull-left[
+
+```{r eval=FALSE}
+.
+├── rstats101.Rproj
+├── _site.yml
+├── index.Rmd 
+├── schedule.Rmd #<<
+├── lab01.Rmd #<<
+└── lab02.Rmd #<<
+```
+]
+
+.pull-right[
+```{r echo=FALSE}
+knitr::include_graphics("images/rmd-friends.jpg")
+```
+]
+
+???
+
+But now there are a few other R Markdown files, too. 
+
+
+---
+name: build4
+
+## Build your site
+
+.pull-left[
+
+```{r eval=FALSE}
+.
+├── rstats101.Rproj
+├── _site.yml #<<
+├── index.Rmd 
+├── schedule.Rmd 
+├── lab01.Rmd 
+└── lab02.Rmd 
+```
+]
+
+.pull-right[
+```{r, echo=FALSE}
+knitr::include_graphics("images/Q.jpg")
+```
+]
+
+???
+
+And you might not recognize this file. That's new...
+
+---
+name: build5
+
+## Build your site
+
+.left-column[
+
+```{r eval=FALSE}
+.
+├── rstats101.Rproj
+├── _site.yml #<<
+├── index.Rmd 
+├── schedule.Rmd 
+├── lab01.Rmd 
+└── lab02.Rmd 
+```
+]
+
+.right-column[
+
+```{r, echo=FALSE}
+knitr::include_graphics("images/screenshots/build-site.png")
+```
+]
+
+???
+
+But before we dig deeper into the files here, let's Build our site and see what we get. 
+
+To do that, you can mouse over to the Build tab, which will build your site in one fell swoop.
+
+---
+name: build6
+
 ## Build your site
 
 .left-column[
@@ -897,22 +1048,24 @@ The main difference is that we have a navbar at the top with links that will tak
 ├── _site.yml
 ├── index.Rmd 
 ├── schedule.Rmd 
-├── lab01.Rmd
-└── lab02.Rmd
+├── lab01.Rmd 
+└── lab02.Rmd 
 ```
 ]
 
 .right-column[
 ```{r, echo=FALSE}
-knitr::include_graphics("images/screenshots/build-site.jpg")
+knitr::include_graphics("images/screenshots/build-site-after.png")
 ```
 ]
 
+(note: RMD site in viewer pane is NOT the default setting)
+
 ???
 
-So let's build an RMD site of our own. On the left are the files that are going to be in our R Project directory. 
+And once we do, this will create a new folder called `_site/`, which will hold all the HTML files that were just knit. 
 
-
+Let's take a look at some of these...
 
 ---
 class: center middle
@@ -927,7 +1080,7 @@ knitr::include_graphics("images/screenshots/RMD-site.png")
 
 ???
 
-And here's a simple site that we're going to look at more closely.
+Here is the site we just built. We have a navbar and a theme -- and seeif you notice anything different about the navbar
 
 ---
 background-image: url("images/rawpixel/bunch-balloons-rmd1.jpg")
@@ -949,6 +1102,34 @@ background-size: contain
 └── lab02.Rmd
 ```
 ]
+
+???
+
+---
+## Inside the `index.Rmd`
+
+.left-column[
+```{r eval=FALSE}
+.
+├── rstats101.Rproj
+├── _site/ 
+├── _site.yml
+├── index.Rmd #<<
+├── schedule.Rmd 
+├── lab01.Rmd
+└── lab02.Rmd
+```
+]
+
+.right-column[
+```{r, echo=FALSE}
+knitr::include_graphics("images/screenshots/RMD-site1.png")
+```
+
+do i need this slide w/ annotation?
+
+]
+
 
 ???
 
@@ -1039,6 +1220,36 @@ yml_empty() %>%
 ```
 
 
+]
+
+<img src="images/RMD-site-annotated.png" style="
+  position: absolute; 
+  width: 52%; 
+  top: 91px;
+  right: 147px;
+">
+
+---
+## Inside the `_site.yml`
+
+.left-column[
+
+```{r eval=FALSE}
+.
+├── rstats101.Rproj
+├── _site/ 
+├── _site.yml #<<
+├── index.Rmd 
+├── schedule.Rmd 
+├── lab01.Rmd
+└── lab02.Rmd
+```
+]
+
+.right-column[
+```{r, echo=FALSE}
+knitr::include_graphics("images/screenshots/RMD-site1.png")
+```
 ]
 
 ---
@@ -1222,101 +1433,6 @@ knitr::include_graphics("images/screenshots/RMD-site-lab.png")
 + Other `.Rmd` files = Content 
 
 ---
-exclude: true
-template: clouds2
-
-## Inside the `_site.yml`
-
-.left-column[
-```{r eval=FALSE}
-.
-├── RMD-site.Rproj
-├── _site.yml #<<
-├── index.Rmd
-├── Lab1.Rmd
-```
-]
-
-<img src="images/site.yml.png" style="
-  position: absolute; 
-  width: 63%; 
-  top: 96px;
-  right: 49px;
-">
-
-
-.right-column[
-```{r echo=FALSE}
- yml_empty() %>%
-  yml_navbar(
-    title = "rstats101",
-    left = list(
-      navbar_page("Syllabus", href = "index.html"),
-      navbar_page("Labs", href = "lab1.html")
-    )) %>% 
-  yml_output(html_document(toc = TRUE, toc_float = TRUE, theme = "yeti")) %>% 
-  asis_yaml_output(fences = FALSE)
-```
-]
-
----
-exclude: true
-class: center, left
-
-## Put it together and what have you got?
-
-.pull-left[
-
-.Rmds
-
-```{r, echo=FALSE}
-knitr::include_graphics("images/rawpixel/instruments.jpg")
-```
-
-]
-
---
-
-.pull-right[
-
-`_site.yml`
-
-```{r, echo=FALSE}
-knitr::include_graphics("images/orchestra.jpg")
-```
-]
-
----
-exclude: true
-template: clouds2
-
-## Build the site
-
-.left-column[
-```{r eval=FALSE}
-.
-├── RMD-site.Rproj
-├── _site.yml
-├── index.Rmd
-├── Lab1.Rmd
-└── _site/ #<<
-```
-]
-
-.right-column[
-```{r, echo=FALSE}
-knitr::include_graphics("images/screenshots/build-site.jpg")
-```
-]
-
-
-
-???
-
-Once you have at minimum the _site.yml and the index.RMd
-You can mouse over to the Build tab, which give you  HTML-website ready files in a folder called "_site"
-
----
 class: middle, center
 
 # How do you share this site?
@@ -1402,7 +1518,7 @@ knitr::include_graphics("https://dcossyleon.github.io/gifs/video/stay-organized1
 
 ---
 
-class: middle, left
+class: left
 
 ## R Markdown sites
 
