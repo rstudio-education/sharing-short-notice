@@ -1589,27 +1589,69 @@ class: middle, center
 background-image: url(images/Clouds.jpg)
 background-size: cover
 
-<https://blogs.rstudio.com/tensorflow/about.html>
+<https://rstudio.github.io/distill/>
 
-<iframe src="https://blogs.rstudio.com/tensorflow/about.html/" height="600" width="1200" frameborder="0"></iframe> 
-
+![](https://dcossyleon.github.io/gifs/video/distill-intro.gif)
 
 ???
 
-Here's a Distill site...and it's actually very similar to a RMD site, but it has some features built-in that make it especially good for technical and scientific content. ANd I'll show you an example of that in a second. 
+Here's a Distill site...
 
-Another great optional feature of Distill that is worth pointing out, is the ability to organize content into a blog format. 
+Distill is basically an R MArkdown site's sibling but with more technical and scientific interests.
+
+Distill has almost the exact same structure, but it comes with some built-in features that make it easier to author math and science content
+
+For example...
+
+---
+
+class: middle, center
+background-image: url(images/Clouds.jpg)
+background-size: cover
+
+<https://rstudio.github.io/distill/>
+
+Screenshot footnotes and asides
+
+
+---
+
+class: middle, center
+background-image: url(images/Clouds.jpg)
+background-size: cover
+
+<https://rstudio.github.io/distill/>
+
+Screenshot Reuse clause in footer
 
 ---
 template: clouds
+name: distill-build1
 
-## Distill site
+## Build your site
 
-(Screenshot of basic Distill site)
+.left-column[
+
+```{r eval=FALSE}
+.
+├── rstats101.Rproj
+├── _site.yml #<<
+├── index.Rmd 
+├── schedule.Rmd 
+├── lab01.Rmd 
+└── lab02.Rmd 
+```
+]
+
+.right-column[
+<img src="images/screenshots/build-site.png">
+]
+
+to-do swap build screen shot with Distill proj in IDE, change dir tree
 
 ???
 
-And here's a simple Distill site that we're going to look at more closely.
+So let's build a minimal Distill site of our own. 
 
 
 ---
