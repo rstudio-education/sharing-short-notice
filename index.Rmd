@@ -1690,21 +1690,17 @@ The index.Rmd file is special. It is both the first chapter, and contains some Y
 
 .right-column[
 
-
-```
----
-title: "A Book"
-author: "Frida Gomam"
-site: bookdown::bookdown_site
-documentclass: book
-output:
-  bookdown::gitbook: default
----
-
-Welcome to the course!
+```{r echo=FALSE, comment='#'}
+# x <- as_yml("knit: bookdown::render_book")
+yml_empty() %>%
+  yml_title("rstats101 book") %>%
+  yml_author("Alison Hill") %>%
+  yml_bookdown_site() %>% 
+  # yml_toplevel(x) %>% 
+  asis_yaml_output()
+cat("Welcome {-}")
 ```
 
-to-do convert to ymlthis
 ]
 
 ---
@@ -1728,8 +1724,100 @@ background-size: contain
 ```
 ]
 
+---
 
+## Inside the `_bookdown.yml`
 
+.left-column[
+```{r eval=FALSE}
+.
+├── book.Rproj
+├── _bookdown.yml #<<
+├── _output.yml 
+├── index.Rmd 
+├── 01-week.Rmd 
+├── 02-week.Rmd 
+├── 03-week.Rmd 
+└── _book 
+```
+]
+
+.right-column[
+```{r echo=FALSE}
+yml_empty() %>%
+  yml_bookdown_opts(new_session = TRUE) %>% 
+  asis_yaml_output(fences = FALSE)
+```
+]
+
+???
+
+new session forces bookdown to do what is called knit then merge
+
+strongly recommend
+
+K-M uses separate R sessions for individual chapters
+
+each chapter compiles from a clean state, including packages loaded
+
+Without it, you would need to make sure that you don't have any duplicate chunk labels throughout your ENTIRE book.
+
+BUT K-M does not allow Rmd files to be in subdirectories,
+
+---
+
+## Inside the `_bookdown.yml`
+
+.left-column[
+```{r eval=FALSE}
+.
+├── book.Rproj
+├── _bookdown.yml #<<
+├── _output.yml 
+├── index.Rmd 
+├── week01.Rmd 
+├── week02.Rmd 
+├── week03.Rmd 
+└── _book 
+```
+]
+
+.right-column[
+```{r echo=FALSE}
+yml_empty() %>%
+  yml_bookdown_opts(
+    new_session = TRUE,
+    rmd_files = c("index.Rmd", "week01.Rmd", "week02.Rmd", "week03.Rmd")
+    ) %>% 
+  asis_yaml_output(fences = FALSE)
+```
+]
+
+---
+
+## Inside the `_output.yml`
+
+.left-column[
+```{r eval=FALSE}
+.
+├── book.Rproj
+├── _bookdown.yml 
+├── _output.yml #<<
+├── index.Rmd 
+├── 01-week.Rmd 
+├── 02-week.Rmd 
+├── 03-week.Rmd 
+└── _book 
+```
+]
+
+.right-column[
+
+```yaml
+bookdown::gitbook: default
+```
+
+]
 
 ---
 background-image: url("images/rawpixel/bunch-balloons-book3.jpg")
@@ -1871,23 +1959,63 @@ Yes.
 ]
 
 ---
-class: inverse, center, middle
+name: blogdown
+class: top, center
+background-image: url(images/mtsalsa-blogdown.jpg)
+background-size: contain
+background-position: center, bottom
 
-# blogdown
 
----
+# `install.packages("blogdown")`
 
-...is more intense, but here's what's possible.
 
 ???
 
-Gif of blogdown
+
+---
+background-image: url(images/rawpixel/knight.jpg)
+background-size: contain
+background-color: #F5ECE0
+
+---
+class: center, middle, inverse
+
+```{r echo=FALSE}
+knitr::include_graphics("images/hugo.svg")
+```
+
+<https://gohugo.io/>
+
 
 ---
 
-We won't go into the key files for this, but a main PRO of blogdown is that you get to have organized directories and subdirections. 
+Academic theme
 
-* Junk drawer vs Container Store
+---
+
+# Advice
+
+1. Don't update Hugo during your course.
+
+--
+
+1. Don't update your Hugo theme during your course.
+
+--
+
+1. Seriously, just don't update anything during your course.
+
+
+
+---
+
+Can't get anywhere else
+
++ Subdirectories
+
++ Ability to "knit" all output formats (like R Markdown slides, plain Rmd documents, etc.) with single button
+
++ Ability to "serve" all outputs on a single site
 
 ---
 
