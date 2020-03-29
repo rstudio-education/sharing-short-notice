@@ -1227,6 +1227,7 @@ yml_empty() %>%
   width: 52%; 
   top: 91px;
   right: 147px;
+  display: none;
 ">
 
 ---
