@@ -19,11 +19,8 @@ output:
       beforeInit: "https://platform.twitter.com/widgets.js"
     includes:
       in_header: [assets/header.html]
-<<<<<<< HEAD
 params:
   github_link: "TBD"
-=======
->>>>>>> 13201023220379b3e6edc944c4f9d0622c58e775
 ---
 
 ```{r setup, include=FALSE}
