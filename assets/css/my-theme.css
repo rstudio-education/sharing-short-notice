@@ -244,7 +244,7 @@ div.my-footer span {
 }
 
 .remark-slide-content:after {
-    content: "bit.ly/share";
+    content: "rstd.io/sharing";
     position: absolute;
     bottom: 5px;
     right: 35px;

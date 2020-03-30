@@ -148,8 +148,6 @@ If you type the short link on the bottom right of this slide into your browser r
 
 All of these links are clickable from the slides.
 
-[REMEMBER TO REPLACE THE FAKE SHORT LINK]
-
 ---
 template: clouds
 
@@ -764,7 +762,7 @@ class: top, center
 
 ???
 
-So here is "markdown mountain"...
+So we're going to hike "markdown mountain"...
 
 ---
 background-image: url(images/mtsalsa.jpg)
@@ -793,13 +791,12 @@ background-position: center, bottom
 So let's begin with an R Markdown site.
 
 ---
-
 class: center top
-background-image: url(images/Clouds2.jpg)
+background-color: #f5ede4
 
 &lt;https://apreshill.github.io/data-vis-labs-2018&gt;
 
-&lt;img src= "images/screenshots/RMD-site-wild.png" style=" margin-top: -20px;"&gt;
+&lt;img src= "images/screenshots/RMD-site-wild.png" style="margin-top: -20px;"&gt;
 
 --
 
@@ -818,8 +815,8 @@ The main difference is that we have a navbar at the top -- with links that will 
 
 
 ---
-class:center middle
-background-image: url(images/Clouds2.jpg)
+class: center middle
+background-color: #f5ede4
 
 &lt;https://apreshill.github.io/data-vis-labs-2018&gt;
 
@@ -841,7 +838,7 @@ Link to other pages, including one's you've made.
     
 ---
 class: center middle
-background-image: url(images/Clouds2.jpg)
+background-color: #f5ede4
 
 &lt;https://apreshill.github.io/data-vis-labs-2018&gt;
 
@@ -889,6 +886,8 @@ name: build1
 So let's build a minimal R Markdown site of our own. 
 
 Imagine that this box on the left is the list of files that are inside of our R Project folder. 
+
+Let's take a look inside some of these...
 
 ---
 name: build2
@@ -993,14 +992,14 @@ name: build5
 ]
 
 .right-column[
-&lt;img src="images/screenshots/build-site.png"&gt;
+&lt;img src="images/screenshots/build-site.png" style="margin-top: -28px;"&gt;
 ]
 
 ???
 
-But before we dig deeper into the files here, let's Build our site and see what we get. 
+But before we dig deeper into the files here, let's knit all the pages in our R Markdown site in one fell swoop. 
 
-To do that, you can mouse over to the Build tab, which will build your site in one fell swoop.
+To do that, you can mouse over to the Build Tab in the IDE and then click "Build Website".
 
 ---
 name: build6
@@ -1008,7 +1007,6 @@ name: build6
 ## Build your site
 
 .left-column[
-
 
 ```r
 .
@@ -1023,8 +1021,7 @@ name: build6
 ]
 
 .right-column[
-&lt;img src="images/screenshots/build-site-after.png"&gt;
-
+&lt;img src="images/screenshots/build-site-after.png" style="margin-top: -28px"&gt;
 ]
 
 (note: RMD site in viewer pane is NOT the default setting)
@@ -1046,11 +1043,9 @@ background-color: #f5ede4
 ![](images/screenshots/RMD-site.png)
 ???
 
-Here is the site we just built. We have a navbar and a theme -- and see if you notice anything different about the navbar...we'll come back to that in a bit.
+Here is the site we just built. We have a navbar and a theme that will apply to all pages on our site -- and even a dropdown menu!
 
-Also homepage link. 
-
-Let's look at the source code for some of the documents that made this site possible, starting with the index.
+Let's look under the hood and see some of the site's source code, starting with the index.
 
 ---
 background-image: url("images/rawpixel/bunch-balloons-rmd1.jpg")
@@ -1076,7 +1071,7 @@ background-size: contain
 
 ???
 
-Remember that the index.Rmd is a special R Markdown document. In any site, whatever file you name `index` becomes the homepage.  
+Remember that the index.Rmd is a special R Markdown documen--- because In any site, whatever file is named `index` will be treated as the homepage.  
 
 So if our site was a big bunch of hot air ballons, `index` would be the main one of them all. 
 
@@ -1122,7 +1117,7 @@ to-do convert to ymlthis
 
 If we take a peek inside index, you'll notice that the YAML is much more pared down-- 
 
-Here we only have a key for the title, but in fact, if we wanted to, we could have even gotten rid of that and had no YAML at all.  
+ but in fact, it doesn't have to be -- Here we're only using a key for the title, but we could have kept the exact same YAML that we had a single RMD document or we even gotten rid of that and had no YAML at all-- depending on what information we want to show. The meta data we include in each document is flexible in an RMD site. 
 
 (We'll see why next.)
 
@@ -1149,10 +1144,13 @@ background-size: contain
 
 ???
 
-Next up, we have `_site.yml`. And in our balloon analogy, `_site.yml` is the basket that is bringing all the ballon strings together.
+Next up, we have `_site.yml`: this is the site's configuration page, and it is basically is a YAML to rule all other RMD YAMLS in our site.
 
-Let's take a look inside this file.
+It is because of this file, that our index page (and all other RMDs in our site) can be so-pared down.
 
+In our balloon analogy, `_site.yml` is the basket that is bringing all the ballon strings together.
+
+Let's take a look inside...
 ---
 ## Inside the `_site.yml`
 
@@ -1202,9 +1200,7 @@ output:
 
 ???
 
-This file is essentially a mega - YAML, with metadata for the entire website.
-
-Let's walk through this:
+Alright, let's pause a little longer here and walk through this:
 
 * If you've only ever worked with a single R MArkdown file before, then you've maybe never seen `navbar:` as a YAML key. As you might expect, all of the options indented under here are what build our navbar:
     
@@ -1864,10 +1860,9 @@ The most recently updated R MArkdown doc will pop to the top. This creates a stu
 ├── Project1.Rmd 
 └── Project2.Rmd 
 ```
-
 ]
 
-.column-right[
+.right-column[
 
 ```r
 
