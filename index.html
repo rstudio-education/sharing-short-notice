@@ -4,7 +4,7 @@
     <title>Sharing on Short Notice</title>
     <meta charset="utf-8" />
     <meta name="author" content="Alison Hill" />
-    <meta name="date" content="2020-03-29" />
+    <meta name="date" content="2020-03-30" />
     <link href="libs/remark-css/default.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/my-theme.css" type="text/css" />
@@ -1521,9 +1521,9 @@ background-size: contain
 
 * Source stays same
 
-* Built-in themes (Bootstrap)
+* Built-in themes
 
-* Short-notice = Simple
+* Simple -&gt; short notice
 
 ]
 
@@ -1566,8 +1566,8 @@ Next up is Distill, which you'll need to install first before you can use it.
 
 ---
 class: middle, center
-background-image: url(images/Clouds.jpg)
-background-size: cover
+template: clouds2
+background-image: cover
 
 &lt;https://rstudio.github.io/distill/&gt;
 
@@ -1575,95 +1575,457 @@ background-size: cover
 
 ???
 
-Here's a Distill site...
+Here you get to see a bit of what a Distill site looks like, and actually the site I'm showing you is the documentation site for Distill itself. 
 
-Distill is basically an R MArkdown site's sibling but with more technical and scientific interests.
+The design that you see is the out-of-the-box styling that you get. It's not easy to change or customize this, but it looks pretty sleek, so this doens't matter too much.
 
-It has almost the exact same structure, but it comes with some built-in features that make it easier to author math and science content
+Distill is basically an R MArkdown site's sibling but with more technical and scientific interests. 
+
+It has almost the exact same structure, but it comes with some built-in features that make it easier to author math and science content.
 
 For example...
 
 ---
-template: clouds
+template: clouds2
+class: middle, center
 
-## Distill site
-
-(Screenshot of basic Distill site)
+&lt;https://rstudio.github.io/distill/&gt;
+&lt;img src="images/screenshots/distill-aside.png" style="margin-top: -28px;"&gt;
 
 ???
 
-And here's a simple Distill site that we're going to look at more closely.
-
+`&lt;aside&gt; my margin note &lt;/aside&gt;`
 
 ---
-template: clouds
+class: middle, center
+template: clouds2
 
-## Inside the project
+&lt;https://rstudio.github.io/distill/&gt;
+&lt;img src="images/screenshots/distill-reuse.png" style="margin-top: -28px;"&gt;
+
+---
+template: clouds2
+
+## Build your site
+
+.left-column[
+
+
+```r
+.
+├── DataViz101.Rproj
+*├── _site/
+├── _site.yml 
+├── index.Rmd 
+├── Project1.Rmd 
+└── Project2.Rmd 
+```
+]
+
+.right-column[
+&lt;img src="images/screenshots/build-distill.png" style="margin-top: -28px;"&gt;
+]
+
+
+???
+
+So let's build a minimal Distill site of our own. 
+
+Same as RMD site -- Build tab.
+
+Also, this will put our HTML files in a _site folder.
+
+---
+
+![](images/screenshots/min-distill.png)
+--
+
+&lt;img src="images/screenshots/min-distill0.png" style="
+  position: absolute; 
+  width: 100%; 
+  top: 0px;
+  left: 0px;
+"&gt;
+
+--
+&lt;img src="images/screenshots/min-distill1.png" style="
+  position: absolute; 
+  width: 100%; 
+  top: 0px;
+  left: 0px;
+"&gt;
+
+--
+
+&lt;img src="images/screenshots/min-distill2.png" style="
+  position: absolute; 
+  width: 100%; 
+  top: 0px;
+  left: 0px;
+"&gt;
+
+
+???
+
+Quick things to notice -- let's look inside.
+
+---
+background-image: url("images/rawpixel/bunch-balloons-rmd1.jpg")
+background-position: right
+background-size: contain
+
+## Inside the `index.Rmd`
 
 .left-column[
 
 ```r
 .
-├── distill-site.Rproj
-*├── _site.yml
+├── DataViz101.Rproj
+├── _site/
+├── _site.yml 
 *├── index.Rmd
-├── listing.Rmd
-├── _posts/
+├── Project1.Rmd 
+└── Project2.Rmd 
+```
+]
+
+???
+
+The index page in a distill site will function the same way that it did in the RMD page. It will be the site's home page.
+
+---
+template: clouds2
+
+## Inside the `index.Rmd`
+
+.left-column[
+
+```r
+.
+├── DataViz101.Rproj
+├── _site/
+├── _site.yml 
+*├── index.Rmd
+├── Project1.Rmd 
+└── Project2.Rmd 
 ```
 ]
 
 .right-column[
+```
+---
+title: Intro to Data Visualization
+description: Spring 2020 Course Website
+author:
+  - name: Alison Hill
+    affiliation: RStudio
+  - name: Desirée De Leon
+    affiliation: Emory University
+---
 
-
-Basic distill Screenshot annotated
+# Welcome to the course!
+```
 ]
 
---
-
-&lt;img src="" style="
+&lt;img src="images/tab-index.png" style="
   position: absolute; 
-  width: 52%; 
-  top: 91px;
-  right: 147px;
+  width: 60%; 
+  top: 131px;
+  right:67px;
 "&gt;
 
 ???
 
-A Distill site without blog content needs the same minimum files as an RMD site. 
+At a minimum, I recommend having a `title:`, but including a short description or tagline is nice too. 
 
-**Minimum** required files:
-
-1. `index.Rmd` = Homepage
-
-1. `_site.yml` = Navbar
-
-But for the blog-like feature, you need a Blog Listing RMD, a folder, named posts/ which then contains a directory for each post you make. 
+It's also possible to add multiple authors to any Distill page, which could be useful if you're co-teaching (or if you decide to have students form groups to author their own Distill articles)
 
 ---
+background-image: url(images/rawpixel/bunch-balloons-rmd2.jpg)
+background-position: right
+background-size: contain
 
-# Where is the site?
+# Inside the `_site.yml`
 
-build with button
+.left-column[
+
+```r
+.
+├── DataViz101.Rproj
+├── _site/
+*├── _site.yml
+├── index.Rmd
+├── Project1.Rmd 
+└── Project2.Rmd 
+```
+
+]
 
 ???
 
-actually the same as Rmd site!
+Next we move on to the _site.yml page. Site configuration. This should sound a bit familiar...
 
 ---
+template: clouds2
 
-# How do you share this site?
+# Inside the `_site.yml`
 
-Drag-and-drop `_site/`
+.left-column[
 
-![](https://media.giphy.com/media/5pUkiGdxzKisg/giphy.gif)
+```r
+.
+├── DataViz101.Rproj
+├── _site/
+*├── _site.yml
+├── index.Rmd
+├── Project1.Rmd 
+└── Project2.Rmd 
+```
+
+]
+
+.right-column[
+```
+title: Data Viz 101
+navbar:
+  right:
+    - text: Projects
+      menu: 
+      - text: Project 1
+        href: projects1.html
+      - text: Project 2
+        href: projects2.html
+output: distill::distill_article
+```
+]
+
+&lt;img src="images/tab-site-yml.png" style="
+  position: absolute; 
+  width: 60%; 
+  top: 138px;
+  right:67px;
+"&gt;
 
 ???
 
-actually the same as Rmd site!
+The YAML keys here are all very similar, with one important change.
+
+The output MUST specify that this is a Distill article. This is how the site knows to apply the Distill styling and framework. 
+
+Other than this, you can take any of your existing RMD documents, clean out its individual frontmatter YAML at the top, and plop it into your Distill navbar key to implement it as a Distill article. 
 
 ---
+class: center middle
+exclude: true
+
+&lt;img src="images/whispering-1200.jpg" style=" width: 90%;"&gt;
+
+---
+background-image: url(images/Whisper.jpg)
+background-size: contain
+
+&lt;div class="word-bubble" style="
+  position: absolute; 
+  text-align: center;
+  width: 50%; 
+  top: 100px;
+  left: 310px;
+  font-size: 1.3em;
+"&gt; Alas, I have kept one important thing &lt;br&gt; from you about Distill websites. &lt;/div&gt;
+
+
+---
+class: center middle
+
+#  A Distill Blog
+
+---
+
+![](https://rstudio.github.io/distill/images/site-listing.png)
+???
+
+A page on your site that compiles a chronological listing of R Markdown posts. 
+
+For a course, let's say that after every class, you'd like to post notes or announcements about that day's lesson. With a blog, you can do that easily -- 
+
+The most recently updated R MArkdown doc will pop to the top. This creates a student-centered approach to designing website content -- because students will always be able to tell what has been recently updated. This is not always the case with non-blog style pages.
+---
+
+## Make a blog post
+
+.left-column[
+
+```r
+.
+├── DataViz101.Rproj
+├── _site/
+├── _site.yml
+├── index.Rmd
+├── Project1.Rmd 
+└── Project2.Rmd 
+```
+
+]
+
+.column-right[
+
+```r
+
+distill::create_post("Week 1")
+
+```
+
+What did this add?
+
+]
+
+
+---
+background-image: /*url("images/rawpixel/bunch-balloons-rmd4.jpg")*/
+background-position: right
+background-size: contain
+
+## `_posts/`
 
 .pull-left[
+
+```r
+.
+├── DataViz101.Rproj
+├── _site/
+├── _site.yml
+├── index.Rmd
+├── Project1.Rmd 
+├── Project2.Rmd
+*└── _posts/
+```
+]
+
+???
+
+A new folder for blog posts --- inside you have a subdirectory and RMD file for your new post. 
+
+---
+
+# Inside a post
+
+.left-column[
+
+```r
+.
+└── _posts/ 
+  └── Week1 # Optional
+*   └── Week1.Rmd
+    
+```
+]
+
+.right-column[
+```
+---
+title: Week 1
+date: 03-24-2020
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+During our first week we will make our first plots with `ggplot2`.
+```
+
+* Posts **MUST** be knit individually
+* Rinse and repeat for each new post.
+
+]
+---
+
+## Add a listing page
+
+.left-column[
+
+```r
+.
+├── DataViz101.Rproj
+├── _site/
+├── _site.yml
+├── index.Rmd
+├── Project1.Rmd 
+├── Project2.Rmd 
+*└── listings.Rmd
+
+```
+
+]
+
+.right-column[
+```
+---
+listing: posts
+---
+```
+]
+
+???
+
+But we need a way to tell our Distill site that this post exists. We create a listing page -- a content-less page whose only job is to compile all the posts we've authored and knit. 
+
+We create a listings page in our root directory. The RMD file can be called anything -- the only critical piece is that it have this listing key in its YAML.
+
+---
+## Update the `_site.yml`
+
+.left-column[
+
+```r
+.
+├── DataViz101.Rproj
+├── _site/
+*├── _site.yml
+├── index.Rmd
+├── Project1.Rmd 
+├── Project2.Rmd 
+└── listings.Rmd
+```
+
+]
+
+.right-column[
+```
+title: Data Viz 101
+navbar:
+  right:
+    - text: Schedule
+      href: listings.html
+    - text: Projects
+      menu: 
+      - text: Project 1
+        href: projects1.html
+      - text: Project 2
+        href: projects2.html
+    - text: Schedule
+      href: listings.html
+output: distill::distill_article
+```
+]
+
+---
+class: middle, center
+
+blog page = listing page + `distill::create_post()`
+
+---
+
+GIF drag and drop _site/ to netlify
+
+---
+
+change domain name
+
+---
+
+.pull-right[
+
+### Distill Sites
 
 * Sleek
 
@@ -1673,9 +2035,11 @@ actually the same as Rmd site!
 
 ]
 
---
+---
 
-.pull-right[
+.pull-left[
+
+### Distill Sites
 
 * Knit posts one-by-one (but no manual adding to menus!)
 

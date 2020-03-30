@@ -534,3 +534,8 @@ pre {
 .hidden{
   visibility: hidden;
 }
+
+.word-bubble {
+  font-family: 'Noto Serif JP';
+  font-size: 1.2em;
+}
