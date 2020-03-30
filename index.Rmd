@@ -19,8 +19,11 @@ output:
       beforeInit: "https://platform.twitter.com/widgets.js"
     includes:
       in_header: [assets/header.html]
+<<<<<<< HEAD
 params:
   github_link: "TBD"
+=======
+>>>>>>> 13201023220379b3e6edc944c4f9d0622c58e775
 ---
 
 ```{r setup, include=FALSE}
@@ -2511,8 +2514,22 @@ knitr::include_graphics("images/hugo.svg")
 
 
 ---
+class: center, middle
+background-image: url(images/Clouds2.jpg)
+background-size: cover
 
-Academic theme
+<https://academic-demo.netlify.com/>
+
+<iframe src="https://academic-demo.netlify.com/" height="600" width="1200" frameborder="0"></iframe> 
+
+---
+class: center, middle
+background-image: url(images/Clouds2.jpg)
+background-size: cover
+
+<https://share-blogdown.netlify.com/>
+
+<iframe src="https://share-blogdown.netlify.com/" height="600" width="1200" frameborder="0"></iframe> 
 
 ---
 background-image: url(images/rawpixel/balloon-ouch.jpg)
