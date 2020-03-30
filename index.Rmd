@@ -16,11 +16,6 @@ output:
       highlightLines: true
       countIncrementalSlides: false
       ratio: "16:9"
-      beforeInit: "https://platform.twitter.com/widgets.js"
-    includes:
-      in_header: [assets/header.html]
-params:
-  github_link: "TBD"
 ---
 
 ```{r setup, include=FALSE}
