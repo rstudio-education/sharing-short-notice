@@ -1094,10 +1094,12 @@ Remember that the index.Rmd is a special R Markdown documen--- because In any si
 So if our site was a big bunch of hot air ballons, `index` would be the main one of them all. 
 
 ---
+background-image: url(images/Clouds2.jpg)
+background-size: cover
+
 ## Inside the `index.Rmd`
 
 .left-column[
-
 ```{r eval=FALSE}
 .
 ├── rstats101.Rproj
@@ -1111,7 +1113,6 @@ So if our site was a big bunch of hot air ballons, `index` would be the main one
 ]
 
 .right-column[
-
 ```
 ---
 title: "rstats 101"
@@ -1119,8 +1120,6 @@ title: "rstats 101"
 
 Welcome to the course!
 ```
-
-to-do convert to ymlthis
 ]
 
 <img src="images/tab-index.png" style="
@@ -1134,7 +1133,11 @@ to-do convert to ymlthis
 
 If we take a peek inside index, you'll notice that the YAML is much more pared down-- 
 
- but in fact, it doesn't have to be -- Here we're only using a key for the title, but we could have kept the exact same YAML that we had a single RMD document or we even gotten rid of that and had no YAML at all-- depending on what information we want to show. The meta data we include in each document is flexible in an RMD site. 
+ but in fact, it doesn't have to be -- 
+ 
+Here we're only using a key for the title, but we could have kept the exact same YAML that we had in any existing single RMD document or we even gotten rid of that and had no YAML at all-- depending on what information we wanted to show. 
+
+The metadata we include in each document is flexible in an RMD site. 
 
 (We'll see why next.)
 
@@ -1160,14 +1163,18 @@ background-size: contain
 
 ???
 
-Next up, we have `_site.yml`: this is the site's configuration page, and it is basically is a YAML to rule all other RMD YAMLS in our site.
+Next up, we have `_site.yml`: this is the site's configuration page, and it is basically is a YAML to rule all the other YAMLS.
 
-It is because of this file, that our index page (and all other RMDs in our site) can be so-pared down.
+It is because of *this* file that our index page in our site could be so-pared down.
 
 In our balloon analogy, `_site.yml` is the basket that is bringing all the ballon strings together.
 
 Let's take a look inside...
+
 ---
+background-image: url(images/Clouds2.jpg)
+background-size: cover
+
 ## Inside the `_site.yml`
 
 .left-column[
@@ -1215,33 +1222,37 @@ yml_empty() %>%
 
 ???
 
-Alright, let's pause a little longer here and walk through this:
+This file is important, so let's pause a little longer here and walk through this:
 
 * If you've only ever worked with a single R MArkdown file before, then you've maybe never seen `navbar:` as a YAML key. As you might expect, all of the options indented under here are what build our navbar:
     
     + The first line gives a title to our site, and creates the link in the navbar to go to the homepage.
     
-    + The next thing is `left:`, and this assigns your navbar links will go on the left side immediately next to the the site title. (but you can also choose `right:`)
+    + The next key is `left:` (but you can also choose `right:`), and this determines whether your links will go on the left or right side of the navbar.
     
     + Underneath are nested YAML keys where we spell out what items we want in the navbar. 
     
-    + Whenever you make a new R MArkdown document, if you want it to show up in  your navbar, you have to remember to add a reference to it here! (Alison can interject here about forgetting to do this). 
+    + Whenever you decide to add a new R Markdown page to your site, you have to remember to add a reference to it here if you want it in your navbar! It's easy to forget to do this.
     
-    + So say I have an R Markdown document with Syllabus information. I put in the text that I want for its link in the navbar. And then I have to tell _site.yml what the link's destination should be -- that's its `href:` (stands for hypertext reference). 
+    + As an example: say I have an R Markdown document with Syllabus information that I want to add. The `text:` key is what you'll read in the navbar. And the `href:` (which stands for hypertext reference) is the file location for this page. 
     
-    **note!** the href should always end in `.html`
-    
-    + finally -- we can use a `menu:` key to build a the dropdown menu you saw in our site earlier. This dropdown menu has two items, each links to a lab page. 
+**note!** the href should always end in `.html`
 
+    + You can keep growing your navbar by adding pages in this way. 
+    
+    + And if the navbar starts to get crowded you can use `menu:` key to build a the dropdown menu you saw in our site earlier. This dropdown menu has two items, each links to a lab page. 
 
-+ And then there's an output section: 
-we had this before too. ANy keys we apply here will apply to all other parts of our site -- so *this* is why our index.Rmd's YAML was optional. 
++ And finally, there is an output section: 
++ we had this before in the single doc. 
+Any keys we apply here will apply to all other parts of our site -- so *this* is why our index.Rmd's YAML was optional. 
 
 ---
+background-image: url(images/Clouds2.jpg)
+background-size: cover
+
 ## R Markdown site
 
 .left-column[
-
 ```{r eval=FALSE}
 .
 ├── rstats101.Rproj
@@ -1293,6 +1304,9 @@ In fact,
 Every Rmd is a page
 
 ---
+class: middle, center
+background-image: url(images/Clouds2.jpg)
+background-size: cover
 
 ![](images/screenshots/Lab1.png)
 
@@ -1307,10 +1321,12 @@ toc_float
 and code download (be sure screenshot is taken after clicking on code download button so the drop down shows up like: https://pbs.twimg.com/media/D2OwEBxUYAAG3YN?format=jpg&name=4096x4096)
 
 ---
+background-image: url(images/Clouds2.jpg)
+background-size: cover
+
 ## Inside a page
 
 .left-column[
-
 ```{r eval=FALSE}
 .
 ├── rstats101.Rproj
@@ -1324,7 +1340,6 @@ and code download (be sure screenshot is taken after clicking on code download b
 ]
 
 .right-column[
-
 ```{r echo=FALSE}
  yml_empty() %>%
   yml_output(html_document(toc = TRUE, toc_float = TRUE, code_download = TRUE)) %>% 
@@ -1339,12 +1354,15 @@ we'll cover the syllabus
 and how to use Zoom.
 
 ```
-
 ]
 
+???
 that's exactly what we see -- 
 
 ---
+class: middle, center
+background-image: url(images/Clouds2.jpg)
+background-size: cover
 
 ![](images/screenshots/Lab1-annotated.png)
 
@@ -1380,7 +1398,9 @@ background-size: contain
 Okay, we're finally, ready to share our R MArkdown site -- we'll do this the same way as before. All of our HTML, website-ready pages are stored in the _site/ folder. So This this is the only folder, we need to ddrag and drop 
 
 ---
-class: center, middle
+class: middle, center
+background-image: url(images/Clouds2.jpg)
+background-size: cover
 
 <video width="1316" height="630" controls>
     <source src="images/rmd-site-dnd.mp4" type="video/mp4">
@@ -1391,7 +1411,9 @@ class: center, middle
 And we will drop that folder back into netlify to make our site. 
 
 ---
-class: center, middle
+class: left middle
+background-image: url(images/Clouds2.jpg)
+background-size: cover
 
 # But...
 
@@ -1401,10 +1423,9 @@ class: center, middle
 
 .right-column[
 
-![](images/screenshots/24hrs.png)
+<img src="images/screenshots/24hrs.png" style="margin-top: -28px;">
 
 Only exists for 24 hours. 
-
 ]
 
 ???
@@ -1440,7 +1461,6 @@ template: clouds
 # What if I make a change?
 
 ---
-
 ## What if I make a change?
 
 .pull-left[
@@ -1473,7 +1493,6 @@ yml_empty() %>%
 Imagine that after we've dragged and drop, we decide we want to change our site theme -- let's try 
 
 ---
-
 class: center, middle
 
 <video width="1560" height="620" controls>
@@ -1573,8 +1592,8 @@ Next up is Distill, which you'll need to install first before you can use it.
 
 ---
 class: middle, center
-template: clouds2
-background-image: cover
+background-image: url(images/Clouds2.jpg)
+background-size: cover
 
 <https://rstudio.github.io/distill/>
 
@@ -1593,8 +1612,9 @@ It has almost the exact same structure, but it comes with some built-in features
 For example...
 
 ---
-template: clouds2
 class: middle, center
+background-image: url(images/Clouds2.jpg)
+background-size: cover
 
 <https://rstudio.github.io/distill/>
 <img src="images/screenshots/distill-aside.png" style="margin-top: -28px;">
@@ -1605,14 +1625,13 @@ class: middle, center
 
 ---
 class: middle, center
-template: clouds2
+background-image: url(images/Clouds2.jpg)
+background-size: cover
 
 <https://rstudio.github.io/distill/>
 <img src="images/screenshots/distill-reuse.png" style="margin-top: -28px;">
 
 ---
-template: clouds2
-
 ## Build your site
 
 .left-column[
@@ -1699,7 +1718,6 @@ background-size: contain
 The index page in a distill site will function the same way that it did in the RMD page. It will be the site's home page.
 
 ---
-template: clouds2
 
 ## Inside the `index.Rmd`
 
@@ -1725,6 +1743,7 @@ author:
     affiliation: RStudio
   - name: Desirée De Leon
     affiliation: Emory University
+site: distill::distill_website
 ---
 
 # Welcome to the course!
@@ -1740,16 +1759,18 @@ author:
 
 ???
 
-At a minimum, I recommend having a `title:`, but including a short description or tagline is nice too. 
+At a minimum, I recommend having a `title:` and `site: distill::website`, but including a short description or tagline is nice too. 
 
 It's also possible to add multiple authors to any Distill page, which could be useful if you're co-teaching (or if you decide to have students form groups to author their own Distill articles)
+
+[*note*: `site: distill::website` is only necessary if you wanna make the blog later]
 
 ---
 background-image: url(images/rawpixel/bunch-balloons-rmd2.jpg)
 background-position: right
 background-size: contain
 
-# Inside the `_site.yml`
+## Inside the `_site.yml`
 
 .left-column[
 ```{r eval=FALSE}
@@ -1769,9 +1790,7 @@ background-size: contain
 Next we move on to the _site.yml page. Site configuration. This should sound a bit familiar...
 
 ---
-template: clouds2
-
-# Inside the `_site.yml`
+## Inside the `_site.yml`
 
 .left-column[
 ```{r eval=FALSE}
@@ -1837,22 +1856,31 @@ background-size: contain
 
 
 ---
+template: clouds
 class: center middle
 
 #  A Distill Blog
 
----
-
-![](https://rstudio.github.io/distill/images/site-listing.png)
 ???
 
-A page on your site that compiles a chronological listing of R Markdown posts. 
+You can have a part of your Distill site be a blog.
+
+---
+class: middle, center
+background-image: url(images/Clouds2.jpg)
+background-size: cover
+
+<img src="https://rstudio.github.io/distill/images/site-listing.png" style = "width: 80%;">
+
+???
+
+In other words, you can have a dedicated page on your site that compiles many other R Markdown pages in a chronological way--- this can make it much easier to navigate to a page even if its not in the navbar or a dropdown. 
 
 For a course, let's say that after every class, you'd like to post notes or announcements about that day's lesson. With a blog, you can do that easily -- 
 
-The most recently updated R MArkdown doc will pop to the top. This creates a student-centered approach to designing website content -- because students will always be able to tell what has been recently updated. This is not always the case with non-blog style pages.
----
+The most recently *dated* R MArkdown doc will pop to the top. This creates a student-centered approach to designing website content -- because students will always be able to see what has been recently updated. This is not always the case with non-blog style pages.
 
+---
 ## Make a blog post
 
 .left-column[
@@ -1905,7 +1933,7 @@ A new folder for blog posts --- inside you have a subdirectory and RMD file for 
 
 ---
 
-# Inside a post
+## Inside a post
 
 .left-column[
 ```{r eval=FALSE}
@@ -1927,13 +1955,21 @@ output:
     self_contained: false
 ---
 
-During our first week we will make our first plots with `ggplot2`.
+During our first week we will 
+make our first plots with `ggplot2`.
 ```
 
 * Posts **MUST** be knit individually
 * Rinse and repeat for each new post.
 
 ]
+
+???
+
+You can throw any old existing RMD into the _posts/ folder, change the output to distill_article and be good to go. 
+
+to-do: see if self_contained is necessary. 
+
 ---
 
 ## Add a listing page
@@ -2017,6 +2053,10 @@ GIF drag and drop _site/ to netlify
 change domain name
 
 ---
+class: middle
+background-image: url(images/rawpixel/blue-balloon-side.jpg)
+background-position: left
+background-size: contain
 
 .pull-right[
 
@@ -2031,6 +2071,10 @@ change domain name
 ]
 
 ---
+class: middle
+background-image: url(images/rawpixel/balloon-ouch.jpg)
+background-position: right
+background-size: contain
 
 .pull-left[
 
