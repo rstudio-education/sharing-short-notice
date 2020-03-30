@@ -55,7 +55,7 @@ template: clouds
 layout: true
 name: clouds2
 background-image: url(images/Clouds2.jpg)
-background-size: contain
+background-size: cover
 
 ---
 template: clouds2
@@ -71,6 +71,10 @@ class: middle, center
 
 ]
 
+???
+
+I'm Alison Hill. I'm a data scientist and professional educator at RStudio.
+
 --
 
 .pull-right[
@@ -84,8 +88,6 @@ class: middle, center
 ]
 
 ???
-
-I'm Alison Hill. I'm a data scientist and professional educator at RStudio.
 
 And I'm Desirée De Leon. I interned with Alison last summer at RStudio on the education team.
 
@@ -183,6 +185,12 @@ class: middle, center
     <img src="images/rawpixel/educator.jpg" style="width: 100%;">
   </div>
   
+???
+
+Here's who we think you are...
+
+You're an educator
+  
 --
 
    <div class="column"style="margin: 0 1em;">
@@ -193,15 +201,10 @@ class: middle, center
 
 ???
 
-Here's who we think you are...
+You have R Markdown files for teaching...
 
-* You're an educator
+But they're stuck on your computer, and you need to share them easily with others. 
 
-* You have R Markdown files for teaching...
-
-* But they're stuck on your computer, and you need to share them easily with others. 
-
-* And--- you probably have a new classroom space that looks like this-- so sharing needs to be done 100% online
 
 ---
 class: middle, center
@@ -227,15 +230,7 @@ class: middle, center
 
 ???
 
-Here's who we think you are...
-
-* You're an educator
-
-* You have R Markdown files for teaching...
-
-* But they're stuck on your computer, and you need to share them easily others. 
-
-* And--- you probably have a new classroom space that looks like this-- so sharing needs to be done 100% online
+And--- you probably have a new classroom space that looks like this-- so sharing needs to be done 100% online
 
 ---
 class: center
@@ -1504,7 +1499,7 @@ You now know how to build and update an R Markdown site. There are a few additio
 
 ---
 template: clouds2
-class: middle center
+class: middle, center
 
 ## No Subfolders
 
@@ -2089,7 +2084,9 @@ class: middle, center
 
 <https://bookdown.org/yihui/bookdown/>
 
+<!--
 <iframe src="https://bookdown.org/yihui/bookdown/" height="600" width="1200" frameborder="0"></iframe> 
+-->
 
 ???
 
@@ -2470,7 +2467,9 @@ background-size: cover
 
 <https://academic-demo.netlify.com/>
 
+<!--
 <iframe src="https://academic-demo.netlify.com/" height="600" width="1200" frameborder="0"></iframe> 
+-->
 
 ---
 class: center, middle
@@ -2479,7 +2478,9 @@ background-size: cover
 
 <https://share-blogdown.netlify.com/>
 
+<!--
 <iframe src="https://share-blogdown.netlify.com/" height="600" width="1200" frameborder="0"></iframe> 
+-->
 
 ---
 background-image: url(images/rawpixel/balloon-ouch.jpg)
