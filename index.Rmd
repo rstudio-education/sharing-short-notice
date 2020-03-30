@@ -19,6 +19,11 @@ output:
       beforeInit: "https://platform.twitter.com/widgets.js"
     includes:
       in_header: [assets/header.html]
+<<<<<<< HEAD
+params:
+  github_link: "TBD"
+=======
+>>>>>>> 13201023220379b3e6edc944c4f9d0622c58e775
 ---
 
 ```{r setup, include=FALSE}
@@ -55,7 +60,7 @@ template: clouds
 layout: true
 name: clouds2
 background-image: url(images/Clouds2.jpg)
-background-size: cover
+background-size: contain
 
 ---
 template: clouds2
@@ -71,10 +76,6 @@ class: middle, center
 
 ]
 
-???
-
-I'm Alison Hill. I'm a data scientist and professional educator at RStudio.
-
 --
 
 .pull-right[
@@ -88,6 +89,8 @@ I'm Alison Hill. I'm a data scientist and professional educator at RStudio.
 ]
 
 ???
+
+I'm Alison Hill. I'm a data scientist and professional educator at RStudio.
 
 And I'm Desirée De Leon. I interned with Alison last summer at RStudio on the education team.
 
@@ -185,12 +188,6 @@ class: middle, center
     <img src="images/rawpixel/educator.jpg" style="width: 100%;">
   </div>
   
-???
-
-Here's who we think you are...
-
-You're an educator
-  
 --
 
    <div class="column"style="margin: 0 1em;">
@@ -201,10 +198,15 @@ You're an educator
 
 ???
 
-You have R Markdown files for teaching...
+Here's who we think you are...
 
-But they're stuck on your computer, and you need to share them easily with others. 
+* You're an educator
 
+* You have R Markdown files for teaching...
+
+* But they're stuck on your computer, and you need to share them easily with others. 
+
+* And--- you probably have a new classroom space that looks like this-- so sharing needs to be done 100% online
 
 ---
 class: middle, center
@@ -230,7 +232,15 @@ class: middle, center
 
 ???
 
-And--- you probably have a new classroom space that looks like this-- so sharing needs to be done 100% online
+Here's who we think you are...
+
+* You're an educator
+
+* You have R Markdown files for teaching...
+
+* But they're stuck on your computer, and you need to share them easily others. 
+
+* And--- you probably have a new classroom space that looks like this-- so sharing needs to be done 100% online
 
 ---
 class: center
@@ -1517,15 +1527,16 @@ template: clouds
 You now know how to build and update an R Markdown site. There are a few additional considerations I want to point out. 
 
 ---
-template: clouds2
 class: middle, center
+background-image: url(images/Clouds2.jpg)
+background-size: cover
 
 ## No Subfolders
 
 <https://github.com/apreshill/data-vis-labs-2018>
 
 ```{r stay-organized, echo=FALSE}
-knitr::include_graphics("https://dcossyleon.github.io/gifs/video/stay-organized1.gif")
+# knitr::include_graphics("https://dcossyleon.github.io/gifs/video/stay-organized1.gif")
 ```
 
 ???
@@ -1597,7 +1608,7 @@ background-size: cover
 
 <https://rstudio.github.io/distill/>
 
-![](https://dcossyleon.github.io/gifs/video/distill-intro.gif)
+![](#https://dcossyleon.github.io/gifs/video/distill-intro.gif)
 
 ???
 
@@ -1718,7 +1729,7 @@ background-size: contain
 The index page in a distill site will function the same way that it did in the RMD page. It will be the site's home page.
 
 ---
-
+= 
 ## Inside the `index.Rmd`
 
 .left-column[
@@ -2128,9 +2139,7 @@ class: middle, center
 
 <https://bookdown.org/yihui/bookdown/>
 
-<!--
 <iframe src="https://bookdown.org/yihui/bookdown/" height="600" width="1200" frameborder="0"></iframe> 
--->
 
 ???
 
@@ -2511,9 +2520,7 @@ background-size: cover
 
 <https://academic-demo.netlify.com/>
 
-<!--
 <iframe src="https://academic-demo.netlify.com/" height="600" width="1200" frameborder="0"></iframe> 
--->
 
 ---
 class: center, middle
@@ -2522,9 +2529,7 @@ background-size: cover
 
 <https://share-blogdown.netlify.com/>
 
-<!--
 <iframe src="https://share-blogdown.netlify.com/" height="600" width="1200" frameborder="0"></iframe> 
--->
 
 ---
 background-image: url(images/rawpixel/balloon-ouch.jpg)
