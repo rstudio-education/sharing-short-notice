@@ -94,7 +94,9 @@ class: middle, center
 
 &lt;img src="https://media.giphy.com/media/WTEdeICMGkw91sHEy1/giphy.gif" style="width: 82.07%; display: block; margin: 1 auto;"&gt;
 [<i class="fab  fa-github "></i> @apreshill](https://github.com/apreshill)  
-[<i class="fab  fa-twitter "></i> @apreshill](https://twitter.com/apreshill)]
+[<i class="fab  fa-twitter "></i> @apreshill](https://twitter.com/apreshill)
+
+]
 
 .pull-right[
 ### Desirée De Leon  
@@ -103,10 +105,7 @@ class: middle, center
 [<i class="fab  fa-github "></i> @dcossyleon](https://github.com/dcossyleon)  
 [<i class="fab  fa-twitter "></i> @dcossyle](https://twitter.com/dcossyle)
 
-![](https://media.giphy.com/media/hoqxB6HRhWtySSjO2S/giphy.gif)
-
-[<i class="fab  fa-github "></i> @dcossyleon](https://github.com/dcossyleon)  
-[<i class="fab  fa-twitter "></i> @dcossyle](https://twitter.com/dcossyle)]
+]
 
 ???
 
@@ -178,6 +177,10 @@ class: middle, center
     &lt;img src="images/rawpixel/educator.jpg" style="width: 100%;"&gt;
   &lt;/div&gt;
   
+???
+
+You're an educator
+  
 --
 
    &lt;div class="column"style="margin: 0 1em;"&gt;
@@ -188,17 +191,7 @@ class: middle, center
 
 ???
 
-
-
-Here's who we think you are...
-
-* You're an educator
-
-* You have R Markdown files for teaching...
-
-* But they're stuck on your computer, and you need to share them easily with others. 
-
-* And--- you probably have a new classroom space that looks like this-- so sharing needs to be done 100% online
+You have R Markdown files for teaching...
 
 ---
 class: middle, center
@@ -215,6 +208,10 @@ class: middle, center
     &lt;img src="images/rmd-buddy-help.jpg" style=""&gt;
   &lt;/div&gt;
   
+???
+
+But they're stuck on your computer, and you need to share them easily with others. 
+
 --
   &lt;div class="column" style="margin: 0 1em;"&gt;
     &lt;h3&gt; Your new classroom &lt;/h3&gt;
@@ -224,15 +221,7 @@ class: middle, center
 
 ???
 
-Here's who we think you are...
-
-* You're an educator
-
-* You have R Markdown files for teaching...
-
-* But they're stuck on your computer, and you need to share them easily others with out filling up their inboxes.
-
-* And--- you probably have a new classroom space that looks like this-- so sharing needs to be done 100% online
+And--- you probably have a new classroom space that looks like this-- so sharing needs to be done 100% online
 
 ---
 class: center
@@ -264,7 +253,7 @@ background-size: cover
 
 ???
 
-R Markdown tools you can use to get your **course materials** 
+**R Markdown tools** you can use to get your course materials...
 
 ---
 class: middle, center
@@ -275,7 +264,7 @@ background-size: cover
 
 ???
 
-[CLICK] online [CLICK] 
+**online**...
 
 ---
 class: middle, center
@@ -286,7 +275,7 @@ background-size: cover
 
 ???
 
-on short notice.
+on **short notice**.
 
 ---
 class: middle, center
@@ -334,11 +323,11 @@ class: center, middle
 
 ???
 
-+ Shareable
+Shareable
 
-+ Reproducible
+Reproducible
 
-+ Resilient
+Resilient
 
 Why make a course website at all?  It makes your content shareable, reproducible, and resilient [to short-notice changes]
 
@@ -376,7 +365,7 @@ class: center middle
 
 
 ???
-Inside that folder, you'll notice an RProj file. Opening that file in RStudio... 
+Inside that folder, you'll notice an RProj file. Opening that file in RStudio takes us...
 
 ---
 background-image: url(images/screenshots/Single-rmd.png)
@@ -385,7 +374,7 @@ class: middle, center
 
 ???
 
-...takes us here, where we can see our single R Markdown file for our lab. This one is for a lab for visualizing data from the Museum of Modern Art.
+**here**, where we can see our single R Markdown file. This one is for a lab for visualizing data from the Museum of Modern Art.
 
 Let's quickly walk through some of the key parts of this file.
 
@@ -463,11 +452,11 @@ Of course, Desiree, the real magic happens, when you click on the Knit icon, and
 
 So, here's what that looks like: 
 
-+ We knit
-+ We can watch in this bottom pane as our R Markdown document gets processed.
-+ And voila! -- we see our rendered HTML file. 
-+ We can choose to open this up in a real browser window.
-+ And then just test a few things out. 
+- We knit
+- We can watch in this bottom pane as our R Markdown document gets processed.
+- And voila! -- we see our rendered HTML file. 
+- We can choose to open this up in a real browser window.
+- And then just test a few things out. 
 
 ---
 class: middle center
@@ -489,7 +478,7 @@ Here is what we knit.
 
 ???
 
-Using the **theme** key in our YAML, we changed our font and colors.
+Using the `THEME:` key in our YAML, we changed our font and colors.
 
 --
 
@@ -502,7 +491,7 @@ Using the **theme** key in our YAML, we changed our font and colors.
 
 ???
 
-And we have this nice table of contents floating off to the side.
+And we have this nice table of contents floating off to the side...
 
 --
 
@@ -517,7 +506,7 @@ And we have this nice table of contents floating off to the side.
 
 But this is still local and stuck on my computer. 
 
-A **link** would make it easier to share. 
+A *link* would make it easier to share. 
 
 
 ---
@@ -526,21 +515,9 @@ class: center, middle
 
 # How do we start .emphasis[sharing]?
 
-
-
----
-exclude: true
-class: center middle
-
-## What does a .emphasis[linkable] Rmd look like?
-
-&lt;img src="images/hello-index.jpg" width="570" /&gt;
-
 ???
 
-So then what does a *linkable* RMD look like? There are two pre-requisites: 
-
-1. You have to make sure we have an R Markdown document is named `index.Rmd` -- an internet browser will always begin by looking for a file named index to open up first. 
+So how do we start sharing?
 
 ---
 background-image: url("images/Server.jpg")
@@ -567,7 +544,7 @@ We need a web server...
 
 which is basically a big computer in the clouds
 
-hat/tip to Heather Nolis for this analogy.
+hat/tip to Heather Nolis for that analogy.
 
 --
 &lt;img src="images/Netlify.png" style="
@@ -598,9 +575,9 @@ class: top center
 
 ???
 
-We are going to drag and drop our folder into Netlify and put our webpage online.
+We are going to drag and drop our project folder into Netlify and put our webpage online.
 
-So, Alison, let's do our first drag and drop!
+So, Alison-- let's do our first drag and drop!
 
 
 ---
@@ -621,7 +598,6 @@ and  drag n drop the folder in.
 A few seconds later, Netlify has  auto-generated a silly-name link and deployed our page -- this link is where our Lab02 page now lives,  and you can share your page with whomever you choose --  
 
 BOTH: hooray!
-
 
 ---
 class: center, middle
@@ -652,7 +628,7 @@ So then we dragged and dropped our folder
 
 Netlify deployed our page
 
-and generated a link! Ta - da!
+and generated a link! Woohoo!
 
 ---
 background-image: url(images/what-happened/single-doc/Slide2.jpeg)
@@ -672,7 +648,7 @@ So then we dragged and dropped our folder
 
 Netlify deployed our page
 
-and generated a link! Ta - da!
+and generated a link! Woohoo!
 
 ---
 background-image: url(images/what-happened/single-doc/Slide3.jpeg)
@@ -692,7 +668,7 @@ So then we dragged and dropped our folder
 
 Netlify deployed our page
 
-and generated a link! Ta - da!
+and generated a link! Woohoo!
 
 ---
 background-image: url(images/what-happened/single-doc/Slide4.jpeg)
@@ -712,7 +688,7 @@ It looked great, but still only lived locally in our R Project folder
 
 Netlify deployed our page
 
-and generated a link! Ta - da!
+and generated a link! Woohoo!
 
 ---
 background-image: url(images/what-happened/single-doc/Slide5.jpeg)
@@ -732,7 +708,7 @@ So then we dragged and dropped our folder
 
 **Netlify deployed our page**
 
-and generated a link! Ta - da!
+and generated a link! Woohoo!
 
 ---
 background-image: url(images/what-happened/single-doc/Slide6.jpeg)
@@ -752,7 +728,7 @@ So then we dragged and dropped our folder
 
 Netlify deployed our page
 
-**and generated a link! Ta - da!**
+**and generated a link! Woohoo!**
 
 
 ---
@@ -795,7 +771,7 @@ class: top, center
 
 ???
 
-So we're going to hike "markdown mountain"...
+So we're going to hike Markdown mountain today...
 
 ---
 background-image: url(images/mtsalsa.jpg)
@@ -807,7 +783,7 @@ class: top, center
 
 ???
 
-And our goal for the rest of this webinar is to show you 4 RMD tools that are for turning a *COLLECTION* of RMDs into a web*site*.
+And our goal for the rest of this webinar is to show you 4 R Markdown tools that are for turning a *COLLECTION* of RMDs into a web*site*.
 
 
 ---
@@ -823,7 +799,7 @@ background-position: center, bottom
 
 So let's begin with an R Markdown site.
 
-To make one, you only need the rmarkdown package installed, which is already done for you if you use RStudio.
+To make one, you only need the `rmarkdown` package installed, which is already done for you if you use RStudio.
 
 ---
 template: clouds2
@@ -999,7 +975,8 @@ Let's look under the hood at some of these files.
 background-image: url("images/rawpixel/bunch-balloons-rmd1.jpg")
 background-position: right
 background-size: contain
-class: middle
+
+## .hidden[Inside the `index.Rmd`]
 
 .left-column[
 
@@ -1061,7 +1038,7 @@ This is the course website...
 
 If we take a peek inside index.Rmd, we don't see anything special-
 
-in fact, you can take any existing R Markdown document that you already have, rename it index, and turn it into your site's homepage.
+in fact, you can take *any* existing R Markdown document that you already have, rename it `index`, and turn it into your site's homepage.
 
 
 
@@ -1069,8 +1046,9 @@ in fact, you can take any existing R Markdown document that you already have, re
 background-image: url("images/rawpixel/bunch-balloons-rmd2.jpg")
 background-position: right
 background-size: contain
-class: middle
 
+
+## .hidden[Inside the `_site.yml`]
 
 .left-column[
 
@@ -1121,35 +1099,53 @@ output:
 ]
 
 .right-column[
-&lt;img src="images/screenshots/RMD-site-annotated.png" width="805" /&gt;
+&lt;img src="images/screenshots/RMD-site.png" width="782" /&gt;
 ]
 
 
 ???
 
-(no index.Rmd label)
-
 The first thing you may notice is this is a YAML file, so there are no fences, but it is a list of keys and values.
 
-The first key is navbar, and this is how you build your site's navigation.
+The first key is `navbar:`, and this is how you build your site's navigation.
 
-[increment]
+--
+&lt;img src="images/RMD-site-title.png" style="
+  position: absolute;
+  width: 100%;
+  top: 10px;
+  left: 10px;"&gt;
+  
+???
+there is key for the title... 
 
-Say: there is key for the title... (BING)
+--
 
-Show: arrow to title
+&lt;img src="images/RMD-site-left.png" style="
+  position: absolute;
+  width: 100%;
+  top: 10px;
+  left: 10px;"&gt;
 
-[increment]
+???
 
-Say: whether we want links on the left or right... (BING)
+Whether we want links on the left or right... 
 
-Show: brackets above left side [LEFT!]
+--
 
-[increment]
+&lt;img src="images/RMD-site-menu.png" style="
+  position: absolute;
+  width: 100%;
+  top: 10px;
+  left: 10px;"&gt;
 
-Say: And if we want links listed in a dropdown menu, we can do that too... (BING)
+???
 
-Show: brackets above dropdown [MENU!]
+Say: And if we want links listed in a dropdown menu, we can do that too... 
+
+--
+
+???
 
 For all the pages you link to in your navbar, the `href` needs to point to an .html file, even though the source may be R Markdown.
 
@@ -1181,8 +1177,6 @@ class: middle
 As for the other R Markdown pages, there is nothing special about *them*. 
 
 As long as you link to a page in `_site.yml`, you can take any existing R Markdown file and turn it into a page within a website.
-
-
 
 ---
 class: middle, center
@@ -1751,7 +1745,7 @@ class: middle, center
 background-image: url(images/Clouds2.jpg)
 background-size: cover
 
-&lt;img src="https://rstudio.github.io/distill/images/site-listing.png" style = "width: 80%;"&gt;
+&lt;img src="https://rstudio.github.io/distill/images/site-listing.png" style="width: 80%;"&gt;
 
 ???
 
@@ -2628,6 +2622,42 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
     deleted = true;
   });
 })();
+(function() {
+  "use strict"
+  /* Replace <script> tags in slides area to make them executable
+   *
+   * Runs after post-processing of markdown source into slides and replaces only
+   * <script>s on the last slide of continued slides using the .has-continuation
+   * class added by xaringan. Finally, any <script>s in the slides area that
+   * aren't executed are commented out.
+   */
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container:not(.has-continuation) script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+  var scriptsNotExecuted = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container.has-continuation script'
+  );
+  if (!scriptsNotExecuted.length) return;
+  for (var i = 0; i < scriptsNotExecuted.length; i++) {
+    var comment = document.createComment(scriptsNotExecuted[i].outerHTML)
+    scriptsNotExecuted[i].parentElement.replaceChild(comment, scriptsNotExecuted[i])
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
 // adds .remark-code-has-line-highlighted class to <pre> parent elements
 // of code chunks containing highlighted lines with class .remark-code-line-highlighted
 (function(d) {
@@ -2645,17 +2675,6 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
   }
   preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
 })(document);</script>
-
-<script>
-(function() {
-  var links = document.getElementsByTagName('a');
-  for (var i = 0; i < links.length; i++) {
-    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
-      links[i].target = '_blank';
-    }
-  }
-})();
-</script>
 
 <script>
 slideshow._releaseMath = function(el) {
