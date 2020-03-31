@@ -57,8 +57,6 @@ template: clouds
 
 So hello- we're so happy you could join us today. 
 
-We hope that in our time together we'll be able to help you do your jobs better.
-
 ---
 name: clouds2
 background-image: url(images/Clouds2.jpg)
@@ -80,7 +78,7 @@ class: middle, center
 
 ???
 
-My name is Alison Hill. I'm a data scientist and professional educator at RStudio.
+My name is Alison Hill, and I'm a data scientist and professional educator at RStudio.
 
 --
 
@@ -170,6 +168,8 @@ https://apreshill.github.io/data-vis-labs-2018/
 If you type the short link on the bottom right of this slide into your browser right now, you'll be able to follow along.
 
 All of these links are clickable from the slides.
+
+Each site was built using R Markdown, with different tools chosen depending on what we needed.
 
 ---
 template: clouds
@@ -1334,7 +1334,7 @@ background-size: cover
 
 ???
 
-But ...
+But you may have noticed...
 
 unclaimed sites are deleted after 24 hours. We have to create an account with Netlify to keep our site online permanently.
 
@@ -2045,25 +2045,32 @@ Some new features to point out during "tour" :
 * Sections
 
 ---
+template: clouds2
+
+![](images/screenshots/min-bookdown.png)
+
+---
+class: middle
+
 ## Build your book
 
 .left-column[
 
 ```{r eval=FALSE}
 .
-├── book.Rproj
+├── 01-hotdogs.Rmd
+├── 02-moma.Rmd
+├── 03-meow.Rmd
 ├── _bookdown.yml
-├── _output.yml
+├── dataviz-book.Rproj
+├── images/
 ├── index.Rmd 
-├── week01.Rmd
-├── week02.Rmd
-├── week03.Rmd
 └── _book #<<
 ```
 ]
 
 .right-column[
-Build your book with the Build tab. 
+![](images/screenshots/build-bookdown.png)
 ]
 
 ---
@@ -2077,14 +2084,14 @@ background-size: contain
 
 ```{r eval=FALSE}
 .
-├── book.Rproj
+├── 01-hotdogs.Rmd
+├── 02-moma.Rmd
+├── 03-meow.Rmd
 ├── _bookdown.yml
-├── _output.yml
+├── dataviz-book.Rproj
+├── images/
 ├── index.Rmd #<<
-├── week01.Rmd
-├── week02.Rmd
-├── week03.Rmd
-└── _book
+└── _book 
 ```
 ]
 
@@ -2099,14 +2106,14 @@ The index.Rmd file is special. It is both the first chapter, and contains some Y
 
 ```{r eval=FALSE}
 .
-├── book.Rproj
+├── 01-hotdogs.Rmd
+├── 02-moma.Rmd
+├── 03-meow.Rmd
 ├── _bookdown.yml
-├── _output.yml
+├── dataviz-book.Rproj
+├── images/
 ├── index.Rmd #<<
-├── week01.Rmd
-├── week02.Rmd
-├── week03.Rmd
-└── _book
+└── _book 
 ```
 ]
 
@@ -2115,9 +2122,11 @@ The index.Rmd file is special. It is both the first chapter, and contains some Y
 ```{r echo=FALSE, comment='#'}
 # x <- as_yml("knit: bookdown::render_book")
 yml_empty() %>%
-  yml_title("rstats101 book") %>%
+  yml_title("Principles & Practice of Data Visualization") %>%
+  yml_subtitle("Spring 2020") %>% 
   yml_author("Alison Hill") %>%
   yml_bookdown_site() %>% 
+  yml_output(bookdown::gitbook()) %>% 
   # yml_toplevel(x) %>% 
   asis_yaml_output()
 cat("Welcome {-}")
@@ -2129,19 +2138,18 @@ cat("Welcome {-}")
 background-image: url("images/rawpixel/bunch-balloons-book2.jpg")
 background-position: right
 background-size: contain
-
-## Inside the `.yml`s
+class: middle
 
 .left-column[
 ```{r eval=FALSE}
 .
-├── book.Rproj
+├── 01-hotdogs.Rmd
+├── 02-moma.Rmd
+├── 03-meow.Rmd
 ├── _bookdown.yml #<<
-├── _output.yml #<<
+├── dataviz-book.Rproj
+├── images/
 ├── index.Rmd 
-├── week01.Rmd 
-├── week02.Rmd 
-├── week03.Rmd 
 └── _book 
 ```
 ]
@@ -2153,13 +2161,13 @@ background-size: contain
 .left-column[
 ```{r eval=FALSE}
 .
-├── book.Rproj
+├── 01-hotdogs.Rmd
+├── 02-moma.Rmd
+├── 03-meow.Rmd
 ├── _bookdown.yml #<<
-├── _output.yml 
+├── dataviz-book.Rproj
+├── images/
 ├── index.Rmd 
-├── 01-week.Rmd 
-├── 02-week.Rmd 
-├── 03-week.Rmd 
 └── _book 
 ```
 ]
@@ -2193,13 +2201,13 @@ BUT K-M does not allow Rmd files to be in subdirectories,
 .left-column[
 ```{r eval=FALSE}
 .
-├── book.Rproj
+├── hotdogs.Rmd
+├── moma.Rmd
+├── meow.Rmd
 ├── _bookdown.yml #<<
-├── _output.yml 
+├── dataviz-book.Rproj
+├── images/
 ├── index.Rmd 
-├── week01.Rmd 
-├── week02.Rmd 
-├── week03.Rmd 
 └── _book 
 ```
 ]
@@ -2209,36 +2217,10 @@ BUT K-M does not allow Rmd files to be in subdirectories,
 yml_empty() %>%
   yml_bookdown_opts(
     new_session = TRUE,
-    rmd_files = c("index.Rmd", "week01.Rmd", "week02.Rmd", "week03.Rmd")
+    rmd_files = c("index.Rmd", "hotdogs.Rmd", "moma.Rmd", "meow.Rmd")
     ) %>% 
   asis_yaml_output(fences = FALSE)
 ```
-]
-
----
-
-## Inside the `_output.yml`
-
-.left-column[
-```{r eval=FALSE}
-.
-├── book.Rproj
-├── _bookdown.yml 
-├── _output.yml #<<
-├── index.Rmd 
-├── 01-week.Rmd 
-├── 02-week.Rmd 
-├── 03-week.Rmd 
-└── _book 
-```
-]
-
-.right-column[
-
-```yaml
-bookdown::gitbook: default
-```
-
 ]
 
 ---
@@ -2252,14 +2234,14 @@ background-size: contain
 
 ```{r eval=FALSE}
 .
-├── book.Rproj
-├── _bookdown.yml
-├── _output.yml
+├── 01-hotdogs.Rmd #<<
+├── 02-moma.Rmd #<<
+├── 03-meow.Rmd #<<
+├── _bookdown.yml 
+├── dataviz-book.Rproj
+├── images/
 ├── index.Rmd 
-├── week01.Rmd #<<
-├── week02.Rmd #<<
-├── week03.Rmd #<<
-└── _book
+└── _book 
 ```
 ]
 
@@ -2274,26 +2256,26 @@ Every Rmd is a chapter
 
 ```{r eval=FALSE}
 .
-├── book.Rproj
-├── _bookdown.yml
-├── _output.yml
+├── 01-hotdogs.Rmd 
+├── 02-moma.Rmd #<<
+├── 03-meow.Rmd 
+├── _bookdown.yml 
+├── dataviz-book.Rproj
+├── images/
 ├── index.Rmd 
-├── week01.Rmd #<<
-├── week02.Rmd 
-├── week03.Rmd 
-└── _book
+└── _book 
 ```
 ]
 
 .right-column[
 
 ```
-# Week One
+# MoMA Museum Tour 
 
-In our first week together, 
-we'll cover the syllabus 
-and how to use Zoom.
-
+We’ll use data from the Museum of 
+Modern Art (MoMA), 
+publicly available on GitHub 
+and as analyzed by [fivethirtyeight.com](https://fivethirtyeight.com/features/a-nerds-guide-to-the-2229-paintings-at-moma/).
 ```
 
 ]
@@ -2314,69 +2296,64 @@ background-size: contain
 
 ```{r eval=FALSE}
 .
-├── book.Rproj
-├── _bookdown.yml
-├── _output.yml
+├── 01-hotdogs.Rmd 
+├── 02-moma.Rmd 
+├── 03-meow.Rmd 
+├── _bookdown.yml 
+├── dataviz-book.Rproj
+├── images/
 ├── index.Rmd 
-├── week01.Rmd
-├── week02.Rmd
-├── week03.Rmd
 └── _book #<<
 ```
 ]
 
 ---
 
-drag and drop goes here
+drag and drop _book folder
 
 
 ---
+background-image: url(images/bookdown-km.png)
+background-size: contain
 
 
-![](https://rstudio4edu.github.io/rstudio4edu-book/images/screenshots/bookdown-skeleton-files.jpg)
 ???
 
-For example... a directory that looks like this.
-
-Your RMDs will be in the root. The first one is still index.Rmd. This becomes the first page of your book. Usually an preface or Intro.
-
-The REst of the RMDs are numbered. These each become book chapters. 
+B/c of new session true
 
 ---
-# Do I need to change the RMDs?
+class: middle
+background-image: url(images/rawpixel/blue-balloon-side.jpg)
+background-position: left
+background-size: contain
 
-Yes. 
+.pull-right[
+### The nice parts
 
-* You (might) need to rename all the files to have a numerical order. 
-* All chapter .Rmd files MUST begin with a `# Level 1 Header` no matter what. No front matter YAMLS.
++ Hard to get lost
 
----
++ "Infinite" TOC
 
-# ...here's why
-
-(maybe if time allows)
-
-![](https://rstudio4edu.github.io/rstudio4edu-book/images/illos/Bookdown-file-flow.jpg)
-
-
----
-
-# Pros and Cons of Bookdown
-
-.pull-left[
-
-* Hard to get lost
-* Order
-* Cross-references
-* Numbered figures, equations, tables
++ Cross-references, numbered figures, equations, tables
 
 ]
 
-.pull-right[
+---
+class: middle
+background-image: url(images/rawpixel/balloon-ouch.jpg)
+background-position: right
+background-size: contain
 
-* Three YAMLS (time consuming to set up)
-* No subfolders
+.pull-left[
+### The hard parts
 
++ (Maybe) re-naming files
+
++ `# Chapter name`
+
++ Many YAMLs
+
++ (Still) no subfolders
 
 ]
 
@@ -2408,11 +2385,19 @@ knitr::include_graphics("images/hugo.svg")
 
 <https://gohugo.io/>
 
+---
+class: center, middle
+background-image: url(images/rawpixel/so-many.jpg)
+background-position: left
+background-size: contain
+
+.pull-right[
+<https://themes.gohugo.io/>
+]
 
 ---
 class: center, middle
-background-image: url(images/Clouds2.jpg)
-background-size: cover
+template: clouds2
 
 <https://academic-demo.netlify.com/>
 
@@ -2426,6 +2411,111 @@ background-size: cover
 <https://share-blogdown.netlify.com/>
 
 <iframe src="https://share-blogdown.netlify.com/" height="600" width="1200" frameborder="0"></iframe> 
+
+---
+class: middle
+
+## Build your site
+
+.pull-left[
+
+```{r eval=FALSE}
+.
+├── R/
+├── config/_default
+├── content/
+├── data/
+├── resources/_gen
+├── static/
+├── themes/hugo-academic
+├── config.toml
+├── index.Rmd
+├── share-blogdown.Rproj
+└── _public #<<
+```
+
+]
+
+.pull-right[
+![](images/screenshots/build-blogdown.png)
+]
+
+---
+background-image: url(images/rawpixel/bunch-balloons.jpg)
+background-position: right
+background-size: contain
+
+.pull-left[
+```{r eval=FALSE}
+.
+├── R/ 
+├── config/_default
+├── content/ #<<
+├── data/
+├── resources/_gen
+├── static/ 
+├── themes/hugo-academic
+├── config.toml
+├── index.Rmd
+├── share-blogdown.Rproj
+└── _public 
+```
+
+]
+
+???
+
+Your primary content will live here, in either R Markdown or plain Markdown files. The YAML will depend on your theme.
+
+This means you'll need to change any existing YAML to adapt to your theme.
+
+And this is how you get locked into a theme.
+
+---
+background-image: url(images/rawpixel/bunch-balloons.jpg)
+background-position: right
+background-size: contain
+
+.pull-left[
+```{r eval=FALSE}
+.
+├── R/ #<<
+├── config/_default
+├── content/
+├── data/
+├── resources/_gen
+├── static/ #<<
+├── themes/hugo-academic
+├── config.toml
+├── index.Rmd
+├── share-blogdown.Rproj
+└── _public 
+```
+
+]
+
+???
+
+You can stash and build other R Markdown documents in the static directory too, like slides or other kinds of output formats. 
+
+You can see how I did that in the demo files.
+
+---
+class: middle
+background-image: url(images/rawpixel/blue-balloon-side.jpg)
+background-position: left
+background-size: contain
+
+.pull-right[
+### The nice parts
+
++ Subfolders!
+
++ Knit *anything*
+
++ `bookdown`
+
+]
 
 ---
 background-image: url(images/rawpixel/balloon-ouch.jpg)
@@ -2462,23 +2552,16 @@ class: middle
 
 ---
 
-Can't get anywhere else
-
-+ Subdirectories
-
-+ Ability to "knit" all output formats (like R Markdown slides, plain Rmd documents, etc.) with single button
-
-+ Ability to "serve" all outputs on a single site
+drag and drop _public folder
 
 ---
 
 # Here's a shortcut you can use
 
-Deploy to netlify link
+Deploy to netlify video
 
 ???
 
-Gif
 
 ---
 class: inverse, center, middle
@@ -2490,25 +2573,6 @@ Need four square view with static screenshots of each of the 4 sites
 ???
 
 Say out loud which folder to drag and drop for each (maybe have the text show up in each of the four squares like `site/`, `_book/`, `public/`)
-
----
-class: inverse, center, middle
-
-# Advice
-
-+ build, don't knit (generally)
-
-+ know your site's output directory!
-
-+ publish early and update often, don't wait
-
----
-
-# the options
-
-???
-
-which options work best for whom?
 
 ---
 
@@ -2533,33 +2597,3 @@ background-color: #FCFEF8
 
 Thanks for joining us today. We hope we've left you with some ideas you can use now and later. And we hope we leave you with visions of websites dancing in your heads :)
 
----
-name: excuses
-
-## 3 excuses
-
-.columns[
-
-.left-col[
-"I can't give away my work!"
-
-
-] 
-
-
-
-.middle-col[
-"It's not perfect (yet)!" 
-
-*"If it knits, it ships."*
-]
-
-
-
-.right-col[
-"It's scary." 
-
-*"If it hurts, do it more often."*
-]
-
-]
