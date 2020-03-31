@@ -53,6 +53,24 @@ class: center, middle
 background-image: url(images/Clouds.jpg)
 background-size: cover
 
+```{r meta, echo=FALSE}
+library(metathis)
+meta() %>%
+  meta_general(
+    description = "How to Get Your Teaching Materials Online with R Markdown",
+    generator = "xaringan and remark.js"
+  ) %>% 
+  meta_name("github-repo" = "rstudio-education/sharing-short-notice") %>% 
+  meta_social(
+    title = "Sharing on Short Notice",
+    url = "https://rstd.io/sharing",
+    image = "https://repository-images.githubusercontent.com/248553842/408a8d80-7363-11ea-96ae-d04b664002df",
+    image_alt = "The first slide features a flying machine",
+    og_type = "website",
+    twitter_card_type = "summary_large_image"
+  )
+```
+
 ---
 template: clouds
 
