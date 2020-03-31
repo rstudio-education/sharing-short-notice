@@ -2194,7 +2194,7 @@ It has 3 labs from a course I taught on data visualization.
 ---
 ## Build your book
 
-.left-column[
+.left-column1[
 
 
 ```r
@@ -2210,7 +2210,7 @@ It has 3 labs from a course I taught on data visualization.
 ```
 ]
 
-.right-column[
+.right-column1[
 &lt;img src="images/screenshots/build-bookdown.png" style="margin-top: -28px;"&gt;
 ]
 
@@ -2231,7 +2231,7 @@ background-size: contain
 
 ## .hidden[Inside the `index.Rmd`]
 
-.left-column[
+.left-column1[
 
 
 ```r
@@ -2254,7 +2254,7 @@ The index.Rmd file turns into the first chapter.
 ---
 ## Inside the `index.Rmd`
 
-.left-column[
+.left-column1[
 
 
 ```r
@@ -2270,7 +2270,7 @@ The index.Rmd file turns into the first chapter.
 ```
 ]
 
-.right-column[
+.right-column1[
 
 ```yaml
 ---
@@ -2395,7 +2395,7 @@ background-size: contain
 
 ## Inside the chapters
 
-.left-column[
+.left-column1[
 
 
 ```r
@@ -2418,7 +2418,7 @@ The chapters themselves are each separate R markdown files. With one major chang
 ---
 ## Inside one chapter
 
-.left-column[
+.left-column1[
 
 
 ```r
@@ -2434,7 +2434,7 @@ The chapters themselves are each separate R markdown files. With one major chang
 ```
 ]
 
-.right-column[
+.right-column1[
 
 ```
 # MoMA Museum Tour 
@@ -2455,6 +2455,10 @@ This will mean that you'll need to change any individual R Markdown file that yo
 
 Each chapter has to start with a level 1 markdown header like "MoMA Museum Tour" here.
 
+---
+background-image: url(images/bookdown-km.png)
+background-size: contain
+
 
 ---
 background-image: url("images/rawpixel/bunch-balloons-book4.jpg")
@@ -2463,7 +2467,7 @@ background-size: contain
 
 ## Sharing your book
 
-.left-column[
+.left-column1[
 
 
 ```r
@@ -2504,14 +2508,11 @@ But these random domain names are hard to remember and keep track of.
 
 We can update the domain on netlify.com to make the link easier to share.
 
----
-background-image: url(images/bookdown-km.png)
-background-size: contain
+...
+
+And it really is there- the new link works right away.
 
 
-???
-
-B/c of new session true
 
 ---
 class: middle
@@ -2609,6 +2610,8 @@ template: clouds2
 
 For course websites, my favorite theme to use is the Hugo academic theme, because it is well documented and flexible.
 
+This theme also has search built-in, which is nice.
+
 ---
 class: center, middle
 background-image: url(images/Clouds2.jpg)
@@ -2629,23 +2632,16 @@ template: clouds2
 
 ![](images/screenshots/blogdown-labs.png)
 
-desiree add circle around lab 02
 
 ---
 template: clouds2
 
 ![](images/screenshots/blogdown-lab02.png)
 
-desiree annotate arrows coming out of labs/slides buttons to
-
-images/screenshots/blogdown-lab02-rmd.png
-images/screenshots/blogdown-lab02-slides.png
-
-
 ---
-class: middle
+template: clouds2
 
-There's also a search function here too!
+![](images/screenshots/blog-1.png)
 
 ---
 ## Build your site
@@ -2703,6 +2699,8 @@ background-size: contain
 
 ???
 
+The content folder is probably the place you'll dig into the most.
+
 Your primary content will live here, in either R Markdown or plain Markdown files. The YAML will depend on your theme.
 
 This means you'll need to change any existing YAML to adapt to your theme.
@@ -2737,9 +2735,9 @@ background-size: contain
 
 ???
 
-You can stash and build other R Markdown documents in the static directory too, like slides or other kinds of output formats. 
+Sometimes I stash and build other R Markdown documents in the static folder.
 
-You can see how I did that in the demo files.
+You can see how I did that in the demo files with my R Markdown labs and xaringan slides.
 
 ---
 class: middle
@@ -2807,31 +2805,16 @@ drag and drop _public folder
 
 # Here's a shortcut you can use
 
-Deploy to netlify video
-
-???
+&lt;video width="1084" height="610" controls&gt;&lt;source src="images/drop-blog.mp4" type="video/mp4"&gt;&lt;/video&gt;
 
 
 ---
-class: inverse, center, middle
 
-# Review
+# Ideas &amp; resources
 
-Need four square view with static screenshots of each of the 4 sites
++ Continuous deployment
 
-???
-
-Say out loud which folder to drag and drop for each (maybe have the text show up in each of the four squares like `site/`, `_book/`, `public/`)
-
----
-
-# Other links, resources, stuff
-
-Looking ahead:
-
-Connect netlify to github and use continuous deployment for your sites
-
-Link out to gh repo for all the things? I can make issues with resources for each tool
++ More here: https://github.com/rstudio-education/sharing-short-notice
 
 ---
 background-image: url("images/rawpixel/site-dreams.jpg")
@@ -2895,42 +2878,6 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
     deleted = true;
   });
 })();
-(function() {
-  "use strict"
-  /* Replace <script> tags in slides area to make them executable
-   *
-   * Runs after post-processing of markdown source into slides and replaces only
-   * <script>s on the last slide of continued slides using the .has-continuation
-   * class added by xaringan. Finally, any <script>s in the slides area that
-   * aren't executed are commented out.
-   */
-  var scripts = document.querySelectorAll(
-    '.remark-slides-area .remark-slide-container:not(.has-continuation) script'
-  );
-  if (!scripts.length) return;
-  for (var i = 0; i < scripts.length; i++) {
-    var s = document.createElement('script');
-    var code = document.createTextNode(scripts[i].textContent);
-    s.appendChild(code);
-    scripts[i].parentElement.replaceChild(s, scripts[i]);
-  }
-  var scriptsNotExecuted = document.querySelectorAll(
-    '.remark-slides-area .remark-slide-container.has-continuation script'
-  );
-  if (!scriptsNotExecuted.length) return;
-  for (var i = 0; i < scriptsNotExecuted.length; i++) {
-    var comment = document.createComment(scriptsNotExecuted[i].outerHTML)
-    scriptsNotExecuted[i].parentElement.replaceChild(comment, scriptsNotExecuted[i])
-  }
-})();
-(function() {
-  var links = document.getElementsByTagName('a');
-  for (var i = 0; i < links.length; i++) {
-    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
-      links[i].target = '_blank';
-    }
-  }
-})();
 // adds .remark-code-has-line-highlighted class to <pre> parent elements
 // of code chunks containing highlighted lines with class .remark-code-line-highlighted
 (function(d) {
@@ -2948,6 +2895,17 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
   }
   preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
 })(document);</script>
+
+<script>
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+</script>
 
 <script>
 slideshow._releaseMath = function(el) {
