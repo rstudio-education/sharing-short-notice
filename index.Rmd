@@ -2792,13 +2792,16 @@ class: middle
 
 ---
 
-drag and drop _public folder
+# Share your site
+
+<video width="1084" height="610" controls><source src="images/drop-blog.mp4" type="video/mp4"></video>
+
 
 ---
 
 # Here's a shortcut you can use
 
-<video width="1084" height="610" controls><source src="images/drop-blog.mp4" type="video/mp4"></video>
+<video width="1084" height="610" controls><source src="images/deploy-button.mp4" type="video/mp4"></video>
 
 
 ---
