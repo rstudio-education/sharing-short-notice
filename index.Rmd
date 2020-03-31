@@ -2380,6 +2380,24 @@ background-size: cover
 <iframe src="https://share-blogdown.netlify.com/" height="600" width="1200" frameborder="0"></iframe> 
 
 ---
+template: clouds2
+
+![](images/screenshots/blogdown-labs.png)
+
+desiree add circle around lab 02
+
+---
+template: clouds2
+
+![](images/screenshots/blogdown-lab02.png)
+
+desiree annotate arrows coming out of labs/slides buttons to
+
+images/screenshots/blogdown-lab02-rmd.png
+images/screenshots/blogdown-lab02-slides.png
+
+
+---
 class: middle
 
 ## Build your site
