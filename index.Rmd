@@ -2206,7 +2206,7 @@ It has 3 labs from a course I taught on data visualization.
 ```
 ]
 
-.right-column[
+.right-column1[
 <img src="images/screenshots/build-bookdown.png" style="margin-top: -28px;">
 ]
 
@@ -2264,7 +2264,7 @@ The index.Rmd file turns into the first chapter.
 ```
 ]
 
-.right-column[
+.right-column1[
 
 ```{r echo=FALSE, comment='#'}
 # x <- as_yml("knit: bookdown::render_book")
@@ -2427,7 +2427,7 @@ The chapters themselves are each separate R markdown files. With one major chang
 ```
 ]
 
-.right-column[
+.right-column1[
 
 ```
 # MoMA Museum Tour 
