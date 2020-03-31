@@ -27,6 +27,12 @@ library(ymlthis)
 library(tidyverse)
 ```
 
+layout: true
+
+<a class="footer-link" href="https://rstudio-education.github.io/sharing-short-notice/">rstd.io/sharing</a>
+
+---
+
 class: title-slide, center, bottom
 
 # `r rmarkdown::metadata$title`
@@ -42,7 +48,6 @@ Welcome to the webinar on sharing on short notice
 Where we'll show you how to get your teaching materials online with R Markdown.
 
 ---
-layout: true
 name: clouds
 class: center, middle
 background-image: url(images/Clouds.jpg)

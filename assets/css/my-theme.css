@@ -242,7 +242,6 @@ thead, tfoot, tr:nth-child(even) { background: #eee }
 /* footer */
 
 div.my-footer {
-    background-color: #282a36;
     position: absolute;
     bottom: 0px;
     left: 0px;
@@ -258,13 +257,12 @@ div.my-footer span {
     bottom: 2px;
 }
 
-.remark-slide-content:after {
-    content: "rstd.io/sharing";
+a.footer-link {
     position: absolute;
     bottom: 5px;
-    right: 35px;
+    right: 50px;
     height: 40px;
-    width: 120px;
+    width: 150px;
     color: #E7553C;
 }
 
