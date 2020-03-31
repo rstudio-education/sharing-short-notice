@@ -2098,7 +2098,7 @@ background-size: contain
 ???
 
 With that, we've now covered the first two R Markdown tools. 
-And Alison will walk us through a couple more that look quite different.
+
 
 ---
 name: bookdown
@@ -2113,7 +2113,11 @@ background-position: center, bottom
 
 ???
 
+Now, Alison will be our guide for the rest of our ascent up markdown mountain.
 
+ALISON:
+
+Thank you Desiree! We'll start with bookdown, which is an additional package that you need to install before using it.
 
 ---
 background-image: url("images/rawpixel/writing-machine.jpg")
@@ -2123,21 +2127,41 @@ class: middle
 
 # Online book with...
 
+???
+
+So as the name of the package suggests, bookdown is a way to build books with R Markdown. 
+
+You can use it to build an online book with a...
+
 --
 
 + Table of contents
 
+???
+
+table of contents
+
 --
 
 + Chapters
+
+???
+
+Multiple chapters, in fact as many as you want!
 
 --
 
 + Bells &amp; whistles
 
 
+???
+
+and lots of bells and whistles that we can't cover today.
+
+
 ---
 class: middle, center
+template: clouds2
 
 &lt;https://bookdown.org/yihui/bookdown/&gt;
 
@@ -2145,16 +2169,27 @@ class: middle, center
 
 ???
 
-Some new features to point out during "tour" :
-* A very long TOC
-* Chapters 
-* Sections
-* Search function
+They are all covered in the bookdown book, which you can see here.
+
+It's also a bookdown book itself!
+
+You can see that instead of using a top navbar, this format gives me a way to navigate the book using a very long but scrollable table of contents in this left sidebar.
+
+Each chapter is an R Markdown file, which when I click on it, shows up in the right pane.
+
+Bookdown also comes with search built-in.
 
 ---
 template: clouds2
 
 ![](images/screenshots/min-bookdown.png)
+
+
+???
+
+Here is a much shorter bookdown book, which I'll use now to give you a quick tour.
+
+It has 3 labs from a course I taught on data visualization.
 
 ---
 ## Build your book
@@ -2178,6 +2213,16 @@ template: clouds2
 .right-column[
 &lt;img src="images/screenshots/build-bookdown.png" style="margin-top: -28px;"&gt;
 ]
+
+???
+
+The files in this project are on the left.
+
+To make the book from these files, we click on the build book button in the top right pane.
+
+This creates a new folder called `_book`, which is where our book now lives.
+
+Let's look at some of the other files...
 
 ---
 background-image: url("images/rawpixel/bunch-balloons-book1.jpg")
@@ -2204,7 +2249,7 @@ background-size: contain
 
 ???
 
-The index.Rmd file is special. It is both the first chapter, and contains some YAML for the book's metadata like the title. You can think of this as the mega-YAML for your book- it is the YAML for all the chapters.
+The index.Rmd file turns into the first chapter. 
 
 ---
 ## Inside the `index.Rmd`
@@ -2240,6 +2285,14 @@ output: bookdown::gitbook
 
 ]
 
+???
+
+If we peek inside, we see some familiar YAML at the top, like a title and author.
+
+We also have 2 new YAML keys: `site` and `output`. Both are necessary for building an HTML book.
+
+Then the rest of that file can be a regular R Markdown file.
+
 ---
 background-image: url("images/rawpixel/bunch-balloons-book2.jpg")
 background-position: right
@@ -2261,6 +2314,12 @@ background-size: contain
 └── _book/ 
 ```
 ]
+
+???
+
+Like with our other sites, we have a separate yaml file too.
+
+This one is named `_bookdown.yml`, and it works with the index.Rmd file to tie all our chapters together.
 
 ---
 
@@ -2289,17 +2348,11 @@ new_session: true
 
 ???
 
-new session forces bookdown to do what is called knit then merge
+I recommend using this file to set at least one new key: new session as true.
 
-strongly recommend
+This makes sure that each chapter is knit in separate R sessions.
 
-K-M uses separate R sessions for individual chapters
-
-each chapter compiles from a clean state, including packages loaded
-
-Without it, you would need to make sure that you don't have any duplicate chunk labels throughout your ENTIRE book.
-
-BUT K-M does not allow Rmd files to be in subdirectories,
+You might notice that my chapter files right now are named with numbers as prefixes...
 
 ---
 
@@ -2331,6 +2384,10 @@ new_session: true
 ```
 ]
 
+???
+
+If you don't want them numbered, you can use this yaml file to specify the order of the rmd chapters by filename instead.
+
 ---
 background-image: url("images/rawpixel/bunch-balloons-book3.jpg")
 background-position: right
@@ -2356,7 +2413,7 @@ background-size: contain
 
 ???
 
-Every Rmd is a chapter
+The chapters themselves are each separate R markdown files. With one major change...
 
 ---
 ## Inside one chapter
@@ -2392,7 +2449,11 @@ and as analyzed by [fivethirtyeight.com](https://fivethirtyeight.com/features/a-
 
 ???
 
-Main points- the Rmd chapters don't have any YAML. This will mean that you'll need to change any individual Rmd that you want to make into chapters.
+None of the chapters can have a YAML. 
+
+This will mean that you'll need to change any individual R Markdown file that you want to convert into chapters in a book.
+
+Each chapter has to start with a level 1 markdown header like "MoMA Museum Tour" here.
 
 
 ---
@@ -2418,6 +2479,10 @@ background-size: contain
 ```
 ]
 
+???
+
+So, how do we share the book once it's written and built? We know our HTML files live in the _book folder so this should seem like old hat to you now...
+
 ---
 class: middle, center
 
@@ -2425,12 +2490,19 @@ class: middle, center
 
 
 ???
-and we're ready to share using the ol' drag n drop. 
-So, we'll use the `_book` folder now.
+
+We would drag that folder straight into Netlify to get a link.
+
 
 ---
 
 &lt;video width="1084" height="610" controls&gt;&lt;source src="images/netlify-domain.mp4" type="video/mp4"&gt;&lt;/video&gt;
+
+???
+
+But these random domain names are hard to remember and keep track of.
+
+We can update the domain on netlify.com to make the link easier to share.
 
 ---
 background-image: url(images/bookdown-km.png)
@@ -2452,21 +2524,19 @@ background-size: contain
 
 + Hard to get lost
 
-+ "Infinite" TOC
-
-+ Cross-references, numbered figures, equations, tables
-
 ### The bad
 
-+ (Maybe) re-naming files
-
-+ `# Chapter name`
-
-+ Many YAMLs
++ Converting
 
 + (Still) no subfolders
 
 ]
+
+???
+
+The best part about bookdown is it is hard to get lost. The TOC and search functions really help, and because we have more real estate in the TOC vertically, you can squeeze a lot more content in.
+
+The hard parts are that to convert existing files over, you may need to rename them and you definitely have to remove the YAMLs. You also still don't get to have subfolders. 
 
 ---
 name: blogdown
@@ -2481,11 +2551,22 @@ background-position: center, bottom
 
 ???
 
+So Desiree- we have made it to the summit- blogdown!
 
 ---
 background-image: url(images/rawpixel/knight.jpg)
 background-size: contain
 background-color: #F5ECE0
+
+???
+
+Blogdown is a great package for building custom and unique websites with R Markdown.
+
+But, it is not for the faint of heart.
+
+It also may not be good for you to adopt on short notice, because there is a lot to learn.
+
+But I want you to know about it in case you've already tried the tools we just covered and are still not quite satisfied with the options.
 
 ---
 class: center, middle, inverse
@@ -2493,6 +2574,12 @@ class: center, middle, inverse
 ![](images/hugo.svg)&lt;!-- --&gt;
 
 &lt;https://gohugo.io/&gt;
+
+???
+
+So what is blogdown? It is an R package that helps you build a website using a generator called HUGO.
+
+The package lets you use the RStudio IDE and R Markdown to make your site.
 
 ---
 class: center, middle
@@ -2504,6 +2591,12 @@ background-size: contain
 &lt;https://themes.gohugo.io/&gt;
 ]
 
+???
+
+One of the best and worst things about Hugo is that there are themes- so you can really get creative.
+
+But you can also easily get overwhelmed by the choices- there are over 100 themes to choose from.
+
 ---
 class: center, middle
 template: clouds2
@@ -2511,6 +2604,10 @@ template: clouds2
 &lt;https://academic-demo.netlify.com/&gt;
 
 &lt;iframe src="https://academic-demo.netlify.com/" height="600" width="1200" frameborder="0"&gt;&lt;/iframe&gt; 
+
+???
+
+For course websites, my favorite theme to use is the Hugo academic theme, because it is well documented and flexible.
 
 ---
 class: center, middle
@@ -2520,6 +2617,12 @@ background-size: cover
 &lt;https://share-blogdown.netlify.com/&gt;
 
 &lt;iframe src="https://share-blogdown.netlify.com/" height="600" width="1200" frameborder="0"&gt;&lt;/iframe&gt; 
+
+???
+
+Here is a hugo academic site I built for this webinar as a demo.
+
+I took my old data visualization course website made with R Markdown that Desiree started with, and converted it to blogdown to show you what is possible.
 
 ---
 template: clouds2
