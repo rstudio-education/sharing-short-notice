@@ -2093,7 +2093,7 @@ background-size: contain
 ???
 
 With that, we've now covered the first two R Markdown tools. 
-And Alison will walk us through a couple more that look quite different.
+
 
 ---
 name: bookdown
@@ -2108,7 +2108,11 @@ background-position: center, bottom
 
 ???
 
+Now, Alison will be our guide for the rest of our ascent up markdown mountain.
 
+ALISON:
+
+Thank you Desiree! We'll start with bookdown, which is an additional package that you need to install before using it.
 
 ---
 background-image: url("images/rawpixel/writing-machine.jpg")
@@ -2118,21 +2122,41 @@ class: middle
 
 # Online book with...
 
+???
+
+So as the name of the package suggests, bookdown is a way to build books with R Markdown. 
+
+You can use it to build an online book with a...
+
 --
 
 + Table of contents
 
+???
+
+table of contents
+
 --
 
 + Chapters
+
+???
+
+Multiple chapters, in fact as many as you want!
 
 --
 
 + Bells &amp; whistles
 
 
+???
+
+and lots of bells and whistles that we can't cover today.
+
+
 ---
 class: middle, center
+template: clouds2
 
 &lt;https://bookdown.org/yihui/bookdown/&gt;
 
@@ -2140,16 +2164,27 @@ class: middle, center
 
 ???
 
-Some new features to point out during "tour" :
-* A very long TOC
-* Chapters 
-* Sections
-* Search function
+They are all covered in the bookdown book, which you can see here.
+
+It's also a bookdown book itself!
+
+You can see that instead of using a top navbar, this format gives me a way to navigate the book using a very long but scrollable table of contents in this left sidebar.
+
+Each chapter is an R Markdown file, which when I click on it, shows up in the right pane.
+
+Bookdown also comes with search built-in.
 
 ---
 template: clouds2
 
 ![](images/screenshots/min-bookdown.png)
+
+
+???
+
+Here is a much shorter bookdown book, which I'll use now to give you a quick tour.
+
+It has 3 labs from a course I taught on data visualization.
 
 ---
 ## Build your book
@@ -2173,6 +2208,16 @@ template: clouds2
 .right-column[
 &lt;img src="images/screenshots/build-bookdown.png" style="margin-top: -28px;"&gt;
 ]
+
+???
+
+The files in this project are on the left.
+
+To make the book from these files, we click on the build book button in the top right pane.
+
+This creates a new folder called `_book`, which is where our book now lives.
+
+Let's look at some of the other files...
 
 ---
 background-image: url("images/rawpixel/bunch-balloons-book1.jpg")
@@ -2199,7 +2244,7 @@ background-size: contain
 
 ???
 
-The index.Rmd file is special. It is both the first chapter, and contains some YAML for the book's metadata like the title. You can think of this as the mega-YAML for your book- it is the YAML for all the chapters.
+The index.Rmd file turns into the first chapter. 
 
 ---
 ## Inside the `index.Rmd`
@@ -2235,6 +2280,14 @@ output: bookdown::gitbook
 
 ]
 
+???
+
+If we peek inside, we see some familiar YAML at the top, like a title and author.
+
+We also have 2 new YAML keys: `site` and `output`. Both are necessary for building an HTML book.
+
+Then the rest of that file can be a regular R Markdown file.
+
 ---
 background-image: url("images/rawpixel/bunch-balloons-book2.jpg")
 background-position: right
@@ -2256,6 +2309,12 @@ background-size: contain
 └── _book/ 
 ```
 ]
+
+???
+
+Like with our other sites, we have a separate yaml file too.
+
+This one is named `_bookdown.yml`, and it works with the index.Rmd file to tie all our chapters together.
 
 ---
 
@@ -2283,6 +2342,8 @@ new_session: true
 ]
 
 ???
+
+I recommend using this file to set at least one new key: new session as true.
 
 new session forces bookdown to do what is called knit then merge
 
