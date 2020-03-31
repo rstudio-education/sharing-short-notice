@@ -73,8 +73,8 @@ class: middle, center
 
 <img style="border-radius: 50%;" src="https://conf20-intro-ml.netlify.com/authors/alison/avatar.jpg" width="150px"/>
 
-[<i class="fab fa-github"></i> @apreshill](https://github.com/apreshill)  
-[<i class="fab fa-twitter"></i> @apreshill](https://twitter.com/apreshill)
+[`r icon::fa("github")` @apreshill](https://github.com/apreshill)  
+[`r icon::fa("twitter")` @apreshill](https://twitter.com/apreshill)
 
 ]
 
@@ -89,8 +89,8 @@ My name is Alison Hill. I'm a data scientist and professional educator at RStudi
 
 <img style="border-radius: 50%;" src="https://conf20-intro-ml.netlify.com/authors/desiree/avatar.jpg" width="150px"/>
 
-[<i class="fab fa-github"></i> @dcossyleon](https://github.com/dcossyleon)  
-[<i class="fab fa-twitter"></i> @dcossyle](https://twitter.com/dcossyle)
+[`r icon::fa("github")` @dcossyleon](https://github.com/dcossyleon)  
+[`r icon::fa("twitter")` @dcossyle](https://twitter.com/dcossyle)
 
 ]
 
@@ -107,8 +107,8 @@ class: middle, center
 
 <img style="border-radius: 50%;" src="https://conf20-intro-ml.netlify.com/authors/alison/avatar.jpg" width="150px"/>
 
-[<i class="fab fa-github"></i> @apreshill](https://github.com/apreshill)  
-[<i class="fab fa-twitter"></i> @apreshill](https://twitter.com/apreshill)
+[`r icon::fa("github")` @apreshill](https://github.com/apreshill)  
+[`r icon::fa("twitter")` @apreshill](https://twitter.com/apreshill)
 
 ]
 
@@ -117,8 +117,8 @@ class: middle, center
 
 ![](https://media.giphy.com/media/hoqxB6HRhWtySSjO2S/giphy.gif)
 
-[<i class="fab fa-github"></i> @dcossyleon](https://github.com/dcossyleon)  
-[<i class="fab fa-twitter"></i> @dcossyle](https://twitter.com/dcossyle)
+[`r icon::fa("github")` @dcossyleon](https://github.com/dcossyleon)  
+[`r icon::fa("twitter")` @dcossyle](https://twitter.com/dcossyle)
 
 ]
 
