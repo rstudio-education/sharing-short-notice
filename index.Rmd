@@ -2566,6 +2566,12 @@ knitr::include_graphics("images/hugo.svg")
 
 <https://gohugo.io/>
 
+???
+
+So what is blogdown? It is an R package that helps you build a website using a generator called HUGO.
+
+The package lets you use the RStudio IDE and R Markdown to make your site.
+
 ---
 class: center, middle
 background-image: url(images/rawpixel/so-many.jpg)
@@ -2576,6 +2582,12 @@ background-size: contain
 <https://themes.gohugo.io/>
 ]
 
+???
+
+One of the best and worst things about Hugo is that there are themes- so you can really get creative.
+
+But you can also easily get overwhelmed by the choices- there are over 100 themes to choose from.
+
 ---
 class: center, middle
 template: clouds2
@@ -2583,6 +2595,10 @@ template: clouds2
 <https://academic-demo.netlify.com/>
 
 <iframe src="https://academic-demo.netlify.com/" height="600" width="1200" frameborder="0"></iframe> 
+
+???
+
+For course websites, my favorite theme to use is the Hugo academic theme, because it is well documented and flexible.
 
 ---
 class: center, middle
@@ -2592,6 +2608,12 @@ background-size: cover
 <https://share-blogdown.netlify.com/>
 
 <iframe src="https://share-blogdown.netlify.com/" height="600" width="1200" frameborder="0"></iframe> 
+
+???
+
+Here is a hugo academic site I built for this webinar as a demo.
+
+I took my old data visualization course website made with R Markdown that Desiree started with, and converted it to blogdown to show you what is possible.
 
 ---
 template: clouds2
