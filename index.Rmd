@@ -2295,12 +2295,12 @@ B/c of new session true
 
 ---
 class: middle
-background-image: url(images/rawpixel/blue-balloon-side.jpg)
-background-position: left
+background-image: url(images/rawpixel/balloon-ouch.jpg)
+background-position: right
 background-size: contain
 
-.pull-right[
-### The nice parts
+.pull-left[
+### The good
 
 + Hard to get lost
 
@@ -2308,16 +2308,7 @@ background-size: contain
 
 + Cross-references, numbered figures, equations, tables
 
-]
-
----
-class: middle
-background-image: url(images/rawpixel/balloon-ouch.jpg)
-background-position: right
-background-size: contain
-
-.pull-left[
-### The hard parts
+### The bad
 
 + (Maybe) re-naming files
 
@@ -2479,13 +2470,21 @@ background-position: left
 background-size: contain
 
 .pull-right[
-### The nice parts
+### The good
 
 + Subfolders!
 
 + Knit *anything*
 
 + `bookdown`
+
+### The bad
+
++ Hugo `r emo::ji("grimace")`
+
++ Complex
+
++ **not** for short notice
 
 ]
 
