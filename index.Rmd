@@ -146,7 +146,6 @@ class: middle, center
 And even though we don't have a video feed in this webinar, we promise we are real live humans who are stuck at home right now just like you all, sitting in front our computers.
 
 ---
-layout: false
 class: freight-slide, center, middle, inverse
 
 # .shadow-text[We ship a lot of websites.]
