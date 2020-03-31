@@ -2059,7 +2059,6 @@ Which means that we're now about done with Distill and...
 
 ```{r echo=FALSE}
 knitr::include_graphics("images/screenshots/drop-distill.png")
-
 ```
 
 
@@ -2163,7 +2162,7 @@ template: clouds2
 ├── dataviz-book.Rproj
 ├── images/
 ├── index.Rmd 
-└── _book #<<
+└── _book/ #<<
 ```
 ]
 
@@ -2189,7 +2188,7 @@ background-size: contain
 ├── dataviz-book.Rproj
 ├── images/
 ├── index.Rmd #<<
-└── _book 
+└── _book/ 
 ```
 ]
 
@@ -2211,7 +2210,7 @@ The index.Rmd file is special. It is both the first chapter, and contains some Y
 ├── dataviz-book.Rproj
 ├── images/
 ├── index.Rmd #<<
-└── _book 
+└── _book/ 
 ```
 ]
 
@@ -2249,7 +2248,7 @@ background-size: contain
 ├── dataviz-book.Rproj
 ├── images/
 ├── index.Rmd 
-└── _book 
+└── _book/ 
 ```
 ]
 
@@ -2267,7 +2266,7 @@ background-size: contain
 ├── dataviz-book.Rproj
 ├── images/
 ├── index.Rmd 
-└── _book 
+└── _book/
 ```
 ]
 
@@ -2307,7 +2306,7 @@ BUT K-M does not allow Rmd files to be in subdirectories,
 ├── dataviz-book.Rproj
 ├── images/
 ├── index.Rmd 
-└── _book 
+└── _book/
 ```
 ]
 
@@ -2340,7 +2339,7 @@ background-size: contain
 ├── dataviz-book.Rproj
 ├── images/
 ├── index.Rmd 
-└── _book 
+└── _book/ 
 ```
 ]
 
@@ -2362,7 +2361,7 @@ Every Rmd is a chapter
 ├── dataviz-book.Rproj
 ├── images/
 ├── index.Rmd 
-└── _book 
+└── _book/ 
 ```
 ]
 
@@ -2402,14 +2401,25 @@ background-size: contain
 ├── dataviz-book.Rproj
 ├── images/
 ├── index.Rmd 
-└── _book #<<
+└── _book/ #<<
 ```
 ]
 
 ---
+class: middle, center
 
-drag and drop _book folder
+```{r echo=FALSE, out.width='80%'}
+knitr::include_graphics("images/screenshots/drop-book.png")
+```
 
+
+???
+and we're ready to share using the ol' drag n drop. 
+So, we'll use the `_book` folder now.
+
+---
+
+<video width="1084" height="610" controls><source src="images/netlify-domain.mp4" type="video/mp4"></video>
 
 ---
 background-image: url(images/bookdown-km.png)
