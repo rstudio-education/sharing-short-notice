@@ -2191,7 +2191,7 @@ It has 3 labs from a course I taught on data visualization.
 ---
 ## Build your book
 
-.left-column[
+.left-column1[
 
 ```{r eval=FALSE}
 .
@@ -2227,7 +2227,7 @@ background-size: contain
 
 ## .hidden[Inside the `index.Rmd`]
 
-.left-column[
+.left-column1[
 
 ```{r eval=FALSE}
 .
@@ -2249,7 +2249,7 @@ The index.Rmd file turns into the first chapter.
 ---
 ## Inside the `index.Rmd`
 
-.left-column[
+.left-column1[
 
 ```{r eval=FALSE}
 .
@@ -2390,7 +2390,7 @@ background-size: contain
 
 ## Inside the chapters
 
-.left-column[
+.left-column1[
 
 ```{r eval=FALSE}
 .
@@ -2412,7 +2412,7 @@ The chapters themselves are each separate R markdown files. With one major chang
 ---
 ## Inside one chapter
 
-.left-column[
+.left-column1[
 
 ```{r eval=FALSE}
 .
@@ -2448,6 +2448,10 @@ This will mean that you'll need to change any individual R Markdown file that yo
 
 Each chapter has to start with a level 1 markdown header like "MoMA Museum Tour" here.
 
+---
+background-image: url(images/bookdown-km.png)
+background-size: contain
+
 
 ---
 background-image: url("images/rawpixel/bunch-balloons-book4.jpg")
@@ -2456,7 +2460,7 @@ background-size: contain
 
 ## Sharing your book
 
-.left-column[
+.left-column1[
 
 ```{r eval=FALSE}
 .
@@ -2498,14 +2502,11 @@ But these random domain names are hard to remember and keep track of.
 
 We can update the domain on netlify.com to make the link easier to share.
 
----
-background-image: url(images/bookdown-km.png)
-background-size: contain
+...
+
+And it really is there- the new link works right away.
 
 
-???
-
-B/c of new session true
 
 ---
 class: middle
@@ -2697,6 +2698,8 @@ background-size: contain
 
 ???
 
+The content folder is probably the place you'll dig into the most.
+
 Your primary content will live here, in either R Markdown or plain Markdown files. The YAML will depend on your theme.
 
 This means you'll need to change any existing YAML to adapt to your theme.
@@ -2730,9 +2733,9 @@ background-size: contain
 
 ???
 
-You can stash and build other R Markdown documents in the static directory too, like slides or other kinds of output formats. 
+Sometimes I stash and build other R Markdown documents in the static folder.
 
-You can see how I did that in the demo files.
+You can see how I did that in the demo files with my R Markdown labs and xaringan slides.
 
 ---
 class: middle
@@ -2806,25 +2809,12 @@ Deploy to netlify video
 
 
 ---
-class: inverse, center, middle
 
-# Review
+# Ideas & resources
 
-Need four square view with static screenshots of each of the 4 sites
++ Continuous deployment
 
-???
-
-Say out loud which folder to drag and drop for each (maybe have the text show up in each of the four squares like `site/`, `_book/`, `public/`)
-
----
-
-# Other links, resources, stuff
-
-Looking ahead:
-
-Connect netlify to github and use continuous deployment for your sites
-
-Link out to gh repo for all the things? I can make issues with resources for each tool
++ More here: https://github.com/rstudio-education/sharing-short-notice
 
 ---
 background-image: url("images/rawpixel/site-dreams.jpg")
