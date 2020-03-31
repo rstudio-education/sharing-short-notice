@@ -1664,7 +1664,7 @@ This creates a `_site` folder for our HTML files.
   position: absolute; 
   width: 100%; 
   top: 0px;
-  left: 0px;
+  right: 70px;
 "&gt;
 
 
@@ -1748,10 +1748,11 @@ Including a title and short description is nice too.
 [*note*: `site: distill::website` is only necessary if you wanna make the blog later]
 
 ---
-class: middle
 background-image: url(images/rawpixel/bunch-balloons-rmd2.jpg)
 background-position: right
 background-size: contain
+
+## .hidden[Inside the `_site.yml`]
 
 .left-column[
 
@@ -1770,7 +1771,8 @@ background-size: contain
 
 ???
 
-Next we move on to the _site.yml page. It's still for site configuration. This should sound a bit familiar...
+Next we move on to the `_site.yml` page. 
+It's still for site configuration. This should sound a bit familiar...
 
 ---
 ## Inside the `_site.yml`
@@ -1794,17 +1796,17 @@ Next we move on to the _site.yml page. It's still for site configuration. This s
 
 
 ```r
-title: Data Viz
+title: DataViz 
 navbar:
   right:
     - text: Labs
-      menu: 
+      menu:
       - text: Lab 1
         href: lab01.html
       - text: Lab 2
         href: lab02.html
     - text: Project
-      menu: project.html
+      href: project.html
 *output: distill::distill_article
 ```
 ]
@@ -1884,6 +1886,7 @@ Each post is itself its own page, and it doesn't need to be built into the navig
 .right-column[
 ```
 ---
+title: Schedule
 listing: posts
 ---
 ```
@@ -1891,7 +1894,7 @@ listing: posts
 
 ???
 
-Instead, we create a listing page -- an R Markdown document whose only job is to have this listing YAML key and value.
+Instead, we create a listing page -- an R Markdown document whose only job is to have a title and a listing YAML key and value.
 
 We'll call our "schedule".
 
@@ -2041,11 +2044,28 @@ Unfortunately, each posts **does** have to be knit individually.
 
 ???
 
-Finally, you'll need to build once more, so that the listing page will be updated with the new posts. And now you're ready to share your site.
+Finally, you'll need to build once more, so that the listing page will be updated with the new posts.
 
 ---
+class: middle center
 
-Screenshot drag and drop _site/ to netlify
+## A minimal "blog" page
+
+![](images/screenshots/distill-min-blog.png)
+
+???
+
+Here's what this "blog page" looks like when it's rendered.
+
+---
+## Sharing your site
+
+&lt;img src="images/screenshots/drop-distill.png" width="699" /&gt;
+
+
+???
+Which means that we're now about done with Distill, and we're ready to share using the ol' drag n drop. 
+
 
 ---
 class: middle
@@ -2755,6 +2775,42 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
     deleted = true;
   });
 })();
+(function() {
+  "use strict"
+  /* Replace <script> tags in slides area to make them executable
+   *
+   * Runs after post-processing of markdown source into slides and replaces only
+   * <script>s on the last slide of continued slides using the .has-continuation
+   * class added by xaringan. Finally, any <script>s in the slides area that
+   * aren't executed are commented out.
+   */
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container:not(.has-continuation) script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+  var scriptsNotExecuted = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container.has-continuation script'
+  );
+  if (!scriptsNotExecuted.length) return;
+  for (var i = 0; i < scriptsNotExecuted.length; i++) {
+    var comment = document.createComment(scriptsNotExecuted[i].outerHTML)
+    scriptsNotExecuted[i].parentElement.replaceChild(comment, scriptsNotExecuted[i])
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
 // adds .remark-code-has-line-highlighted class to <pre> parent elements
 // of code chunks containing highlighted lines with class .remark-code-line-highlighted
 (function(d) {
@@ -2772,17 +2828,6 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
   }
   preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
 })(document);</script>
-
-<script>
-(function() {
-  var links = document.getElementsByTagName('a');
-  for (var i = 0; i < links.length; i++) {
-    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
-      links[i].target = '_blank';
-    }
-  }
-})();
-</script>
 
 <script>
 slideshow._releaseMath = function(el) {
