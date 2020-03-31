@@ -1,0 +1,2679 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Sharing on Short Notice</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Alison Hill" />
+    <meta name="date" content="2020-03-30" />
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/my-theme.css" type="text/css" />
+    <link rel="stylesheet" href="assets/css/my-fonts.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+
+
+
+class: title-slide, center, bottom
+
+# Sharing on Short Notice
+
+## How to Get Your Teaching Materials Online with R Markdown
+
+### Alison Hill &amp;#183; Desirée De Leon
+
+???
+
+Welcome to the webinar on sharing on short notice
+
+Where we'll show you how to get your teaching materials online with R Markdown.
+
+---
+layout: true
+name: clouds
+class: center, middle
+background-image: url(images/Clouds.jpg)
+background-size: cover
+
+---
+template: clouds
+
+## .big-text[Hello.]
+
+???
+
+So hello- we're so happy you could join us today. 
+
+We hope that in our time together we'll be able to help you do your jobs better.
+
+---
+name: clouds2
+background-image: url(images/Clouds2.jpg)
+background-size: cover
+
+---
+template: clouds2
+class: middle, center
+
+.pull-left[
+### Alison Hill 
+
+&lt;img style="border-radius: 50%;" src="https://conf20-intro-ml.netlify.com/authors/alison/avatar.jpg" width="150px"/&gt;
+
+[&lt;i class="fab fa-github"&gt;&lt;/i&gt; @apreshill](https://github.com/apreshill)  
+[&lt;i class="fab fa-twitter"&gt;&lt;/i&gt; @apreshill](https://twitter.com/apreshill)
+
+]
+
+???
+
+My name is Alison Hill. I'm a data scientist and professional educator at RStudio.
+
+--
+
+.pull-right[
+### Desirée De Leon  
+
+&lt;img style="border-radius: 50%;" src="https://conf20-intro-ml.netlify.com/authors/desiree/avatar.jpg" width="150px"/&gt;
+
+[&lt;i class="fab fa-github"&gt;&lt;/i&gt; @dcossyleon](https://github.com/dcossyleon)  
+[&lt;i class="fab fa-twitter"&gt;&lt;/i&gt; @dcossyle](https://twitter.com/dcossyle)
+
+]
+
+???
+
+And I'm Desirée De Leon. I interned with Alison last summer at RStudio on the education team.
+
+---
+template: clouds2
+class: middle, center
+
+.pull-left[
+### Alison Hill 
+
+&lt;img style="border-radius: 50%;" src="https://conf20-intro-ml.netlify.com/authors/alison/avatar.jpg" width="150px"/&gt;
+
+[&lt;i class="fab fa-github"&gt;&lt;/i&gt; @apreshill](https://github.com/apreshill)  
+[&lt;i class="fab fa-twitter"&gt;&lt;/i&gt; @apreshill](https://twitter.com/apreshill)
+
+]
+
+.pull-right[
+### Desirée De Leon  
+
+![](https://media.giphy.com/media/hoqxB6HRhWtySSjO2S/giphy.gif)
+
+[&lt;i class="fab fa-github"&gt;&lt;/i&gt; @dcossyleon](https://github.com/dcossyleon)  
+[&lt;i class="fab fa-twitter"&gt;&lt;/i&gt; @dcossyle](https://twitter.com/dcossyle)
+
+]
+
+???
+
+And even though we don't have a video feed in this webinar, we promise we are real live humans who are stuck at home right now just like you all, sitting in front our computers.
+
+---
+layout: false
+class: freight-slide, center, middle, inverse
+
+# .shadow-text[We ship a lot of websites.]
+
+???
+
+I am a developmental psychologist
+
+Desirée is a neuroscientist
+
+Neither of us is a web developer
+
+But we both ship a lot of websites for teaching data science.
+
+Here are just a few of them.
+
+
+---
+class: freight-slide, center, middle, inverse
+
+# .shadow-text[We ship a lot of websites.]
+
+http://bit.ly/giraffe-stats
+
+https://education.rstudio.com/
+
+https://bookdown.org/yihui/blogdown/
+
+https://stat545.com/
+
+https://conf20-intro-ml.netlify.com/
+
+https://summer-of-blogdown.netlify.com/
+
+https://apreshill.github.io/data-vis-labs-2018/
+
+
+???
+
+If you type the short link on the bottom right of this slide into your browser right now, you'll be able to follow along.
+
+All of these links are clickable from the slides.
+
+---
+template: clouds
+
+# Who are you?
+
+???
+
+So that's us. Who are you?
+
+
+---
+class: middle, center
+
+&lt;div class="flex" style="margin: 0 1em;"&gt;
+  &lt;div class="column"&gt;
+    &lt;h3&gt; You're an educator &lt;h3&gt;
+    &lt;img src="images/rawpixel/educator.jpg" style="width: 100%;"&gt;
+  &lt;/div&gt;
+  
+--
+
+   &lt;div class="column"style="margin: 0 1em;"&gt;
+    &lt;h3&gt; You've got lots of .Rmds &lt;/h3&gt;
+    &lt;img src="images/rmd-buddy.jpg" style="width: 100%;"&gt;
+  &lt;/div&gt;
+  
+
+???
+
+
+
+Here's who we think you are...
+
+* You're an educator
+
+* You have R Markdown files for teaching...
+
+* But they're stuck on your computer, and you need to share them easily with others. 
+
+* And--- you probably have a new classroom space that looks like this-- so sharing needs to be done 100% online
+
+---
+class: middle, center
+
+
+&lt;div class="flex" style="margin: 0 1em;"&gt;
+  &lt;div class="column"&gt;
+    &lt;h3&gt; You're an educator &lt;/h3&gt;
+    &lt;img src="images/rawpixel/educator.jpg" style="width: 100%;"&gt;
+  &lt;/div&gt;
+  
+  &lt;div class="column"style="margin: 0 1em;"&gt;
+    &lt;h3&gt; You've got lots of .Rmds &lt;/h3&gt;
+    &lt;img src="images/rmd-buddy-help.jpg" style=""&gt;
+  &lt;/div&gt;
+  
+--
+  &lt;div class="column" style="margin: 0 1em;"&gt;
+    &lt;h3&gt; Your new classroom &lt;/h3&gt;
+    &lt;img src="images/internet.jpg"  style=""&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+???
+
+Here's who we think you are...
+
+* You're an educator
+
+* You have R Markdown files for teaching...
+
+* But they're stuck on your computer, and you need to share them easily others with out filling up their inboxes.
+
+* And--- you probably have a new classroom space that looks like this-- so sharing needs to be done 100% online
+
+---
+class: center
+background-image: url("images/rawpixel/lesson-time.jpg")
+background-size: contain
+background-color: #f6f6f6
+
+## You might feel like this right now.
+
+???
+
+And you might feel like this right now.
+
+---
+class: middle, center
+
+# Sharing on **short notice**
+
+???
+
+With that in mind, today we'll give you a quick tour of the...
+
+---
+class: middle, center
+background-image: url("images/short1.jpg")
+background-size: cover
+
+# Sharing on **short notice**
+
+???
+
+R Markdown tools you can use to get your **course materials** 
+
+---
+class: middle, center
+background-image: url("images/short2.jpg")
+background-size: cover
+
+# Sharing on **short notice**
+
+???
+
+[CLICK] online [CLICK] 
+
+---
+class: middle, center
+background-image: url("images/short3.jpg")
+background-size: cover
+
+# Sharing on **short notice**
+
+???
+
+on short notice.
+
+---
+class: middle, center
+background-image: url("images/rawpixel/inflation.jpg")
+background-size: contain
+background-color: #EBEAE6
+
+???
+
+So we'll show you how to build websites using R Markdown and friends. 
+
+Our goal is to help you get your site up in the air in the cloud...
+
+---
+class: inverse, center
+background-image: url("images/rawpixel/blue-balloon.jpg")
+background-size: cover
+
+# This
+
+???
+
+with a shareable link so that you can get on with your teaching...
+
+---
+class: top center
+background-image: url("images/rawpixel/balloon-ouch.jpg")
+background-position: bottom center
+background-size: 40%
+
+# Not this
+
+???
+
+and hopefully avoid HTML crashes.
+
+---
+class: center, middle
+
+## Why make a course website?
+
+--
+
+&lt;img src="images/rawpixel/fortress.jpg" width="444" /&gt;
+
+???
+
++ Shareable
+
++ Reproducible
+
++ Resilient
+
+Why make a course website at all?  It makes your content shareable, reproducible, and resilient [to short-notice changes]
+
+Saving here for now:
+The good news is that R markdown is made for sharing
+
+R Markdown can be knitted into websites
+
+and websites can be shared easily with a single link
+
+But before we talk about full course website, first we need to talk about single R Markdown files. So I'll pass it off to Desiree to get us started. 
+
+---
+template: clouds
+
+# What does an .Rmd look like?
+
+???
+
+Jumping right in, what *does* an R Markdown file look like?
+
+---
+class: center, middle
+
+&lt;img src="images/screenshots/Rproj1.png" width="544" /&gt;
+
+???
+
+Here is an r project folder for a lab. 
+
+---
+class: center middle
+
+&lt;img src="images/screenshots/Rproj2.png" width="544" /&gt;
+
+
+???
+Inside that folder, you'll notice an RProj file. Opening that file in RStudio... 
+
+---
+background-image: url(images/screenshots/Single-rmd.png)
+background-size: contain
+class: middle, center
+
+???
+
+...takes us here, where we can see our single R Markdown file for our lab. This one is for a lab for visualizing data from the Museum of Modern Art.
+
+Let's quickly walk through some of the key parts of this file.
+
+---
+background-image: url(images/screenshots/Single-rmd0.png)
+background-size: contain
+class: middle, center
+
+???
+
+It starts with metadata, written in YAML, which is a list of keys on the left and their values on the right.
+
+---
+class: middle, center
+background-image: url(images/screenshots/Single-rmd1.png)
+background-size: contain
+
+???
+
+The first key you see is the TITLE, which is `Lab 02: MoMA Museum Tour`.
+
+---
+class: middle, center
+background-image: url(images/screenshots/Single-rmd2.png)
+background-size: contain
+
+???
+
+The last YAML section is all about output. Here the output is an html document.
+
+
+---
+class: middle, center
+background-image: url(images/screenshots/Single-rmd3.png)
+background-size: contain
+
+???
+
+Beneath that, we can add options to our html document -- for example, a table of contents, with the key TOC set to TRUE. 
+
+---
+class: middle, center
+background-image: url(images/screenshots/Single-rmd4.png)
+background-size: contain
+
+???
+
+So that's the metadata, but the real meat in your R Markdown file 
+is text written in markdown...
+
+
+---
+class: middle, center
+background-image: url(images/screenshots/Single-rmd5.png)
+background-size: contain
+
+
+???
+
+and your code, written in R.
+
+So these 3 things: metadata, text, and code make up an R Markdown document.
+
+---
+class: top center
+
+&lt;video width="1530" height="610" controls&gt;
+    &lt;source src="images/single-doc-knit.mp4" type="video/mp4"&gt; &lt;/video&gt;
+
+???
+
+ALISON says:
+
+Of course, Desiree, the real magic happens, when you click on the Knit icon, and see your file turned into HTML. 
+
+So, here's what that looks like: 
+
++ We knit
++ We can watch in this bottom pane as our R Markdown document gets processed.
++ And voila! -- we see our rendered HTML file. 
++ We can choose to open this up in a real browser window.
++ And then just test a few things out. 
+
+---
+class: middle center
+background-image: url(images/screenshots/Single-knit1.png)
+background-size: contain
+
+???
+
+Here is what we knit. 
+
+--
+
+&lt;img src="images/screenshots/Single-knit2.png" style="
+  position: absolute; 
+  width: 91%; 
+  top: -53px;
+  right: 5px;
+"&gt;
+
+???
+
+Using the **theme** key in our YAML, we changed our font and colors.
+
+--
+
+&lt;img src="images/screenshots/Single-knit3.png" style="
+  position: absolute; 
+  width: 97%; 
+  top: -45px;
+  right: -51px;
+"&gt;
+
+???
+
+And we have this nice table of contents floating off to the side.
+
+--
+
+&lt;img src="images/screenshots/Single-knit4.png" style="
+  position: absolute; 
+  width: 73%; 
+  bottom: 10px;
+  right: 80px;
+"&gt;
+
+???
+
+But this is still local and stuck on my computer. 
+
+A **link** would make it easier to share. 
+
+
+---
+template: clouds
+class: center, middle
+
+# How do we start .emphasis[sharing]?
+
+
+
+---
+exclude: true
+class: center middle
+
+## What does a .emphasis[linkable] Rmd look like?
+
+&lt;img src="images/hello-index.jpg" width="570" /&gt;
+
+???
+
+So then what does a *linkable* RMD look like? There are two pre-requisites: 
+
+1. You have to make sure we have an R Markdown document is named `index.Rmd` -- an internet browser will always begin by looking for a file named index to open up first. 
+
+---
+background-image: url("images/Server.jpg")
+background-size: 80%
+background-position: bottom
+class: center, top
+
+# How do we start .emphasis[sharing]?
+
+???
+
+We need a web server...
+
+--
+&lt;img src="https://github.com/nolistic.png" style="
+  position: absolute; 
+  width: 10%; 
+  top: 140px;
+  right: 60px;
+  border-radius: 50%;
+"&gt;
+
+???
+
+which is basically a big computer in the clouds
+
+hat/tip to Heather Nolis for this analogy.
+
+--
+&lt;img src="images/Netlify.png" style="
+  position: absolute; 
+  width: 23%; 
+  top: 218px;
+  right: 301px;
+"&gt;
+
+???
+
+And for this webinar, we'll use servers provided by Netlify.
+
+
+---
+class: top center
+
+# How do we start .emphasis[sharing]?
+
+.pull-left[
+## Go here:
+#### [app.netlify.com/drop](https://app.netlify.com/drop)
+]
+
+.pull-right[
+&lt;img src= "https://summer-of-blogdown.netlify.com/assets/netlify-drop.png" style="width: 85%;"&gt;
+]
+
+???
+
+We are going to drag and drop our folder into Netlify and put our webpage online.
+
+So, Alison, let's do our first drag and drop!
+
+
+---
+class: center, middle
+
+&lt;video width="1200" height="625" controls&gt;
+    &lt;source src="images/single-doc-dnd.mp4" type="video/mp4"&gt;
+&lt;/video&gt;
+
+???
+
+ALISON says:
+
+So, I open up my browser, and go to app.netlify.com/drop -- 
+
+and  drag n drop the folder in. 
+
+A few seconds later, Netlify has  auto-generated a silly-name link and deployed our page -- this link is where our Lab02 page now lives,  and you can share your page with whomever you choose --  
+
+BOTH: hooray!
+
+
+---
+class: center, middle
+background-image: url(images/Clouds.jpg)
+background-size: cover
+
+# What just happened?
+
+???
+
+What just happened?
+
+---
+background-image: url(images/what-happened/single-doc/Slide1.jpeg)
+class: middle center
+background-size: contain
+
+
+???
+
+**We started with an R Markdown file named index**
+
+We knit this to convert to an internet-ready HTML file
+
+It looked great, but still only lived locally in our R Project folder
+
+So then we dragged and dropped our folder
+
+Netlify deployed our page
+
+and generated a link! Ta - da!
+
+---
+background-image: url(images/what-happened/single-doc/Slide2.jpeg)
+class: middle center
+background-size: contain
+
+
+???
+
+We started with an R Markdown file named index
+
+**We knit this to convert to an internet-ready HTML file**
+
+It looked great, but still only lived locally in our R Project folder
+
+So then we dragged and dropped our folder
+
+Netlify deployed our page
+
+and generated a link! Ta - da!
+
+---
+background-image: url(images/what-happened/single-doc/Slide3.jpeg)
+class: middle center
+background-size: contain
+
+
+???
+
+We started with an R Markdown file named index
+
+We knit this to convert to an internet-ready HTML file
+
+**It looked great, but still only lived locally in our R Project folder**
+
+So then we dragged and dropped our folder
+
+Netlify deployed our page
+
+and generated a link! Ta - da!
+
+---
+background-image: url(images/what-happened/single-doc/Slide4.jpeg)
+class: middle center
+background-size: contain
+
+
+???
+
+We started with an R Markdown file named index
+
+We knit this to convert to an internet-ready HTML file
+
+It looked great, but still only lived locally in our R Project folder
+
+**So then we dragged and dropped our folder**
+
+Netlify deployed our page
+
+and generated a link! Ta - da!
+
+---
+background-image: url(images/what-happened/single-doc/Slide5.jpeg)
+class: middle center
+background-size: contain
+
+
+???
+
+We started with an R Markdown file named index
+
+We knit this to convert to an internet-ready HTML file
+
+It looked great, but still only lived locally in our R Project folder
+
+So then we dragged and dropped our folder
+
+**Netlify deployed our page**
+
+and generated a link! Ta - da!
+
+---
+background-image: url(images/what-happened/single-doc/Slide6.jpeg)
+class: middle center
+background-size: contain
+
+
+???
+
+We started with an R Markdown file named index
+
+We knit this to convert to an internet-ready HTML file
+
+It looked great, but still only lived locally in our R Project folder
+
+So then we dragged and dropped our folder
+
+Netlify deployed our page
+
+**and generated a link! Ta - da!**
+
+
+---
+background-image: url(images/rawpixel/single-balloon.jpg)
+background-size: contain
+background-position: left
+class: middle, center
+
+.pull-right[
+### But that is just one .Rmd file...
+]
+
+???
+
+But that is just one R Markdown file...
+
+
+---
+background-image: url(images/rawpixel/bunch-balloons.jpg)
+background-size: contain
+background-position: right
+class: middle, center
+
+.pull-left[
+### We want to share many .Rmd files!
+]
+
+
+???
+
+We want to share many R Markdown files!
+
+---
+background-image: url(images/mtsalsa0.jpg)
+background-position: bottom center
+background-size: contain
+class: top, center
+
+## So where are we going?
+
+???
+
+So we're going to hike "markdown mountain"...
+
+---
+background-image: url(images/mtsalsa.jpg)
+background-position: bottom center
+background-size: contain
+class: top, center
+
+## So where are we going?
+
+???
+
+And our goal for the rest of this webinar is to show you 4 RMD tools that are for turning a *COLLECTION* of RMDs into a web*site*.
+
+
+---
+name: default_site
+class:  top, center
+background-image: url(images/mtsalsa-rmd.jpg)
+background-size: contain
+background-position: center, bottom
+
+# `install.packages("rmarkdown")`
+
+???
+
+So let's begin with an R Markdown site.
+
+To make one, you only need the rmarkdown package installed, which is already done for you if you use RStudio.
+
+---
+template: clouds2
+class: center, top
+
+&lt;https://apreshill.github.io/data-vis-labs-2018&gt;
+
+&lt;img src= "images/screenshots/RMD-site-wild.png" style="margin-top: -20px;"&gt;
+
+???
+
+Here is an R Markdown site for a course about data visualization. Actually, the MoMA lab we just turned into a webpage was one of the labs from this course.
+
+The biggest addition here is this top navigation bar...
+
+--
+
+&lt;img src="images/Circle-nav.png" style="
+  position: absolute; 
+  width: 16%; 
+  top: 126px;
+  left: 253px;
+"&gt;
+
+???
+
+which allows us to link to other webpages...
+
+
+
+---
+template: clouds2
+class: center middle
+
+&lt;https://apreshill.github.io/data-vis-labs-2018&gt;
+
+
+&lt;img src= "images/screenshots/RMD-site-wild.png" style="width: 110%; margin-top: -20px; visibility: hidden;"&gt;
+
+
+&lt;img src= "images/screenshots/RMD-site-wild1.png" 
+  style="
+    position: absolute; 
+    width: 103%; 
+    top: 2px;
+    left: -1px;
+  "&gt;
+
+???
+
+including ones made with R Markdown, like this page with slides and readings...
+    
+---
+template: clouds2
+class: center middle
+
+&lt;https://apreshill.github.io/data-vis-labs-2018&gt;
+
+&lt;img src= "images/screenshots/RMD-site-wild.png" style="width: 110%; margin-top: -20px; visibility: hidden;"&gt;
+
+
+&lt;img src= "images/screenshots/RMD-site-wild2.png" 
+  style="
+    position: absolute; 
+    width: 103%; 
+    top: 2px;
+    left: -1px;
+  "&gt;
+
+
+???
+
+Or other websites, like this one here which goes to a learning management system.
+
+---
+name: build1
+
+## Build your site
+
+.pull-left[
+
+
+```r
+.
+*├── rstats101.Rproj
+├── _site.yml
+├── index.Rmd 
+├── schedule.Rmd 
+├── lab01.Rmd
+└── lab02.Rmd
+```
+]
+
+.pull-right[
+&lt;img src="images/rproj.png" width="325" /&gt;
+
+]
+???
+
+So let's build a minimal R Markdown site of our own. 
+
+Imagine that this box on the left is the list of files that are inside of our R Project folder. 
+
+---
+name: build5
+
+## Build your site
+
+.left-column[
+
+
+```r
+.
+├── rstats101.Rproj
+├── _site.yml 
+├── index.Rmd 
+├── schedule.Rmd 
+├── lab01.Rmd 
+└── lab02.Rmd 
+```
+]
+
+.right-column[
+&lt;img src="images/screenshots/build-site.png" style="margin-top: -28px;"&gt;
+]
+
+???
+
+To knit all these pages in our R Markdown site, you can mouse over to the Build Tab in RStudio and then click "Build Website".
+
+---
+name: build6
+
+## Build your site
+
+.left-column[
+
+
+```r
+.
+├── rstats101.Rproj
+*├── _site/
+├── _site.yml 
+├── index.Rmd 
+├── schedule.Rmd 
+├── lab01.Rmd 
+└── lab02.Rmd 
+```
+]
+
+.right-column[
+&lt;img src="images/screenshots/build-site.png" style="margin-top: -28px;"&gt;
+]
+
+???
+
+Now you can see that it created a new folder called `_site`- that is where our html files live.
+
+
+---
+template: clouds2
+class: center top
+
+![](images/screenshots/RMD-site.png)
+
+???
+
+Here is the site we just built. We have a navbar, a theme -- and even a dropdown menu!
+
+Let's look under the hood at some of these files.
+
+---
+background-image: url("images/rawpixel/bunch-balloons-rmd1.jpg")
+background-position: right
+background-size: contain
+class: middle
+
+.left-column[
+
+
+```r
+.
+├── rstats101.Rproj
+├── _site/ 
+├── _site.yml
+*├── index.Rmd
+├── schedule.Rmd 
+├── lab01.Rmd
+└── lab02.Rmd
+```
+]
+
+???
+
+Let's start with index.Rmd. 
+
+Index is a special file name in any website- because it is the homepage.  
+
+So if each of our R Markdown files in our site was a hot air balloon here, `index` would be the first you would see. 
+
+---
+background-image: url(images/Clouds2.jpg)
+background-size: cover
+
+## Inside the `index.Rmd`
+
+.left-column[
+
+```r
+.
+├── rstats101.Rproj
+├── _site/ 
+├── _site.yml
+*├── index.Rmd
+├── schedule.Rmd 
+├── lab01.Rmd
+└── lab02.Rmd
+```
+]
+
+.right-column[
+```
+---
+title: "rstats 101"
+---
+
+# Welcome to the course!
+
+This is the course website...
+```
+]
+
+
+???
+
+If we take a peek inside index.Rmd, we don't see anything special-
+
+in fact, you can take any existing R Markdown document that you already have, rename it index, and turn it into your site's homepage.
+
+
+
+---
+background-image: url("images/rawpixel/bunch-balloons-rmd2.jpg")
+background-position: right
+background-size: contain
+class: middle
+
+
+.left-column[
+
+```r
+.
+├── rstats101.Rproj
+├── _site/ 
+*├── _site.yml
+├── index.Rmd 
+├── schedule.Rmd 
+├── lab01.Rmd
+└── lab02.Rmd
+```
+]
+
+???
+
+The `_site.yml` is new. 
+
+This is the file that ties all the pages together.
+
+It is called the site configuration file, written in YAML.
+
+Let's take a look inside...
+
+---
+
+## Inside the `_site.yml`
+
+.left-column[
+
+```yaml
+navbar:
+  title: rstats101
+  left:
+  - text: Schedule
+    href: schedule.html
+  - text: Labs
+    menu:
+    - text: Lab 1
+      href: lab01.html
+    - text: Lab 2
+      href: lab02.html
+output:
+  html_document:
+    theme: flatly
+```
+]
+
+.right-column[
+&lt;img src="images/screenshots/RMD-site-annotated.png" width="805" /&gt;
+]
+
+
+???
+
+(no index.Rmd label)
+
+The first thing you may notice is this is a YAML file, so there are no fences, but it is a list of keys and values.
+
+The first key is navbar, and this is how you build your site's navigation.
+
+[increment]
+
+Say: there is key for the title... (BING)
+
+Show: arrow to title
+
+[increment]
+
+Say: whether we want links on the left or right... (BING)
+
+Show: brackets above left side [LEFT!]
+
+[increment]
+
+Say: And if we want links listed in a dropdown menu, we can do that too... (BING)
+
+Show: brackets above dropdown [MENU!]
+
+For all the pages you link to in your navbar, the `href` needs to point to an .html file, even though the source may be R Markdown.
+
+Finally, we set up a theme that applies to the navbar and all pages.
+
+---
+background-image: url("images/rawpixel/bunch-balloons-rmd3.jpg")
+background-position: right
+background-size: contain
+class: middle
+
+.left-column[
+
+
+```r
+.
+├── rstats101.Rproj
+├── _site/ 
+├── _site.yml 
+├── index.Rmd 
+*├── schedule.Rmd
+*├── lab01.Rmd
+*└── lab02.Rmd
+```
+]
+
+???
+
+As for the other R Markdown pages, there is nothing special about *them*. 
+
+As long as you link to a page in `_site.yml`, you can take any existing R Markdown file and turn it into a page within a website.
+
+
+
+---
+class: middle, center
+background-image: url(images/Clouds2.jpg)
+background-size: cover
+
+![](images/screenshots/Lab1.png)
+
+???
+
+quiz Alison, what do you think the YAML for this page looks like??
+
+Answer:
+
+toc
+toc_float
+and code download (be sure screenshot is taken after clicking on code download button so the drop down shows up like: https://pbs.twimg.com/media/D2OwEBxUYAAG3YN?format=jpg&amp;name=4096x4096)
+
+---
+class: middle, center
+background-image: url(images/Clouds2.jpg)
+background-size: cover
+
+![](images/screenshots/Lab1-annotated.png)
+
+???
+
+circle toc, note floating
+
+circle code download button
+
+
+---
+background-image: url(images/Clouds2.jpg)
+background-size: cover
+
+## Inside a page
+
+.left-column[
+
+```r
+.
+├── rstats101.Rproj
+├── _site/ 
+├── _site.yml 
+├── index.Rmd 
+├── schedule.Rmd 
+*├── lab01.Rmd
+└── lab02.Rmd
+```
+]
+
+.right-column[
+```yaml
+---
+output:
+  html_document:
+    toc: true
+    toc_float: true
+    code_download: true
+---
+```
+
+```
+# Lab One
+
+In our first week together, 
+we'll cover the syllabus 
+and how to use Zoom.
+
+```
+]
+
+???
+
+Good job, Alison!
+
+That is exactly what we see. You can set the YAML for each page if you want.
+
+If you wanted these output options on every page in your site, we could have added these to the `_site.yml` instead.
+
+
+---
+background-image: url("images/rawpixel/bunch-balloons-rmd4.jpg")
+background-position: right
+background-size: contain
+
+## Sharing your site
+
+.left-column[
+
+
+```r
+.
+├── rstats101.Rproj
+*├── _site/
+├── _site.yml 
+├── index.Rmd 
+├── schedule.Rmd 
+├── lab01.Rmd 
+└── lab02.Rmd
+```
+]
+
+???
+
+Okay, we're finally, ready to share our R MArkdown site -- we'll do this the same way as before. All of our HTML, website-ready pages are stored in the _site/ folder. So This this is the only folder, we need to ddrag and drop 
+
+---
+class: middle, center
+background-image: url(images/Clouds2.jpg)
+background-size: cover
+
+&lt;video width="1316" height="630" controls&gt;
+    &lt;source src="images/rmd-site-dnd.mp4" type="video/mp4"&gt;
+&lt;/video&gt;
+
+???
+
+And we will drop that folder back into netlify to make our site. 
+
+---
+class: left middle
+background-image: url(images/Clouds2.jpg)
+background-size: cover
+
+# But...
+
+.left-column[
+![](https://media.giphy.com/media/3orif5e8QhgoL9TvmU/giphy.gif)
+]
+
+.right-column[
+
+&lt;img src="images/screenshots/24hrs.png" style="margin-top: -28px;"&gt;
+
+]
+
+???
+
+But ...
+
+unclaimed sites are deleted after 24 hours. We have to create an account with Netlify to keep our site online permanently.
+
+So let's go back to Netlify and do that. 
+
+---
+class: middle center
+
+&lt;video width="1510" height="638" controls&gt;
+    &lt;source src="images/netlify-account.mp4" type="video/mp4"&gt;
+&lt;/video&gt;
+
+???
+
+ALISON
+
+If you already use GitHub or BitBucket, then I recommend you use that to sign in becuase you're workflow will be smoother if your accounts are connected. But for today, I'm just going to sign up with email...
+
+Once you've signed up, you'll see you have an account dashboard. And your silly-named link is now here to stay. 
+
+
+---
+template: clouds
+
+# What if I make a change?
+
+---
+## What if I make a change?
+
+.left-column[
+
+```r
+navbar:
+  title: rstats101
+  left:
+  - text: Schedule
+    href: schedule.html
+  - text: Labs
+    menu:
+    - text: Lab 1
+      href: lab01.html
+    - text: Lab 2
+      href: lab02.html
+output:
+  html_document:
+*   theme: united
+```
+]
+
+
+.right-column[
+&lt;img src="images/screenshots/build-site.png" style="margin-top: -28px;"&gt;
+]
+
+???
+
+Let's say I want to use the united theme, instead of flatly.
+
+I change that in my site yaml, re-build my site, then...
+
+---
+class: center, middle
+
+&lt;video width="1560" height="620" controls&gt;
+    &lt;source src="images/netlify-update.mp4" type="video/mp4"&gt;
+&lt;/video&gt;
+
+???
+
+Once we've re-built our site wiith the changes we want. We'll go back to our _site/ folder. 
+
+In netlify, we can make sure we are in the "deploy" tab of our dashboard -- and there's a spot specifically for updating. WE can drag and drop again here. 
+
+We click on the link--and see our new theme has been applied.
+
+---
+template: clouds
+
+# Thoughts on R Markdown Sites
+
+???
+
+You now know how to build and update an R Markdown site. There are a few additional considerations I want to point out. 
+
+---
+class: middle, center
+background-image: url(images/Clouds2.jpg)
+background-size: cover
+
+## No Subfolders
+
+&lt;https://github.com/apreshill/data-vis-labs-2018&gt;
+
+
+
+???
+
+The first is that RMD sites will not automatically Build RMD files that are contained in subfolders. This means that all RMDS have to be in the project root directory. 
+
+If you have a lot of files you want to link to in your course, keeping your project tidy can start to feel tricky. That's why this repository of an RMD site that i'm showing you here looks so full. 
+
+One solution you can use in this scenario is to have good file-naming hygiene: consistently use number pre-fixing to keep your files in order.
+
+---
+class: middle
+background-image: url(images/rawpixel/blue-balloon-side.jpg)
+background-position: left
+background-size: contain
+
+.pull-right[
+### R Markdown Site
+
+* Source stays same
+
+* Built-in themes
+
+* Simple -&gt; short notice
+
+]
+
+---
+class: middle
+background-image: url(images/rawpixel/balloon-ouch.jpg)
+background-position: right
+background-size: contain
+
+.pull-left[
+### R Markdown site advice
+
+* Cannot use subfolders
+
+* 
+
+]
+
+???
+
+So in summary for RMD site, 
+You don't have to change much from your original docs. 
+You get to use built in themes from bootstrap
+
+
+With those points in mind, let's move on to our next tool.
+
+---
+name: distill
+class:  top, center
+background-image: url(images/mtsalsa-distill.jpg)
+background-size: contain
+background-position: center, bottom
+
+# `install.packages("distill")`
+
+???
+
+Next up is Distill, which you'll need to install first before you can use it. 
+
+---
+class: middle, center
+template: clouds2
+
+&lt;https://rstudio.github.io/distill/&gt;
+
+![](#https://dcossyleon.github.io/gifs/video/distill-intro.gif)
+
+???
+
+This is a distill website.
+
+The style is not easy to change without CSS, but it looks pretty slick out-of-the-box.
+
+Think of distill as the nerdier sibling of an R Markdown site- it is built for technical and scientific communication. 
+
+---
+class: middle, center
+template: clouds2
+
+&lt;https://rstudio.github.io/distill/&gt;
+&lt;img src="images/screenshots/distill-aside.png" style="margin-top: -28px;"&gt;
+
+???
+
+`&lt;aside&gt; my margin note &lt;/aside&gt;`
+
+---
+class: middle, center
+template: clouds2
+
+&lt;https://rstudio.github.io/distill/&gt;
+&lt;img src="images/screenshots/distill-reuse.png" style="margin-top: -28px;"&gt;
+
+???
+
+...a way to display reuse licenses for your educational content...
+
+---
+class: middle, center
+template: clouds2
+
+NEW SCREENSHOT
+
+???
+
+...a way to list multiple authors and their affiliations.
+
+---
+## Build your site
+
+.left-column[
+
+
+```r
+.
+├── DataViz101.Rproj
+*├── _site/
+├── _site.yml 
+├── index.Rmd 
+├── Project1.Rmd 
+└── Project2.Rmd 
+```
+]
+
+.right-column[
+&lt;img src="images/screenshots/build-distill.png" style="margin-top: -28px;"&gt;
+]
+
+
+???
+
+So let's build a minimal Distill site of our own. 
+
+Just like we did with the R Markdown site, we use the build tab to build our distill site.
+
+This creates a _site folder for our HTML files.
+
+---
+
+![](images/screenshots/min-distill.png)
+--
+
+&lt;img src="images/screenshots/min-distill0.png" style="
+  position: absolute; 
+  width: 100%; 
+  top: 0px;
+  left: 0px;
+"&gt;
+
+--
+&lt;img src="images/screenshots/min-distill1.png" style="
+  position: absolute; 
+  width: 100%; 
+  top: 0px;
+  left: 0px;
+"&gt;
+
+--
+
+&lt;img src="images/screenshots/min-distill2.png" style="
+  position: absolute; 
+  width: 100%; 
+  top: 0px;
+  left: 0px;
+"&gt;
+
+
+???
+
+Quick things to notice -- let's look inside.
+
+---
+background-image: url("images/rawpixel/bunch-balloons-rmd1.jpg")
+background-position: right
+background-size: contain
+class: middle
+
+.left-column[
+
+```r
+.
+├── DataViz101.Rproj
+├── _site/
+├── _site.yml 
+*├── index.Rmd
+├── Project1.Rmd 
+└── Project2.Rmd 
+```
+]
+
+???
+
+The index page in a distill site will work just the same as in an R Markdown site. 
+
+It will be the site's home page.
+
+But there is one IMPORTANT change we need to make inside of this file. 
+
+---
+## Inside the `index.Rmd`
+
+.left-column[
+
+```r
+.
+├── DataViz101.Rproj
+├── _site/
+├── _site.yml 
+*├── index.Rmd
+├── Project1.Rmd 
+└── Project2.Rmd 
+```
+]
+
+.right-column[
+```
+---
+title: Intro to Data Visualization
+description: Spring 2020 Course Website
+author:
+  - name: Alison Hill
+    affiliation: RStudio
+  - name: Desirée De Leon
+    affiliation: Emory University
+site: distill::distill_website
+---
+
+# Welcome to the course!
+```
+]
+
+&lt;img src="images/tab-index.png" style="
+  position: absolute; 
+  width: 60%; 
+  top: 131px;
+  right:67px;
+"&gt;
+
+???
+
+At a minimum, I recommend having a `title:` and `site: distill::website`, but including a short description or tagline is nice too. 
+
+It's also possible to add multiple authors to any Distill page, which could be useful if you're co-teaching (or if you decide to have students form groups to author their own Distill articles)
+
+[*note*: `site: distill::website` is only necessary if you wanna make the blog later]
+
+---
+background-image: url(images/rawpixel/bunch-balloons-rmd2.jpg)
+background-position: right
+background-size: contain
+
+## Inside the `_site.yml`
+
+.left-column[
+
+```r
+.
+├── DataViz101.Rproj
+├── _site/
+*├── _site.yml
+├── index.Rmd
+├── Project1.Rmd 
+└── Project2.Rmd 
+```
+
+]
+
+???
+
+Next we move on to the _site.yml page. Site configuration. This should sound a bit familiar...
+
+---
+## Inside the `_site.yml`
+
+.left-column[
+
+```r
+.
+├── DataViz101.Rproj
+├── _site/
+*├── _site.yml
+├── index.Rmd
+├── Project1.Rmd 
+└── Project2.Rmd 
+```
+
+]
+
+.right-column[
+```
+title: Data Viz 101
+navbar:
+  right:
+    - text: Projects
+      menu: 
+      - text: Project 1
+        href: projects1.html
+      - text: Project 2
+        href: projects2.html
+output: distill::distill_article
+```
+]
+
+&lt;img src="images/tab-site-yml.png" style="
+  position: absolute; 
+  width: 60%; 
+  top: 138px;
+  right:67px;
+"&gt;
+
+???
+
+The YAML keys here are all very similar, with one important change.
+
+The output MUST specify that this is a Distill article. This is how the site knows to apply the Distill styling and framework. 
+
+Other than this, you can take any of your existing RMD documents, clean out its individual frontmatter YAML at the top, and plop it into your Distill navbar key to implement it as a Distill article. 
+
+---
+class: center middle
+exclude: true
+
+&lt;img src="images/whispering-1200.jpg" style=" width: 90%;"&gt;
+
+---
+background-image: url(images/Whisper.jpg)
+background-size: contain
+
+&lt;div class="word-bubble" style="
+  position: absolute; 
+  text-align: center;
+  width: 50%; 
+  top: 100px;
+  left: 310px;
+  font-size: 1.3em;
+"&gt; Alas, I have kept one important thing &lt;br&gt; from you about Distill websites. &lt;/div&gt;
+
+
+---
+template: clouds
+class: center middle
+
+#  A Distill Blog
+
+???
+
+You can have a part of your Distill site be a blog.
+
+---
+class: middle, center
+background-image: url(images/Clouds2.jpg)
+background-size: cover
+
+&lt;img src="https://rstudio.github.io/distill/images/site-listing.png" style = "width: 80%;"&gt;
+
+???
+
+In other words, you can have a dedicated page on your site that compiles many other R Markdown pages in a chronological way--- this can make it much easier to navigate to a page even if its not in the navbar or a dropdown. 
+
+For a course, let's say that after every class, you'd like to post notes or announcements about that day's lesson. With a blog, you can do that easily -- 
+
+The most recently *dated* R MArkdown doc will pop to the top. This creates a student-centered approach to designing website content -- because students will always be able to see what has been recently updated. This is not always the case with non-blog style pages.
+
+---
+## Make a blog post
+
+.left-column[
+
+```r
+.
+├── DataViz101.Rproj
+├── _site/
+├── _site.yml
+├── index.Rmd
+├── Project1.Rmd 
+└── Project2.Rmd 
+```
+]
+
+.right-column[
+
+```r
+
+distill::create_post("Week 1")
+
+```
+
+What did this add?
+
+]
+
+
+---
+background-image: /*url("images/rawpixel/bunch-balloons-rmd4.jpg")*/
+background-position: right
+background-size: contain
+
+## `_posts/`
+
+.pull-left[
+
+```r
+.
+├── DataViz101.Rproj
+├── _site/
+├── _site.yml
+├── index.Rmd
+├── Project1.Rmd 
+├── Project2.Rmd
+*└── _posts/
+```
+]
+
+???
+
+A new folder for blog posts --- inside you have a subdirectory and RMD file for your new post. 
+
+---
+
+## Inside a post
+
+.left-column[
+
+```r
+_posts/ 
+*├── Week1.Rmd
+├── Week2.Rmd 
+└── Week3.Rmd
+```
+]
+
+.right-column[
+```
+---
+title: Week 1
+date: 03-24-2020
+output: distill::distill_article
+---
+
+During our first week we will 
+make our first plots with `ggplot2`.
+```
+
+* Posts **MUST** be knit individually
+* Rinse and repeat for each new post.
+
+]
+
+???
+
+You can throw any old existing RMD into the _posts/ folder, change the output to distill_article and be good to go. 
+
+---
+
+## Add a listing page
+
+.left-column[
+
+```r
+.
+├── DataViz101.Rproj
+├── _site/
+├── _site.yml
+├── index.Rmd
+├── Project1.Rmd 
+├── Project2.Rmd 
+*└── listings.Rmd
+
+```
+
+]
+
+.right-column[
+```
+---
+listing: posts
+---
+```
+]
+
+???
+
+But we need a way to tell our Distill site that this post exists. We create a listing page -- a content-less page whose only job is to compile all the posts we've authored and knit. 
+
+We create a listings page in our root directory. The RMD file can be called anything -- the only critical piece is that it have this listing key in its YAML.
+
+---
+## Update the `_site.yml`
+
+.left-column[
+
+```r
+.
+├── DataViz101.Rproj
+├── _site/
+*├── _site.yml
+├── index.Rmd
+├── Project1.Rmd 
+├── Project2.Rmd 
+└── listings.Rmd
+```
+
+]
+
+.right-column[
+```
+title: Data Viz 101
+navbar:
+  right:
+    - text: Project
+      href: project.html
+    - text: Labs
+      menu: 
+      - text: Lab 1
+        href: lab01.html
+      - text: Lab 2
+        href: lab02.html
+    - text: Schedule
+      href: listings.html
+output: distill::distill_article
+```
+]
+
+---
+class: middle, center
+
+blog page = listing page + `distill::create_post()`
+
+---
+
+GIF drag and drop _site/ to netlify
+
+---
+
+change domain name
+
+---
+class: middle
+background-image: url(images/rawpixel/blue-balloon-side.jpg)
+background-position: left
+background-size: contain
+
+.pull-right[
+
+### Distill Sites
+
+* Sleek
+
+* 2 content flavors
+
+* Nice features out-of-the-box
+
+]
+
+---
+class: middle
+background-image: url(images/rawpixel/balloon-ouch.jpg)
+background-position: right
+background-size: contain
+
+.pull-left[
+
+### Distill Sites
+
+* Knit posts one-by-one (but no manual adding to menus!)
+
+* Project organization
+
+
+]
+
+---
+name: bookdown
+class:  top, center
+background-image: url(images/mtsalsa-book.jpg)
+background-size: contain
+background-position: center, bottom
+
+
+# `install.packages("bookdown")`
+
+
+???
+
+
+
+---
+background-image: url("images/rawpixel/writing-machine.jpg")
+background-size: contain
+background-position: right
+class: middle
+
+# Online book with...
+
+--
+
++ Table of contents
+
+--
+
++ Chapters
+
+--
+
++ Bells &amp; whistles
+
+
+---
+class: middle, center
+
+&lt;https://bookdown.org/yihui/bookdown/&gt;
+
+&lt;iframe src="https://bookdown.org/yihui/bookdown/" height="600" width="1200" frameborder="0"&gt;&lt;/iframe&gt; 
+
+???
+
+Some new features to point out during "tour" :
+* A very long TOC
+* Chapters 
+* Sections
+
+---
+## Build your book
+
+.left-column[
+
+
+```r
+.
+├── book.Rproj
+├── _bookdown.yml
+├── _output.yml
+├── index.Rmd 
+├── week01.Rmd
+├── week02.Rmd
+├── week03.Rmd
+*└── _book
+```
+]
+
+.right-column[
+Build your book with the Build tab. 
+]
+
+---
+background-image: url("images/rawpixel/bunch-balloons-book1.jpg")
+background-position: right
+background-size: contain
+
+## Inside the `index.Rmd`
+
+.left-column[
+
+
+```r
+.
+├── book.Rproj
+├── _bookdown.yml
+├── _output.yml
+*├── index.Rmd
+├── week01.Rmd
+├── week02.Rmd
+├── week03.Rmd
+└── _book
+```
+]
+
+???
+
+The index.Rmd file is special. It is both the first chapter, and contains some YAML for the book's metadata like the title. You can think of this as the mega-YAML for your book- it is the YAML for all the chapters.
+
+---
+## Inside the `index.Rmd`
+
+.left-column[
+
+
+```r
+.
+├── book.Rproj
+├── _bookdown.yml
+├── _output.yml
+*├── index.Rmd
+├── week01.Rmd
+├── week02.Rmd
+├── week03.Rmd
+└── _book
+```
+]
+
+.right-column[
+
+```yaml
+---
+title: rstats101 book
+author: Alison Hill
+site: bookdown::bookdown_site
+---
+# Welcome {-}
+```
+
+]
+
+---
+background-image: url("images/rawpixel/bunch-balloons-book2.jpg")
+background-position: right
+background-size: contain
+
+## Inside the `.yml`s
+
+.left-column[
+
+```r
+.
+├── book.Rproj
+*├── _bookdown.yml
+*├── _output.yml
+├── index.Rmd 
+├── week01.Rmd 
+├── week02.Rmd 
+├── week03.Rmd 
+└── _book 
+```
+]
+
+---
+
+## Inside the `_bookdown.yml`
+
+.left-column[
+
+```r
+.
+├── book.Rproj
+*├── _bookdown.yml
+├── _output.yml 
+├── index.Rmd 
+├── 01-week.Rmd 
+├── 02-week.Rmd 
+├── 03-week.Rmd 
+└── _book 
+```
+]
+
+.right-column[
+```yaml
+new_session: true
+```
+]
+
+???
+
+new session forces bookdown to do what is called knit then merge
+
+strongly recommend
+
+K-M uses separate R sessions for individual chapters
+
+each chapter compiles from a clean state, including packages loaded
+
+Without it, you would need to make sure that you don't have any duplicate chunk labels throughout your ENTIRE book.
+
+BUT K-M does not allow Rmd files to be in subdirectories,
+
+---
+
+## Inside the `_bookdown.yml`
+
+.left-column[
+
+```r
+.
+├── book.Rproj
+*├── _bookdown.yml
+├── _output.yml 
+├── index.Rmd 
+├── week01.Rmd 
+├── week02.Rmd 
+├── week03.Rmd 
+└── _book 
+```
+]
+
+.right-column[
+```yaml
+rmd_files:
+- index.Rmd
+- week01.Rmd
+- week02.Rmd
+- week03.Rmd
+new_session: true
+```
+]
+
+---
+
+## Inside the `_output.yml`
+
+.left-column[
+
+```r
+.
+├── book.Rproj
+├── _bookdown.yml 
+*├── _output.yml
+├── index.Rmd 
+├── 01-week.Rmd 
+├── 02-week.Rmd 
+├── 03-week.Rmd 
+└── _book 
+```
+]
+
+.right-column[
+
+```yaml
+bookdown::gitbook: default
+```
+
+]
+
+---
+background-image: url("images/rawpixel/bunch-balloons-book3.jpg")
+background-position: right
+background-size: contain
+
+## Inside the chapters
+
+.left-column[
+
+
+```r
+.
+├── book.Rproj
+├── _bookdown.yml
+├── _output.yml
+├── index.Rmd 
+*├── week01.Rmd
+*├── week02.Rmd
+*├── week03.Rmd
+└── _book
+```
+]
+
+???
+
+Every Rmd is a chapter
+
+---
+## Inside one chapter
+
+.left-column[
+
+
+```r
+.
+├── book.Rproj
+├── _bookdown.yml
+├── _output.yml
+├── index.Rmd 
+*├── week01.Rmd
+├── week02.Rmd 
+├── week03.Rmd 
+└── _book
+```
+]
+
+.right-column[
+
+```
+# Week One
+
+In our first week together, 
+we'll cover the syllabus 
+and how to use Zoom.
+
+```
+
+]
+
+???
+
+Main points- the Rmd chapters don't have any YAML. This will mean that you'll need to change any individual Rmd that you want to make into chapters.
+
+
+---
+background-image: url("images/rawpixel/bunch-balloons-book4.jpg")
+background-position: right
+background-size: contain
+
+## Sharing your book
+
+.left-column[
+
+
+```r
+.
+├── book.Rproj
+├── _bookdown.yml
+├── _output.yml
+├── index.Rmd 
+├── week01.Rmd
+├── week02.Rmd
+├── week03.Rmd
+*└── _book
+```
+]
+
+---
+
+drag and drop goes here
+
+
+---
+
+
+![](https://rstudio4edu.github.io/rstudio4edu-book/images/screenshots/bookdown-skeleton-files.jpg)
+???
+
+For example... a directory that looks like this.
+
+Your RMDs will be in the root. The first one is still index.Rmd. This becomes the first page of your book. Usually an preface or Intro.
+
+The REst of the RMDs are numbered. These each become book chapters. 
+
+---
+# Do I need to change the RMDs?
+
+Yes. 
+
+* You (might) need to rename all the files to have a numerical order. 
+* All chapter .Rmd files MUST begin with a `# Level 1 Header` no matter what. No front matter YAMLS.
+
+---
+
+# ...here's why
+
+(maybe if time allows)
+
+![](https://rstudio4edu.github.io/rstudio4edu-book/images/illos/Bookdown-file-flow.jpg)
+
+
+---
+
+# Pros and Cons of Bookdown
+
+.pull-left[
+
+* Hard to get lost
+* Order
+* Cross-references
+* Numbered figures, equations, tables
+
+]
+
+.pull-right[
+
+* Three YAMLS (time consuming to set up)
+* No subfolders
+
+
+]
+
+---
+name: blogdown
+class: top, center
+background-image: url(images/mtsalsa-blogdown.jpg)
+background-size: contain
+background-position: center, bottom
+
+
+# `install.packages("blogdown")`
+
+
+???
+
+
+---
+background-image: url(images/rawpixel/knight.jpg)
+background-size: contain
+background-color: #F5ECE0
+
+---
+class: center, middle, inverse
+
+![](images/hugo.svg)&lt;!-- --&gt;
+
+&lt;https://gohugo.io/&gt;
+
+
+---
+class: center, middle
+background-image: url(images/Clouds2.jpg)
+background-size: cover
+
+&lt;https://academic-demo.netlify.com/&gt;
+
+&lt;iframe src="https://academic-demo.netlify.com/" height="600" width="1200" frameborder="0"&gt;&lt;/iframe&gt; 
+
+---
+class: center, middle
+background-image: url(images/Clouds2.jpg)
+background-size: cover
+
+&lt;https://share-blogdown.netlify.com/&gt;
+
+&lt;iframe src="https://share-blogdown.netlify.com/" height="600" width="1200" frameborder="0"&gt;&lt;/iframe&gt; 
+
+---
+background-image: url(images/rawpixel/balloon-ouch.jpg)
+background-position: left
+background-size: contain
+class: middle
+
+.pull-right[
+
+## `blogdown` advice
+
+]
+
+.pull-right[
+
++ Don't update Hugo during your course.
+
+]
+
+--
+
+.pull-right[
+
++ Don't update your Hugo theme during your course.
+
+]
+--
+
+.pull-right[
+
++ Seriously, just don't update anything during your course.
+
+]
+
+---
+
+Can't get anywhere else
+
++ Subdirectories
+
++ Ability to "knit" all output formats (like R Markdown slides, plain Rmd documents, etc.) with single button
+
++ Ability to "serve" all outputs on a single site
+
+---
+
+# Here's a shortcut you can use
+
+Deploy to netlify link
+
+???
+
+Gif
+
+---
+class: inverse, center, middle
+
+# Review
+
+Need four square view with static screenshots of each of the 4 sites
+
+???
+
+Say out loud which folder to drag and drop for each (maybe have the text show up in each of the four squares like `site/`, `_book/`, `public/`)
+
+---
+class: inverse, center, middle
+
+# Advice
+
++ build, don't knit (generally)
+
++ know your site's output directory!
+
++ publish early and update often, don't wait
+
+---
+
+# the options
+
+???
+
+which options work best for whom?
+
+---
+
+# Other links, resources, stuff
+
+Looking ahead:
+
+Connect netlify to github and use continuous deployment for your sites
+
+Link out to gh repo for all the things? I can make issues with resources for each tool
+
+---
+background-image: url("images/rawpixel/site-dreams.jpg")
+background-size: 80%
+background-position: bottom, center
+class: center, top
+background-color: #FCFEF8
+
+# Thank you
+
+???
+
+Thanks for joining us today. We hope we've left you with some ideas you can use now and later. And we hope we leave you with visions of websites dancing in your heads :)
+
+---
+name: excuses
+
+## 3 excuses
+
+.columns[
+
+.left-col[
+"I can't give away my work!"
+
+
+] 
+
+
+
+.middle-col[
+"It's not perfect (yet)!" 
+
+*"If it knits, it ships."*
+]
+
+
+
+.right-col[
+"It's scary." 
+
+*"If it hurts, do it more often."*
+]
+
+]
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "solarized-light",
+"highlightLanguage": ["r", "css", "yaml"],
+"slideNumberFormat": "",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"ratio": "16:9"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
