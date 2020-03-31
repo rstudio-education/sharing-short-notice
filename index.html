@@ -2345,17 +2345,9 @@ new_session: true
 
 I recommend using this file to set at least one new key: new session as true.
 
-new session forces bookdown to do what is called knit then merge
+This makes sure that each chapter is knit in separate R sessions.
 
-strongly recommend
-
-K-M uses separate R sessions for individual chapters
-
-each chapter compiles from a clean state, including packages loaded
-
-Without it, you would need to make sure that you don't have any duplicate chunk labels throughout your ENTIRE book.
-
-BUT K-M does not allow Rmd files to be in subdirectories,
+You might notice that my chapter files right now are named with numbers as prefixes...
 
 ---
 
@@ -2387,6 +2379,10 @@ new_session: true
 ```
 ]
 
+???
+
+If you don't want them numbered, you can use this yaml file to specify the order of the rmd chapters by filename instead.
+
 ---
 background-image: url("images/rawpixel/bunch-balloons-book3.jpg")
 background-position: right
@@ -2412,7 +2408,7 @@ background-size: contain
 
 ???
 
-Every Rmd is a chapter
+The chapters themselves are each separate R markdown files. With one major change...
 
 ---
 ## Inside one chapter
@@ -2448,7 +2444,11 @@ and as analyzed by [fivethirtyeight.com](https://fivethirtyeight.com/features/a-
 
 ???
 
-Main points- the Rmd chapters don't have any YAML. This will mean that you'll need to change any individual Rmd that you want to make into chapters.
+None of the chapters can have a YAML. 
+
+This will mean that you'll need to change any individual R Markdown file that you want to convert into chapters in a book.
+
+Each chapter has to start with a level 1 markdown header like "MoMA Museum Tour" here.
 
 
 ---
@@ -2474,6 +2474,10 @@ background-size: contain
 ```
 ]
 
+???
+
+So, how do we share the book once it's written and built? We know our HTML files live in the _book folder so this should seem like old hat to you now...
+
 ---
 class: middle, center
 
@@ -2481,12 +2485,19 @@ class: middle, center
 
 
 ???
-and we're ready to share using the ol' drag n drop. 
-So, we'll use the `_book` folder now.
+
+We would drag that folder straight into Netlify to get a link.
+
 
 ---
 
 &lt;video width="1084" height="610" controls&gt;&lt;source src="images/netlify-domain.mp4" type="video/mp4"&gt;&lt;/video&gt;
+
+???
+
+But these random domain names are hard to remember and keep track of.
+
+We can update the domain on netlify.com to make the link easier to share.
 
 ---
 background-image: url(images/bookdown-km.png)
