@@ -123,11 +123,26 @@ a:hover, a:active, a:focus {
   color: #000;
 }
 
+.left-column1 {
+  color: #777;
+  width: 34%;
+  height: 92%;
+  float: left;
+  font-size: 18px;
+}
+
 .right-column {
   width: 67%;
   float: right;
   padding-top: 0em;
 }
+
+.right-column1 {
+  width: 63%;
+  float: right;
+  padding-top: 0em;
+}
+
 .pull-left {
   float: left;
   width: 47%;

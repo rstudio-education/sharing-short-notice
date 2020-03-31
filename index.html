@@ -1088,7 +1088,7 @@ Let's take a look inside...
 
 ## Inside the `_site.yml`
 
-.left-column[
+.left-column1[
 
 ```yaml
 navbar:
@@ -1108,7 +1108,7 @@ output:
 ```
 ]
 
-.right-column[
+.right-column1[
 &lt;img src="images/screenshots/RMD-site.png" width="782" /&gt;
 ]
 
@@ -1122,9 +1122,9 @@ The first key is `navbar:`, and this is how you build your site's navigation.
 --
 &lt;img src="images/screenshots/RMD-site-title.png" style="
   position: absolute;
-  width: 100%;
-  top: 10px;
-  left: 10px;"&gt;
+  width: 64%;
+  top: 135px;
+  right: 6px;"&gt;
   
 ???
 there is key for the title... 
@@ -1133,9 +1133,9 @@ there is key for the title...
 
 &lt;img src="images/screenshots/RMD-site-left.png" style="
   position: absolute;
-  width: 100%;
-  top: 10px;
-  left: 10px;"&gt;
+  width: 64%;
+  top: 135px;
+  right: 6px;"&gt;
 
 ???
 
@@ -1145,9 +1145,9 @@ Whether we want links on the left or right...
 
 &lt;img src="images/screenshots/RMD-site-menu.png" style="
   position: absolute;
-  width: 100%;
-  top: 10px;
-  left: 10px;"&gt;
+  width:64%;
+  top: 135px;
+  right: 6px;"&gt;
 
 ???
 
@@ -1157,7 +1157,107 @@ And if we want links listed in a dropdown menu, we can do that too...
 
 ???
 
-For all the pages you link to in your navbar, the `href` needs to point to an .html file, even though the source may be R Markdown.
+For all the pages you link to in your navbar, the `href:` needs to point to an .html file, even though the source may be R Markdown.
+
+Finally, we set up a theme that applies to the navbar and all pages.
+
+---
+## Inside the `_site.yml`
+
+.left-column1[
+
+
+```r
+navbar:
+  title: rstats101
+  left:
+  - text: Schedule
+*   href: schedule.html
+  - text: Labs
+    menu:
+    - text: Lab 1
+*     href: lab01.html
+    - text: Lab 2
+*     href: lab02.html
+output:
+  html_document:
+    theme: flatly
+```
+]
+
+.right-column1[
+&lt;img src="images/screenshots/RMD-site.png" width="782" /&gt;
+]
+
+&lt;img src="images/screenshots/RMD-site-title.png" style="
+  position: absolute;
+  width: 64%;
+  top: 135px;
+  right: 6px;"&gt;
+
+&lt;img src="images/screenshots/RMD-site-left.png" style="
+  position: absolute;
+  width: 64%;
+  top: 135px;
+  right: 6px;"&gt;
+
+&lt;img src="images/screenshots/RMD-site-menu.png" style="
+  position: absolute;
+  width:64%;
+  top: 135px;
+  right: 6px;"&gt;
+
+???
+
+For all the pages you link to in your navbar, the `href:` needs to point to an .html file, even though the source may be R Markdown.
+---
+## Inside the `_site.yml`
+
+.left-column1[
+
+
+```r
+navbar:
+  title: rstats101
+  left:
+  - text: Schedule
+    href: schedule.html
+  - text: Labs
+    menu:
+    - text: Lab 1
+      href: lab01.html
+    - text: Lab 2
+      href: lab02.html
+output:
+  html_document:
+*   theme: flatly
+```
+]
+
+.right-column1[
+&lt;img src="images/screenshots/RMD-site.png" width="782" /&gt;
+]
+
+&lt;img src="images/screenshots/RMD-site-title.png" style="
+  position: absolute;
+  width: 64%;
+  top: 135px;
+  right: 6px;"&gt;
+
+&lt;img src="images/screenshots/RMD-site-left.png" style="
+  position: absolute;
+  width: 64%;
+  top: 135px;
+  right: 6px;"&gt;
+
+&lt;img src="images/screenshots/RMD-site-menu.png" style="
+  position: absolute;
+  width:64%;
+  top: 135px;
+  right: 6px;"&gt;
+
+
+???
 
 Finally, we set up a theme that applies to the navbar and all pages.
 
@@ -1165,8 +1265,8 @@ Finally, we set up a theme that applies to the navbar and all pages.
 background-image: url("images/rawpixel/bunch-balloons-rmd3.jpg")
 background-position: right
 background-size: contain
-class: middle
 
+## .hidden[Other `.Rmd`s]
 .left-column[
 
 
@@ -1184,7 +1284,7 @@ class: middle
 
 ???
 
-As for the other R Markdown pages, there is nothing special about *them*. 
+As for the other R Markdown pages, there is nothing special about them. 
 
 As long as you link to a page in `_site.yml`, you can take any existing R Markdown file and turn it into a page within a website.
 
@@ -1197,13 +1297,7 @@ background-size: cover
 
 ???
 
-quiz Alison, what do you think the YAML for this page looks like??
-
-Answer:
-
-toc
-toc_float
-and code download (be sure screenshot is taken after clicking on code download button so the drop down shows up like: https://pbs.twimg.com/media/D2OwEBxUYAAG3YN?format=jpg&amp;name=4096x4096)
+quiz Alison, what do you think the YAML for this lab page looks like??
 
 ---
 class: middle, center
@@ -1214,10 +1308,11 @@ background-size: cover
 
 ???
 
-circle toc, note floating
+Answer:
 
-circle code download button
-
+toc
+toc_float
+and code download
 
 ---
 background-image: url(images/Clouds2.jpg)
@@ -1412,7 +1507,7 @@ template: clouds
 
 ???
 
-You now know how to build and update an R Markdown site. There are a few additional considerations I want to point out. 
+You now you know how to build and update R Markdown sites...
 
 ---
 class: middle
@@ -1434,7 +1529,9 @@ background-size: contain
 ]
 
 ???
-So in summary for RMD site, 
+
+Some great thing about R Markdown sites:
+
 You don't have to change much from your original docs. 
 You get to use built in themes
 
@@ -1875,7 +1972,7 @@ distill::create_post("Week1")
 
 In your console, run the `distill::create_post( )` function, and give your post a title in quotes. 
 
-This will make a new folder called posts/ and open up new R Markdown file for you to edit.
+This will make a new folder called `posts/`, a sub-directory for your new post, and it will open up a new R Markdown file for you to edit.
 
 You can rinse and repeat -- creating as many new posts as you'd like. 
 
@@ -1890,7 +1987,7 @@ Let's look inside one.
 ```r
 _posts/ 
 *├── Week1/
-* ├── Week1.Rmd
+* └── Week1.Rmd
 ├── Week2/
 └── Week3/
 ```
@@ -1911,9 +2008,11 @@ make our first plots with `ggplot2`.
 
 ???
 
-The YAML of your post will be automatically populated with the appropriate keys. 
+(You can see on the left what I mean by the sub-directory for your post.)
 
-Now you can past in the body content of any existing R Markdown file into your post, **knit**, and you'll be good to go. 
+On the right, we see the YAML of your new post will be automatically populated with the appropriate keys, but you can edit them if you'd like.
+
+Now you can paste in the body content of any existing R Markdown file into your post, **knit**, and you'll be good to go. 
 
 Unfortunately, each posts **does** have to be knit individually.
 
@@ -1942,15 +2041,11 @@ Unfortunately, each posts **does** have to be knit individually.
 
 ???
 
-Build once more, so that your listing page will be updated with the new posts. And now you're ready to share your site.
+Finally, you'll need to build once more, so that the listing page will be updated with the new posts. And now you're ready to share your site.
 
 ---
 
 Screenshot drag and drop _site/ to netlify
-
----
-
-change domain name
 
 ---
 class: middle
@@ -2026,6 +2121,7 @@ Some new features to point out during "tour" :
 * A very long TOC
 * Chapters 
 * Sections
+* Search function
 
 ---
 template: clouds2
@@ -2033,8 +2129,6 @@ template: clouds2
 ![](images/screenshots/min-bookdown.png)
 
 ---
-class: middle
-
 ## Build your book
 
 .left-column[
@@ -2054,7 +2148,7 @@ class: middle
 ]
 
 .right-column[
-![](images/screenshots/build-bookdown.png)
+&lt;img src="images/screenshots/build-bookdown.png" style="margin-top: -28px;"&gt;
 ]
 
 ---
@@ -2062,7 +2156,7 @@ background-image: url("images/rawpixel/bunch-balloons-book1.jpg")
 background-position: right
 background-size: contain
 
-## Inside the `index.Rmd`
+## .hidden[Inside the `index.Rmd`]
 
 .left-column[
 
@@ -2122,9 +2216,10 @@ output: bookdown::gitbook
 background-image: url("images/rawpixel/bunch-balloons-book2.jpg")
 background-position: right
 background-size: contain
-class: middle
 
-.left-column[
+## .hidden[Inside the `_bookdown.yml`]
+
+.left-column1[
 
 ```r
 .
@@ -2143,7 +2238,7 @@ class: middle
 
 ## Inside the `_bookdown.yml`
 
-.left-column[
+.left-column1[
 
 ```r
 .
@@ -2158,7 +2253,7 @@ class: middle
 ```
 ]
 
-.right-column[
+.right-column1[
 ```yaml
 new_session: true
 ```
@@ -2182,7 +2277,7 @@ BUT K-M does not allow Rmd files to be in subdirectories,
 
 ## Inside the `_bookdown.yml`
 
-.left-column[
+.left-column1[
 
 ```r
 .
@@ -2197,7 +2292,7 @@ BUT K-M does not allow Rmd files to be in subdirectories,
 ```
 ]
 
-.right-column[
+.right-column1[
 ```yaml
 rmd_files:
 - index.Rmd
@@ -2389,13 +2484,14 @@ background-size: cover
 
 &lt;iframe src="https://share-blogdown.netlify.com/" height="600" width="1200" frameborder="0"&gt;&lt;/iframe&gt; 
 
----
-class: middle
+???
 
+There's also a search function here too!
+
+---
 ## Build your site
 
-.pull-left[
-
+.left-column1[
 
 ```r
 .
@@ -2414,14 +2510,18 @@ class: middle
 
 ]
 
-.pull-right[
-![](images/screenshots/build-blogdown.png)
+.right-column1[
+
+&lt;img src="images/screenshots/build-blogdown.png" style="margin-top: -28px;"&gt;
+
 ]
 
 ---
 background-image: url(images/rawpixel/bunch-balloons.jpg)
 background-position: right
 background-size: contain
+
+## .hidden[Primary content]
 
 .pull-left[
 
@@ -2454,6 +2554,8 @@ And this is how you get locked into a theme.
 background-image: url(images/rawpixel/bunch-balloons.jpg)
 background-position: right
 background-size: contain
+
+## .hidden[Stash]
 
 .pull-left[
 
