@@ -1107,6 +1107,8 @@ It is called the site configuration file, written in YAML.
 Let's take a look inside...
 
 ---
+background-image: url(images/Clouds2.jpg)
+background-size: cover
 
 ## Inside the `_site.yml`
 
@@ -1184,6 +1186,9 @@ For all the pages you link to in your navbar, the `href:` needs to point to an .
 Finally, we set up a theme that applies to the navbar and all pages.
 
 ---
+background-image: url(images/Clouds2.jpg)
+background-size: cover
+
 ## Inside the `_site.yml`
 
 .left-column1[
@@ -1233,6 +1238,9 @@ output:
 
 For all the pages you link to in your navbar, the `href:` needs to point to an .html file, even though the source may be R Markdown.
 ---
+background-image: url(images/Clouds2.jpg)
+background-size: cover
+
 ## Inside the `_site.yml`
 
 .left-column1[
@@ -1410,7 +1418,7 @@ background-size: contain
 
 ???
 
-Okay, we're finally, ready to share our R MArkdown site -- we'll do this the same way as before. All of our HTML, website-ready pages are stored in the _site/ folder. So This this is the only folder, we need to ddrag and drop 
+Okay, we're finally, ready to share our R Markdown site -- we'll do this the same way as before. All of our HTML, website-ready pages are stored in the _site/ folder. So This this is the only folder, we need to ddrag and drop 
 
 ---
 class: middle, center
@@ -1426,7 +1434,7 @@ background-size: cover
 And we will drop that folder back into netlify to make our site. 
 
 ---
-class: left middle
+class: left
 background-image: url(images/Clouds2.jpg)
 background-size: cover
 
@@ -1451,6 +1459,8 @@ unclaimed sites are deleted after 24 hours. We have to create an account with Ne
 So let's go back to Netlify and do that. 
 
 ---
+background-image: url(images/Clouds2.jpg)
+background-size: cover
 class: middle center
 
 &lt;video width="1510" height="638" controls&gt;
@@ -1472,9 +1482,12 @@ template: clouds
 # What if I make a change?
 
 ---
+background-image: url(images/Clouds2.jpg)
+background-size: cover
+
 ## What if I make a change?
 
-.left-column[
+.left-column1[
 
 ```r
 navbar:
@@ -1495,7 +1508,7 @@ output:
 ]
 
 
-.right-column[
+.right-column1[
 &lt;img src="images/screenshots/build-site.png" style="margin-top: -28px;"&gt;
 ]
 
@@ -1506,6 +1519,8 @@ Let's say I want to use the united theme, instead of flatly.
 I change that in my site yaml, re-build my site, then...
 
 ---
+background-image: url(images/Clouds2.jpg)
+background-size: cover
 class: center, middle
 
 &lt;video width="1560" height="620" controls&gt;
@@ -1661,6 +1676,8 @@ Just like we did with the R Markdown site, we use the build tab to knit all our 
 This creates a `_site` folder for our HTML files.
 
 ---
+background-image: url(images/Clouds2.jpg)
+background-size: cover
 
 ![](images/screenshots/min-distill.png)
 --
@@ -1726,6 +1743,8 @@ Any existing R Markdown document you have will do.
 But there is one addition we make inside of this file. 
 
 ---
+background-image: url(images/Clouds2.jpg)
+background-size: cover
 ## Inside the `index.Rmd`
 
 .left-column[
@@ -1797,6 +1816,8 @@ Next we move on to the `_site.yml` page.
 It's still for site configuration. This should sound a bit familiar...
 
 ---
+background-image: url(images/Clouds2.jpg)
+background-size: cover
 ## Inside the `_site.yml`
 
 .left-column[
@@ -1841,12 +1862,6 @@ The YAML navbar keys here are all similar to what we used in an R Markdown site,
 The output **must** specify that this is a Distill article.
 
 ---
-class: center middle
-exclude: true
-
-&lt;img src="images/whispering-1200.jpg" style=" width: 90%;"&gt;
-
----
 background-image: url(images/Whisper.jpg)
 background-size: contain
 
@@ -1886,6 +1901,9 @@ You can have a single page made up of clickable posts, like this.
 Each post is itself its own page, and it doesn't need to be built into the navigation bar.  
 
 ---
+background-image: url(images/Clouds2.jpg)
+background-size: cover
+
 ## Add a listing page
 
 .left-column[
@@ -1921,6 +1939,9 @@ Instead, we create a listing page -- an R Markdown document whose only job is to
 We'll call our "schedule".
 
 ---
+background-image: url(images/Clouds2.jpg)
+background-size: cover
+
 ## Update the `_site.yml`
 
 .left-column[
@@ -1966,9 +1987,8 @@ Then, we link our listing page to navigation bar.
 Now we are ready to make some posts.
 
 ---
-background-image: /*url("images/rawpixel/bunch-balloons-rmd4.jpg")*/
-background-position: right
-background-size: contain
+background-image: url(images/Clouds2.jpg)
+background-size: cover
 
 ## Create a post
 
@@ -2004,6 +2024,8 @@ You can rinse and repeat -- creating as many new posts as you'd like.
 Let's look inside one.
 
 ---
+background-image: url(images/Clouds2.jpg)
+background-size: cover
 
 ## Inside a post
 
@@ -2069,6 +2091,8 @@ Unfortunately, each posts **does** have to be knit individually.
 Finally, you'll need to build once more, so that the listing page will be updated with the new posts.
 
 ---
+background-image: url(images/Clouds2.jpg)
+background-size: cover
 class: middle center
 
 ## A minimal "blog" page
@@ -2082,6 +2106,8 @@ Here's what this "blog page" looks like when it's rendered.
 Which means that we're now about done with Distill and...
 
 ---
+class: center
+
 ## Sharing your site
 
 &lt;img src="images/screenshots/drop-distill.png" width="699" /&gt;
@@ -2269,6 +2295,9 @@ background-size: contain
 The index.Rmd file turns into the first chapter. 
 
 ---
+background-image: url(images/Clouds2.jpg)
+background-size: cover
+
 ## Inside the `index.Rmd`
 
 .left-column1[
@@ -2339,6 +2368,8 @@ Like with our other sites, we have a separate yaml file too.
 This one is named `_bookdown.yml`, and it works with the index.Rmd file to tie all our chapters together.
 
 ---
+background-image: url(images/Clouds2.jpg)
+background-size: cover
 
 ## Inside the `_bookdown.yml`
 
@@ -2372,6 +2403,8 @@ This makes sure that each chapter is knit in separate R sessions.
 You might notice that my chapter files right now are named with numbers as prefixes...
 
 ---
+background-image: url(images/Clouds2.jpg)
+background-size: cover
 
 ## Inside the `_bookdown.yml`
 
@@ -2433,6 +2466,9 @@ background-size: contain
 The chapters themselves are each separate R markdown files. With one major change...
 
 ---
+background-image: url(images/Clouds2.jpg)
+background-size: cover
+
 ## Inside one chapter
 
 .left-column1[
@@ -2505,7 +2541,7 @@ background-size: contain
 So, how do we share the book once it's written and built? We know our HTML files live in the _book folder so this should seem like old hat to you now...
 
 ---
-class: middle, center
+class: middle center
 
 &lt;img src="images/screenshots/drop-book.png" width="80%" /&gt;
 
@@ -2516,6 +2552,8 @@ We would drag that folder straight into Netlify to get a link.
 
 
 ---
+background-image: url(images/Clouds2.jpg)
+background-size: cover
 
 &lt;video width="1084" height="610" controls&gt;&lt;source src="images/netlify-domain.mp4" type="video/mp4"&gt;&lt;/video&gt;
 
@@ -2815,22 +2853,25 @@ class: middle
 ]
 
 ---
+## Share your site
 
-# Share your site
-
-&lt;video width="1084" height="610" controls&gt;&lt;source src="images/drop-blog.mp4" type="video/mp4"&gt;&lt;/video&gt;
-
-
----
-
-# Here's a shortcut you can use
-
-&lt;video width="1084" height="610" controls&gt;&lt;source src="images/deploy-button.mp4" type="video/mp4"&gt;&lt;/video&gt;
+&lt;video width="1010" height="600" controls&gt;&lt;source src="images/drop-blog.mp4" type="video/mp4"&gt;&lt;/video&gt;
 
 
 ---
+background-image: url(images/Clouds2.jpg)
+background-size: cover
 
-# Ideas &amp; resources
+## Here's a shortcut you can use
+
+&lt;video width="1000" height="500" controls&gt;&lt;source src="images/deploy-button.mp4" type="video/mp4"&gt;&lt;/video&gt;
+
+
+---
+background-image: url(images/Clouds2.jpg)
+background-size: cover
+
+## Ideas &amp; resources
 
 + Continuous deployment
 
@@ -2843,7 +2884,7 @@ background-position: bottom, center
 class: center, top
 background-color: #FCFEF8
 
-# Thank you
+## Thank you
 
 ???
 
